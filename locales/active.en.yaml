@@ -1,4 +1,4 @@
+PageTitle: Request Tor Bridges
 VoilaBridges:
-  description: Present the bridges to the user
   one: 'Here is your bridge:'
-  other: 'Here are your {{.PluralCount}} bridges:'
+  other: 'Here are your {{.Count}} bridges:'
