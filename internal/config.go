@@ -45,6 +45,7 @@ type Distributors struct {
 	Https  HttpsDistConfig  `json:"https"`
 	Salmon SalmonDistConfig `json:"salmon"`
 	Stub   StubDistConfig   `json:"stub"`
+	Gettor GettorDistConfig `json:"gettor"`
 }
 
 type StubDistConfig struct {
@@ -63,10 +64,24 @@ type SalmonDistConfig struct {
 	WorkingDir string       `json:"working_dir"` // This is where Salmon stores its state.
 }
 
+type GettorDistConfig struct {
+	Email EmailConfig `json:"email"`
+}
+
 type WebApiConfig struct {
 	ApiAddress string `json:"api_address"`
 	CertFile   string `json:"cert_file"`
 	KeyFile    string `json:"key_file"`
+}
+
+type EmailConfig struct {
+	Address      string `json:"address"`
+	SmtpServer   string `json:"smtp_server"`
+	SmtpUsername string `json:"smtp_username"`
+	SmtpPassword string `json:"smtp_password"`
+	ImapServer   string `json:"imap_server"`
+	ImapUsername string `json:"imap_username"`
+	ImapPassword string `json:"imap_password"`
 }
 
 // LoadConfig loads the given JSON configuration file and returns the resulting
