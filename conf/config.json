@@ -7,7 +7,10 @@
         "api_endpoint_targets": "/targets",
         "web_endpoint_status": "/status",
         "web_endpoint_metrics": "/rdsys-backend-metrics",
-        "supported_resources": ["vanilla", "obfs2", "obfs3", "obfs4", "scramblesuit"],
+        "resources": {
+                "supported": ["vanilla", "obfs2", "obfs3", "obfs4", "scramblesuit"],
+                "unpartitioned": []
+        },
         "api_tokens": {
                 "https": "HttpsApiTokenPlaceholder",
                 "salmon": "SalmonApiTokenPlaceholder",

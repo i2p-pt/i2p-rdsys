@@ -30,9 +30,14 @@ type BackendConfig struct {
 	// distributor should get.  E.g. if the HTTPS distributor is set to x and
 	// the Salmon distributor is set to y, then HTTPS gets x/(x+y) of all
 	// resources and Salmon gets y/(x+y).
-	DistProportions    map[string]int `json:"distribution_proportions"`
-	SupportedResources []string       `json:"supported_resources"`
-	WebApi             WebApiConfig   `json:"web_api"`
+	DistProportions map[string]int `json:"distribution_proportions"`
+	Resources       ResourceTypes  `json:"resources"`
+	WebApi          WebApiConfig   `json:"web_api"`
+}
+
+type ResourceTypes struct {
+	Supported     []string `json:"supported"`
+	Unpartitioned []string `json:"unpartitioned"`
 }
 
 type Distributors struct {

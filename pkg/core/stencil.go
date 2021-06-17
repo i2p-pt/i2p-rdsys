@@ -16,7 +16,7 @@ type Stencil struct {
 
 // SplitHashring represents a hashring with a corresponding stencil.  The
 // backend uses one SplitHashring per resource type to map resources to
-// distributors.
+// distributors. If the Stencil is nil it behaves as a normal hashring.
 type SplitHashring struct {
 	*Hashring
 	*Stencil
@@ -75,6 +75,9 @@ func (s *Stencil) GetUpperEnd() (int, error) {
 // DoesDistOwnResource returns true if the given resource maps to the given
 // distributor and false otherwise.
 func (s *Stencil) DoesDistOwnResource(r Resource, distName string) bool {
+	if s == nil {
+		return true
+	}
 
 	filterFunc, err := s.GetFilterFunc(distName)
 	if err != nil {
@@ -122,6 +125,9 @@ func (s *Stencil) GetFilterFunc(distName string) (FilterFunc, error) {
 // GetForDist takes as input a distributor's name (e.g. "moat") and returns the
 // resources that are allocated for the given distributor.
 func (h *SplitHashring) GetForDist(distName string) ([]Resource, error) {
+	if h.Stencil == nil {
+		return h.Hashring.GetAll(), nil
+	}
 
 	filterFunc, err := h.Stencil.GetFilterFunc(distName)
 	if err != nil {

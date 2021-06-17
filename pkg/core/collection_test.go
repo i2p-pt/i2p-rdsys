@@ -9,7 +9,7 @@ func TestAddCollection(t *testing.T) {
 	d1 := NewDummy(1, 1)
 	d2 := NewDummy(2, 2)
 	d3 := NewDummy(3, 2)
-	c := NewBackendResources([]string{d1.Type()}, &Stencil{})
+	c := NewBackendResources([]string{d1.Type()}, []string{}, &Stencil{})
 
 	c.Add(d1)
 	if c.Collection[d1.Type()].Len() != 1 {
@@ -40,7 +40,7 @@ func TestAddCollection(t *testing.T) {
 
 func TestStringCollection(t *testing.T) {
 	d := NewDummy(1, 1)
-	c := NewBackendResources([]string{d.Type()}, &Stencil{})
+	c := NewBackendResources([]string{d.Type()}, []string{}, &Stencil{})
 	s := c.String()
 	expected := "0 dummy"
 	if s != expected {
@@ -51,7 +51,7 @@ func TestStringCollection(t *testing.T) {
 func TestPruneCollection(t *testing.T) {
 	d := NewDummy(1, 1)
 	d.ExpiryTime = time.Minute * 10
-	c := NewBackendResources([]string{d.Type()}, &Stencil{})
+	c := NewBackendResources([]string{d.Type()}, []string{}, &Stencil{})
 	c.Add(d)
 	hLength := func() int { return c.Collection[d.Type()].Len() }
 

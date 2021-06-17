@@ -84,14 +84,14 @@ func (b *BackendContext) InitBackend(cfg *Config) {
 	log.Println("Initialising backend.")
 	b.Config = cfg
 	rTypes := []string{}
-	for _, rType := range cfg.Backend.SupportedResources {
+	for _, rType := range cfg.Backend.Resources.Supported {
 		if _, exists := resources.ResourceMap[rType]; !exists {
 			log.Printf("Error: Skipping %q because we have no constructor for it.", rType)
 			continue
 		}
 		rTypes = append(rTypes, rType)
 	}
-	b.Resources = *core.NewBackendResources(rTypes, BuildStencil(cfg.Backend.DistProportions))
+	b.Resources = *core.NewBackendResources(rTypes, cfg.Backend.Resources.Unpartitioned, BuildStencil(cfg.Backend.DistProportions))
 	b.metrics = InitMetrics()
 
 	b.rTestPool = NewResourceTestPool(cfg.Backend.BridgestrapEndpoint)
