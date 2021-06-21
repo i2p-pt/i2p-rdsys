@@ -26,18 +26,19 @@ type BackendConfig struct {
 	StatusEndpoint         string            `json:"web_endpoint_status"`
 	MetricsEndpoint        string            `json:"web_endpoint_metrics"`
 	BridgestrapEndpoint    string            `json:"bridgestrap_endpoint"`
+	StorageDir             string            `json:"storage_dir"`
 	// DistProportions contains the proportion of resources that each
 	// distributor should get.  E.g. if the HTTPS distributor is set to x and
 	// the Salmon distributor is set to y, then HTTPS gets x/(x+y) of all
 	// resources and Salmon gets y/(x+y).
-	DistProportions map[string]int `json:"distribution_proportions"`
-	Resources       ResourceTypes  `json:"resources"`
-	WebApi          WebApiConfig   `json:"web_api"`
+	DistProportions map[string]int            `json:"distribution_proportions"`
+	Resources       map[string]ResourceConfig `json:"resources"`
+	WebApi          WebApiConfig              `json:"web_api"`
 }
 
-type ResourceTypes struct {
-	Supported     []string `json:"supported"`
-	Unpartitioned []string `json:"unpartitioned"`
+type ResourceConfig struct {
+	Unpartitioned bool `json:"unpartitioned"`
+	Stored        bool `json:"stored"`
 }
 
 type Distributors struct {

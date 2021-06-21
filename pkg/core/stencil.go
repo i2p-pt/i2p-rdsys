@@ -31,7 +31,7 @@ type Interval struct {
 
 // NewSplitHashring returns a new SplitHashring.
 func NewSplitHashring() *SplitHashring {
-	return &SplitHashring{NewHashring(), &Stencil{}}
+	return &SplitHashring{NewHashring(), nil}
 }
 
 // Contains returns 'true' if the given number n falls into the interval [a, b]

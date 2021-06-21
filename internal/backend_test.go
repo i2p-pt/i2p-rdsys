@@ -58,7 +58,8 @@ func TestPostResourcesHandler(t *testing.T) {
 	b.Config.Backend.ApiTokens = make(map[string]string)
 	b.Config.Backend.ApiTokens["foo"] = "bar"
 
-	b.Resources = *core.NewBackendResources([]string{"obfs4"}, []string{}, nil)
+	b.Resources = *core.NewBackendResources(map[string]bool{"obfs4": false}, nil)
+	b.rStore = &ResourceStore{}
 
 	rr := httptest.NewRecorder()
 	body := strings.NewReader("[{\"type\": \"obfs4\", \"address\": \"1.2.3.4\", \"port\": 1234}]")

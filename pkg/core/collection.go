@@ -37,19 +37,17 @@ type EventRecipient struct {
 }
 
 // NewBackendResources creates and returns a new resource collection.
-func NewBackendResources(rNames []string, unpartitionedTypes []string, stencil *Stencil) *BackendResources {
+// rTypes is a map of resource type names to a boolean indicating if the resrouce is unpartitioend
+func NewBackendResources(rTypes map[string]bool, stencil *Stencil) *BackendResources {
 	r := &BackendResources{}
 	r.Collection = make(map[string]*SplitHashring)
 	r.EventRecipients = make(map[string]*EventRecipient)
 
-	for _, rName := range rNames {
+	for rName, unpartitioned := range rTypes {
 		log.Printf("Creating split hashring for resource %q.", rName)
 		r.Collection[rName] = NewSplitHashring()
-		r.Collection[rName].Stencil = stencil
-		for _, t := range unpartitionedTypes {
-			if t == rName {
-				r.Collection[rName].Stencil = nil
-			}
+		if !unpartitioned {
+			r.Collection[rName].Stencil = stencil
 		}
 	}
 

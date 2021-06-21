@@ -28,6 +28,7 @@ type BackendContext struct {
 	Resources core.BackendResources
 	rTestPool *ResourceTestPool
 	metrics   *Metrics
+	rStore    *ResourceStore
 }
 
 // metricsWrapper keeps track of the number of times each of our API endpoints
@@ -83,21 +84,23 @@ func (b *BackendContext) InitBackend(cfg *Config) {
 
 	log.Println("Initialising backend.")
 	b.Config = cfg
-	rTypes := []string{}
-	for _, rType := range cfg.Backend.Resources.Supported {
+	rTypes := map[string]bool{}
+	for rType, conf := range cfg.Backend.Resources {
 		if _, exists := resources.ResourceMap[rType]; !exists {
 			log.Printf("Error: Skipping %q because we have no constructor for it.", rType)
 			continue
 		}
-		rTypes = append(rTypes, rType)
+		rTypes[rType] = conf.Unpartitioned
 	}
-	b.Resources = *core.NewBackendResources(rTypes, cfg.Backend.Resources.Unpartitioned, BuildStencil(cfg.Backend.DistProportions))
+	b.Resources = *core.NewBackendResources(rTypes, BuildStencil(cfg.Backend.DistProportions))
 	b.metrics = InitMetrics()
 
 	b.rTestPool = NewResourceTestPool(cfg.Backend.BridgestrapEndpoint)
 	defer b.rTestPool.Stop()
 
 	quit := make(chan bool)
+
+	b.rStore = InitResourceStore(cfg, &b.Resources)
 
 	var wg sync.WaitGroup
 	ready := make(chan bool, 1)
@@ -422,10 +425,20 @@ func (b *BackendContext) postResourcesHandler(w http.ResponseWriter, req *http.R
 		return
 	}
 
+	rTypes := map[string]struct{}{}
 	for _, r := range rs {
 		b.Resources.Add(r)
+		rTypes[r.Type()] = struct{}{}
 		log.Printf("Added %s's %q resource to collection.", req.RemoteAddr, r.Type())
 	}
+
+	for rType := range rTypes {
+		b.rStore.Save(rType)
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintln(w, "{}")
 }
 
 // resourcesHandler handles requests coming from distributors (if it's GET
