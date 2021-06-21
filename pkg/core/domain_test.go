@@ -134,12 +134,12 @@ func TestResourceBase(t *testing.T) {
 
 	b := NewResourceBase()
 
-	if b.Test().State != StateUntested {
+	if b.TestResult().State != StateUntested {
 		t.Errorf("resource base has wrong default state")
 	}
 
-	b.Test().State = StateFunctional
-	if b.Test().State != StateFunctional {
+	b.TestResult().State = StateFunctional
+	if b.TestResult().State != StateFunctional {
 		t.Errorf("failed to update resource base state")
 	}
 
@@ -209,22 +209,5 @@ func TestApplyDiff(t *testing.T) {
 	m.ApplyDiff(diff)
 	if len(m["dummy"]) != 0 {
 		t.Errorf("failed to remove resource from diff")
-	}
-}
-
-func TestResourceTests(t *testing.T) {
-
-	b := NewResourceBase()
-	if b.Test().State != StateUntested {
-		t.Fatal("unexpected resource state")
-	}
-
-	test := &ResourceTest{
-		State: StateDysfunctional,
-		Error: "something went wrong",
-	}
-	b.SetTest(test)
-	if b.Test().State != StateDysfunctional {
-		t.Fatal("unexpected resource state")
 	}
 }

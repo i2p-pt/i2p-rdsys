@@ -32,16 +32,12 @@ type Hashnode struct {
 // Hashring represents a hashring consisting of resources.
 type Hashring struct {
 	Hashnodes []*Hashnode
-	TestFunc  TestFunc
 	sync.RWMutex
 }
 
 // FilterFunc takes as input a resource and returns true or false, depending on
 // its filtering criteria.
 type FilterFunc func(r Resource) bool
-
-// TestFunc takes as input a resource and tests it.
-type TestFunc func(r Resource)
 
 // NewResourceDiff returns a new ResourceDiff.
 func NewResourceDiff() *ResourceDiff {
@@ -62,7 +58,6 @@ func NewHashnode(k Hashkey, r Resource) *Hashnode {
 func NewHashring() *Hashring {
 
 	h := &Hashring{}
-	h.TestFunc = func(r Resource) {}
 	return h
 }
 
@@ -190,7 +185,7 @@ func (h *Hashring) maybeTestResource(r Resource) {
 		oldR = h.Hashnodes[i].Elem
 		// And is it exactly the same as the one we're dealing with?
 		if oldR.Oid() == r.Oid() {
-			rTest := oldR.Test()
+			rTest := oldR.TestResult()
 			r = oldR
 			// Is the resource already tested?
 			if rTest != nil && rTest.State != StateUntested {
@@ -201,9 +196,7 @@ func (h *Hashring) maybeTestResource(r Resource) {
 			}
 		}
 	}
-	if h.TestFunc != nil {
-		go h.TestFunc(r)
-	}
+	go r.Test()
 }
 
 // AddOrUpdate attempts to add the given resource to the hashring.  If it
@@ -313,8 +306,8 @@ func (h *Hashring) GetMany(k Hashkey, num int) ([]Resource, error) {
 
 	for j := i; j < num+i; j++ {
 		r := h.Hashnodes[j%h.Len()].Elem
-		if r.Test().State != StateFunctional {
-			log.Printf("Skipping %q because its state is %d.", r.String(), r.Test().State)
+		if r.TestResult().State != StateFunctional {
+			log.Printf("Skipping %q because its state is %d.", r.String(), r.TestResult().State)
 			continue
 		}
 		resources = append(resources, h.Hashnodes[j%h.Len()].Elem)

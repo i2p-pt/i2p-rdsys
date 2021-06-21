@@ -11,6 +11,7 @@ type Dummy struct {
 	UniqueId   Hashkey
 	ExpiryTime time.Duration
 	test       *ResourceTest
+	testFunc   func(Resource)
 }
 
 func NewDummy(oid Hashkey, uid Hashkey) *Dummy {
@@ -37,8 +38,16 @@ func (d *Dummy) SetType(rType string) {
 func (d *Dummy) IsPublic() bool {
 	return false
 }
-func (d *Dummy) Test() *ResourceTest {
+func (d *Dummy) TestResult() *ResourceTest {
 	return d.test
+}
+func (d *Dummy) Test() {
+	if d.testFunc != nil {
+		d.testFunc(d)
+	}
+}
+func (d *Dummy) SetTestFunc(f func(Resource)) {
+	d.testFunc = f
 }
 func (d *Dummy) SetTest(t *ResourceTest) {
 	d.test = t

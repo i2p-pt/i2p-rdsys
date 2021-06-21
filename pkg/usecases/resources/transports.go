@@ -10,12 +10,16 @@ import (
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
 )
 
+// TestFunc takes as input a resource and tests it.
+type TestFunc func(r core.Resource)
+
 // Transport represents a Tor bridge's pluggable transport.
 type Transport struct {
 	core.ResourceBase
 	BridgeBase
 	Parameters map[string]string `json:"params,omitempty"`
 	Bridge     *Bridge           `json:"-"`
+	testFunc   TestFunc          `json:"-"`
 }
 
 // NewTransport returns a new Transport object.
@@ -26,6 +30,18 @@ func NewTransport() *Transport {
 	t.Protocol = ProtoTypeTCP
 	t.Parameters = make(map[string]string)
 	return t
+}
+
+// SetTest sets the resource's test result to the given ResourceTest.
+func (t *Transport) SetTestFunc(f TestFunc) {
+	t.testFunc = f
+}
+
+// Test runs a resource's test if a TestFunc was set for it.
+func (t *Transport) Test() {
+	if t.testFunc != nil {
+		t.testFunc(t)
+	}
 }
 
 func (t *Transport) String() string {

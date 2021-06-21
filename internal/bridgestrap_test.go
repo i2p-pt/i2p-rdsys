@@ -47,11 +47,11 @@ func TestDispatch(t *testing.T) {
 	defer p.Stop()
 
 	p.pending <- d
-	d.Test().State = core.StateUntested
+	d.TestResult().State = core.StateUntested
 	p.pending <- d
 	time.Sleep(time.Millisecond)
 
-	if d.Test().State == core.StateUntested {
+	if d.TestResult().State == core.StateUntested {
 		t.Fatal("resource should not be untested")
 	}
 }
@@ -72,8 +72,8 @@ func TestTestFunc(t *testing.T) {
 
 	// Were all states set correctly?
 	for i := 0; i < len(dummies); i++ {
-		if dummies[i].Test().State != core.StateFunctional {
-			t.Fatal("resource state was set incorrectly", dummies[i].Test().State)
+		if dummies[i].TestResult().State != core.StateFunctional {
+			t.Fatal("resource state was set incorrectly", dummies[i].TestResult().State)
 		}
 	}
 }

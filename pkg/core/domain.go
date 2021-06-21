@@ -35,8 +35,8 @@ type Resource interface {
 	// identifiers.  If two resources have the same Oid, they must have the
 	// same Uid but not vice versa.
 	Oid() Hashkey
-	SetTest(*ResourceTest)
-	Test() *ResourceTest
+	Test()
+	TestResult() *ResourceTest
 	// Expiry returns the duration after which the resource should be deleted
 	// from the backend (if the backend hasn't received an update).
 	Expiry() time.Duration
@@ -249,13 +249,8 @@ func (r *ResourceBase) SetType(Type string) {
 	r.RType = Type
 }
 
-// SetTest sets the resource's test result to the given ResourceTest.
-func (r *ResourceBase) SetTest(test *ResourceTest) {
-	r.test = test
-}
-
-// Test returns the resource's test result.
-func (r *ResourceBase) Test() *ResourceTest {
+// TestResult returns the resource's test result.
+func (r *ResourceBase) TestResult() *ResourceTest {
 	return r.test
 }
 

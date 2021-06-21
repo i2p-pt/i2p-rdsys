@@ -67,7 +67,7 @@ func NewResourceTestPool(apiEndpoint string) *ResourceTestPool {
 // GetTestFunc returns a function that's executed when a new resource is added
 // to rdsys's backend.  The function takes as input a resource and submits it
 // to our testing pool.
-func (p *ResourceTestPool) GetTestFunc() core.TestFunc {
+func (p *ResourceTestPool) GetTestFunc() func(r core.Resource) {
 	return func(r core.Resource) {
 		p.pending <- r
 	}
@@ -173,7 +173,7 @@ func (p *ResourceTestPool) testResources(rMap map[string]core.Resource) {
 			continue
 		}
 
-		rTest := r.Test()
+		rTest := r.TestResult()
 		rTest.LastTested = bridgeTest.LastTested
 		rTest.Error = bridgeTest.Error
 		if bridgeTest.Functional {

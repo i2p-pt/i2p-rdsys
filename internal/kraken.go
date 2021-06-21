@@ -30,9 +30,10 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	defer ticker.Stop()
 
 	rcol := bCtx.Resources
+	testFunc := bCtx.rTestPool.GetTestFunc()
 	// Immediately parse bridge descriptor when we're called, and let caller
 	// know when we're done.
-	reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, rcol)
+	reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, rcol, testFunc)
 	ready <- true
 
 	for {
@@ -42,7 +43,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 			return
 		case <-ticker.C:
 			log.Println("Kraken's ticker is ticking.")
-			reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, rcol)
+			reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, rcol, testFunc)
 			pruneExpiredResources(bCtx.metrics, rcol)
 			calcTestedResources(bCtx.metrics, rcol)
 			log.Printf("Backend resources: %s", &rcol)
@@ -70,7 +71,7 @@ func calcTestedResources(metrics *Metrics, rcol core.BackendResources) {
 			core.StateDysfunctional: 0,
 		}
 		for _, r := range hashring.GetAll() {
-			nums[r.Test().State] += 1
+			nums[r.TestResult().State] += 1
 		}
 		for state, num := range nums {
 			frac := float64(num) / float64(hashring.Len())
@@ -93,10 +94,10 @@ func pruneExpiredResources(metrics *Metrics, rcol core.BackendResources) {
 
 // reloadBridgeDescriptors reloads bridge descriptors from the given
 // cached-extrainfo file and its corresponding cached-extrainfo.new.
-func reloadBridgeDescriptors(extrainfoFile string, rcol core.BackendResources) {
+func reloadBridgeDescriptors(extrainfoFile string, rcol core.BackendResources, testFunc resources.TestFunc) {
 
 	var err error
-	var res []core.Resource
+	var res []*resources.Transport
 
 	for _, filename := range []string{extrainfoFile, extrainfoFile + ".new"} {
 		res, err = loadBridgesFromExtrainfo(filename)
@@ -107,6 +108,7 @@ func reloadBridgeDescriptors(extrainfoFile string, rcol core.BackendResources) {
 
 		log.Printf("Adding %d resources from %q.", len(res), filename)
 		for _, resource := range res {
+			resource.SetTestFunc(testFunc)
 			rcol.Add(resource)
 		}
 	}
@@ -114,7 +116,7 @@ func reloadBridgeDescriptors(extrainfoFile string, rcol core.BackendResources) {
 
 // loadBridgesFromExtrainfo loads and returns bridges from Serge's extrainfo
 // files.
-func loadBridgesFromExtrainfo(extrainfoFile string) ([]core.Resource, error) {
+func loadBridgesFromExtrainfo(extrainfoFile string) ([]*resources.Transport, error) {
 
 	file, err := os.Open(extrainfoFile)
 	if err != nil {
@@ -133,10 +135,10 @@ func loadBridgesFromExtrainfo(extrainfoFile string) ([]core.Resource, error) {
 // ParseExtrainfoDoc parses the given extra-info document and returns the
 // content as a Bridges object.  Note that the extra-info document format is as
 // it's produced by the bridge authority.
-func ParseExtrainfoDoc(r io.Reader) ([]core.Resource, error) {
+func ParseExtrainfoDoc(r io.Reader) ([]*resources.Transport, error) {
 
 	var fingerprint string
-	var transports []core.Resource
+	var transports []*resources.Transport
 	// var bridges = rsrc.NewBridges()
 	// var b *rsrc.Bridge
 

@@ -96,9 +96,6 @@ func (b *BackendContext) InitBackend(cfg *Config) {
 
 	b.rTestPool = NewResourceTestPool(cfg.Backend.BridgestrapEndpoint)
 	defer b.rTestPool.Stop()
-	for _, rType := range rTypes {
-		b.Resources.Collection[rType].TestFunc = b.rTestPool.GetTestFunc()
-	}
 
 	quit := make(chan bool)
 
@@ -309,12 +306,12 @@ func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		foundResource = true
 
-		rResult := fmt.Sprintf("* %s: %s\n", rType, statuses[resource.Test().State])
-		if resource.Test().Error != "" {
-			rResult += fmt.Sprintf("  Error: %s\n", resource.Test().Error)
+		rResult := fmt.Sprintf("* %s: %s\n", rType, statuses[resource.TestResult().State])
+		if resource.TestResult().Error != "" {
+			rResult += fmt.Sprintf("  Error: %s\n", resource.TestResult().Error)
 		}
-		if resource.Test().State != core.StateUntested {
-			lastTested := resource.Test().LastTested
+		if resource.TestResult().State != core.StateUntested {
+			lastTested := resource.TestResult().LastTested
 			tDiff := time.Now().UTC().Sub(lastTested)
 			rResult += fmt.Sprintf("  Last tested: %s (%s ago)\n", lastTested, tDiff)
 		}

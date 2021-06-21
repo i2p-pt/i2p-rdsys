@@ -318,14 +318,15 @@ func TestMaybeTestResource(t *testing.T) {
 	d1 := NewDummy(0, 0)
 	h := NewHashring()
 	wg := new(sync.WaitGroup)
-	h.TestFunc = func(r Resource) {
+	testFunc := func(r Resource) {
 		// Increment counter each time our test function is called.  That makes
 		// it easy to keep track of how often a resource is tested.
 		numTests += 1
-		r.Test().State = StateFunctional
-		r.Test().LastTested = time.Now().UTC()
+		r.TestResult().State = StateFunctional
+		r.TestResult().LastTested = time.Now().UTC()
 		wg.Done()
 	}
+	d1.SetTestFunc(testFunc)
 	addOrUpdateAndWait := func(r Resource) {
 		wg.Add(1)
 		h.AddOrUpdate(r)
@@ -347,6 +348,7 @@ func TestMaybeTestResource(t *testing.T) {
 	// A modified resource (i.e. its unique ID remained the same but its object
 	// ID changed) must be tested again.
 	modifiedD1 := NewDummy(1, 0)
+	modifiedD1.SetTestFunc(testFunc)
 	addOrUpdateAndWait(modifiedD1)
 	if numTests != 2 {
 		t.Fatalf("failed to test modified resource")
@@ -360,14 +362,14 @@ func TestMaybeTestResource(t *testing.T) {
 	}
 
 	// A resource that somehow lost its state must be tested again.
-	modifiedD1.Test().State = StateUntested
+	modifiedD1.TestResult().State = StateUntested
 	addOrUpdateAndWait(modifiedD1)
 	if numTests != 4 {
 		t.Fatalf("stateless resource was not tested again")
 	}
 
 	// Finally, let's make sure that the resource's state was set correctly.
-	if modifiedD1.Test().State == StateUntested {
+	if modifiedD1.TestResult().State == StateUntested {
 		t.Fatal("resource state was not set corrected by testing")
 	}
 }
