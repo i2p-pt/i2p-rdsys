@@ -16,12 +16,17 @@
 		"obfs2": {},
 		"obfs3": {},
 		"obfs4": {},
-		"scramblesuit": {}
+		"scramblesuit": {},
+		"tblink": {
+			"unpartitioned": true,
+			"stored": true
+		}
         },
         "api_tokens": {
                 "https": "HttpsApiTokenPlaceholder",
                 "salmon": "SalmonApiTokenPlaceholder",
-                "stub": "StubApiTokenPlaceholder"
+                "stub": "StubApiTokenPlaceholder",
+                "gettor": "StubApiTokenPlaceholder"
         },
         "web_api": {
             "api_address": "127.0.0.1:7100",
@@ -58,6 +63,18 @@
                 "api_address": "127.0.0.1:7400",
                 "cert_file": "",
                 "key_file": ""
+            }
+        },
+        "gettor": {
+            "resources": ["tblink"],
+            "email": {
+                "address": "gettor@example.com",
+                "smtp_server": "smt.example.com:25",
+                "smtp_username": "gettor",
+                "smtp_password": "pass",
+                "imap_server": "imaps://imap.example.com:993",
+                "imap_username": "gettor",
+                "imap_password": "pass"
             }
         }
     }

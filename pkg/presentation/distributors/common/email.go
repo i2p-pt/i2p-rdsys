@@ -47,7 +47,7 @@ func StartEmail(emailCfg *internal.EmailConfig, distCfg *internal.Config,
 	smtpAuth := smtp.PlainAuth("", emailCfg.SmtpUsername, emailCfg.SmtpPassword, smtpHost)
 	imap, err := initImap(emailCfg)
 	if err != nil {
-		log.Fatal("Can't start the imap client:", err)
+		log.Fatal("Can't start the imap client: ", err)
 	}
 
 	e := emailClient{

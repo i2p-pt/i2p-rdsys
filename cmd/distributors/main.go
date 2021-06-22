@@ -5,9 +5,11 @@ import (
 	"log"
 
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/internal"
+	gettorMail "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/gettor"
 	httpsUI "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/https"
 	salmonWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/salmon"
 	stubWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/stub"
+	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/gettor"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/https"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/salmon"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/stub"
@@ -35,6 +37,7 @@ func main() {
 		salmon.DistName: salmonWeb.InitFrontend,
 		https.DistName:  httpsUI.InitFrontend,
 		stub.DistName:   stubWeb.InitFrontend,
+		gettor.DistName: gettorMail.InitFrontend,
 	}
 	runFunc, exists := constructors[distName]
 	if !exists {

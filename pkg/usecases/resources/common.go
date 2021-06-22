@@ -19,6 +19,7 @@ const (
 	ResourceTypeWebSocket    = "websocket"
 	ResourceTypeFTE          = "fte"
 	ResourceTypeHTTPT        = "httpt"
+	ResourceTypeTBLink       = "tblink"
 )
 
 var ResourceMap = map[string]func() interface{}{
@@ -32,6 +33,7 @@ var ResourceMap = map[string]func() interface{}{
 	ResourceTypeWebSocket:    func() interface{} { return NewTransport() },
 	ResourceTypeFTE:          func() interface{} { return NewTransport() },
 	ResourceTypeHTTPT:        func() interface{} { return NewTransport() },
+	ResourceTypeTBLink:       func() interface{} { return NewTBLink() },
 }
 
 type TmpResourceDiff struct {

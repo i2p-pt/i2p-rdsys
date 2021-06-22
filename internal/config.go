@@ -65,7 +65,8 @@ type SalmonDistConfig struct {
 }
 
 type GettorDistConfig struct {
-	Email EmailConfig `json:"email"`
+	Resources []string    `json:"resources"`
+	Email     EmailConfig `json:"email"`
 }
 
 type WebApiConfig struct {
