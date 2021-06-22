@@ -77,5 +77,14 @@
                 "imap_password": "pass"
             }
         }
+    },
+    "updaters": {
+        "gettor": {
+            "github": {
+                "auth_token": "",
+                "owner": "TheTorProject",
+                "repo": "gettorbrowser"
+            }
+        }
     }
 }

@@ -15,6 +15,7 @@ import (
 type Config struct {
 	Backend      BackendConfig `json:"backend"`
 	Distributors Distributors  `json:"distributors"`
+	Updaters     Updaters      `json:"updaters"`
 }
 
 type BackendConfig struct {
@@ -83,6 +84,20 @@ type EmailConfig struct {
 	ImapServer   string `json:"imap_server"`
 	ImapUsername string `json:"imap_username"`
 	ImapPassword string `json:"imap_password"`
+}
+
+type Updaters struct {
+	Gettor GettorUpdater `json:"gettor"`
+}
+
+type GettorUpdater struct {
+	Github Github `json:"github"`
+}
+
+type Github struct {
+	AuthToken string `json:"auth_token"`
+	Owner     string `json:"owner"`
+	Repo      string `json:"repo"`
 }
 
 // LoadConfig loads the given JSON configuration file and returns the resulting

@@ -15,7 +15,7 @@ func TestAuthentication(t *testing.T) {
 	b := BackendContext{}
 	tokens := make(map[string]string)
 	tokens["https"] = "8M4WSTrhwatWYGDWJw1OtS2cDXYfJtAetCcaFP94lYo="
-	b.Config = &Config{BackendConfig{ApiTokens: tokens}, Distributors{}}
+	b.Config = &Config{BackendConfig{ApiTokens: tokens}, Distributors{}, Updaters{}}
 
 	rr := httptest.NewRecorder()
 	r := &http.Request{}
