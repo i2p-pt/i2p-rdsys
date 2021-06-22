@@ -57,7 +57,7 @@ func NewResourceTestPool(apiEndpoint string) *ResourceTestPool {
 	p.flushTimeout = time.Minute
 	p.shutdown = make(chan bool)
 	p.pending = make(chan core.Resource)
-	p.ipc = mechanisms.NewHttpsIpc(apiEndpoint)
+	p.ipc = mechanisms.NewHttpsIpc(apiEndpoint, "GET", "")
 	p.inProgress = make(map[string]bool)
 	go p.dispatch()
 

@@ -65,12 +65,14 @@ func (d *HttpsDistributor) Init(cfg *internal.Config) {
 	d.ring = core.NewHashring()
 
 	log.Printf("Initialising resource stream.")
-	d.ipc = mechanisms.NewHttpsIpc("http://" + cfg.Backend.WebApi.ApiAddress + cfg.Backend.ResourceStreamEndpoint)
+	d.ipc = mechanisms.NewHttpsIpc(
+		"http://"+cfg.Backend.WebApi.ApiAddress+cfg.Backend.ResourceStreamEndpoint,
+		"GET",
+		d.cfg.Backend.ApiTokens[DistName])
 	rStream := make(chan *core.ResourceDiff)
 	req := core.ResourceRequest{
 		RequestOrigin: DistName,
 		ResourceTypes: d.cfg.Distributors.Https.Resources,
-		BearerToken:   d.cfg.Backend.ApiTokens[DistName],
 		Receiver:      rStream,
 	}
 	d.ipc.StartStream(&req)

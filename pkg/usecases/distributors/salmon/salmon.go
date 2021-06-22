@@ -161,12 +161,14 @@ func (s *SalmonDistributor) Init(cfg *internal.Config) {
 	s.shutdown = make(chan bool)
 
 	log.Printf("Initialising resource stream.")
-	s.ipc = mechanisms.NewHttpsIpc("http://" + cfg.Backend.WebApi.ApiAddress + cfg.Backend.ResourceStreamEndpoint)
+	s.ipc = mechanisms.NewHttpsIpc(
+		"http://"+cfg.Backend.WebApi.ApiAddress+cfg.Backend.ResourceStreamEndpoint,
+		"GET",
+		s.cfg.Backend.ApiTokens[DistName])
 	rStream := make(chan *core.ResourceDiff)
 	req := core.ResourceRequest{
 		RequestOrigin: DistName,
 		ResourceTypes: s.cfg.Distributors.Salmon.Resources,
-		BearerToken:   s.cfg.Backend.ApiTokens[DistName],
 		Receiver:      rStream,
 	}
 	s.ipc.StartStream(&req)

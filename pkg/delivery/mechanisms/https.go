@@ -24,15 +24,20 @@ const (
 // HttpsIpcContext implements the delivery.Mechanism interface.
 type HttpsIpcContext struct {
 	apiEndpoint     string
+	method          string
+	bearerToken     string
 	messages        chan *core.ResourceDiff
 	done            chan bool
 	wg              sync.WaitGroup
 	timeBeforeRetry time.Duration
 }
 
-func NewHttpsIpc(apiEndpoint string) *HttpsIpcContext {
+func NewHttpsIpc(apiEndpoint string, method string, bearerToken string) *HttpsIpcContext {
 
-	return &HttpsIpcContext{apiEndpoint: apiEndpoint}
+	return &HttpsIpcContext{
+		apiEndpoint: apiEndpoint,
+		method:      method,
+		bearerToken: bearerToken}
 }
 
 // StartStream initates the start of the HTTP resource stream.
@@ -57,7 +62,7 @@ func (ctx *HttpsIpcContext) StopStream() {
 // returns an error.
 func (ctx *HttpsIpcContext) MakeJsonRequest(req interface{}, ret interface{}) error {
 
-	resp, err := ctx.sendRequest(req, "")
+	resp, err := ctx.sendRequest(req)
 	if err != nil {
 		return err
 	}
@@ -115,7 +120,7 @@ func (ctx *HttpsIpcContext) handleStream(req *core.ResourceRequest) {
 		var resp *http.Response
 		for success := false; !success; success = (err == nil) {
 			log.Printf("Making HTTP request to initiate resource stream.")
-			resp, err = ctx.sendRequest(req, req.BearerToken)
+			resp, err = ctx.sendRequest(req)
 			if err != nil {
 				log.Printf("Error making HTTP request: %s", err.Error())
 				log.Printf("Trying again in %s.", ctx.timeBeforeRetry)
@@ -165,22 +170,21 @@ func (ctx *HttpsIpcContext) handleStream(req *core.ResourceRequest) {
 }
 
 // sendRequest marshalls the given request into JSON and sends it to the API
-// endpoint that's part of the given context.  If not "", the function sets the
-// given bearer token in the HTTP request.
-func (ctx *HttpsIpcContext) sendRequest(req interface{}, bearerToken string) (*http.Response, error) {
+// endpoint that's part of the given context.
+func (ctx *HttpsIpcContext) sendRequest(req interface{}) (*http.Response, error) {
 
 	encoded, err := json.Marshal(req)
 	if err != nil {
 		return nil, err
 	}
 
-	httpReq, err := http.NewRequest(http.MethodGet, ctx.apiEndpoint, bytes.NewBuffer(encoded))
+	httpReq, err := http.NewRequest(ctx.method, ctx.apiEndpoint, bytes.NewBuffer(encoded))
 	if err != nil {
 		return nil, err
 	}
 	httpReq.Header.Set("Content-Type", "application/json")
-	if bearerToken != "" {
-		httpReq.Header.Set("Authorization", fmt.Sprintf("Bearer %s", bearerToken))
+	if ctx.bearerToken != "" {
+		httpReq.Header.Set("Authorization", fmt.Sprintf("Bearer %s", ctx.bearerToken))
 	}
 
 	client := &http.Client{}

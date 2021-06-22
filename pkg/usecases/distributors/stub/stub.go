@@ -78,12 +78,14 @@ func (d *StubDistributor) Init(cfg *internal.Config) {
 	// and others may change their state).  We will receive resources at the
 	// rStream channel.
 	log.Printf("Initialising resource stream.")
-	d.ipc = mechanisms.NewHttpsIpc("http://" + cfg.Backend.WebApi.ApiAddress + cfg.Backend.ResourceStreamEndpoint)
+	d.ipc = mechanisms.NewHttpsIpc(
+		"http://"+cfg.Backend.WebApi.ApiAddress+cfg.Backend.ResourceStreamEndpoint,
+		"GET",
+		d.cfg.Backend.ApiTokens[DistName])
 	rStream := make(chan *core.ResourceDiff)
 	req := core.ResourceRequest{
 		RequestOrigin: DistName,
 		ResourceTypes: d.cfg.Distributors.Stub.Resources,
-		BearerToken:   d.cfg.Backend.ApiTokens[DistName],
 		Receiver:      rStream,
 	}
 	d.ipc.StartStream(&req)

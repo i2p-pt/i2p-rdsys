@@ -273,7 +273,6 @@ type ResourceRequest struct {
 	// Name of requesting distributor.
 	RequestOrigin string             `json:"request_origin"`
 	ResourceTypes []string           `json:"resource_types"`
-	BearerToken   string             `json:"-"`
 	Receiver      chan *ResourceDiff `json:"-"`
 }
 
