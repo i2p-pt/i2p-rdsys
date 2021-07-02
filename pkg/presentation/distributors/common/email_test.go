@@ -2,6 +2,7 @@ package common
 
 import (
 	"net/mail"
+	"strings"
 	"syscall"
 	"testing"
 	"time"
@@ -16,6 +17,14 @@ import (
 
 const (
 	testImapAddress = "localhost:1143"
+	testEmail       = "From: test@example.org\r\n" +
+		"To: test@example.com\r\n" +
+		"Subject: win en\r\n" +
+		"Date: Wed, 11 May 2016 14:31:59 +0000\r\n" +
+		"Message-ID: <0000000@localhost/>\r\n" +
+		"Content-Type: text/plain\r\n" +
+		"\r\n" +
+		"win en"
 )
 
 var (
@@ -41,6 +50,8 @@ func testImapServer() (*server.Server, backend.Mailbox) {
 	s.AllowInsecureAuth = true
 	s.Enable(idle.NewExtension())
 
+	mbox.CreateMessage([]string{}, time.Now(), strings.NewReader(testEmail))
+
 	go s.ListenAndServe()
 	return s, mbox
 }
@@ -56,10 +67,10 @@ func TestImapExistingInbox(t *testing.T) {
 		if err != nil {
 			t.Fatal("Error parsing from address", err)
 		}
-		if from.Address != "contact@example.org" {
+		if from.Address != "test@example.org" {
 			t.Error("unexpected from:", from)
 		}
-		if msg.Header.Get("subject") != "A little message, just for you" {
+		if msg.Header.Get("subject") != "win en" {
 			t.Error("unexpected suject:", msg.Header.Get("subject"))
 		}
 
@@ -79,7 +90,8 @@ func timeoutDistributor(t *testing.T, duration time.Duration) {
 func checkInboxEmptyAndExit(t *testing.T, mbox backend.Mailbox) {
 	time.Sleep(time.Second)
 	s, _ := mbox.Status([]imap.StatusItem{imap.StatusMessages})
-	if s.Messages != 0 {
+	// The test server already has a message marked as seen that is ignored
+	if s.Messages != 1 {
 		t.Error("The message was not deleted")
 	}
 	syscall.Kill(syscall.Getpid(), syscall.SIGINT)

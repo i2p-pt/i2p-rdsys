@@ -10,12 +10,17 @@ import (
 	"os/signal"
 	"strings"
 	"syscall"
+	"time"
 
 	"github.com/emersion/go-imap"
 	"github.com/emersion/go-imap-idle"
 	"github.com/emersion/go-imap/client"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/internal"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors"
+)
+
+const (
+	durationIgnoreEmails = 24 * time.Hour
 )
 
 type SendFunction func(subject, body string) error
@@ -157,15 +162,23 @@ waitLoop:
 }
 
 func (e *emailClient) fetchMessages(mboxStatus *imap.MailboxStatus) {
-	if mboxStatus.Messages == 0 {
+	criteria := imap.NewSearchCriteria()
+	criteria.WithoutFlags = []string{imap.SeenFlag, imap.DeletedFlag}
+	seqs, err := e.imap.Search(criteria)
+	if err != nil {
+		log.Println("Error getting unseen messages:", err)
+		return
+	}
+
+	if len(seqs) == 0 {
 		return
 	}
 
 	seqset := new(imap.SeqSet)
-	seqset.AddRange(uint32(1), mboxStatus.Messages)
+	seqset.AddNum(seqs...)
 	items := []imap.FetchItem{imap.FetchItem("BODY.PEEK[]")}
 
-	log.Println("fetch", mboxStatus.Messages, "messages from the imap server")
+	log.Println("fetch", len(seqs), "messages from the imap server")
 	messages := make(chan *imap.Message, mboxStatus.Messages)
 	go func() {
 		err := e.imap.Fetch(seqset, items, messages)
@@ -175,11 +188,10 @@ func (e *emailClient) fetchMessages(mboxStatus *imap.MailboxStatus) {
 	}()
 
 	for msg := range messages {
-		processed := true
+		flag := ""
 		for _, literal := range msg.Body {
 			email, err := mail.ReadMessage(literal)
 			if err != nil {
-				processed = false
 				log.Println("Error parsing incoming email", err)
 				continue
 			}
@@ -190,16 +202,26 @@ func (e *emailClient) fetchMessages(mboxStatus *imap.MailboxStatus) {
 
 			err = e.incomingHandler(email, send)
 			if err != nil {
-				log.Println("Error handling incoming email:", err)
-				processed = false
+				log.Println("Error handling incoming email ", email.Header.Get("Message-ID"), ":", err)
+
+				date, err := email.Header.Date()
+				if flag == "" &&
+					(err != nil || date.Add(durationIgnoreEmails).Before(time.Now())) {
+
+					log.Println("Give up with the email, marked as readed so it will not be processed anymore")
+					flag = imap.SeenFlag
+				}
+			} else {
+				// delete the email as it was fully processed
+				flag = imap.DeletedFlag
 			}
 		}
-		if processed {
+		if flag != "" {
 			seqset := new(imap.SeqSet)
 			seqset.AddNum(msg.SeqNum)
 
 			item := imap.FormatFlagsOp(imap.AddFlags, true)
-			flags := []interface{}{imap.DeletedFlag}
+			flags := []interface{}{flag}
 			err := e.imap.Store(seqset, item, flags, nil)
 			if err != nil {
 				log.Println("Error setting the delete flag", err)
