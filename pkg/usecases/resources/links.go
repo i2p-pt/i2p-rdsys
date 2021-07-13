@@ -1,7 +1,10 @@
 package resources
 
 import (
+	"fmt"
 	"hash/crc64"
+	"strconv"
+	"strings"
 	"time"
 
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
@@ -11,6 +14,30 @@ type Version struct {
 	Mayor int `json:"mayor"`
 	Minor int `json:"minor"`
 	Patch int `json:"patch"`
+}
+
+func Str2Version(s string) (version Version, err error) {
+	parts := strings.Split(s, ".")
+	version.Mayor, err = strconv.Atoi(parts[0])
+	if err != nil {
+		return
+	}
+
+	if len(parts) > 1 {
+		version.Minor, err = strconv.Atoi(parts[1])
+		if err != nil {
+			return
+		}
+	}
+
+	if len(parts) > 2 {
+		version.Patch, err = strconv.Atoi(parts[2])
+	}
+	return
+}
+
+func (v Version) String() string {
+	return fmt.Sprintf("%d.%d.%d", v.Mayor, v.Minor, v.Patch)
 }
 
 // Compare returns 1 if v version is higher than v2,

@@ -26,7 +26,9 @@ type GettorDistributor struct {
 	wg       sync.WaitGroup
 	shutdown chan bool
 	tblinks  TBLinkList
-	version  resources.Version
+
+	// latest version of Tor Browser per platform
+	version map[string]resources.Version
 
 	// locales map a lowercase locale to its correctly cased locale
 	locales map[string]string
@@ -159,7 +161,7 @@ func (d *GettorDistributor) Shutdown() {
 
 // applyDiff to tblinks. Ignore changes, links should not change, just appear new or be gone
 func (d *GettorDistributor) applyDiff(diff *core.ResourceDiff) {
-	needsCleanUp := false
+	needsCleanUp := map[string]struct{}{}
 	for rType, resourceQueue := range diff.New {
 		if rType != "tblink" {
 			continue
@@ -170,13 +172,18 @@ func (d *GettorDistributor) applyDiff(diff *core.ResourceDiff) {
 				log.Println("Not valid tblink resource", r)
 				continue
 			}
-			switch d.version.Compare(link.Version) {
-			case 1:
-				// ignore resources with old versions
-				continue
-			case -1:
-				d.version = link.Version
-				needsCleanUp = true
+			version, ok := d.version[link.Platform]
+			if ok {
+				switch version.Compare(link.Version) {
+				case 1:
+					// ignore resources with old versions
+					continue
+				case -1:
+					d.version[link.Platform] = link.Version
+					needsCleanUp[link.Platform] = struct{}{}
+				}
+			} else {
+				d.version[link.Platform] = link.Version
 			}
 
 			_, ok = d.tblinks[link.Platform]
@@ -213,29 +220,28 @@ func (d *GettorDistributor) applyDiff(diff *core.ResourceDiff) {
 		}
 	}
 
-	if needsCleanUp {
-		d.deleteOldVersions()
+	for platform := range needsCleanUp {
+		d.deleteOldVersions(platform)
 	}
 }
 
-func (d *GettorDistributor) deleteOldVersions() {
-	for platform, locales := range d.tblinks {
-		for locale, res := range locales {
-			newResources := []*resources.TBLink{}
-			for _, r := range res {
-				if d.version.Compare(r.Version) == 0 {
-					newResources = append(newResources, r)
-				}
+func (d *GettorDistributor) deleteOldVersions(platform string) {
+	locales := d.tblinks[platform]
+	for locale, res := range locales {
+		newResources := []*resources.TBLink{}
+		for _, r := range res {
+			if d.version[platform].Compare(r.Version) == 0 {
+				newResources = append(newResources, r)
 			}
+		}
 
-			if len(newResources) == 0 {
-				delete(d.tblinks[platform], locale)
-			} else {
-				d.tblinks[platform][locale] = newResources
-			}
+		if len(newResources) == 0 {
+			delete(d.tblinks[platform], locale)
+		} else {
+			d.tblinks[platform][locale] = newResources
 		}
-		if len(d.tblinks[platform]) == 0 {
-			delete(d.tblinks, platform)
-		}
+	}
+	if len(d.tblinks[platform]) == 0 {
+		delete(d.tblinks, platform)
 	}
 }
