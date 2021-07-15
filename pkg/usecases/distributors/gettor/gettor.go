@@ -21,6 +21,12 @@ const (
 	CommandLinks = "links"
 )
 
+var platformAliases = map[string]string{
+	"linux":   "linux64",
+	"windows": "win32",
+	"osx":     "osx64",
+}
+
 type GettorDistributor struct {
 	ipc      delivery.Mechanism
 	wg       sync.WaitGroup
@@ -76,7 +82,13 @@ func (d *GettorDistributor) ParseCommand(body io.Reader) *Command {
 		}
 
 		if command.Platform == "" {
-			_, exists := d.tblinks[word]
+			platform, exists := platformAliases[word]
+			if exists {
+				command.Platform = platform
+				continue
+			}
+
+			_, exists = d.tblinks[word]
 			if exists {
 				command.Platform = word
 				continue
@@ -100,7 +112,10 @@ func (d *GettorDistributor) ParseCommand(body io.Reader) *Command {
 }
 
 func (d *GettorDistributor) SupportedPlatforms() []string {
-	platforms := make([]string, 0, len(d.tblinks))
+	platforms := make([]string, 0, len(platformAliases)+len(d.tblinks))
+	for platform := range platformAliases {
+		platforms = append(platforms, platform)
+	}
 	for platform := range d.tblinks {
 		platforms = append(platforms, platform)
 	}
