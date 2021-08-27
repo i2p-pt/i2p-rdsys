@@ -19,7 +19,7 @@ type Transport struct {
 	BridgeBase
 	Parameters map[string]string `json:"params,omitempty"`
 	Bridge     *Bridge           `json:"-"`
-	testFunc   TestFunc          `json:"-"`
+	testFunc   TestFunc
 }
 
 // NewTransport returns a new Transport object.

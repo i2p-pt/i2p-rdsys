@@ -29,7 +29,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	ticker := time.NewTicker(KrakenTickerInterval)
 	defer ticker.Stop()
 
-	rcol := bCtx.Resources
+	rcol := &bCtx.Resources
 	testFunc := bCtx.rTestPool.GetTestFunc()
 	// Immediately parse bridge descriptor when we're called, and let caller
 	// know when we're done.
@@ -46,7 +46,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 			reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, rcol, testFunc)
 			pruneExpiredResources(bCtx.metrics, rcol)
 			calcTestedResources(bCtx.metrics, rcol)
-			log.Printf("Backend resources: %s", &rcol)
+			log.Printf("Backend resources: %s", rcol)
 		}
 	}
 }
@@ -55,7 +55,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 // resource type and exposes them via Prometheus.  The function can tell us
 // that e.g. among all obfs4 bridges, 0.2 are untested, 0.7 are functional, and
 // 0.1 are dysfunctional.
-func calcTestedResources(metrics *Metrics, rcol core.BackendResources) {
+func calcTestedResources(metrics *Metrics, rcol *core.BackendResources) {
 
 	// Map our numerical resource states to human-friendly strings.
 	toStr := map[int]string{
@@ -80,7 +80,7 @@ func calcTestedResources(metrics *Metrics, rcol core.BackendResources) {
 	}
 }
 
-func pruneExpiredResources(metrics *Metrics, rcol core.BackendResources) {
+func pruneExpiredResources(metrics *Metrics, rcol *core.BackendResources) {
 
 	for rName, hashring := range rcol.Collection {
 		origLen := hashring.Len()
@@ -94,7 +94,7 @@ func pruneExpiredResources(metrics *Metrics, rcol core.BackendResources) {
 
 // reloadBridgeDescriptors reloads bridge descriptors from the given
 // cached-extrainfo file and its corresponding cached-extrainfo.new.
-func reloadBridgeDescriptors(extrainfoFile string, rcol core.BackendResources, testFunc resources.TestFunc) {
+func reloadBridgeDescriptors(extrainfoFile string, rcol *core.BackendResources, testFunc resources.TestFunc) {
 
 	var err error
 	var res []*resources.Transport
