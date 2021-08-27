@@ -1,0 +1,6 @@
+test:
+  image: golang:bullseye
+  script:
+    - test -z "$(go fmt ./...)"
+    - go vet -composites=false ./...
+    - go test -v ./...
