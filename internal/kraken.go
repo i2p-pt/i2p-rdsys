@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/NullHypothesis/zoossh"
 	"github.com/prometheus/client_golang/prometheus"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/resources"
@@ -33,7 +34,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	testFunc := bCtx.rTestPool.GetTestFunc()
 	// Immediately parse bridge descriptor when we're called, and let caller
 	// know when we're done.
-	reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, rcol, testFunc)
+	reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, cfg.Backend.NetworkstatusFile, rcol, testFunc)
 	ready <- true
 
 	for {
@@ -43,7 +44,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 			return
 		case <-ticker.C:
 			log.Println("Kraken's ticker is ticking.")
-			reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, rcol, testFunc)
+			reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, cfg.Backend.NetworkstatusFile, rcol, testFunc)
 			pruneExpiredResources(bCtx.metrics, rcol)
 			calcTestedResources(bCtx.metrics, rcol)
 			log.Printf("Backend resources: %s", rcol)
@@ -94,32 +95,79 @@ func pruneExpiredResources(metrics *Metrics, rcol *core.BackendResources) {
 
 // reloadBridgeDescriptors reloads bridge descriptors from the given
 // cached-extrainfo file and its corresponding cached-extrainfo.new.
-func reloadBridgeDescriptors(extrainfoFile string, rcol *core.BackendResources, testFunc resources.TestFunc) {
+func reloadBridgeDescriptors(extrainfoFile, networkstatusFile string, rcol *core.BackendResources, testFunc resources.TestFunc) {
 
-	var err error
-	var bridges map[string]*resources.Bridge
+	//First load bridge descriptors from network status file
+	bridges, err := loadBridgesFromNetworkstatus(networkstatusFile)
+	if err != nil {
+		log.Printf("Error loading network statuses: %s", err.Error())
+	}
 
+	//Update bridges from extrainfo files
 	for _, filename := range []string{extrainfoFile, extrainfoFile + ".new"} {
-		bridges, err = loadBridgesFromExtrainfo(filename)
+		descriptors, err := loadBridgesFromExtrainfo(filename)
 		if err != nil {
 			log.Printf("Failed to reload bridge descriptors: %s", err)
 			continue
 		}
 
-		log.Printf("Adding %d resources from %q.", len(res), filename)
-		for _, bridge := range bridges {
-			for _, t := range bridge.Transports {
-				t.SetTestFunc(testFunc)
-				rcol.Add(t)
+		for fingerprint, desc := range descriptors {
+			bridge, ok := bridges[fingerprint]
+			if !ok {
+				log.Printf("Received extrainfo descriptor for bridge %s but could not find bridge with that fingerprint", fingerprint)
+				continue
 			}
-
-			// only hand out vanilla flavour if there are no transports
-			if len(bridge.Transports) == 0 {
-				bridge.SetTestFunc(testFunc)
-				rcol.Add(bridge)
-			}
+			bridge.Transports = desc.Transports
 		}
 	}
+	log.Printf("Adding %d bridges.", len(bridges))
+	for _, bridge := range bridges {
+		for _, t := range bridge.Transports {
+			t.SetTestFunc(testFunc)
+			rcol.Add(t)
+		}
+
+		// only hand out vanilla flavour if there are no transports
+		if len(bridge.Transports) == 0 {
+			bridge.SetTestFunc(testFunc)
+			rcol.Add(bridge)
+		}
+	}
+}
+
+// learn about available bridges by parsing a network status file
+func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resources.Bridge, error) {
+	bridges := make(map[string]*resources.Bridge)
+	consensus, err := zoossh.ParseConsensusFile(networkstatusFile)
+	if err != nil {
+		return nil, err
+	}
+
+	for obj := range consensus.Iterate(nil) {
+		status, ok := consensus.Get(obj.GetFingerprint())
+		if !ok {
+			log.Printf("Could not retrieve network status for bridge %s",
+				string(obj.GetFingerprint()))
+			continue
+		}
+		// create a new bridge for this status
+		b := resources.NewBridge()
+		b.Fingerprint = string(status.GetFingerprint())
+
+		if addr, err := net.ResolveIPAddr("", status.Address.IPv6Address.String()); err == nil {
+			b.Address = resources.IPAddr{*addr}
+			b.Port = status.Address.IPv6ORPort
+		} else {
+			addr, err := net.ResolveIPAddr("", status.Address.IPv4Address.String())
+			if err != nil {
+				continue
+			}
+			b.Address = resources.IPAddr{*addr}
+			b.Port = status.Address.IPv4ORPort
+		}
+		bridges[b.Fingerprint] = b
+	}
+	return bridges, nil
 }
 
 // loadBridgesFromExtrainfo loads and returns bridges from Serge's extrainfo
