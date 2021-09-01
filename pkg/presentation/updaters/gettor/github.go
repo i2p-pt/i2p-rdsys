@@ -19,12 +19,7 @@ import (
 )
 
 const (
-	releaseName    = "Tor Browser %s-%s"
 	githubPlatform = "github"
-)
-
-var (
-	releaseBody = "These releases were uploaded to be distributed with gettor."
 )
 
 type githubProvider struct {

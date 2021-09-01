@@ -66,3 +66,13 @@ There are three predefined platform aliases:
 * **windows**. That will provide *win32* bundles.
 * **linux**. That will provide *linux64* bundles.
 * **osx**. That will provide *osx64* bundles.
+
+Providers
+---------
+
+* **github**. Uses a single repo with a release per platform, where the files 
+  are release assets.
+* **gitlab**. Uses one repo per platform, the files are included in the repo.
+  There current version is in the project description.
+* **gdrive**. Google drive.
+* **s3**. Used for internet archive. Uses a bucket per platform and version.

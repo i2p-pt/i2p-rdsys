@@ -25,6 +25,11 @@ import (
 const (
 	downloadsURL    = "https://aus1.torproject.org/torbrowser/update_3/release/downloads.json"
 	updateFrequency = time.Hour
+	releaseName     = "Tor Browser %s-%s"
+)
+
+var (
+	releaseBody = "These releases were uploaded to be distributed with gettor."
 )
 
 // updatedLinks keeps the links to be sent to the backend
@@ -62,13 +67,21 @@ func InitUpdater(cfg *internal.Config) {
 	}()
 
 	gh := newGithubProvider(&cfg.Updaters.Gettor.Github)
+	providers := []provider{gh}
+
+	gl, err := newGitlabProvider(&cfg.Updaters.Gettor.Gitlab)
+	if err != nil {
+		log.Printf("cannot create GitLab provider: %v", err)
+	} else {
+		providers = append(providers, gl)
+	}
 
 	googleDrive, err := newGoogleDriveUpdater(&cfg.Updaters.Gettor.GoogleDriveUpdater)
 	if err != nil {
 		log.Printf("cannot create Google Drive provider: %v", err)
+	} else {
+		providers = append(providers, googleDrive)
 	}
-
-	providers := []provider{gh, googleDrive}
 
 	for _, s3Config := range cfg.Updaters.Gettor.S3Updaters {
 		s3Provider, err := newS3Updater(&s3Config)

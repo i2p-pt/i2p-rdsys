@@ -27,10 +27,7 @@ func newGoogleDriveUpdater(cfg *internal.GoogleDriveUpdater) (provider, error) {
 	updater := googleDriveUpdater{config: cfg, ctx: context.Background()}
 	var err error
 	updater.drive, err = updater.createApiClientFromConfig()
-	if err != nil {
-		log.Println("[Google Drive] unable to create updater", err)
-	}
-	return &updater, nil
+	return &updater, err
 }
 
 type googleDriveUpdater struct {

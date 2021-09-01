@@ -122,6 +122,10 @@
                 "owner": "TheTorProject",
                 "repo": "gettorbrowser"
             },
+            "gitlab": {
+                "auth_token": "",
+                "owner": "TheTorProject"
+            },
             "s3": [
                 {
                     "access_key": "",
@@ -148,7 +152,7 @@
                 "app_credential_path": "",
                 "user_credential_path": "",
                 "parent_folder_id": ""
-            }
+	    }
         }
     }
 }

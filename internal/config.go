@@ -127,6 +127,7 @@ type Updaters struct {
 
 type GettorUpdater struct {
 	Github             Github             `json:"github"`
+	Gitlab             Gitlab             `json:"gitlab"`
 	S3Updaters         []S3Updater        `json:"s3"`
 	GoogleDriveUpdater GoogleDriveUpdater `json:"gdrive"`
 }
@@ -135,6 +136,11 @@ type Github struct {
 	AuthToken string `json:"auth_token"`
 	Owner     string `json:"owner"`
 	Repo      string `json:"repo"`
+}
+
+type Gitlab struct {
+	AuthToken string `json:"auth_token"`
+	Owner     string `json:"owner"`
 }
 
 type S3Updater struct {
