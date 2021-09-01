@@ -97,26 +97,34 @@ func pruneExpiredResources(metrics *Metrics, rcol *core.BackendResources) {
 func reloadBridgeDescriptors(extrainfoFile string, rcol *core.BackendResources, testFunc resources.TestFunc) {
 
 	var err error
-	var res []*resources.Transport
+	var bridges map[string]*resources.Bridge
 
 	for _, filename := range []string{extrainfoFile, extrainfoFile + ".new"} {
-		res, err = loadBridgesFromExtrainfo(filename)
+		bridges, err = loadBridgesFromExtrainfo(filename)
 		if err != nil {
 			log.Printf("Failed to reload bridge descriptors: %s", err)
 			continue
 		}
 
 		log.Printf("Adding %d resources from %q.", len(res), filename)
-		for _, resource := range res {
-			resource.SetTestFunc(testFunc)
-			rcol.Add(resource)
+		for _, bridge := range bridges {
+			for _, t := range bridge.Transports {
+				t.SetTestFunc(testFunc)
+				rcol.Add(t)
+			}
+
+			// only hand out vanilla flavour if there are no transports
+			if len(bridge.Transports) == 0 {
+				bridge.SetTestFunc(testFunc)
+				rcol.Add(bridge)
+			}
 		}
 	}
 }
 
 // loadBridgesFromExtrainfo loads and returns bridges from Serge's extrainfo
 // files.
-func loadBridgesFromExtrainfo(extrainfoFile string) ([]*resources.Transport, error) {
+func loadBridgesFromExtrainfo(extrainfoFile string) (map[string]*resources.Bridge, error) {
 
 	file, err := os.Open(extrainfoFile)
 	if err != nil {
@@ -135,38 +143,34 @@ func loadBridgesFromExtrainfo(extrainfoFile string) ([]*resources.Transport, err
 // ParseExtrainfoDoc parses the given extra-info document and returns the
 // content as a Bridges object.  Note that the extra-info document format is as
 // it's produced by the bridge authority.
-func ParseExtrainfoDoc(r io.Reader) ([]*resources.Transport, error) {
+func ParseExtrainfoDoc(r io.Reader) (map[string]*resources.Bridge, error) {
 
-	var fingerprint string
-	var transports []*resources.Transport
-	// var bridges = rsrc.NewBridges()
-	// var b *rsrc.Bridge
+	var bridges map[string]*resources.Bridge
 
 	scanner := bufio.NewScanner(r)
 	for scanner.Scan() {
 		line := scanner.Text()
 		line = strings.TrimSpace(line)
+		b := resources.NewBridge()
 		// We're dealing with a new extra-info block, i.e., a new bridge.
 		if strings.HasPrefix(line, ExtraInfoPrefix) {
-			// b = rsrc.NewBridge()
 			words := strings.Split(line, " ")
 			if len(words) != 3 {
 				return nil, errors.New("incorrect number of words in 'extra-info' line")
 			}
-			fingerprint = words[2]
-			// bridges.Bridges[b.Fingerprint] = b
+			b.Fingerprint = words[2]
+			bridges[b.Fingerprint] = b
 		}
 		// We're dealing with a bridge's transport protocols.  There may be
 		// several.
 		if strings.HasPrefix(line, TransportPrefix) {
 			t := resources.NewTransport()
-			t.Fingerprint = fingerprint
+			t.Fingerprint = b.Fingerprint
 			err := populateTransportInfo(line, t)
 			if err != nil {
 				return nil, err
 			}
-			// b.AddTransport(t)
-			transports = append(transports, t)
+			b.AddTransport(t)
 		}
 	}
 
@@ -174,7 +178,7 @@ func ParseExtrainfoDoc(r io.Reader) ([]*resources.Transport, error) {
 		return nil, err
 	}
 
-	return transports, nil
+	return bridges, nil
 }
 
 // populateTransportInfo parses the given transport line of the format:

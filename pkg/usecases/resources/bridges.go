@@ -10,7 +10,6 @@ import (
 	"net"
 	"reflect"
 	"strings"
-	"sync"
 	"time"
 
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
@@ -43,12 +42,6 @@ func (a *IPAddr) UnmarshalJSON(data []byte) error {
 	return json.Unmarshal(data, &a.IPAddr.IP)
 }
 
-// Bridges represents a set of Bridge objects.
-type Bridges struct {
-	m       sync.Mutex
-	Bridges map[string]*Bridge
-}
-
 // BridgeBase implements variables and methods that are shared by vanilla and
 // pluggable transport bridges.
 type BridgeBase struct {
@@ -66,6 +59,7 @@ type Bridge struct {
 	FirstSeen  time.Time    `json:"-"`
 	LastSeen   time.Time    `json:"-"`
 	Transports []*Transport `json:"-"`
+	testFunc   TestFunc
 }
 
 // IsPublic always returns false because neither vanilla nor pluggable
@@ -88,13 +82,6 @@ func (b *BridgeBase) BridgeUid(rType string) core.Hashkey {
 	}
 
 	return core.Hashkey(crc64.Checksum([]byte(rType+hFingerprint), table))
-}
-
-// NewBridges allocates and returns a new Bridges object.
-func NewBridges() *Bridges {
-	b := &Bridges{}
-	b.Bridges = make(map[string]*Bridge)
-	return b
 }
 
 // NewBridge allocates and returns a new Bridge object.
@@ -133,6 +120,23 @@ func (b *Bridge) Oid() core.Hashkey {
 
 func (b *Bridge) Uid() core.Hashkey {
 	return b.BridgeUid(b.RType)
+}
+
+func (b *Bridge) SetTestFunc(f TestFunc) {
+	b.testFunc = f
+}
+
+func (b *Bridge) Test() {
+	if b.testFunc != nil {
+		// if this bridge has transports, we want to test each of them
+		for _, t := range b.Transports {
+			t.Test()
+		}
+		// if this bridge has no transports, it is a vanilla bridge
+		if len(b.Transports) == 0 {
+			b.testFunc(b)
+		}
+	}
 }
 
 func (b *Bridge) String() string {

@@ -18,7 +18,6 @@ type Transport struct {
 	core.ResourceBase
 	BridgeBase
 	Parameters map[string]string `json:"params,omitempty"`
-	Bridge     *Bridge           `json:"-"`
 	testFunc   TestFunc
 }
 
