@@ -165,7 +165,13 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 			b.Address = resources.IPAddr{*addr}
 			b.Port = status.Address.IPv4ORPort
 		}
-		bridges[b.Fingerprint] = b
+
+		//check to see if the bridge has the running flag
+		if status.Flags.Running {
+			bridges[b.Fingerprint] = b
+		} else {
+			log.Printf("Found bridge %s in networkstatus but is not running", b.Fingerprint)
+		}
 	}
 	return bridges, nil
 }
