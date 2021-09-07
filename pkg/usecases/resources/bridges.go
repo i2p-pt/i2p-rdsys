@@ -45,11 +45,12 @@ func (a *IPAddr) UnmarshalJSON(data []byte) error {
 // BridgeBase implements variables and methods that are shared by vanilla and
 // pluggable transport bridges.
 type BridgeBase struct {
-	Protocol    string `json:"protocol"`
-	Address     IPAddr `json:"address"`
-	Port        uint16 `json:"port"`
-	Fingerprint string `json:"fingerprint"`
-	Distributor string `json:"-"`
+	Protocol    string   `json:"protocol"`
+	Address     IPAddr   `json:"address"`
+	Port        uint16   `json:"port"`
+	Fingerprint string   `json:"fingerprint"`
+	Distributor string   `json:"-"`
+	ORAddresses []IPAddr `json: "or-addresses"`
 }
 
 // Bridge represents a Tor bridge.

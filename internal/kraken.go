@@ -157,13 +157,12 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 		if addr, err := net.ResolveIPAddr("", status.Address.IPv6Address.String()); err == nil {
 			b.Address = resources.IPAddr{*addr}
 			b.Port = status.Address.IPv6ORPort
-		} else {
-			addr, err := net.ResolveIPAddr("", status.Address.IPv4Address.String())
-			if err != nil {
-				continue
-			}
+			b.ORAddresses = append(b.ORAddresses, b.Address)
+		}
+		if addr, err := net.ResolveIPAddr("", status.Address.IPv4Address.String()); err == nil {
 			b.Address = resources.IPAddr{*addr}
 			b.Port = status.Address.IPv4ORPort
+			b.ORAddresses = append(b.ORAddresses, b.Address)
 		}
 
 		//check to see if the bridge has the running flag
