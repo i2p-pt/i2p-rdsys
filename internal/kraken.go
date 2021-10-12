@@ -138,7 +138,7 @@ func reloadBridgeDescriptors(extrainfoFile, networkstatusFile string, rcol *core
 // learn about available bridges by parsing a network status file
 func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resources.Bridge, error) {
 	bridges := make(map[string]*resources.Bridge)
-	consensus, err := zoossh.ParseConsensusFile(networkstatusFile)
+	consensus, err := zoossh.ParseUnsafeConsensusFile(networkstatusFile)
 	if err != nil {
 		return nil, err
 	}
