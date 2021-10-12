@@ -7,11 +7,12 @@ import (
 
 // Dummy implements a simple Resource, which we use in unit tests.
 type Dummy struct {
-	ObjectId   Hashkey
-	UniqueId   Hashkey
-	ExpiryTime time.Duration
-	test       *ResourceTest
-	testFunc   func(Resource)
+	ObjectId     Hashkey
+	UniqueId     Hashkey
+	ExpiryTime   time.Duration
+	test         *ResourceTest
+	testFunc     func(Resource)
+	Distribution string
 }
 
 func NewDummy(oid Hashkey, uid Hashkey) *Dummy {
@@ -54,6 +55,9 @@ func (d *Dummy) SetTest(t *ResourceTest) {
 }
 func (d *Dummy) Expiry() time.Duration {
 	return d.ExpiryTime
+}
+func (d *Dummy) Distributor() string {
+	return d.Distribution
 }
 func (d *Dummy) IsValid() bool {
 	return true

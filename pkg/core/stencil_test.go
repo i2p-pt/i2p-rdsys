@@ -85,3 +85,33 @@ func TestGetFilterFunc(t *testing.T) {
 		t.Errorf("got unexpectedly large number of hits")
 	}
 }
+
+func TestGetFitlerFuncWithDistributor(t *testing.T) {
+	s := Stencil{}
+	// "foo" is half as likely to get resources as "bar".
+	s.AddInterval(&Interval{0, 4, "foo"})
+	s.AddInterval(&Interval{5, 14, "bar"})
+
+	f, err := s.GetFilterFunc("foo")
+	if err != nil {
+		t.Errorf("failed to create filter function")
+	}
+
+	runs := 1000
+	d := &Dummy{}
+	d.Distribution = "bar"
+	for i := 0; i < runs; i++ {
+		d.UniqueId = Hashkey(rand.Uint64())
+		if f(d) {
+			t.Errorf("Resource set to be distributed by %s but got from foo", d.Distributor())
+		}
+	}
+
+	d.Distribution = "foo"
+	for i := 0; i < runs; i++ {
+		d.UniqueId = Hashkey(rand.Uint64())
+		if !f(d) {
+			t.Errorf("Resource set to be distributed by %s but not available from foo", d.Distributor())
+		}
+	}
+}

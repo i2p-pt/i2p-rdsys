@@ -21,6 +21,7 @@ type Config struct {
 type BackendConfig struct {
 	ExtrainfoFile          string            `json:"extrainfo_file"`
 	NetworkstatusFile      string            `json:"networkstatus_file"`
+	DescriptorsFile        string            `json:"descriptors_file"`
 	ApiTokens              map[string]string `json:"api_tokens"`
 	ResourcesEndpoint      string            `json:"api_endpoint_resources"`
 	ResourceStreamEndpoint string            `json:"api_endpoint_resource_stream"`

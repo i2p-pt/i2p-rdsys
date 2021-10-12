@@ -40,6 +40,9 @@ type Resource interface {
 	// Expiry returns the duration after which the resource should be deleted
 	// from the backend (if the backend hasn't received an update).
 	Expiry() time.Duration
+
+	// Distributor set for this resource
+	Distributor() string
 }
 
 // ResourceTest represents the result of a test of a resource.  We use the tool

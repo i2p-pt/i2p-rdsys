@@ -106,6 +106,10 @@ func (s *Stencil) GetFilterFunc(distName string) (FilterFunc, error) {
 	// the given distributor name.  The function uses a deterministic random
 	// number generator to that end.
 	f := func(r Resource) bool {
+		distributor := r.Distributor()
+		if distributor != "" {
+			return distributor == distName
+		}
 
 		// What interval does the resource's hash fall into?
 		seed := r.Uid()

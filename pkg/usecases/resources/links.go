@@ -113,3 +113,8 @@ func (tl *TBLink) String() string {
 func (tl *TBLink) Expiry() time.Duration {
 	return time.Duration(time.Hour * 24 * 365)
 }
+
+// Distributor set for this link
+func (tl *TBLink) Distributor() string {
+	return ""
+}

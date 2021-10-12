@@ -34,7 +34,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	testFunc := bCtx.rTestPool.GetTestFunc()
 	// Immediately parse bridge descriptor when we're called, and let caller
 	// know when we're done.
-	reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, cfg.Backend.NetworkstatusFile, rcol, testFunc)
+	reloadBridgeDescriptors(cfg, rcol, testFunc)
 	ready <- true
 
 	for {
@@ -44,7 +44,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 			return
 		case <-ticker.C:
 			log.Println("Kraken's ticker is ticking.")
-			reloadBridgeDescriptors(cfg.Backend.ExtrainfoFile, cfg.Backend.NetworkstatusFile, rcol, testFunc)
+			reloadBridgeDescriptors(cfg, rcol, testFunc)
 			pruneExpiredResources(bCtx.metrics, rcol)
 			calcTestedResources(bCtx.metrics, rcol)
 			log.Printf("Backend resources: %s", rcol)
@@ -95,16 +95,25 @@ func pruneExpiredResources(metrics *Metrics, rcol *core.BackendResources) {
 
 // reloadBridgeDescriptors reloads bridge descriptors from the given
 // cached-extrainfo file and its corresponding cached-extrainfo.new.
-func reloadBridgeDescriptors(extrainfoFile, networkstatusFile string, rcol *core.BackendResources, testFunc resources.TestFunc) {
+func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc resources.TestFunc) {
 
 	//First load bridge descriptors from network status file
-	bridges, err := loadBridgesFromNetworkstatus(networkstatusFile)
+	bridges, err := loadBridgesFromNetworkstatus(cfg.Backend.NetworkstatusFile)
 	if err != nil {
 		log.Printf("Error loading network statuses: %s", err.Error())
 	}
 
+	distributorNames := make([]string, 0, len(cfg.Backend.DistProportions))
+	for dist := range cfg.Backend.DistProportions {
+		distributorNames = append(distributorNames, dist)
+	}
+	err = getBridgeDistributionRequest(cfg.Backend.DescriptorsFile, distributorNames, bridges)
+	if err != nil {
+		log.Printf("Error loading bridge descriptors file: %s", err.Error())
+	}
+
 	//Update bridges from extrainfo files
-	for _, filename := range []string{extrainfoFile, extrainfoFile + ".new"} {
+	for _, filename := range []string{cfg.Backend.ExtrainfoFile, cfg.Backend.ExtrainfoFile + ".new"} {
 		descriptors, err := loadBridgesFromExtrainfo(filename)
 		if err != nil {
 			log.Printf("Failed to reload bridge descriptors: %s", err)
@@ -173,6 +182,30 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 		}
 	}
 	return bridges, nil
+}
+
+// getBridgeDistributionRequest from the bridge-descriptors file
+func getBridgeDistributionRequest(descriptorsFile string, distributorNames []string, bridges map[string]*resources.Bridge) error {
+	descriptors, err := zoossh.ParseUnsafeDescriptorFile(descriptorsFile)
+	if err != nil {
+		return err
+	}
+
+	for fingerprint, bridge := range bridges {
+		descriptor, ok := descriptors.Get(zoossh.Fingerprint(fingerprint))
+		if !ok {
+			log.Printf("Bridge %s from networkstatus not pressent in the descriptors file %s", fingerprint, descriptorsFile)
+			continue
+		}
+
+		for _, dist := range distributorNames {
+			if dist == descriptor.BridgeDistributionRequest {
+				bridge.Distribution = dist
+				break
+			}
+		}
+	}
+	return nil
 }
 
 // loadBridgesFromExtrainfo loads and returns bridges from Serge's extrainfo
