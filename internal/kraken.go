@@ -174,6 +174,11 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 			b.ORAddresses = append(b.ORAddresses, b.Address)
 		}
 
+		b.Flags.Fast = status.Flags.Fast
+		b.Flags.Stable = status.Flags.Stable
+		b.Flags.Running = status.Flags.Running
+		b.Flags.Valid = status.Flags.Valid
+
 		//check to see if the bridge has the running flag
 		if status.Flags.Running {
 			bridges[b.Fingerprint] = b

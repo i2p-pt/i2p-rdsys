@@ -51,6 +51,15 @@ type BridgeBase struct {
 	Fingerprint  string   `json:"fingerprint"`
 	ORAddresses  []IPAddr `json:"or-addresses"`
 	Distribution string   `json:"distribution"`
+	Flags        Flags    `json:"flags"`
+}
+
+// Flags exposes the bridge flags
+type Flags struct {
+	Fast    bool `json:"fast"`
+	Stable  bool `json:"stable"`
+	Running bool `json:"running"`
+	Valid   bool `json:"valid"`
 }
 
 // Bridge represents a Tor bridge.
