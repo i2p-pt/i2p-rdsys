@@ -236,7 +236,7 @@ func loadBridgesFromExtrainfo(extrainfoFile string) (map[string]*resources.Bridg
 // it's produced by the bridge authority.
 func ParseExtrainfoDoc(r io.Reader) (map[string]*resources.Bridge, error) {
 
-	var bridges map[string]*resources.Bridge
+	bridges := make(map[string]*resources.Bridge)
 
 	scanner := bufio.NewScanner(r)
 	for scanner.Scan() {
