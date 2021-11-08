@@ -166,12 +166,22 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 		if addr, err := net.ResolveIPAddr("", status.Address.IPv6Address.String()); err == nil {
 			b.Address = resources.IPAddr{*addr}
 			b.Port = status.Address.IPv6ORPort
-			b.ORAddresses = append(b.ORAddresses, b.Address)
+			oraddress := resources.ORAddress{
+				IPVersion: 6,
+				Port:      b.Port,
+				Address:   b.Address,
+			}
+			b.ORAddresses = append(b.ORAddresses, oraddress)
 		}
 		if addr, err := net.ResolveIPAddr("", status.Address.IPv4Address.String()); err == nil {
 			b.Address = resources.IPAddr{*addr}
 			b.Port = status.Address.IPv4ORPort
-			b.ORAddresses = append(b.ORAddresses, b.Address)
+			oraddress := resources.ORAddress{
+				IPVersion: 4,
+				Port:      b.Port,
+				Address:   b.Address,
+			}
+			b.ORAddresses = append(b.ORAddresses, oraddress)
 		}
 
 		b.Flags.Fast = status.Flags.Fast
