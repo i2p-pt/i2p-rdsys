@@ -93,13 +93,25 @@ type Updaters struct {
 }
 
 type GettorUpdater struct {
-	Github Github `json:"github"`
+	Github     Github      `json:"github"`
+	S3Updaters []S3Updater `json:"s3_updaters"`
 }
 
 type Github struct {
 	AuthToken string `json:"auth_token"`
 	Owner     string `json:"owner"`
 	Repo      string `json:"repo"`
+}
+
+type S3Updater struct {
+	AccessKey                    string `json:"access_key"`
+	AccessSecret                 string `json:"access_secret"`
+	SigningMethod                string `json:"signing_method"`
+	EndpointUrl                  string `json:"endpoint_url"`
+	EndpointRegion               string `json:"endpoint_region"`
+	Name                         string `json:"name"`
+	Bucket                       string `json:"bucket"`
+	NameProceduralGenerationSeed string `json:"name_procedural_generation_seed"`
 }
 
 // LoadConfig loads the given JSON configuration file and returns the resulting

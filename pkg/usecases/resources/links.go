@@ -67,13 +67,15 @@ func (v Version) Compare(v2 Version) int {
 // TBLink stores a link to download Tor Browser with a certain locale for a certain platform
 type TBLink struct {
 	core.ResourceBase
-	Locale   string  `json:"locale"`
-	Platform string  `json:"platform"`
-	Version  Version `json:"version"`
-	Provider string  `json:"provider"`
-	FileName string  `json:"file_name"`
-	Link     string  `json:"link"`
-	SigLink  string  `json:"sig_link"`
+	Locale       string         `json:"locale"`
+	Platform     string         `json:"platform"`
+	Version      Version        `json:"version"`
+	Provider     string         `json:"provider"`
+	FileName     string         `json:"file_name"`
+	Link         string         `json:"link"`
+	SigLink      string         `json:"sig_link"`
+	CustomOid    *core.Hashkey  `json:"custom_oid"`
+	CustomExpiry *time.Duration `json:"custom_expiry"`
 }
 
 // NewTBLink allocates and returns a new TBLink object.
@@ -94,6 +96,9 @@ func (tl *TBLink) IsValid() bool {
 }
 
 func (tl *TBLink) Oid() core.Hashkey {
+	if tl.CustomOid != nil {
+		return *tl.CustomOid
+	}
 	table := crc64.MakeTable(Crc64Polynomial)
 	return core.Hashkey(crc64.Checksum([]byte(tl.Link), table))
 }
@@ -111,6 +116,9 @@ func (tl *TBLink) String() string {
 
 // Expiry TBLinks that are older than a year, a newer version should have already being released
 func (tl *TBLink) Expiry() time.Duration {
+	if tl.CustomExpiry != nil {
+		return *tl.CustomExpiry
+	}
 	return time.Duration(time.Hour * 24 * 365)
 }
 
