@@ -56,6 +56,14 @@ func InitUpdater(cfg *internal.Config) {
 	gh := newGithubProvider(&cfg.Updaters.Gettor.Github)
 	providers := []provider{gh}
 
+	for _, s3Config := range cfg.Updaters.Gettor.S3Updaters {
+		s3Provider, err := newS3Updater(&s3Config)
+		if err != nil {
+			log.Printf("cannot create S3 provider: %v", err)
+		}
+		providers = append(providers, s3Provider)
+	}
+
 	updateIfNeeded(updater, providers)
 	for {
 		select {
