@@ -94,7 +94,7 @@ type Updaters struct {
 
 type GettorUpdater struct {
 	Github     Github      `json:"github"`
-	S3Updaters []S3Updater `json:"s3_updaters"`
+	S3Updaters []S3Updater `json:"s3"`
 }
 
 type Github struct {

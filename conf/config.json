@@ -86,7 +86,29 @@
                 "auth_token": "",
                 "owner": "TheTorProject",
                 "repo": "gettorbrowser"
-            }
+            },
+            "s3": [
+                {
+                    "access_key": "",
+                    "access_secret": "",
+                    "signing_method": "archive_org_dangerous_workaround",
+                    "endpoint_url": "https://s3.us.archive.org/",
+                    "endpoint_region": "",
+                    "name": "archive_org",
+                    "bucket": "",
+                    "name_procedural_generation_seed": "SECRET"
+                },
+                {
+                    "access_key": "",
+                    "access_secret": "",
+                    "signing_method": "v4",
+                    "endpoint_url": "https://s3.fr-par.scw.cloud",
+                    "endpoint_region": "fr-par",
+                    "name": "scaleway",
+                    "bucket": "get-tor",
+                    "name_procedural_generation_seed": ""
+                }
+            ]
         }
     }
 }
