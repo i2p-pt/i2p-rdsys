@@ -23,6 +23,7 @@ const (
 	MinTransportWords    = 3
 	TransportPrefix      = "transport"
 	ExtraInfoPrefix      = "extra-info"
+	RecordEndPrefix      = "-----END SIGNATURE-----"
 )
 
 func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendContext) {
@@ -249,10 +250,11 @@ func ParseExtrainfoDoc(r io.Reader) (map[string]*resources.Bridge, error) {
 	bridges := make(map[string]*resources.Bridge)
 
 	scanner := bufio.NewScanner(r)
+	b := resources.NewBridge()
 	for scanner.Scan() {
 		line := scanner.Text()
 		line = strings.TrimSpace(line)
-		b := resources.NewBridge()
+
 		// We're dealing with a new extra-info block, i.e., a new bridge.
 		if strings.HasPrefix(line, ExtraInfoPrefix) {
 			words := strings.Split(line, " ")
@@ -260,8 +262,8 @@ func ParseExtrainfoDoc(r io.Reader) (map[string]*resources.Bridge, error) {
 				return nil, errors.New("incorrect number of words in 'extra-info' line")
 			}
 			b.Fingerprint = words[2]
-			bridges[b.Fingerprint] = b
 		}
+
 		// We're dealing with a bridge's transport protocols.  There may be
 		// several.
 		if strings.HasPrefix(line, TransportPrefix) {
@@ -272,6 +274,12 @@ func ParseExtrainfoDoc(r io.Reader) (map[string]*resources.Bridge, error) {
 				return nil, err
 			}
 			b.AddTransport(t)
+		}
+
+		// Let's store the bridge when the record ends
+		if strings.HasPrefix(line, RecordEndPrefix) {
+			bridges[b.Fingerprint] = b
+			b = resources.NewBridge()
 		}
 	}
 
