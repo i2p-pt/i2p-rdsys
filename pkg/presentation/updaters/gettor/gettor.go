@@ -58,7 +58,13 @@ func InitUpdater(cfg *internal.Config) {
 	}()
 
 	gh := newGithubProvider(&cfg.Updaters.Gettor.Github)
-	providers := []provider{gh}
+
+	googleDrive, err := newGoogleDriveUpdater(&cfg.Updaters.Gettor.GoogleDriveUpdater)
+	if err != nil {
+		log.Printf("cannot create Google Drive provider: %v", err)
+	}
+
+	providers := []provider{gh, googleDrive}
 
 	for _, s3Config := range cfg.Updaters.Gettor.S3Updaters {
 		s3Provider, err := newS3Updater(&s3Config)
