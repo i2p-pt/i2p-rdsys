@@ -109,7 +109,12 @@
                     "bucket": "get-tor",
                     "name_procedural_generation_seed": ""
                 }
-            ]
+            ],
+            "gdrive": {
+                "app_credential_path": "",
+                "user_credential_path": "",
+                "parent_folder_id": ""
+            }
         }
     }
 }
