@@ -94,8 +94,9 @@ type Updaters struct {
 }
 
 type GettorUpdater struct {
-	Github     Github      `json:"github"`
-	S3Updaters []S3Updater `json:"s3"`
+	Github             Github             `json:"github"`
+	S3Updaters         []S3Updater        `json:"s3"`
+	GoogleDriveUpdater GoogleDriveUpdater `json:"google_drive_updater"`
 }
 
 type Github struct {
@@ -113,6 +114,12 @@ type S3Updater struct {
 	Name                         string `json:"name"`
 	Bucket                       string `json:"bucket"`
 	NameProceduralGenerationSeed string `json:"name_procedural_generation_seed"`
+}
+
+type GoogleDriveUpdater struct {
+	AppCredentialPath  string `json:"app_credential_path"`
+	UserCredentialPath string `json:"user_credential_path"`
+	ParentFolderID     string `json:"parent_folder_id"`
 }
 
 // LoadConfig loads the given JSON configuration file and returns the resulting

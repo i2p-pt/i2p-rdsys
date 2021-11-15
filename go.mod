@@ -4,8 +4,8 @@ go 1.14
 
 require (
 	github.com/NullHypothesis/zoossh v0.0.0-20211012143359-017a7be2e713
-	github.com/aws/aws-sdk-go-v2 v1.10.0 // indirect
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.17.0 // indirect
+	github.com/aws/aws-sdk-go-v2 v1.10.0
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.17.0
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/emersion/go-imap v1.2.0
 	github.com/emersion/go-imap-idle v0.0.0-20210907174914-db2568431445
@@ -16,9 +16,10 @@ require (
 	github.com/prometheus/client_golang v1.11.0
 	github.com/prometheus/common v0.31.1 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
+	github.com/stretchr/testify v1.6.1
 	golang.org/x/net v0.0.0-20211011170408-caeb26a5c8c0 // indirect
 	golang.org/x/oauth2 v0.0.0-20211005180243-6b3c2da341f1
-	golang.org/x/sys v0.0.0-20211007075335-d3039528d8ac // indirect
+	google.golang.org/api v0.60.0
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 )
