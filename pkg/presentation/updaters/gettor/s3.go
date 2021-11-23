@@ -180,7 +180,8 @@ func (s s3updater) formatNameForExistenceObject(platform string, version resourc
 
 func (s s3updater) formatNameForFile(platform string, version resources.Version, filename string) s3Object {
 	bucketName := s.createProcedurallyGeneratedName(
-		fmt.Sprintf("%v,%v,%v,%v", platform, version, "tor-s3", s.config.Name))
+		fmt.Sprintf("%v,%v,%v", version, "tor-s3", s.config.Name))
+	bucketName = fmt.Sprintf("torbrowser-%v-%v", version.String(), bucketName)
 	if s.config.Bucket != "" {
 		bucketName = s.config.Bucket
 	}
