@@ -91,8 +91,10 @@ func (s s3updater) newRelease(platform string, version resources.Version) upload
 		link.Locale = locale
 		link.FileName = path.Base(binaryPath)
 
-		var duration = time.Hour * 24
-		link.CustomExpiry = &duration
+		if s.config.SigningMethod != "archive_org_dangerous_workaround" {
+			var duration = time.Hour * 24
+			link.CustomExpiry = &duration
+		}
 
 		fileid := fmt.Sprintf("version:%v, provider: %v, plafrorm: %v, locale: %v, filename: %v",
 			link.Version, link.Provider, link.Platform, link.Locale, link.FileName)
