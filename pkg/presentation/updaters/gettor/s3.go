@@ -37,6 +37,11 @@ func (s s3updater) needsUpdate(platform string, version resources.Version) bool 
 	return true
 }
 
+func (s s3updater) needsUpdateRefreshOnly(platform string, version resources.Version) bool {
+	existenceObject := s.formatNameForExistenceObject(platform, version)
+	return s.checkObjectExistence(existenceObject) == nil
+}
+
 func (s s3updater) newRelease(platform string, version resources.Version) uploadFileFunc {
 	existenceObject := s.formatNameForExistenceObject(platform, version)
 	var updateLinkOnly = false

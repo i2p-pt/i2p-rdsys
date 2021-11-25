@@ -33,6 +33,10 @@ type provider interface {
 	newRelease(platform string, version resources.Version) uploadFileFunc
 }
 
+type providerExtRefreshLink interface {
+	needsUpdateRefreshOnly(platform string, version resources.Version) bool
+}
+
 type downloadsLinks struct {
 	Version   string                                  `json:"version"`
 	Downloads map[string]map[string]map[string]string `json:"downloads"`
@@ -90,9 +94,17 @@ func updateIfNeeded(updater *gettor.GettorUpdater, providers []provider) {
 	defer os.RemoveAll(tmpDir)
 
 	for platform, locales := range downloads.Downloads {
+		shouldDownload := false
 		uploadFuncs := []uploadFileFunc{}
 		for _, p := range providers {
 			if p.needsUpdate(platform, version) {
+				if refreshOnly, ok := p.(providerExtRefreshLink); ok {
+					if !refreshOnly.needsUpdateRefreshOnly(platform, version) {
+						shouldDownload = true
+					}
+				} else {
+					shouldDownload = true
+				}
 				fn := p.newRelease(platform, version)
 				if fn != nil {
 					uploadFuncs = append(uploadFuncs, fn)
@@ -105,12 +117,16 @@ func updateIfNeeded(updater *gettor.GettorUpdater, providers []provider) {
 
 		for locale, assets := range locales {
 			log.Println("Uploading to distributors", assets["binary"])
-			binaryPath, err := getAsset(assets["binary"], tmpDir)
+			getAssetPath := getAsset
+			if !shouldDownload {
+				getAssetPath = constructAssetPath
+			}
+			binaryPath, err := getAssetPath(assets["binary"], tmpDir)
 			if err != nil {
 				log.Println("Error getting asset:", err)
 				continue
 			}
-			sigPath, err := getAsset(assets["sig"], tmpDir)
+			sigPath, err := getAssetPath(assets["sig"], tmpDir)
 			if err != nil {
 				log.Println("Error getting asset:", err)
 				continue
@@ -141,10 +157,18 @@ func updateIfNeeded(updater *gettor.GettorUpdater, providers []provider) {
 	}
 }
 
-func getAsset(url string, tmpDir string) (filePath string, err error) {
+func constructAssetPath(url string, tmpDir string) (filePath string, err error) {
 	segments := strings.Split(url, "/")
 	fileName := segments[len(segments)-1]
 	filePath = path.Join(tmpDir, fileName)
+	return fileName, nil
+}
+
+func getAsset(url string, tmpDir string) (filePath string, err error) {
+	filePath, err = constructAssetPath(url, tmpDir)
+	if err != nil {
+		return
+	}
 	file, err := os.Create(filePath)
 	if err != nil {
 		return
