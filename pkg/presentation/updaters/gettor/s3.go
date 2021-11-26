@@ -168,7 +168,7 @@ func (s s3updater) createLink(obj s3Object) (string, error) {
 	}
 	persignClient := s3.NewPresignClient(s.s3, s.withPersigner)
 	presignedResult, err := persignClient.PresignGetObject(s.ctx,
-		&s3.GetObjectInput{Key: &obj.name, Bucket: &obj.bucket}, s3.WithPresignExpires(time.Hour*24))
+		&s3.GetObjectInput{Key: &obj.name, Bucket: &obj.bucket}, s3.WithPresignExpires(time.Hour*24*6))
 	if err != nil {
 		return "", err
 	}
