@@ -133,6 +133,7 @@ func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc 
 	log.Printf("Adding %d bridges.", len(bridges))
 	for _, bridge := range bridges {
 		for _, t := range bridge.Transports {
+			t.Flags = bridge.Flags
 			t.SetTestFunc(testFunc)
 			rcol.Add(t)
 		}
