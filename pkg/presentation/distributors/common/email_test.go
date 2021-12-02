@@ -2,6 +2,7 @@ package common
 
 import (
 	"net/mail"
+	"os"
 	"strings"
 	"syscall"
 	"testing"
@@ -57,6 +58,9 @@ func testImapServer() (*server.Server, backend.Mailbox) {
 }
 
 func TestImapExistingInbox(t *testing.T) {
+	if os.Getenv("CI") != "" {
+		t.Skip("This test fails unreliable in the CI (#68)")
+	}
 	s, mbox := testImapServer()
 	defer s.Close()
 
