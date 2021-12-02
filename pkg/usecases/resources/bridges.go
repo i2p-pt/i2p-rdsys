@@ -42,6 +42,11 @@ func (a *IPAddr) UnmarshalJSON(data []byte) error {
 	return json.Unmarshal(data, &a.IPAddr.IP)
 }
 
+// Invalid checks if is a valid public address
+func (a *IPAddr) Invalid() bool {
+	return a.IP.IsUnspecified() || a.IP.IsPrivate() || a.IP.IsLoopback() || a.IP.IsMulticast() || a.IP.IsLinkLocalUnicast() || a.IP.IsLinkLocalUnicast()
+}
+
 // BridgeBase implements variables and methods that are shared by vanilla and
 // pluggable transport bridges.
 type BridgeBase struct {

@@ -133,6 +133,10 @@ func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc 
 	log.Printf("Adding %d bridges.", len(bridges))
 	for _, bridge := range bridges {
 		for _, t := range bridge.Transports {
+			if t.Address.Invalid() {
+				log.Printf("Reject bridge %s transport %s as its IP is not valid: %s", t.Fingerprint, t.Type(), t.Address.String())
+				continue
+			}
 			t.Flags = bridge.Flags
 			t.SetTestFunc(testFunc)
 			rcol.Add(t)
@@ -140,6 +144,10 @@ func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc 
 
 		// only hand out vanilla flavour if there are no transports
 		if len(bridge.Transports) == 0 {
+			if bridge.Address.Invalid() {
+				log.Printf("Reject vanilla bridge %s s as its IP is not valid: %s", bridge.Fingerprint, bridge.Address.String())
+				continue
+			}
 			bridge.SetTestFunc(testFunc)
 			rcol.Add(bridge)
 		}
