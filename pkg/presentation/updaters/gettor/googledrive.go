@@ -24,7 +24,7 @@ func newGoogleDriveUpdater(cfg *internal.GoogleDriveUpdater) (provider, error) {
 	var err error
 	updater.drive, err = updater.createApiClientFromConfig()
 	if err != nil {
-		log.Println("[Google Drive]unable to create updater", err)
+		log.Println("[Google Drive] unable to create updater", err)
 	}
 	return &updater, nil
 }
@@ -39,7 +39,7 @@ func (g googleDriveUpdater) needsUpdate(platform string, version resources.Versi
 	if exist, err := g.checkFileExistence(g.formatNameForExistenceObject(platform, version)); err == nil {
 		return !exist
 	} else {
-		log.Println("[Google Drive]unable to check for update", err)
+		log.Println("[Google Drive] unable to check for update", err)
 		return false
 	}
 }
