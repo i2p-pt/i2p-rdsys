@@ -53,29 +53,19 @@ func (g googleDriveUpdater) newRelease(platform string, version resources.Versio
 	return func(binaryPath string, sigPath string, locale string) *resources.TBLink {
 		link := resources.NewTBLink()
 
-		const binaryFile = 0
-		const signatureFile = 1
-		for i, filePath := range []string{binaryPath, sigPath} {
-			filename := path.Base(filePath)
-			fd, err := os.Open(filePath)
+		{
+			var err error
+			link.Link, err = g.createLinkFromPath(binaryPath)
 			if err != nil {
-				log.Println("[Google Drive] Unable to create file to be uploaded", err)
+				log.Println("[Google Drive] Unable to create link for binary ", err)
 				return nil
 			}
-			defer fd.Close()
-
-			downloadLink, err := g.uploadFileAndGetLink(filename, fd)
+		}
+		{
+			var err error
+			link.SigLink, err = g.createLinkFromPath(sigPath)
 			if err != nil {
-				log.Println("[Google Drive] Unable to get file link ", err)
-				return nil
-			}
-			switch i {
-			case binaryFile:
-				link.Link = downloadLink
-			case signatureFile:
-				link.SigLink = downloadLink
-			default:
-				log.Println("[Google Drive] unexpected file index")
+				log.Println("[Google Drive] Unable to create link for binary ", err)
 				return nil
 			}
 		}
@@ -88,6 +78,23 @@ func (g googleDriveUpdater) newRelease(platform string, version resources.Versio
 		return link
 	}
 
+}
+
+func (g googleDriveUpdater) createLinkFromPath(filePath string) (string, error) {
+	filename := path.Base(filePath)
+	fd, err := os.Open(filePath)
+	if err != nil {
+		log.Println("[Google Drive] Unable to create file to be uploaded", err)
+		return "", err
+	}
+	defer fd.Close()
+
+	downloadLink, err := g.uploadFileAndGetLink(filename, fd)
+	if err != nil {
+		log.Println("[Google Drive] Unable to get file link ", err)
+		return "", err
+	}
+	return downloadLink, nil
 }
 
 // tokenFromFile Retrieves a token from a local file.
