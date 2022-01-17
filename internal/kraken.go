@@ -104,10 +104,12 @@ func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc 
 		log.Printf("Error loading network statuses: %s", err.Error())
 	}
 
-	distributorNames := make([]string, 0, len(cfg.Backend.DistProportions))
+	distributorNames := make([]string, 0, len(cfg.Backend.DistProportions)+1)
+	distributorNames = append(distributorNames, "none")
 	for dist := range cfg.Backend.DistProportions {
 		distributorNames = append(distributorNames, dist)
 	}
+
 	err = getBridgeDistributionRequest(cfg.Backend.DescriptorsFile, distributorNames, bridges)
 	if err != nil {
 		log.Printf("Error loading bridge descriptors file: %s", err.Error())
@@ -223,10 +225,15 @@ func getBridgeDistributionRequest(descriptorsFile string, distributorNames []str
 			continue
 		}
 
-		for _, dist := range distributorNames {
-			if dist == descriptor.BridgeDistributionRequest {
-				bridge.Distribution = dist
-				break
+		if descriptor.BridgeDistributionRequest != "any" {
+			for _, dist := range distributorNames {
+				if dist == descriptor.BridgeDistributionRequest {
+					bridge.Distribution = dist
+					break
+				}
+			}
+			if bridge.Distribution == "" {
+				log.Printf("Bridge %s has an unsupported distribution request: %s", fingerprint, descriptor.BridgeDistributionRequest)
 			}
 		}
 	}
