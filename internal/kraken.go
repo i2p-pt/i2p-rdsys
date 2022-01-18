@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	KrakenTickerInterval = time.Minute
+	KrakenTickerInterval = 30 * time.Minute
 	MinTransportWords    = 3
 	TransportPrefix      = "transport"
 	ExtraInfoPrefix      = "extra-info"
@@ -37,6 +37,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	// know when we're done.
 	reloadBridgeDescriptors(cfg, rcol, testFunc)
 	ready <- true
+	writeAssignments(cfg, rcol)
 
 	for {
 		select {
@@ -48,6 +49,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 			reloadBridgeDescriptors(cfg, rcol, testFunc)
 			pruneExpiredResources(bCtx.metrics, rcol)
 			calcTestedResources(bCtx.metrics, rcol)
+			writeAssignments(cfg, rcol)
 			log.Printf("Backend resources: %s", rcol)
 		}
 	}

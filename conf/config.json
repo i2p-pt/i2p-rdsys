@@ -10,6 +10,7 @@
         "web_endpoint_status": "/status",
         "web_endpoint_metrics": "/rdsys-backend-metrics",
         "storage_dir": "/tmp/storage",
+        "assignments_file": "./assignments.log",
         "resources": {
                 "vanilla": {
 			"unpartitioned": false,

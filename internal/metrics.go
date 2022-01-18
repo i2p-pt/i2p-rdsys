@@ -1,8 +1,17 @@
 package internal
 
 import (
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+	"strings"
+	"time"
+
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
+	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
+	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/resources"
 )
 
 const (
@@ -48,4 +57,59 @@ func InitMetrics() *Metrics {
 	)
 
 	return metrics
+}
+
+func writeAssignments(cfg *Config, rcol *core.BackendResources) {
+	file, err := os.OpenFile(cfg.Backend.AssignmentsFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Println("Can't open assignments file", cfg.Backend.AssignmentsFile, err)
+		return
+	}
+	defer file.Close()
+
+	fmt.Fprintln(file, "bridge-pool-assignment", time.Now().UTC().Format("2006-01-02 15:04:05"))
+	for distributor := range cfg.Backend.DistProportions {
+		for transport := range cfg.Backend.Resources {
+			rs := rcol.Get(distributor, transport)
+			for _, resource := range rs {
+				transport, ok := resource.(*resources.Transport)
+				if ok {
+					fmt.Fprintln(file, transport.Fingerprint, distributor, "transport="+transport.Type(), bridgeInfo(transport.BridgeBase))
+					continue
+				}
+
+				bridge, ok := resource.(*resources.Bridge)
+				if ok {
+					fmt.Fprintln(file, bridge.Fingerprint, distributor, bridgeInfo(bridge.BridgeBase))
+				}
+			}
+		}
+	}
+
+}
+
+func bridgeInfo(bridge resources.BridgeBase) string {
+	ip := map[uint16]struct{}{}
+
+	if bridge.Address.IP.To4() != nil {
+		ip[4] = struct{}{}
+	} else {
+		ip[6] = struct{}{}
+	}
+
+	for _, address := range bridge.ORAddresses {
+		ip[address.IPVersion] = struct{}{}
+	}
+
+	versions := make([]string, 0, len(ip))
+	for version := range ip {
+		versions = append(versions, strconv.Itoa(int(version)))
+	}
+
+	info := []string{"ip=" + strings.Join(versions, ",")}
+	if bridge.Port == 443 {
+		info = append(info, "port=443")
+	}
+
+	return strings.Join(info, " ")
 }

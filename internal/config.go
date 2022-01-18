@@ -30,6 +30,7 @@ type BackendConfig struct {
 	MetricsEndpoint        string            `json:"web_endpoint_metrics"`
 	BridgestrapEndpoint    string            `json:"bridgestrap_endpoint"`
 	StorageDir             string            `json:"storage_dir"`
+	AssignmentsFile        string            `json:"assignments_file"`
 	// DistProportions contains the proportion of resources that each
 	// distributor should get.  E.g. if the HTTPS distributor is set to x and
 	// the Salmon distributor is set to y, then HTTPS gets x/(x+y) of all
