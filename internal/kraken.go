@@ -37,7 +37,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	// know when we're done.
 	reloadBridgeDescriptors(cfg, rcol, testFunc)
 	ready <- true
-	writeAssignments(cfg, rcol)
+	bCtx.metrics.updateDistributors(cfg, rcol)
 
 	for {
 		select {
@@ -49,7 +49,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 			reloadBridgeDescriptors(cfg, rcol, testFunc)
 			pruneExpiredResources(bCtx.metrics, rcol)
 			calcTestedResources(bCtx.metrics, rcol)
-			writeAssignments(cfg, rcol)
+			bCtx.metrics.updateDistributors(cfg, rcol)
 			log.Printf("Backend resources: %s", rcol)
 		}
 	}

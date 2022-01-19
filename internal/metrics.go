@@ -19,9 +19,10 @@ const (
 )
 
 type Metrics struct {
-	TestedResources *prometheus.GaugeVec
-	Resources       *prometheus.GaugeVec
-	Requests        *prometheus.CounterVec
+	TestedResources      *prometheus.GaugeVec
+	Resources            *prometheus.GaugeVec
+	DistributorResources *prometheus.GaugeVec
+	Requests             *prometheus.CounterVec
 }
 
 // InitMetrics initialises our Prometheus metrics.
@@ -47,6 +48,15 @@ func InitMetrics() *Metrics {
 		[]string{"type"},
 	)
 
+	metrics.DistributorResources = promauto.NewGaugeVec(
+		prometheus.GaugeOpts{
+			Namespace: PrometheusNamespace,
+			Name:      "distributor_resources",
+			Help:      "The number of resources we have per distributor",
+		},
+		[]string{"distributor", "type"},
+	)
+
 	metrics.Requests = promauto.NewCounterVec(
 		prometheus.CounterOpts{
 			Namespace: PrometheusNamespace,
@@ -59,7 +69,7 @@ func InitMetrics() *Metrics {
 	return metrics
 }
 
-func writeAssignments(cfg *Config, rcol *core.BackendResources) {
+func (m *Metrics) updateDistributors(cfg *Config, rcol *core.BackendResources) {
 	file, err := os.OpenFile(cfg.Backend.AssignmentsFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Println("Can't open assignments file", cfg.Backend.AssignmentsFile, err)
@@ -83,6 +93,10 @@ func writeAssignments(cfg *Config, rcol *core.BackendResources) {
 					fmt.Fprintln(file, bridge.Fingerprint, distributor, bridgeInfo(bridge.BridgeBase))
 				}
 			}
+
+			m.DistributorResources.
+				With(prometheus.Labels{"distributor": distributor, "type": transport}).
+				Set(float64(len(rs)))
 		}
 	}
 
