@@ -4,6 +4,7 @@ import (
 	"errors"
 	"log"
 	"math/rand"
+	"sort"
 )
 
 // Stencil is a list of intervals that implements a "view" that can be
@@ -32,6 +33,25 @@ type Interval struct {
 // NewSplitHashring returns a new SplitHashring.
 func NewSplitHashring() *SplitHashring {
 	return &SplitHashring{NewHashring(), nil}
+}
+
+// BuildIntervalChain turns the distributor proportions into an interval chain,
+// which helps us determine what distributor a given resource should map to.
+func BuildStencil(proportions map[string]int) *Stencil {
+
+	var keys []string
+	for key := range proportions {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+
+	stencil := &Stencil{}
+	i := 0
+	for _, k := range keys {
+		stencil.AddInterval(&Interval{i, i + proportions[k] - 1, k})
+		i += proportions[k]
+	}
+	return stencil
 }
 
 // Contains returns 'true' if the given number n falls into the interval [a, b]

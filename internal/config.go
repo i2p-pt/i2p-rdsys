@@ -6,9 +6,6 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	"sort"
-
-	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
 )
 
 // Config represents our central configuration file.
@@ -147,24 +144,4 @@ func LoadConfig(filename string) (*Config, error) {
 	}
 
 	return &config, nil
-}
-
-// TODO: This function may belong somewhere else.
-// BuildIntervalChain turns the distributor proportions into an interval chain,
-// which helps us determine what distributor a given resource should map to.
-func BuildStencil(proportions map[string]int) *core.Stencil {
-
-	var keys []string
-	for key, _ := range proportions {
-		keys = append(keys, key)
-	}
-	sort.Strings(keys)
-
-	stencil := &core.Stencil{}
-	i := 0
-	for _, k := range keys {
-		stencil.AddInterval(&core.Interval{i, i + proportions[k] - 1, k})
-		i += proportions[k]
-	}
-	return stencil
 }

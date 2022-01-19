@@ -92,7 +92,7 @@ func (b *BackendContext) InitBackend(cfg *Config) {
 		}
 		rTypes[rType] = conf.Unpartitioned
 	}
-	b.Resources = *core.NewBackendResources(rTypes, BuildStencil(cfg.Backend.DistProportions))
+	b.Resources = *core.NewBackendResources(rTypes, core.BuildStencil(cfg.Backend.DistProportions))
 	b.metrics = InitMetrics()
 
 	b.rTestPool = NewResourceTestPool(cfg.Backend.BridgestrapEndpoint)
