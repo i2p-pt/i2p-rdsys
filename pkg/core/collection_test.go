@@ -9,7 +9,8 @@ func TestAddCollection(t *testing.T) {
 	d1 := NewDummy(1, 1)
 	d2 := NewDummy(2, 2)
 	d3 := NewDummy(3, 2)
-	c := NewBackendResources(map[string]bool{d1.Type(): false}, &Stencil{})
+	c := NewBackendResources()
+	c.AddResourceType(d1.Type(), false, nil)
 
 	c.Add(d1)
 	if c.Collection[d1.Type()].Len() != 1 {
@@ -40,7 +41,8 @@ func TestAddCollection(t *testing.T) {
 
 func TestStringCollection(t *testing.T) {
 	d := NewDummy(1, 1)
-	c := NewBackendResources(map[string]bool{d.Type(): false}, &Stencil{})
+	c := NewBackendResources()
+	c.AddResourceType(d.Type(), false, nil)
 	s := c.String()
 	expected := "0 dummy"
 	if s != expected {
@@ -51,7 +53,8 @@ func TestStringCollection(t *testing.T) {
 func TestPruneCollection(t *testing.T) {
 	d := NewDummy(1, 1)
 	d.ExpiryTime = time.Minute * 10
-	c := NewBackendResources(map[string]bool{d.Type(): false}, &Stencil{})
+	c := NewBackendResources()
+	c.AddResourceType(d.Type(), false, nil)
 	c.Add(d)
 	hLength := func() int { return c.Collection[d.Type()].Len() }
 
@@ -72,5 +75,29 @@ func TestPruneCollection(t *testing.T) {
 	// Pruning should have left our hashring empty.
 	if hLength() != 0 {
 		t.Fatalf("expectec hashring of length 0 but got %d", hLength())
+	}
+}
+
+func TestCollectionProportions(t *testing.T) {
+	distName := "distributor"
+	d := NewDummy(1, 1)
+
+	c1 := NewBackendResources()
+	c1.AddResourceType(d.Type(), false, nil)
+	c1.Add(d)
+	resources := c1.Get(distName, d.Type())
+	if len(resources) != 0 {
+		t.Errorf("Unexpected resource len %d: %v", len(resources), resources)
+	}
+
+	c2 := NewBackendResources()
+	c2.AddResourceType(d.Type(), false, map[string]int{distName: 1})
+	c2.Add(d)
+	resources = c2.Get(distName, d.Type())
+	if len(resources) != 1 {
+		t.Fatalf("Unexpected resource len %d: %v", len(resources), resources)
+	}
+	if resources[0].Oid() != d.Oid() {
+		t.Errorf("Unexpected dummy resource: %v", resources[0])
 	}
 }

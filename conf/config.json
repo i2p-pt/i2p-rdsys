@@ -14,7 +14,8 @@
         "resources": {
                 "vanilla": {
 			"unpartitioned": false,
-			"stored": false
+			"stored": false,
+			"distributors": ["https", "salmon"]
 		},
 		"obfs2": {},
 		"obfs3": {},
@@ -44,7 +45,7 @@
     },
     "distributors": {
         "https": {
-            "resources": ["obfs3", "obfs4", "scramblesuit"],
+            "resources": ["obfs4", "vanilla"],
             "web_api": {
                 "api_address": "127.0.0.1:7200",
                 "cert_file": "",
@@ -53,7 +54,7 @@
         },
         "salmon": {
             "working_dir": "/tmp/salmon/",
-            "resources": ["obfs4"],
+            "resources": ["obfs4", "vanilla"],
             "web_api": {
                 "api_address": "127.0.0.1:7300",
                 "cert_file": "",

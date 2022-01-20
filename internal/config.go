@@ -38,8 +38,9 @@ type BackendConfig struct {
 }
 
 type ResourceConfig struct {
-	Unpartitioned bool `json:"unpartitioned"`
-	Stored        bool `json:"stored"`
+	Unpartitioned bool     `json:"unpartitioned"`
+	Stored        bool     `json:"stored"`
+	Distributors  []string `json:"distributors"`
 }
 
 type Distributors struct {
