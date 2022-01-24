@@ -19,6 +19,8 @@ type BackendConfig struct {
 	ExtrainfoFile          string            `json:"extrainfo_file"`
 	NetworkstatusFile      string            `json:"networkstatus_file"`
 	DescriptorsFile        string            `json:"descriptors_file"`
+	BlocklistFile          string            `json:"blocklist_file"`
+	AllowlistFile          string            `json:"allowlist_file"`
 	ApiTokens              map[string]string `json:"api_tokens"`
 	ResourcesEndpoint      string            `json:"api_endpoint_resources"`
 	ResourceStreamEndpoint string            `json:"api_endpoint_resource_stream"`

@@ -1,0 +1,6 @@
+fingerprint ABCDEF123456790 country-code aa
+fprint 123456790ABCDEF country-code bb
+fingerprint 123456790ABCDEF country-code ee
+123456790ABCDEF country-code cc
+fingerprint 123456790ABCDEF coucode dd
+fingerprint 123456790ABCDEF ff

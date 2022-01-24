@@ -3,6 +3,8 @@
         "extrainfo_file": "cached-extrainfo",
         "networkstatus_file": "networkstatus-bridges",
         "descriptors_file": "bridge-descriptors",
+        "blocklist_file": "",
+        "allowlist_file": "",
         "bridgestrap_endpoint": "http://127.0.0.1:5001/bridge-state",
         "api_endpoint_resources": "/resources",
         "api_endpoint_resource_stream": "/resource-stream",

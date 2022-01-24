@@ -134,14 +134,23 @@ func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc 
 			bridge.Transports = desc.Transports
 		}
 	}
+
+	bl, err := newBlockList(cfg.Backend.BlocklistFile, cfg.Backend.AllowlistFile)
+	if err != nil {
+		log.Println("Problem loading block list:", err)
+	}
+
 	log.Printf("Adding %d bridges.", len(bridges))
 	for _, bridge := range bridges {
+		blockedIn := bl.blockedIn(bridge.Fingerprint)
+
 		for _, t := range bridge.Transports {
 			if t.Address.Invalid() {
 				log.Printf("Reject bridge %s transport %s as its IP is not valid: %s", t.Fingerprint, t.Type(), t.Address.String())
 				continue
 			}
 			t.Flags = bridge.Flags
+			t.SetBlockedIn(blockedIn)
 			t.SetTestFunc(testFunc)
 			rcol.Add(t)
 		}
@@ -152,6 +161,7 @@ func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc 
 				log.Printf("Reject vanilla bridge %s s as its IP is not valid: %s", bridge.Fingerprint, bridge.Address.String())
 				continue
 			}
+			bridge.SetBlockedIn(blockedIn)
 			bridge.SetTestFunc(testFunc)
 			rcol.Add(bridge)
 		}
