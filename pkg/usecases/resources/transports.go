@@ -15,7 +15,6 @@ type TestFunc func(r core.Resource)
 
 // Transport represents a Tor bridge's pluggable transport.
 type Transport struct {
-	core.ResourceBase
 	BridgeBase
 	Parameters map[string]string `json:"params,omitempty"`
 	testFunc   TestFunc
@@ -23,7 +22,7 @@ type Transport struct {
 
 // NewTransport returns a new Transport object.
 func NewTransport() *Transport {
-	t := &Transport{ResourceBase: *core.NewResourceBase()}
+	t := &Transport{BridgeBase: BridgeBase{ResourceBase: *core.NewResourceBase()}}
 	// As of 2020-05-19, all of our pluggable transports are based on TCP, so
 	// we might as well make it the default for now.
 	t.Protocol = ProtoTypeTCP

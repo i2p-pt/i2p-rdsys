@@ -50,6 +50,7 @@ func (a *IPAddr) Invalid() bool {
 // BridgeBase implements variables and methods that are shared by vanilla and
 // pluggable transport bridges.
 type BridgeBase struct {
+	core.ResourceBase
 	Protocol     string      `json:"protocol"`
 	Address      IPAddr      `json:"address"`
 	Port         uint16      `json:"port"`
@@ -75,7 +76,6 @@ type Flags struct {
 
 // Bridge represents a Tor bridge.
 type Bridge struct {
-	core.ResourceBase
 	BridgeBase
 	FirstSeen  time.Time    `json:"-"`
 	LastSeen   time.Time    `json:"-"`
@@ -112,7 +112,7 @@ func (b *BridgeBase) Distributor() string {
 
 // NewBridge allocates and returns a new Bridge object.
 func NewBridge() *Bridge {
-	b := &Bridge{ResourceBase: *core.NewResourceBase()}
+	b := &Bridge{BridgeBase: BridgeBase{ResourceBase: *core.NewResourceBase()}}
 	// A bridge (without pluggable transports) is always running vanilla Tor
 	// over TCP.
 	b.Protocol = ProtoTypeTCP

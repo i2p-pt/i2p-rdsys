@@ -84,13 +84,15 @@ func (m *Metrics) updateDistributors(cfg *Config, rcol *core.BackendResources) {
 			for _, resource := range rs {
 				transport, ok := resource.(*resources.Transport)
 				if ok {
-					fmt.Fprintln(file, transport.Fingerprint, distributor, "transport="+transport.Type(), bridgeInfo(transport.BridgeBase))
+					info := bridgeInfo(transport.BridgeBase)
+					fmt.Fprintln(file, transport.Fingerprint, distributor, "transport="+transport.Type(), info)
 					continue
 				}
 
 				bridge, ok := resource.(*resources.Bridge)
 				if ok {
-					fmt.Fprintln(file, bridge.Fingerprint, distributor, bridgeInfo(bridge.BridgeBase))
+					info := bridgeInfo(bridge.BridgeBase)
+					fmt.Fprintln(file, bridge.Fingerprint, distributor, info)
 				}
 			}
 
@@ -123,6 +125,16 @@ func bridgeInfo(bridge resources.BridgeBase) string {
 	info := []string{"ip=" + strings.Join(versions, ",")}
 	if bridge.Port == 443 {
 		info = append(info, "port=443")
+	}
+
+	blockedIn := bridge.BlockedIn()
+	if len(blockedIn) != 0 {
+		countries := make([]string, 0, len(blockedIn))
+		for k := range blockedIn {
+			countries = append(countries, k)
+		}
+
+		info = append(info, "blocklist="+strings.Join(countries, ","))
 	}
 
 	return strings.Join(info, " ")
