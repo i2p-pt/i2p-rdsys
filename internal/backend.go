@@ -270,6 +270,9 @@ func (b *BackendContext) getResourceStreamHandler(w http.ResponseWriter, r *http
 }
 
 func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
+	// XXX: this will do a linear search on all bridges for each status requests.
+	//      We might want to improve it in the future with a hashtable of fingerprints or
+	//      something that will not trigger a heavy computation on each request.
 
 	if err := r.ParseForm(); err != nil {
 		http.Error(w, "failed to parse parameters", http.StatusBadRequest)
@@ -291,39 +294,40 @@ func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
 	// to the final result.
 	foundResource := false
 	statuses := []string{"not yet tested", "functional", "dysfunctional"}
-	for rType, _ := range resources.ResourceMap {
-		sHashring, exists := b.Resources.Collection[rType]
-		if !exists {
-			continue
-		}
-
-		key := core.NewHashkey(rType + id)
-		resource, err := sHashring.GetExact(key)
-		if err != nil {
-			// We may have been given a non-hashed fingerprint.  Let's try to
-			// hash it, and see if we get a result.
-			hId, err := resources.HashFingerprint(id)
+	for rType, sHashring := range b.Resources.Collection {
+		for _, node := range sHashring.Hashnodes {
+			resource := node.Elem
+			fingerprint, err := getFingerprint(resource)
 			if err != nil {
-				continue
+				break
 			}
-			key := core.NewHashkey(rType + hId)
-			resource, err = sHashring.GetExact(key)
-			if err != nil {
-				continue
-			}
-		}
-		foundResource = true
 
-		rResult := fmt.Sprintf("* %s: %s\n", rType, statuses[resource.TestResult().State])
-		if resource.TestResult().Error != "" {
-			rResult += fmt.Sprintf("  Error: %s\n", resource.TestResult().Error)
+			if fingerprint != id {
+				hFingerprint, err := resources.HashFingerprint(fingerprint)
+				if err != nil {
+					continue
+				}
+				if hFingerprint != id {
+					continue
+				}
+			}
+
+			rResult := fmt.Sprintf("* %s: %s\n", rType, statuses[resource.TestResult().State])
+			if resource.TestResult().Error != "" {
+				rResult += fmt.Sprintf("  Error: %s\n", resource.TestResult().Error)
+			}
+			if resource.TestResult().State != core.StateUntested {
+				lastTested := resource.TestResult().LastTested
+				tDiff := time.Now().UTC().Sub(lastTested)
+				rResult += fmt.Sprintf("  Last tested: %s (%s ago)\n", lastTested, tDiff)
+			}
+			result = append(result, rResult+"\n")
+			foundResource = true
+			break
 		}
-		if resource.TestResult().State != core.StateUntested {
-			lastTested := resource.TestResult().LastTested
-			tDiff := time.Now().UTC().Sub(lastTested)
-			rResult += fmt.Sprintf("  Last tested: %s (%s ago)\n", lastTested, tDiff)
+		if foundResource {
+			break
 		}
-		result = append(result, rResult+"\n")
 	}
 	if !foundResource {
 		http.Error(w, "no resources for the given id", http.StatusNotFound)
@@ -475,4 +479,18 @@ func (b *BackendContext) targetsHandler(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 	http.Error(w, "not yet implemented", http.StatusInternalServerError)
+}
+
+func getFingerprint(resource core.Resource) (string, error) {
+	transport, ok := resource.(*resources.Transport)
+	if ok {
+		return transport.Fingerprint, nil
+	}
+
+	bridge, ok := resource.(*resources.Bridge)
+	if ok {
+		return bridge.Fingerprint, nil
+	}
+
+	return "", fmt.Errorf("No fingerprint for given resource %s", resource.Type())
 }
