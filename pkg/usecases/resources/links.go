@@ -2,7 +2,6 @@ package resources
 
 import (
 	"fmt"
-	"hash/crc64"
 	"strconv"
 	"strings"
 	"time"
@@ -99,8 +98,7 @@ func (tl *TBLink) Oid() core.Hashkey {
 	if tl.CustomOid != nil {
 		return *tl.CustomOid
 	}
-	table := crc64.MakeTable(Crc64Polynomial)
-	return core.Hashkey(crc64.Checksum([]byte(tl.Link), table))
+	return core.NewHashkey(tl.Link)
 }
 
 func (tl *TBLink) Uid() core.Hashkey {

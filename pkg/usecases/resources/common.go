@@ -7,8 +7,6 @@ import (
 )
 
 const (
-	Crc64Polynomial = 0x42F0E1EBA9EA3693
-
 	ResourceTypeVanilla      = "vanilla"
 	ResourceTypeObfs2        = "obfs2"
 	ResourceTypeObfs3        = "obfs3"

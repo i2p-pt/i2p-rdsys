@@ -2,7 +2,6 @@ package resources
 
 import (
 	"fmt"
-	"hash/crc64"
 	"sort"
 	"strings"
 	"time"
@@ -69,8 +68,7 @@ func (t *Transport) Expiry() time.Duration {
 }
 
 func (t *Transport) Oid() core.Hashkey {
-	table := crc64.MakeTable(Crc64Polynomial)
-	return core.Hashkey(crc64.Checksum([]byte(t.String()), table))
+	return core.NewHashkey(t.String())
 }
 
 // Uid simply returns the pluggable transport's Oid.  For PTs, we don't

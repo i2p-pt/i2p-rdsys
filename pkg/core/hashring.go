@@ -3,12 +3,17 @@ package core
 import (
 	"errors"
 	"fmt"
+	"hash/crc64"
 	"log"
 	"sort"
 	"strings"
 	"sync"
 	"time"
 )
+
+const crc64Polynomial = 0x42F0E1EBA9EA3693
+
+var crc64Table = crc64.MakeTable(crc64Polynomial)
 
 // ResourceDiff represents a diff that contains new, changed, and gone
 // resources.  A resource diff can be applied onto data structures that
@@ -46,6 +51,11 @@ func NewResourceDiff() *ResourceDiff {
 		Changed: make(ResourceMap),
 		Gone:    make(ResourceMap),
 	}
+}
+
+// NewHashkey calculates a hash from the id to be used index in the hashring
+func NewHashkey(id string) Hashkey {
+	return Hashkey(crc64.Checksum([]byte(id), crc64Table))
 }
 
 // NewHashnode returns a new hash node and sets its LastUpdate field to the

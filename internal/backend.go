@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"hash/crc64"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -291,7 +290,6 @@ func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
 	// Iterate over each resource type that contains the given UID and add it
 	// to the final result.
 	foundResource := false
-	table := crc64.MakeTable(resources.Crc64Polynomial)
 	statuses := []string{"not yet tested", "functional", "dysfunctional"}
 	for rType, _ := range resources.ResourceMap {
 		sHashring, exists := b.Resources.Collection[rType]
@@ -299,7 +297,7 @@ func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
 			continue
 		}
 
-		key := core.Hashkey(crc64.Checksum([]byte(rType+id), table))
+		key := core.NewHashkey(rType + id)
 		resource, err := sHashring.GetExact(key)
 		if err != nil {
 			// We may have been given a non-hashed fingerprint.  Let's try to
@@ -308,7 +306,7 @@ func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				continue
 			}
-			key := core.Hashkey(crc64.Checksum([]byte(rType+hId), table))
+			key := core.NewHashkey(rType + hId)
 			resource, err = sHashring.GetExact(key)
 			if err != nil {
 				continue

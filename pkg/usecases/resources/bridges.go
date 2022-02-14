@@ -5,7 +5,6 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"hash/crc64"
 	"log"
 	"net"
 	"reflect"
@@ -91,18 +90,16 @@ func (b *BridgeBase) IsPublic() bool {
 }
 
 // BridgeUid determines a bridge's hash key by first hashing its fingerprint,
-// and then calculating a CRC-64 over a concatenation of the bridge's type and
+// and then calculating a HashKey over a concatenation of the bridge's type and
 // its hashed fingerprint.
 func (b *BridgeBase) BridgeUid(rType string) core.Hashkey {
-	table := crc64.MakeTable(Crc64Polynomial)
-
 	hFingerprint, err := HashFingerprint(b.Fingerprint)
 	if err != nil {
 		log.Printf("Bug: Error while hashing fingerprint %s.", b.Fingerprint)
 		hFingerprint = b.Fingerprint
 	}
 
-	return core.Hashkey(crc64.Checksum([]byte(rType+hFingerprint), table))
+	return core.NewHashkey(rType + hFingerprint)
 }
 
 // Distributor set for this bridge
@@ -140,8 +137,7 @@ func (b *Bridge) GetBridgeLine() string {
 }
 
 func (b *Bridge) Oid() core.Hashkey {
-	table := crc64.MakeTable(Crc64Polynomial)
-	return core.Hashkey(crc64.Checksum([]byte(b.GetBridgeLine()), table))
+	return core.NewHashkey(b.GetBridgeLine())
 }
 
 func (b *Bridge) Uid() core.Hashkey {

@@ -2,7 +2,6 @@ package https
 
 import (
 	"fmt"
-	"hash/crc64"
 	"log"
 	"net/http"
 
@@ -10,7 +9,6 @@ import (
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/common"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/https"
-	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/resources"
 )
 
 var dist *https.HttpsDistributor
@@ -29,9 +27,8 @@ func mapRequestToHashkey(r *http.Request) core.Hashkey {
 	}
 	slash16 := r.RemoteAddr[:i]
 	log.Printf("Using address prefix %q as hash key.", slash16)
-	table := crc64.MakeTable(resources.Crc64Polynomial)
 
-	return core.Hashkey(crc64.Checksum([]byte(slash16), table))
+	return core.NewHashkey(slash16)
 }
 
 // RequestHandler handles requests for /.

@@ -8,7 +8,6 @@ import (
 	"encoding/hex"
 	"fmt"
 	"hash"
-	"hash/crc64"
 	"io"
 	"log"
 	"os"
@@ -103,8 +102,7 @@ func (s s3updater) newRelease(platform string, version resources.Version) upload
 
 		fileid := fmt.Sprintf("version:%v, provider: %v, plafrorm: %v, locale: %v, filename: %v",
 			link.Version, link.Provider, link.Platform, link.Locale, link.FileName)
-		table := crc64.MakeTable(resources.Crc64Polynomial)
-		var oid = core.Hashkey(crc64.Checksum([]byte(fileid), table))
+		var oid = core.NewHashkey(fileid)
 		link.CustomOid = &oid
 		return link
 	}
