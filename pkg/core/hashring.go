@@ -88,16 +88,19 @@ func (m *ResourceDiff) String() string {
 }
 
 // Len implements the sort interface.
+// This function is unsafe and needs a mutex lock before being used
 func (h *Hashring) Len() int {
 	return len(h.hashnodes)
 }
 
 // Less implements the sort interface.
+// This function is unsafe and needs a mutex lock before being used
 func (h *Hashring) Less(i, j int) bool {
 	return h.hashnodes[i].hashkey < h.hashnodes[j].hashkey
 }
 
 // Swap implements the sort interface.
+// This function is unsafe and needs a mutex lock before being used
 func (h *Hashring) Swap(i, j int) {
 	h.hashnodes[i], h.hashnodes[j] = h.hashnodes[j], h.hashnodes[i]
 }
@@ -203,7 +206,11 @@ func (h *Hashring) AddOrUpdate(r Resource) (event int) {
 func (h *Hashring) Remove(r Resource) error {
 	h.Lock()
 	defer h.Unlock()
+	return h.remove(r)
+}
 
+// remove without locking the mutex
+func (h *Hashring) remove(r Resource) error {
 	i, err := h.getIndex(r.Uid())
 	if err != nil {
 		return err
@@ -247,6 +254,8 @@ func (h *Hashring) getIndex(k Hashkey) (int, error) {
 // the given hash key, we return the element whose hash key is the closest to
 // the given hash key in descending direction.
 func (h *Hashring) Get(k Hashkey) (Resource, error) {
+	h.RLock()
+	defer h.RUnlock()
 
 	i, err := h.getIndex(k)
 	if err != nil && i == -1 {
@@ -258,6 +267,8 @@ func (h *Hashring) Get(k Hashkey) (Resource, error) {
 // GetExact attempts to retrieve the element identified by the given hash key.
 // If we cannot find the element, an error is returned.
 func (h *Hashring) GetExact(k Hashkey) (Resource, error) {
+	h.RLock()
+	defer h.RUnlock()
 
 	i, err := h.getIndex(k)
 	if err != nil {
@@ -270,6 +281,8 @@ func (h *Hashring) GetExact(k Hashkey) (Resource, error) {
 // given number of elements.  If the number of desired elements exceeds the
 // number of elements in the hashring, an error is returned.
 func (h *Hashring) GetMany(k Hashkey, num int) ([]Resource, error) {
+	h.RLock()
+	defer h.RUnlock()
 
 	if num > h.Len() {
 		return nil, errors.New("requested more elements than hashring has")
@@ -295,6 +308,8 @@ func (h *Hashring) GetMany(k Hashkey, num int) ([]Resource, error) {
 
 // GetAll returns all of the hashring's resources.
 func (h *Hashring) GetAll() []Resource {
+	h.RLock()
+	defer h.RUnlock()
 
 	var elems []Resource
 	for _, node := range h.hashnodes {
@@ -306,6 +321,8 @@ func (h *Hashring) GetAll() []Resource {
 // Filter filters the resources of this hashring with the given filter function
 // and returns the remaining resources as another hashring.
 func (h *Hashring) Filter(f FilterFunc) *Hashring {
+	h.RLock()
+	defer h.RUnlock()
 
 	r := &Hashring{}
 	for _, n := range h.hashnodes {
@@ -318,6 +335,8 @@ func (h *Hashring) Filter(f FilterFunc) *Hashring {
 
 // Prune prunes and returns expired resources from the hashring.
 func (h *Hashring) Prune() []Resource {
+	h.Lock()
+	defer h.Unlock()
 
 	now := time.Now().UTC()
 	pruned := []Resource{}
