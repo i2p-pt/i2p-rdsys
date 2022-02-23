@@ -11,7 +11,8 @@ import (
 const (
 	// These constants represent resource event types.  The backend informs
 	// distributors if a resource is new, has changed, or has disappeared.
-	ResourceIsNew = iota
+	ResourceUnchanged = iota
+	ResourceIsNew
 	ResourceChanged
 	ResourceIsGone
 )
@@ -19,6 +20,9 @@ const (
 // BackendResources implements a collection of resources for our backend.  The
 // backend uses this data structure to keep track of all of its resource types.
 type BackendResources struct {
+	// The mutex us used to protect the access to EventRecipients.
+	// The hashrings in the Collection have their own mutex and the entries
+	// of the Collection map are only set during intialization.
 	sync.RWMutex
 	// Collection maps a resource type (e.g. "obfs4") to its corresponding
 	// split hashring.
@@ -74,23 +78,15 @@ func (ctx *BackendResources) String() string {
 // already exists but has changed (i.e. its unique ID remains the same but its
 // object ID changed), we update the existing resource.
 func (ctx *BackendResources) Add(r1 Resource) {
-
 	hashring, exists := ctx.Collection[r1.Type()]
 	if !exists {
 		return
 	}
-	if i, err := hashring.getIndex(r1.Uid()); err == nil {
-		// The resource's unique ID already exists.  That means, the resource
-		// either remains the same, or it changed (i.e. its object ID differs).
-		r2 := hashring.Hashnodes[i].Elem
-		if r1.Oid() != r2.Oid() {
-			ctx.propagateUpdate(r1, ResourceChanged)
-		}
-	} else {
-		// The unique ID doesn't exist, so we're dealing with a new resource.
-		ctx.propagateUpdate(r1, ResourceIsNew)
+
+	event := hashring.AddOrUpdate(r1)
+	if event != ResourceUnchanged {
+		ctx.propagateUpdate(r1, event)
 	}
-	hashring.AddOrUpdate(r1)
 }
 
 // Get returns a slice of resources of the requested type for the given
@@ -125,8 +121,8 @@ func (ctx *BackendResources) Prune() {
 // channels, allowing the backend to immediately inform a distributor of the
 // update.
 func (ctx *BackendResources) propagateUpdate(r Resource, event int) {
-	ctx.Lock()
-	defer ctx.Unlock()
+	ctx.RLock()
+	defer ctx.RUnlock()
 
 	if _, exists := ctx.Collection[r.Type()]; !exists {
 		return
@@ -142,6 +138,8 @@ func (ctx *BackendResources) propagateUpdate(r Resource, event int) {
 		diff.Changed = rm
 	case ResourceIsGone:
 		diff.Gone = rm
+	default:
+		return
 	}
 
 	for distName, eventRecipient := range ctx.EventRecipients {

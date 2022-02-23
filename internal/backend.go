@@ -295,23 +295,23 @@ func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
 	foundResource := false
 	statuses := []string{"not yet tested", "functional", "dysfunctional"}
 	for rType, sHashring := range b.Resources.Collection {
-		for _, node := range sHashring.Hashnodes {
-			resource := node.Elem
-			fingerprint, err := getFingerprint(resource)
+		resources := sHashring.Filter(func(r core.Resource) bool {
+			fingerprint, err := getFingerprint(r)
 			if err != nil {
-				break
+				return false
+			}
+			if fingerprint == id {
+				return true
 			}
 
-			if fingerprint != id {
-				hFingerprint, err := resources.HashFingerprint(fingerprint)
-				if err != nil {
-					continue
-				}
-				if hFingerprint != id {
-					continue
-				}
-			}
+			hFingerprint, err := resources.HashFingerprint(fingerprint)
+			return err == nil && hFingerprint == id
+		}).GetAll()
+		if len(resources) != 0 {
+			foundResource = true
+		}
 
+		for _, resource := range resources {
 			rResult := fmt.Sprintf("* %s: %s\n", rType, statuses[resource.TestResult().State])
 			if resource.TestResult().Error != "" {
 				rResult += fmt.Sprintf("  Error: %s\n", resource.TestResult().Error)
@@ -322,11 +322,6 @@ func (b *BackendContext) statusHandler(w http.ResponseWriter, r *http.Request) {
 				rResult += fmt.Sprintf("  Last tested: %s (%s ago)\n", lastTested, tDiff)
 			}
 			result = append(result, rResult+"\n")
-			foundResource = true
-			break
-		}
-		if foundResource {
-			break
 		}
 	}
 	if !foundResource {

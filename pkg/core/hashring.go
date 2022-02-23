@@ -212,10 +212,11 @@ func (h *Hashring) maybeTestResource(r Resource) {
 // AddOrUpdate attempts to add the given resource to the hashring.  If it
 // already is in the hashring, we update it if (and only if) its object ID
 // changed.
-func (h *Hashring) AddOrUpdate(r Resource) {
+func (h *Hashring) AddOrUpdate(r Resource) (event int) {
 	h.Lock()
 	defer h.Unlock()
 
+	event = ResourceUnchanged
 	h.maybeTestResource(r)
 	// Does the hashring already have the resource?
 	if i, err := h.getIndex(r.Uid()); err == nil {
@@ -223,12 +224,15 @@ func (h *Hashring) AddOrUpdate(r Resource) {
 		// If so, we only update it if its object ID changed.
 		if h.Hashnodes[i].Elem.Oid() != r.Oid() {
 			h.Hashnodes[i].Elem = r
+			event = ResourceChanged
 		}
 	} else {
 		n := NewHashnode(r.Uid(), r)
 		h.Hashnodes = append(h.Hashnodes, n)
 		sort.Sort(h)
+		event = ResourceIsNew
 	}
+	return
 }
 
 // Remove removes the given resource from the hashring.  If the hashring is
