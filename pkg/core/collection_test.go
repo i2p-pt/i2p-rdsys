@@ -68,8 +68,8 @@ func TestPruneCollection(t *testing.T) {
 	if err != nil {
 		t.Errorf("failed to retrieve existing resource: %s", err)
 	}
-	node := c.Collection[d.Type()].Hashnodes[i]
-	node.LastUpdate = time.Now().UTC().Add(-d.ExpiryTime - time.Minute)
+	node := c.Collection[d.Type()].hashnodes[i]
+	node.lastUpdate = time.Now().UTC().Add(-d.ExpiryTime - time.Minute)
 
 	c.Prune()
 	// Pruning should have left our hashring empty.

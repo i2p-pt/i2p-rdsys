@@ -249,7 +249,7 @@ func TestPrune(t *testing.T) {
 	h.Add(d1)
 
 	now := time.Now().UTC()
-	h.Hashnodes[0].LastUpdate = now.Add(-time.Duration(time.Hour * 2))
+	h.hashnodes[0].lastUpdate = now.Add(-time.Duration(time.Hour * 2))
 	if h.Len() != 1 {
 		t.Fatal("hashring has incorrect length")
 	}

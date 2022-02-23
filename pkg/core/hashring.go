@@ -28,15 +28,15 @@ type ResourceDiff struct {
 type Hashkey uint64
 
 // Hashnodes represents a node in a hashring.
-type Hashnode struct {
-	Hashkey    Hashkey
-	Elem       Resource
-	LastUpdate time.Time
+type hashnode struct {
+	hashkey    Hashkey
+	elem       Resource
+	lastUpdate time.Time
 }
 
 // Hashring represents a hashring consisting of resources.
 type Hashring struct {
-	Hashnodes []*Hashnode
+	hashnodes []*hashnode
 	sync.RWMutex
 }
 
@@ -60,8 +60,8 @@ func NewHashkey(id string) Hashkey {
 
 // NewHashnode returns a new hash node and sets its LastUpdate field to the
 // current UTC time.
-func NewHashnode(k Hashkey, r Resource) *Hashnode {
-	return &Hashnode{Hashkey: k, Elem: r, LastUpdate: time.Now().UTC()}
+func NewHashnode(k Hashkey, r Resource) *hashnode {
+	return &hashnode{hashkey: k, elem: r, lastUpdate: time.Now().UTC()}
 }
 
 // NewHashring returns a new hashring.
@@ -89,17 +89,17 @@ func (m *ResourceDiff) String() string {
 
 // Len implements the sort interface.
 func (h *Hashring) Len() int {
-	return len(h.Hashnodes)
+	return len(h.hashnodes)
 }
 
 // Less implements the sort interface.
 func (h *Hashring) Less(i, j int) bool {
-	return h.Hashnodes[i].Hashkey < h.Hashnodes[j].Hashkey
+	return h.hashnodes[i].hashkey < h.hashnodes[j].hashkey
 }
 
 // Swap implements the sort interface.
 func (h *Hashring) Swap(i, j int) {
-	h.Hashnodes[i], h.Hashnodes[j] = h.Hashnodes[j], h.Hashnodes[i]
+	h.hashnodes[i], h.hashnodes[j] = h.hashnodes[j], h.hashnodes[i]
 }
 
 // ApplyDiff applies the given ResourceDiff to the hashring.  New resources are
@@ -134,13 +134,13 @@ func (h *Hashring) Add(r Resource) error {
 
 	// Does the hashring already have the resource?
 	if i, err := h.getIndex(r.Uid()); err == nil {
-		h.Hashnodes[i].LastUpdate = time.Now().UTC()
+		h.hashnodes[i].lastUpdate = time.Now().UTC()
 		return errors.New("resource already present in hashring")
 	}
 	h.maybeTestResource(r)
 
 	n := NewHashnode(r.Uid(), r)
-	h.Hashnodes = append(h.Hashnodes, n)
+	h.hashnodes = append(h.hashnodes, n)
 	sort.Sort(h)
 	return nil
 }
@@ -155,7 +155,7 @@ func (h *Hashring) maybeTestResource(r Resource) {
 	var oldR Resource
 	// Does the resource already exist in our hashring?
 	if i, err := h.getIndex(r.Uid()); err == nil {
-		oldR = h.Hashnodes[i].Elem
+		oldR = h.hashnodes[i].elem
 		// And is it exactly the same as the one we're dealing with?
 		if oldR.Oid() == r.Oid() {
 			rTest := oldR.TestResult()
@@ -183,15 +183,15 @@ func (h *Hashring) AddOrUpdate(r Resource) (event int) {
 	h.maybeTestResource(r)
 	// Does the hashring already have the resource?
 	if i, err := h.getIndex(r.Uid()); err == nil {
-		h.Hashnodes[i].LastUpdate = time.Now().UTC()
+		h.hashnodes[i].lastUpdate = time.Now().UTC()
 		// If so, we only update it if its object ID changed.
-		if h.Hashnodes[i].Elem.Oid() != r.Oid() {
-			h.Hashnodes[i].Elem = r
+		if h.hashnodes[i].elem.Oid() != r.Oid() {
+			h.hashnodes[i].elem = r
 			event = ResourceChanged
 		}
 	} else {
 		n := NewHashnode(r.Uid(), r)
-		h.Hashnodes = append(h.Hashnodes, n)
+		h.hashnodes = append(h.hashnodes, n)
 		sort.Sort(h)
 		event = ResourceIsNew
 	}
@@ -209,9 +209,9 @@ func (h *Hashring) Remove(r Resource) error {
 		return err
 	}
 
-	leftPart := h.Hashnodes[:i]
-	rightPart := h.Hashnodes[i+1:]
-	h.Hashnodes = append(leftPart, rightPart...)
+	leftPart := h.hashnodes[:i]
+	rightPart := h.hashnodes[i+1:]
+	h.hashnodes = append(leftPart, rightPart...)
 
 	return nil
 }
@@ -228,14 +228,14 @@ func (h *Hashring) getIndex(k Hashkey) (int, error) {
 	}
 
 	i := sort.Search(h.Len(), func(i int) bool {
-		return h.Hashnodes[i].Hashkey >= k
+		return h.hashnodes[i].hashkey >= k
 	})
 
 	if i >= h.Len() {
 		i = 0
 	}
 
-	if i < h.Len() && h.Hashnodes[i].Hashkey == k {
+	if i < h.Len() && h.hashnodes[i].hashkey == k {
 		return i, nil
 	} else {
 		return i, errors.New("could not find key in hashring")
@@ -252,7 +252,7 @@ func (h *Hashring) Get(k Hashkey) (Resource, error) {
 	if err != nil && i == -1 {
 		return nil, err
 	}
-	return h.Hashnodes[i].Elem, nil
+	return h.hashnodes[i].elem, nil
 }
 
 // GetExact attempts to retrieve the element identified by the given hash key.
@@ -263,7 +263,7 @@ func (h *Hashring) GetExact(k Hashkey) (Resource, error) {
 	if err != nil {
 		return nil, err
 	}
-	return h.Hashnodes[i].Elem, nil
+	return h.hashnodes[i].elem, nil
 }
 
 // GetMany behaves like Get with the exception that it attempts to return the
@@ -282,12 +282,12 @@ func (h *Hashring) GetMany(k Hashkey, num int) ([]Resource, error) {
 	}
 
 	for j := i; j < num+i; j++ {
-		r := h.Hashnodes[j%h.Len()].Elem
+		r := h.hashnodes[j%h.Len()].elem
 		if r.TestResult().State != StateFunctional {
 			log.Printf("Skipping %q because its state is %d.", r.String(), r.TestResult().State)
 			continue
 		}
-		resources = append(resources, h.Hashnodes[j%h.Len()].Elem)
+		resources = append(resources, h.hashnodes[j%h.Len()].elem)
 	}
 
 	return resources, nil
@@ -297,8 +297,8 @@ func (h *Hashring) GetMany(k Hashkey, num int) ([]Resource, error) {
 func (h *Hashring) GetAll() []Resource {
 
 	var elems []Resource
-	for _, node := range h.Hashnodes {
-		elems = append(elems, node.Elem)
+	for _, node := range h.hashnodes {
+		elems = append(elems, node.elem)
 	}
 	return elems
 }
@@ -308,9 +308,9 @@ func (h *Hashring) GetAll() []Resource {
 func (h *Hashring) Filter(f FilterFunc) *Hashring {
 
 	r := &Hashring{}
-	for _, n := range h.Hashnodes {
-		if f(n.Elem.(Resource)) {
-			r.Add(n.Elem.(Resource))
+	for _, n := range h.hashnodes {
+		if f(n.elem.(Resource)) {
+			r.Add(n.elem.(Resource))
 		}
 	}
 	return r
@@ -322,10 +322,10 @@ func (h *Hashring) Prune() []Resource {
 	now := time.Now().UTC()
 	pruned := []Resource{}
 
-	for _, node := range h.Hashnodes {
-		if now.Sub(node.LastUpdate) > node.Elem.Expiry() {
-			pruned = append(pruned, node.Elem)
-			h.Remove(node.Elem)
+	for _, node := range h.hashnodes {
+		if now.Sub(node.lastUpdate) > node.elem.Expiry() {
+			pruned = append(pruned, node.elem)
+			h.remove(node.elem)
 		}
 	}
 
