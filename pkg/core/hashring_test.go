@@ -222,60 +222,22 @@ func TestAddOrUpdate(t *testing.T) {
 
 	// Adding an already-existing resource should update its LastUpdate.
 	i, _ := h.getIndex(d.Uid())
-	oldTimestamp := h.Hashnodes[i].LastUpdate
+	oldTimestamp := h.hashnodes[i].lastUpdate
 
 	h.AddOrUpdate(newD)
 
 	i, _ = h.getIndex(d.Uid())
-	newTimestamp := h.Hashnodes[i].LastUpdate
+	newTimestamp := h.hashnodes[i].lastUpdate
 
 	if newTimestamp == oldTimestamp {
 		t.Fatal("failed to update timestamp of hashnode")
 	}
 
 	i, _ = h.getIndex(d.Uid())
-	sameTimestamp := h.Hashnodes[i].LastUpdate
+	sameTimestamp := h.hashnodes[i].lastUpdate
 
 	if newTimestamp != sameTimestamp {
 		t.Fatal("timestamp should be identical")
-	}
-}
-
-func TestDiff(t *testing.T) {
-
-	h1 := &Hashring{}
-	h2 := &Hashring{}
-	d1 := NewDummy(1, 1)
-	d2 := NewDummy(2, 2)
-	d3 := NewDummy(3, 2)
-	d4 := NewDummy(4, 3)
-
-	h1.Add(d1)
-	h1.Add(d2)
-	h2.Add(d3)
-	h2.Add(d4)
-
-	// We should be dealing with one new, one changed, and one gone resource.
-	diff := h1.Diff(h2)
-	if len(diff.New) != 1 {
-		t.Error("incorrect number of new resources")
-	}
-	if diff.New["dummy"][0] != d1 {
-		t.Error("failed to find new resources")
-	}
-
-	if len(diff.Changed) != 1 {
-		t.Error("incorrect number of changed resources")
-	}
-	if diff.Changed["dummy"][0] != d2 {
-		t.Errorf("failed to find changed resources")
-	}
-
-	if len(diff.Gone) != 1 {
-		t.Error("incorrect number of gone resources")
-	}
-	if diff.Gone["dummy"][0] != d4 {
-		t.Errorf("failed to find gone resources")
 	}
 }
 

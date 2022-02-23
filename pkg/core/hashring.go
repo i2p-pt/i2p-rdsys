@@ -126,43 +126,6 @@ func (h *Hashring) ApplyDiff(d *ResourceDiff) {
 	}
 }
 
-// Diff determines the resources that are 1) in h1 but not h2 (new), 2) in both
-// h1 and h2 but changed, and 3) in h2 but not h1 (gone).
-func (h1 *Hashring) Diff(h2 *Hashring) *ResourceDiff {
-
-	diff := NewResourceDiff()
-
-	for _, n := range h1.Hashnodes {
-		r1 := n.Elem
-
-		index, err := h2.getIndex(r1.Uid())
-		// The given resource is not present in h2, so it must be new.
-		if err != nil {
-			diff.New[r1.Type()] = append(diff.New[r1.Type()], r1)
-			continue
-		}
-
-		// The given resource is present.  Did it change, though?
-		r2 := h2.Hashnodes[index].Elem
-		if r1.Oid() != r2.Oid() {
-			diff.Changed[r1.Type()] = append(diff.Changed[r1.Type()], r1)
-		}
-	}
-
-	// Finally, find resources that are gone.
-	for _, n := range h2.Hashnodes {
-		r2 := n.Elem
-
-		_, err := h1.getIndex(r2.Uid())
-		// The given resource is not present in h1, so it must be gone.
-		if err != nil {
-			diff.Gone[r2.Type()] = append(diff.Gone[r2.Type()], r2)
-		}
-	}
-
-	return diff
-}
-
 // Add adds the given resource to the hashring.  If the resource is already
 // present, we update its timestamp and return an error.
 func (h *Hashring) Add(r Resource) error {
