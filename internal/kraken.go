@@ -263,7 +263,7 @@ func loadBridgesFromExtrainfo(extrainfoFile string) (map[string]*resources.Bridg
 	}
 	defer file.Close()
 
-	extra, err := ParseExtrainfoDoc(file)
+	extra, err := parseExtrainfoDoc(file)
 	if err != nil {
 		return nil, err
 	}
@@ -271,10 +271,10 @@ func loadBridgesFromExtrainfo(extrainfoFile string) (map[string]*resources.Bridg
 	return extra, nil
 }
 
-// ParseExtrainfoDoc parses the given extra-info document and returns the
+// parseExtrainfoDoc parses the given extra-info document and returns the
 // content as a Bridges object.  Note that the extra-info document format is as
 // it's produced by the bridge authority.
-func ParseExtrainfoDoc(r io.Reader) (map[string]*resources.Bridge, error) {
+func parseExtrainfoDoc(r io.Reader) (map[string]*resources.Bridge, error) {
 
 	bridges := make(map[string]*resources.Bridge)
 
