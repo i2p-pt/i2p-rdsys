@@ -1,0 +1,3965 @@
+extra-info Unnamed365955763580 1F8A76D9581D72B9B9D84411463445052A78AB71
+published 2002-04-20 08:35:20
+write-history 2021-05-16 11:18:37 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:18:37 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:18:37 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:18:37 (900 s) 0,0,0
+geoip-db-digest 6CB5265AA54764A813ECD5FFBF6B5CA08470B706
+geoip6-db-digest 725CA63980E310136557C6FF0B19A9DDF86AE9B6
+dirreq-stats-end 2021-05-16 11:18:37 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:18:37 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 143.117.2.216:18962
+transport obfs4 143.117.2.216:18952 iat-mode=0,node-id=322da9ea0683f03ce35cf8a71e59b686b9be28e8,public-key=0080a9f7727726783617077919407ceec77865f5ae67d908b87ab0b42ef55fc9
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+fp3hUinsXwJMgNdzMtnjpbIfMYKFwI5Bi4wwWlvdCjMSCpqt4cW3Y4F0fL2usJkX
+T5lVnuoNxkBzM/eCKUvbSwUKChih/YC1IjU0Up5XAWB+ZDkq7uTbNKQrzGEjsanq
+CZf4Gp7Mh3CcpasTdtlAjf5jF2VV+vPRM6QcHGCTxMY=
+-----END SIGNATURE-----
+extra-info Unnamed882477886088 97742B46FFFDAD3E703BA564B3D920739FDA4F38
+published 2012-08-12 22:32:37
+write-history 2021-05-16 22:34:16 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 22:34:16 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 22:34:16 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 22:34:16 (900 s) 0,0,0
+geoip-db-digest 172007C09163A4735550F35899FADD4126FBD5CA
+geoip6-db-digest 919DD576E03F596AE6F89265E02D36C29EF330D3
+dirreq-stats-end 2021-05-16 22:34:16 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 22:34:16 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 164.29.241.115:22515
+transport obfs4 164.29.241.115:22505 iat-mode=0,node-id=786892d85904e693af3d718785f8fed2b92d38a5,public-key=207917dc40abfe615add0b459890d82014421c5255629382e2063e11391e5290
+router-signature
+-----BEGIN SIGNATURE-----
+FmT2obLK5iRp+C4+KBTr8AklAZ8+lhLF4RBnnpg06/3fTJOw4IKyjBvX6Mlnyjjr
+V1xQC1Z8vkPmqYEOZKEbx1RmYpDdkaCCXqe7xTlYEbGNLYxt9fIe/PKMvZlpsgiu
+uWqLRQ3PdN0ZEG7Px6yN/2+F74DsXHqQhszDW/vzp64=
+-----END SIGNATURE-----
+extra-info Unnamed571104831565 7C213E44DF0C74777033B33E3366A8967100B8A5
+published 2002-02-02 14:25:58
+write-history 2021-05-16 04:11:40 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 04:11:40 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 04:11:40 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 04:11:40 (900 s) 0,0,0
+geoip-db-digest AAA16B8FDE2961C695F8A6F3DB2646B6B1C5F5BA
+geoip6-db-digest 298E305E52209A00069F0EE7D2531C0DDC540957
+dirreq-stats-end 2021-05-16 04:11:40 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 04:11:40 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 130.56.204.197:22760
+transport obfs4 130.56.204.197:22750 iat-mode=1,node-id=93fa51b309f36ae636e0e7b4dd03d383b5645648,public-key=ec3e3f34b1ed7f551522cd727ba4e749acd4b5dac1d6a438a91f9cc2ca67620c
+router-signature
+-----BEGIN SIGNATURE-----
+CPWWQj/C9qnEaH7JHHBhQ8wo4s2T9ryJN0R4c/0vYrz7EBs3/QH3f9q4AWbtTtot
+fl/sBScuTI+jIpi/icZD0Lg3wPN7He1anWhItFitdnLt/3doUjzqjoYLjYuC72pP
+H5GEZ73RYZHqtEYquidnfQ52sppC2wpAM46XupUdW4E=
+-----END SIGNATURE-----
+extra-info Unnamed352955656148 56E04AE5C0F64F22206A49939B33FB597BFE1AA7
+published 2010-09-19 00:59:58
+write-history 2021-05-17 08:31:21 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 08:31:21 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 08:31:21 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 08:31:21 (900 s) 0,0,0
+geoip-db-digest 89982A088714E86183586907F1A8572CE4894CFE
+geoip6-db-digest C5F0E27841B7379E8A2D80FA8E7D13005170A2C8
+dirreq-stats-end 2021-05-17 08:31:21 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 08:31:21 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 60.153.135.82:61333
+transport obfs4 60.153.135.82:61323 iat-mode=0,node-id=9f01e584f766dfbb5e49d6e32f7dc51fea2d0d91,public-key=2aa1fd6b1e4d7e4352751c0a8b7acb6fd9aa3a3a4c994f52b0a214c6f346277d
+router-signature
+-----BEGIN SIGNATURE-----
+rT9EdH0UpbOmi1hsaD5v11Kas33dZ3CmdgAMB9reyVaFhDZsV60bs2wSV/Xhklz2
+VmPE/DVsvvmCa6PFDq+YtkXdkFGPps1WOgW02H4b0q+N5H87j8A5RtBmOYHU5jkk
+SMO0tfp/Gjb3/pumwJZCsujhpqk5C8ixSnkodschc5U=
+-----END SIGNATURE-----
+extra-info Unnamed853572922922 B20383C0D841CC31BCECD79C46B786CDE8E807AE
+published 2012-05-19 02:14:07
+write-history 2021-05-17 02:57:01 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 02:57:01 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 02:57:01 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 02:57:01 (900 s) 0,0,0
+geoip-db-digest 577F90313F4504CCC67545B5FCA8B3830DDE5798
+geoip6-db-digest 31596004E800E370FF55FB9C5388BBD716CF1902
+dirreq-stats-end 2021-05-17 02:57:01 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 02:57:01 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 171.100.118.100:16353
+transport obfs4 171.100.118.100:16343 iat-mode=1,node-id=61a27566df0bd1c1db790bb1108f7cb3b4b7213d,public-key=1bee2e2cfbc827a48e51c87f3e62652dc47480bdfb2641de1987eb052c8b4b41
+router-signature
+-----BEGIN SIGNATURE-----
+nlWVYk7SaNXCstYOpv1cyBmv8H+PZX+lQGj+uR522wfEuU346mhZFv+GFikbMF/T
+8hcvcqS4+9kWOy48NX09AEJsKysdjyjPFJeIZW1OmdkceC6uKY+ojYPz92qkRxPG
+2qBwg+ygPvBxB33bKssFgEgG578ABoRdB97l2ONfjKo=
+-----END SIGNATURE-----
+extra-info Unnamed461691873480 439B8DF324C99FBEBE49344D61C93244C773E402
+published 2009-03-05 23:53:04
+write-history 2021-05-16 06:09:37 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 06:09:37 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 06:09:37 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 06:09:37 (900 s) 0,0,0
+geoip-db-digest 083E80970A1D979B8F16906FAAE19916A8F116B9
+geoip6-db-digest EADD399439CA10F6E768BF335E580DC29EECA2F4
+dirreq-stats-end 2021-05-16 06:09:37 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 06:09:37 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 199.62.223.149:36955
+transport obfs4 199.62.223.149:36945 iat-mode=0,node-id=7dfcb47e84da8f6d1030f370f2e308d574281e77,public-key=5514e3463923ca8257bc073bf34413d0426a6b45bf569b5a5b74c7c5298c57a7
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+QpgGGBAX0eldGm4f1oxKa+3KlnqQfj0zozSKZdzpjGYC+7jcMReHONa6NADbGmOH
+knqPp3kRZ/4w/nNHOhcmz/OpkiIPtXQCj2+PLPGq0rjeMQRo2CSIbC8bAsxVRvmw
+fPn6ZfL6qkMSti8xvfIfM1SSTa8kLJYmPob4RYCPV5I=
+-----END SIGNATURE-----
+extra-info Unnamed456808875955 0469A5A09C3DA2E56E9EE1D251EAD5D12FA6ECEE
+published 2014-03-17 02:01:19
+write-history 2021-05-17 02:54:40 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 02:54:40 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 02:54:40 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 02:54:40 (900 s) 0,0,0
+geoip-db-digest 7C5D6A312F541357C8D186BB08FF17A4E393AAD3
+geoip6-db-digest F73423F4A9EC4229DEF43E090408E85763C0A53B
+dirreq-stats-end 2021-05-17 02:54:40 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 02:54:40 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 98.22.9.231:11098
+transport obfs4 98.22.9.231:11088 iat-mode=1,node-id=666820973fd95e6cd9e7bc5f1c53732acbc99326,public-key=ec3e3f34b1ed7f551522cd727ba4e749acd4b5dac1d6a438a91f9cc2ca67620c
+router-signature
+-----BEGIN SIGNATURE-----
+kODKe1yxKiZ++DS1pvjYyg7Q7bxLLsaLK7IBCK2E01pyLuN94OfBvf0Rgufh/oaC
+lV75qD3s0O6boKyaNsByALtFYOceQohXgTO3s/o+RJ9yvoERkJceNpkjx8/jatUi
+QwTiPyEnWiTQTZ3Ji9tPHriasMAa0p4ANvk42IWeR0c=
+-----END SIGNATURE-----
+extra-info Unnamed199966075193 49FD7C6D391FB40EC498B04DB4B75599D0D77BE0
+published 2003-07-14 14:01:20
+write-history 2021-05-16 15:25:46 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 15:25:46 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 15:25:46 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 15:25:46 (900 s) 0,0,0
+geoip-db-digest CCE576CCAC71E11A38C0C68D140E7A65A4100924
+geoip6-db-digest 781B7AC4DCEB96DB50ECBB64A4EC3A4B6D4D3B1B
+dirreq-stats-end 2021-05-16 15:25:46 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 15:25:46 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 14.38.159.224:25378
+transport obfs4 14.38.159.224:25368 iat-mode=1,node-id=c8d7d0ef0eedfa82d2ea1aa592845b9a6d4b02b7,public-key=ba7aa0bfea71dbaf1033edc80705d4db3d0f8f5f938385f764912619b1c344c9
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+AhH/6S31q8d0wxAoZsyAz1y21wTULLTo4Vfd4Db3rmj0pX5j+xQpFgbzteDSHEMC
+eio6mtB/84aWJnMn25G0CgB6EATnVKzckM0ZwwY6RvWUSucQR1kRYv+/srwuY8IT
+MDlxFkXMvCTBoa2dyYkj/xCBklOUPb07tEGD/YrQVEQ=
+-----END SIGNATURE-----
+extra-info Unnamed468894750542 08E8B7FA24A0C20A9F1EAEE711565145160B7346
+published 2007-01-17 07:44:30
+write-history 2021-05-16 07:28:22 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 07:28:22 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 07:28:22 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 07:28:22 (900 s) 0,0,0
+geoip-db-digest E30915742CEF5E3D219F6CE6FB190B72937C8161
+geoip6-db-digest 0597F77A685063A41307486606CF18448F815F49
+dirreq-stats-end 2021-05-16 07:28:22 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 07:28:22 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 62.84.203.68:16962
+transport obfs4 62.84.203.68:16952 iat-mode=1,node-id=89d6a3b70b33bb0e4d95cbd78aa26411d18f281d,public-key=d81bfb50e59a9abbe66f6ae0c6b45c7b9c0bc6eead2cf982118ac4d62b6ffeda
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+O17ZU66w0HtPTrALy5Swdi3dWxHvrhOroLxMbP7xfJecIqwO6aQdNpKOgnfgHaqn
+Kgvo/ELx+2sY1w3w6wmsuDxHR/vtcFTjfjDIPyfAWOVUoJNUp6S3j2beVApuwtZK
+oI3OapwZG4HSKpW6H2fDf1tpkQZ7EgCYP+B2I5l5fLc=
+-----END SIGNATURE-----
+extra-info Unnamed899293706635 AA6CFB09DD3C5468C8572E0E78A9717EE3894737
+published 2000-05-11 18:38:13
+write-history 2021-05-16 11:13:23 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:13:23 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:13:23 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:13:23 (900 s) 0,0,0
+geoip-db-digest A89FD31B5E1DF4E0707F6E3F31287F6462BD7B44
+geoip6-db-digest CED5ECB99F541E1C75C1CF8E0E117C0ACE03737E
+dirreq-stats-end 2021-05-16 11:13:23 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:13:23 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 182.81.27.206:14508
+transport obfs4 182.81.27.206:14498 iat-mode=1,node-id=93436ea60c5dcdd2e9893a025f560ab72422ae8c,public-key=46f531b7ea0428fbf2c3ca2b60e8dc33d6bbfa000e0fd1b489c5e39140a47006
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+jBwaMN7nDo0hL5DDDcf9CUZ4tVzM4471Fhby6il1TpBS6LdSRCtH3wPAVYb23xfw
+/ksvQIMP4L4JRB7R/Qmu/n0CF7vLS87MV/b7yiuErSSTKKJGZ1pSNTL9uQpL8mjO
+gBskhO4OOqWTuzhsbWjBA09lMX2AprzV9S/xOs3XsZI=
+-----END SIGNATURE-----
+extra-info Unnamed918381974595 768825A19A46DA68FD72FE9222C66A4E7ADE9CD1
+published 2013-11-20 05:29:23
+write-history 2021-05-17 06:35:47 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 06:35:47 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 06:35:47 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 06:35:47 (900 s) 0,0,0
+geoip-db-digest A09DC7136DD9E9336A9B295C336D040D2D3DE14C
+geoip6-db-digest BF575199FF4C64011403A66E4078F9232BBD5567
+dirreq-stats-end 2021-05-17 06:35:47 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 06:35:47 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 101.221.196.217:25277
+transport obfs4 101.221.196.217:25267 iat-mode=0,node-id=f8ebbbe3ad6a8cfd13607fd3a7fad7a3a7a50158,public-key=0a88111852095cae045340ea1f0b279944b2a756a213d9b50107d7489771e159
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+altsaAPYNyW0IicYAR4dr0IclSzfR/mB0iJD7jjmb1Yl5iBT5oKbiy0XoaoXjBbM
+y9UNHOC+ZSO30d5UXGEBc3ZPvcZjgAxP0HKV6QNPYSp59u1tUgqsNbxRzF0a5QcM
+fPo0E/AYL9qEzHI+d7p7WoWEsyitwwaH8OYwodzVqIs=
+-----END SIGNATURE-----
+extra-info Unnamed870182803515 12DE44C452F03701E4B9E722A056CE53258F8FE8
+published 2004-01-05 23:26:37
+write-history 2021-05-16 19:24:55 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:24:55 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:24:55 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:24:55 (900 s) 0,0,0
+geoip-db-digest A5FC5D941D243AE84CCA209819CBF5EB21B28B6D
+geoip6-db-digest C6C1A296DF0F4CE8ED792728235F5E598618CD8B
+dirreq-stats-end 2021-05-16 19:24:55 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:24:55 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 66.35.0.177:727
+transport obfs4 66.35.0.177:717 iat-mode=0,node-id=12b445e0dbf65060bfc3dd1a0958f2524d48d324,public-key=c38f1294a259a7e943728e76d1a9d2e0992d22f4cebf6de1fb42204e7126d19a
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+Sy9/AQ1dCNxOAenHEshHFuux6tO60BcHX9o3aOCsA3M51oUuxZqq+lrN80wKNsrE
+8R0a5+LoDRV/Bsb0n7qTum5nfn724lRC4hEaYB+UnhrnkEp1mgJ242CCJEj9hlp2
+GFtd0vRZ7PPOgLWTXav3JVxge4Pmz1fPnDl7Mws3XCU=
+-----END SIGNATURE-----
+extra-info Unnamed213383115374 ACA441F07B985BA94F12CE4E2C617DFFFDA7ACCB
+published 2008-01-07 03:44:31
+write-history 2021-05-16 02:07:44 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 02:07:44 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 02:07:44 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 02:07:44 (900 s) 0,0,0
+geoip-db-digest 3D250FCE89FDCD5E2CEA1355EC4835DABC7757DB
+geoip6-db-digest 6E834BA19E5757E3640E8A0B3F9763D70657A9D2
+dirreq-stats-end 2021-05-16 02:07:44 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 02:07:44 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 158.143.156.144:56040
+transport obfs4 158.143.156.144:56030 iat-mode=0,node-id=bd94219a79987af3e4d4ce45b07edc2230aaf655,public-key=4f74882d2c7f0195a206cd5fa55bc1cfbe217137390a8e80109f788525905ccf
+router-signature
+-----BEGIN SIGNATURE-----
+QTnll3wgqrmGNFkElenVkqfuRAs+b9yGFkG0VSl75YfoDU2xI95ueb6jORvCUZH5
+ttah2Dx2mWRpj45J5Pfb4UO/Nq7f2MZwn/1i7mHdqY8g8Bax6MNQ+DfSnEhIpkyF
+Tl3R0a1y6BXViepZDswKk7Gwlsa5D2PRDH+8dCOz1jo=
+-----END SIGNATURE-----
+extra-info Unnamed366666033972 BE51D48B2AEAAB593E45A4E67ACA53336906A77D
+published 2004-10-02 13:21:09
+write-history 2021-05-16 03:30:33 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 03:30:33 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 03:30:33 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 03:30:33 (900 s) 0,0,0
+geoip-db-digest 8DFF6C5099B8860719C13C9852F68A4A9F7F760D
+geoip6-db-digest 844CD2F742FF6DC353C4F9B4F1EBA7E420664F1E
+dirreq-stats-end 2021-05-16 03:30:33 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 03:30:33 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 87.159.28.126:48288
+transport obfs4 87.159.28.126:48278 iat-mode=0,node-id=bc19aba4e1867441e4a9532dc2090e4be7f24832,public-key=e5266235cd0af9680382063b69dfe20e3d734f980a85095440b981ba012756b9
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+kP6oS8O6imfpgJmp3S0jI/PegN5887YIr2flmeYZjm07gKH1o1cqZrPnngPLtHpp
+rAlpzX0BjYCuYOWoaaHGKIFaaWSw7WN75qj8rfsGC0f/n1VVLee4eRbVir3tb+4a
+wWu9he4VYwLKZei44h3oywitV8udbr7hhRyKenL/loQ=
+-----END SIGNATURE-----
+extra-info Unnamed24675107646 6636A855F408431F1E88DA343DB7A946E355D1E5
+published 2003-01-09 18:18:13
+write-history 2021-05-16 11:38:59 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:38:59 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:38:59 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:38:59 (900 s) 0,0,0
+geoip-db-digest 86C20D7BF54D414349E575AFA401709FDBA542C6
+geoip6-db-digest 146292D551D6DCA83B9EEA4739AF678EBCFB7387
+dirreq-stats-end 2021-05-16 11:38:59 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:38:59 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 207.245.90.35:37954
+transport obfs4 207.245.90.35:37944 iat-mode=1,node-id=67236ce557839585f058ac318e51be7bc0f745e2,public-key=33c35642a71ce7d31f92ebe614045d206968f058cb345c7df4ab397a2655f16d
+router-signature
+-----BEGIN SIGNATURE-----
+wPCsDoXAgEQVPEszuABkB7eZFGWQyL+1cffClhnv0DuTeSizH94RzgTjCjtjodK6
+k2E/DvFUXGqfFHo4EmqgXm28BhKVhPqcQ6UHUCqHmMMykm9lpRDuWyqa5FrZ6/FC
+A4RqeCzRH1Esal6VdKuPoR7cL2hkKrQhPKxNpcBDDPI=
+-----END SIGNATURE-----
+extra-info Unnamed265178958927 F0857ECEE1A28B427E53DBB0877AADC728842A19
+published 2000-10-03 20:24:17
+write-history 2021-05-17 05:58:31 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 05:58:31 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 05:58:31 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 05:58:31 (900 s) 0,0,0
+geoip-db-digest C46EB6747DF866CD335A9640FD396D334D5DCE59
+geoip6-db-digest 6ACA54F88877096A1B8432C0E4512A0BF5EC2448
+dirreq-stats-end 2021-05-17 05:58:31 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 05:58:31 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 164.208.170.231:48920
+transport obfs4 164.208.170.231:48910 iat-mode=1,node-id=75e43426b4fd82102d0e825523b9bf043ed01e5e,public-key=353fd628b7f6e7d426e5d6a27d1bc3ac22fa7f812e7594cf2ec5ca1175785b50
+router-signature
+-----BEGIN SIGNATURE-----
+E4n+pUoWd5cdcFxkpMMAb9rqUiuwD2nGkwcY6ax6Tpy+hHpuOP4xyZDg87tP+ZJv
+qzKhcVP0NV8D6akn81fdSn7VyHv7LN/0eBu5+66R/NNdf7h0qKuQ80VaY3VDxhL5
+ZzLKULBJANp+pDTdZeX3Bt901bxOSX2+SW/h+m/NNrM=
+-----END SIGNATURE-----
+extra-info Unnamed775700086185 86B4B015034FF712B776DD58FB616470095FFFAC
+published 2009-01-03 21:43:25
+write-history 2021-05-17 05:14:50 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 05:14:50 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 05:14:50 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 05:14:50 (900 s) 0,0,0
+geoip-db-digest 09E0DBB05325B2606B9A83C6DFB5AD3EE614A71B
+geoip6-db-digest 62BF47E2A39393832BE0C1910E109FA244949CF9
+dirreq-stats-end 2021-05-17 05:14:50 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 05:14:50 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 106.167.126.56:35478
+transport obfs4 106.167.126.56:35468 iat-mode=1,node-id=1da89865c5192465f8f4fe62d454c2175aff4441,public-key=85759b3811ff7dc47b03792ac85317be51431a3f9e01dcafce317ed736a391b0
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+efh8vzcPtgXuPwtO+5Dgj6bYGlal8vFSF2FVW3WxRGY4bYrfIj7Go0AtMFh3U3eB
+nUpeHEO8Nsp97jL1sImufX52B16TBDIt0bcrAgp7nYLHqXMfE6gU8mclovhUDgOL
+ubnlutLz4rAi97O1EGuNycQVA/JxBVXWaNA9KUrBIXM=
+-----END SIGNATURE-----
+extra-info Unnamed984048035830 B35508CABEFA986ECFF04508104141B6C1BC3FF3
+published 2007-11-17 08:15:37
+write-history 2021-05-16 22:30:27 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 22:30:27 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 22:30:27 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 22:30:27 (900 s) 0,0,0
+geoip-db-digest 0FEC84F918A9FABCF763A9F136CDE01F7F827AAD
+geoip6-db-digest E038BB3B3D490B93224290BD103F68095FE8CF48
+dirreq-stats-end 2021-05-16 22:30:27 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 22:30:27 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 3.210.110.91:4737
+transport obfs4 3.210.110.91:4727 iat-mode=0,node-id=f8ebbbe3ad6a8cfd13607fd3a7fad7a3a7a50158,public-key=ebc47d1683f1e8b6d506bf43f07f93e64fcb54ea8310a90211336139a80e706a
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+ffgaaRb2HwjIoBP1cUaXPvYVO92m3dLDt3PRM31rEH9ICJkr/F8USkJhjvwAp9Bl
+yeLizo+1pGevcUjfbFQhZ0/pPn9Mu5DymDmVap9TNiC2Q3SE4jLjc+2UZf64YrOm
+nNdkhOw8UTd+14f36hbKPzl+/0zIofcaW7IW9OLlZCk=
+-----END SIGNATURE-----
+extra-info Unnamed653498933369 2BB6DF1D239C70A6B3D6559540F59558A47CD20A
+published 2003-04-18 05:45:25
+write-history 2021-05-16 08:44:13 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 08:44:13 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 08:44:13 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 08:44:13 (900 s) 0,0,0
+geoip-db-digest 2B7F8100155CD83802A9669E52A5BA112A6280EC
+geoip6-db-digest 4EF53D96C04E084EF4F613BD1DCDEFEEEF0E536C
+dirreq-stats-end 2021-05-16 08:44:13 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 08:44:13 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 13.223.191.46:53461
+transport obfs4 13.223.191.46:53451 iat-mode=0,node-id=bd057d7f49143824e45263147a02a580137fabef,public-key=c38f1294a259a7e943728e76d1a9d2e0992d22f4cebf6de1fb42204e7126d19a
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+GE6aAQ2uBQLPTJAEJmAw4mUuVLsmfInr5Nzt9DfJYn1wZaZ+RIy3mFfxUoNU/zoQ
+q9qhg/WdYKi+sfgKRU2k99do1XTH7qsJECCNNoVmTK9m4vdEybUWRpTBpzAeFZc/
+RMlTs6ewEO3w5/zyzrJh5rEi/o2/e7tR5EbENgK5lDM=
+-----END SIGNATURE-----
+extra-info Unnamed800327828876 4A161C65D206163BF3AA30F47AC1AE5342E16CAF
+published 2011-05-14 00:30:45
+write-history 2021-05-17 06:11:32 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 06:11:32 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 06:11:32 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 06:11:32 (900 s) 0,0,0
+geoip-db-digest C48F98E403F4B49336875B155381890DFDDCDDFD
+geoip6-db-digest FF56013C984CFA9DE2DE153A1F65E657991BB684
+dirreq-stats-end 2021-05-17 06:11:32 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 06:11:32 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 122.228.76.122:6387
+transport obfs4 122.228.76.122:6377 iat-mode=1,node-id=db4bf2f8ca37a35fdd742bdb5d37e7d646451922,public-key=017ab4b70ea129c29e932d44baddc185ad136bf719c4ada63a10b5bf796af91e
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+spl8CS1A/Byut0FBUzqsYDSks9ReeLJ6vGdabwXSTGPPeF5JzGmTJQqGmcyzXi9p
+HJ1jeiuDKH3FNKqQFVBWGDG8G0NxtRURp4FfRUhSMfechQUcEmN090Xpas0oZrJq
+JNMdeLGisRuosMexluTJgq7JBKy3WJOvT474Ee/S+FY=
+-----END SIGNATURE-----
+extra-info Unnamed864369134895 926B26F8B7631BCA94D4B3576F8208BBF81FC7DB
+published 2006-04-02 03:44:14
+write-history 2021-05-17 02:26:37 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 02:26:37 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 02:26:37 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 02:26:37 (900 s) 0,0,0
+geoip-db-digest 47EED5D54628AA0208BFF94D2E732446DFBC59B8
+geoip6-db-digest B06F729FC2226224D9C62BD7A7D9FF8C435F66B5
+dirreq-stats-end 2021-05-17 02:26:37 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 02:26:37 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 11.158.130.203:7291
+transport obfs4 11.158.130.203:7281 iat-mode=1,node-id=5b9e36ec3fb5698a93d45103ee2f541249c68be4,public-key=1171666c3e0af069667251bbb8dbac52aeff187a6866daa07c597c813aa289e0
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+PObLWkaMCYjVkMReaAK7nNEuvn5NP0PozaO7FDsiJ9/wI6S++J/YSigqWoJKTkd4
+UWfe9jaOU3mIO9kW0LaympnFG+TW+yY0LA6trWlwmotMIfGEH5Ds8bbWjmq98hQE
+zMwMfbW7dfZ0BHtgLIV+isBIAGIh2IWW1J+AKfYA+3Y=
+-----END SIGNATURE-----
+extra-info Unnamed409755205903 AB04F28EB691B841A1D63D6491C26CA129C40637
+published 2000-11-06 10:41:52
+write-history 2021-05-16 19:27:49 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:27:49 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:27:49 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:27:49 (900 s) 0,0,0
+geoip-db-digest F8097F0471DBD2371609101F211DF1B511611F81
+geoip6-db-digest FE9BCD964CEF5B95E6F8F4A012F0F070EE3B4675
+dirreq-stats-end 2021-05-16 19:27:49 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:27:49 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 171.254.147.97:27686
+transport obfs4 171.254.147.97:27676 iat-mode=1,node-id=c387184c46b35fa4a2ef17efb19f8cb838b973c1,public-key=7b8ec8dd836b564f0c85ad088fc744de820345204e154bc1503e04e9d6fdd9f1
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+IPhe+x9Kmouz64DVEQ38G3+/9CDjkltvOPv7GUgKlQF9pZOLLyWwjgaCPd3CXNUC
+I1tXBB1wMCK4wwx+DIfGILwYoqIu7qMDpFLN2v/JnPyrzn7n6Oe2WQXNpK1BSRJ+
+GqWcS7SzIqX29nTHGwM3djYqr9HEnv+kyZmEd2uEBIc=
+-----END SIGNATURE-----
+extra-info Unnamed278617786187 F2FAF76C195711826EDD55D8E5456E00723532B7
+published 2000-03-16 03:26:40
+write-history 2021-05-17 04:51:35 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 04:51:35 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 04:51:35 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 04:51:35 (900 s) 0,0,0
+geoip-db-digest 60672AA9CB73F63E5197E4BAE78027517236C5E3
+geoip6-db-digest 28DD92C118AE23DDC6C90DAB649A92FBF9219499
+dirreq-stats-end 2021-05-17 04:51:35 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 04:51:35 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 17.243.233.239:49710
+transport obfs4 17.243.233.239:49700 iat-mode=1,node-id=e89931b7aa0422594a6876f9bd77450cdb6353ec,public-key=24045c10c12a89f4c11e3b88ea34558fcdf926a8c1008cd08cc33bc71407c774
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+Vf0iM1ZLT/vVAfVIvSEz/GkpOyY0GR1ijaNKQn+J3I3/vuCJKrSWFrtxsPyK+jQS
+NET/QcebPN8TJOFMpIo/jRADorF1JpGn3dWq1ikyFUNCBX7cfVsnf33PCu61dBRy
+jgN1bTXjOBhXsTcLEn9kiNSrPGHpt3NKULjTGxjSL0Y=
+-----END SIGNATURE-----
+extra-info Unnamed157519794008 636314F19ED47A448AA6B54E491EEB822523588F
+published 2001-08-13 23:34:54
+write-history 2021-05-16 17:38:37 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 17:38:37 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 17:38:37 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 17:38:37 (900 s) 0,0,0
+geoip-db-digest B848636DD9EFF87B9DC1A2108A659FFB51C74165
+geoip6-db-digest 9CEE7448445A70B2782FEDB72702F8B68C05E507
+dirreq-stats-end 2021-05-16 17:38:37 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 17:38:37 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 112.65.112.206:51495
+transport obfs4 112.65.112.206:51485 iat-mode=0,node-id=4d634c7d083557e72213c4bd55cc4e7365ccf66f,public-key=b0f66adc83641586656866813fd9dd0b8ebb63796075661ba45d1aa8089e1d44
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+SxWL5GbJFE6p8gj87I+wlEbs0FF9vX08u+TDuiHeX2zThpDuZtiZmdWQ2w3o7NcT
+OcH4CKxEaSfm7xpDdb3EcgUYFR0JuW+uc/q0BhQkqj2uynF1dakFFkbMywo43pR1
+j8KjulcrrS4mlogfMpBG3KgBg45RpAFJu1vhrxzGgYs=
+-----END SIGNATURE-----
+extra-info Unnamed783315496605 826380F6CA69B583F8FD2FED4BD1654F177FCA7A
+published 2001-06-02 10:15:28
+write-history 2021-05-17 07:09:35 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 07:09:35 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 07:09:35 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 07:09:35 (900 s) 0,0,0
+geoip-db-digest 7FCE14A15200056BAFCADE8725F75FF19AB540B5
+geoip6-db-digest 034C35FFDD8FF7DD70CA01D81A37698B6874E902
+dirreq-stats-end 2021-05-17 07:09:35 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 07:09:35 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 106.191.122.103:53259
+transport obfs4 106.191.122.103:53249 iat-mode=0,node-id=0d0e47938f6e00166e7352732ddfb7c610f44db2,public-key=50b5a0a1d8505b42b7686d846de866287584e786452f792c132c3e52ffd39310
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+f70zY+mObE11jGgPNJntHlTFYQN4SQUbIXTKCFfwXUUloEgNqg2WwXQ//cXtggLc
+EgMITJH5e/Rymbpa2uQUuWDUvRAeQACrBQnG1KCTxADSi9LKYBYARXTb8l0QgZHt
+wPF0QAcRBpI1s84qRo5Q/uyk6LOh38R6XWXnEUkfTHU=
+-----END SIGNATURE-----
+extra-info Unnamed813481307470 D237D3C0354D0A60F90E2428F181A7CF90C5B78E
+published 2005-06-04 04:59:04
+write-history 2021-05-16 17:11:07 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 17:11:07 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 17:11:07 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 17:11:07 (900 s) 0,0,0
+geoip-db-digest 1A64C999D0AF0E72C22C6373EC362D84451B3BE9
+geoip6-db-digest 67F5BE1766241E8EDA5D70819DC2CAA6E16AB176
+dirreq-stats-end 2021-05-16 17:11:07 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 17:11:07 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 222.66.21.186:54503
+transport obfs4 222.66.21.186:54493 iat-mode=1,node-id=509d7156a87cf0a92bed636573627c96fef851f5,public-key=41c77c1739e8ed68f37930c031f36cba4618b62ac737e92584490a5df9fd10d4
+router-signature
+-----BEGIN SIGNATURE-----
+C6iJQduDPfjQehw8+OzUVe15AJlJy1/YmHAjDqCxkZZW0qsDCZDyt83tZRRW0BrX
+kdgDuV3x29I3XVEml4sW+zwB5q7TSIGc5N66EncKZu+HHljOhKNXgFgFnmGHs6VN
+K4YWN3MXa3OD4r39Kx8bWzv4tZlEPR54TciY+eYO+bs=
+-----END SIGNATURE-----
+extra-info Unnamed797409187538 3ECB76705E87CF4E312B88F174EAC659F28827E5
+published 2010-02-05 14:01:04
+write-history 2021-05-16 11:18:29 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:18:29 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:18:29 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:18:29 (900 s) 0,0,0
+geoip-db-digest 543AE900526E75B3BFBB80CF3BA55D93E45212D1
+geoip6-db-digest 19A9FD61200434094D731481E27311D096BC7E7E
+dirreq-stats-end 2021-05-16 11:18:29 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:18:29 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 113.95.32.31:19075
+transport obfs4 113.95.32.31:19065 iat-mode=0,node-id=558ae348a40d50bb93d89fa2f25483d0afed1d32,public-key=6eb69e26de2a26eda48af77d4cec893aa0cf4748a64cbefcfe11a22c1e680ad9
+router-signature
+-----BEGIN SIGNATURE-----
+PWxsTVuYSQKcfDzNapG1/eMbkfl9fq9srg9n8zP9hzPpblLh9V3UW5/FPz8mSij1
+aMIrOtLte/K4CIBjCyIfzL1PiQz+ga4rrtRPd4Nu1RuA+yZbBFWHw/91nJuuoIqd
+3SDdKdVtF4yqMwotC21jx8DjceLTARDcZH9hyZvRstE=
+-----END SIGNATURE-----
+extra-info Unnamed905013773809 FBA132FB513BDE99DEEE9B1CE3F12E355876038A
+published 2009-09-12 16:06:59
+write-history 2021-05-16 03:19:58 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 03:19:58 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 03:19:58 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 03:19:58 (900 s) 0,0,0
+geoip-db-digest 48D81B4122E48E5AFB3639B93E60911AE55359F2
+geoip6-db-digest 9F62C62C7A34D828471E34B506498952A0CAB29B
+dirreq-stats-end 2021-05-16 03:19:58 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 03:19:58 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 53.209.21.164:39405
+transport obfs4 53.209.21.164:39395 iat-mode=0,node-id=1df5935d4cd349ac78102af001ced100f31449b1,public-key=c6e26c3e31bac75ea556356cbbd12190e29f277ea5f9010f8f88d5ab3363a2cf
+router-signature
+-----BEGIN SIGNATURE-----
+XDzAw+1lQhHmiy0FeFc6AfEyGmjuVXyUrEsPtqpf6Q9eFgaOuMIDz6mibsRpIhQk
+THDs37XVrhkN6OmiV6nC6RHOujP/x61QTzbv5+VMxEhmjA8BBDmJgDPdFgT1NLdd
+If0aGgDG5eY65JTyJBNOycqZ9JWqqAV0bECH9L+2wc8=
+-----END SIGNATURE-----
+extra-info Unnamed776549678355 2C7AEC265E7975FA9A941510448C69E71FF6E97D
+published 2004-02-11 01:55:38
+write-history 2021-05-15 23:52:35 (900 s) 3188736,2226176,2866176
+read-history 2021-05-15 23:52:35 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-15 23:52:35 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-15 23:52:35 (900 s) 0,0,0
+geoip-db-digest A15E09F5DB04055BFF5BC1817DB7E61D533BCB99
+geoip6-db-digest 1192106F5832C442374DD8D364653793544B71A4
+dirreq-stats-end 2021-05-15 23:52:35 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-15 23:52:35 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 18.202.48.188:56108
+transport obfs4 18.202.48.188:56098 iat-mode=1,node-id=e4afca3f3e2d3c39eff2e6a393f675a20377be32,public-key=e7ecebbc590bc88b3761fa6cd03d749f87463dabb67021a5c6768c25ec68b3f2
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+IAfJsinUnqR3EwCeSpihbtZdnt5u9RWTwD54Gg9ozW6/OWWj+G8B5u3aTMY3jRCd
+mfNnRRjhLzguJ/L2EsAQ/x6EXRHT7a/7ZgjUnF5F+jVnxkBB8ycBSUZ2nF4TgYQt
+WPcQ+25XzAC0ZAZds1k9+0vlg0FX3+vtj0Mgzff9FJo=
+-----END SIGNATURE-----
+extra-info Unnamed849288579279 C603AC26BF4E8EBBF1CB7088B664EB7A5E4354F9
+published 2006-06-02 06:28:17
+write-history 2021-05-16 03:53:03 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 03:53:03 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 03:53:03 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 03:53:03 (900 s) 0,0,0
+geoip-db-digest B53B60F9B9F621683C4646EA76C18EED67757DF6
+geoip6-db-digest 01585F793FE87C9AB5A1454C0ECC82226ED59183
+dirreq-stats-end 2021-05-16 03:53:03 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 03:53:03 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 20.88.229.117:57018
+transport obfs4 20.88.229.117:57008 iat-mode=1,node-id=4d634c7d083557e72213c4bd55cc4e7365ccf66f,public-key=cd05c2283f62b7c74911008df6a66101d51ed5cb23e6b4b5c84af4bc60db0f3a
+router-signature
+-----BEGIN SIGNATURE-----
+BIqL4+orZcmZB45VLHghzXyuI+lgn1gqWAgFaVKt2NGGVtKZy4XDz9BtUWHbtQFO
+qc0vbqFgzLp9KcLdao/SL8WUl2X6wQbvUDaH2iCUokNb505fp1dUsPFX/C6DZhBU
+JU/TvmqWSu12CbAmZTCyjaRTAeDCy6cH0SHv7SoSb+Y=
+-----END SIGNATURE-----
+extra-info Unnamed990825385665 75658D7A0F8C96496919AFD708132F48321CB586
+published 2003-07-09 02:46:12
+write-history 2021-05-17 10:37:02 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 10:37:02 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 10:37:02 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 10:37:02 (900 s) 0,0,0
+geoip-db-digest 4C4A6970C3B3CE8F82F18D94870126CDF39BED66
+geoip6-db-digest 914156926FEE9DA3350660B9BBFFE753294E9C05
+dirreq-stats-end 2021-05-17 10:37:02 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 10:37:02 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 12.56.4.205:4283
+transport obfs4 12.56.4.205:4273 iat-mode=0,node-id=5c0a9085206c2dafcf9c1cb2c0a8dabdc387c895,public-key=cd00e292c5970d3c5e2f0ffa5171e555bc46bfc4faddfb4a418b6840b86e79a3
+router-signature
+-----BEGIN SIGNATURE-----
+O5Yp7poXUIjmhFRf3K7zztyg9E4x/0J7TZQdVsTO6RdvZE6qqqnp8YUVbh37STfK
+VagUAe5o4brjpJjBz1kNTPAbYKYfYG/JrpnCgugV4Un+8+jWynsfE4QI8mBJpBxU
+x7mFCu9HJ0NkGIxzJd4DHw/LAHqPMckoCBqRP07DBz0=
+-----END SIGNATURE-----
+extra-info Unnamed907031763609 108193568E5C7BC717BEBACB7A6E3FDFDCCFC4D4
+published 2013-07-12 18:32:17
+write-history 2021-05-17 02:26:17 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 02:26:17 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 02:26:17 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 02:26:17 (900 s) 0,0,0
+geoip-db-digest B3791434000CB8EBD1183CEEC7B65640479C62B1
+geoip6-db-digest 58A4A47993FABFB887A39D707C4063C51C02BC87
+dirreq-stats-end 2021-05-17 02:26:17 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 02:26:17 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 182.17.71.187:43715
+transport obfs4 182.17.71.187:43705 iat-mode=1,node-id=786892d85904e693af3d718785f8fed2b92d38a5,public-key=087fe55d46b5fac5e233bc72e9f0392365dac5ff09cee4278caca86691771625
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+kd4dz5hcF58seuMjOkXh/2LS2EtnMiBIZ2FHXSDw5z/WnTeAgZp0U86kn5B2sSxz
+tMidKK+mmx9ARROaKvZa667GTarrHnjNE/yOiChzJg5avEXo/UmI1myLQHNGF51p
+DhiBE2fI1uR8dhY5b1ogSTX2eKOiyQMi2sBKwRo0J9M=
+-----END SIGNATURE-----
+extra-info Unnamed840693114090 1D95FBE69A7C7A6DF599D318797A3B2460011BAC
+published 2001-06-17 07:51:24
+write-history 2021-05-16 03:46:06 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 03:46:06 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 03:46:06 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 03:46:06 (900 s) 0,0,0
+geoip-db-digest 4C4306DDBEFE3C9ABCDB4DB3BF5C20F3BD70E8D0
+geoip6-db-digest 2E3B07051F1EEFF0B9462CD6D6F5EA980262198F
+dirreq-stats-end 2021-05-16 03:46:06 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 03:46:06 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 20.65.151.134:23575
+transport obfs4 20.65.151.134:23565 iat-mode=0,node-id=ed4a77d1b56a118938788fc53037759b6c501e3d,public-key=b3ab6982980fddf460a2f47adb428475ce9afa89092fd034499d017a35993f05
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+JzjsBjUHhhdvg8G2Fh+kMlB2LU/RDTt6DEQjyD71I+jroGQX0ODv5h27bYLsEeli
+Yr89sMZwqaGN4Q1tkjiEKsu3DMyu3JSSc67VosR8igHWlrTrZbWt8pti7MqePIgv
+/9Mq2Iv21t2Ij4gM9MG4EwU+TwQYrO3iRcNkRgRt4J4=
+-----END SIGNATURE-----
+extra-info Unnamed879513194051 241A2177B33EB2F715196183F3ADDBED6EB04845
+published 2005-09-03 01:45:09
+write-history 2021-05-16 13:13:11 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 13:13:11 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 13:13:11 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 13:13:11 (900 s) 0,0,0
+geoip-db-digest 1195DDC1461D46620A2CBD510E09D5DDD69B28B6
+geoip6-db-digest 36A880F84CA704B7C21ED97DB61E0254975E69BE
+dirreq-stats-end 2021-05-16 13:13:11 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 13:13:11 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 51.65.118.247:6117
+transport obfs4 51.65.118.247:6107 iat-mode=0,node-id=669b1c85ecbafe23c999100f55a23e06bf59ead7,public-key=136dd1a7d0a62859f2077a62b7673c5c712fb750604a15f5f6140ab2c5112327
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+gT5JkREwxjb6HNEHPFBOUaLkVTGMssuT0ttlh62PWeVRRzogL9M9HOvCl+v8p9UV
+XN9ISNgkVzi5wDY5DFVW7im//M640Mpwc/v9/t/8FuS4o6KIg/nusMa4BfcNchxR
+Cl+qh+t+zMrzieGZ7KvxgaFZTKRZxBHcK246c/AoafM=
+-----END SIGNATURE-----
+extra-info Unnamed812034837931 6A2AB6CAD5BBE357444FBDE9CB16035D4F205A23
+published 2012-09-14 09:26:55
+write-history 2021-05-16 10:26:06 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 10:26:06 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 10:26:06 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 10:26:06 (900 s) 0,0,0
+geoip-db-digest E082631775375164B0BF23E101C614AA5B12AD9A
+geoip6-db-digest B82597D69D5BA0180FB69EB797CA8DA3BC30BDC5
+dirreq-stats-end 2021-05-16 10:26:06 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 10:26:06 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 175.227.240.108:43937
+transport obfs4 175.227.240.108:43927 iat-mode=1,node-id=111ffd83edcb095d251067456a3a60b754b4c717,public-key=92426fa49cf0d59a470bc4d7cc53b8e52489315dc449ab2a4e69539c76ce8e42
+router-signature
+-----BEGIN SIGNATURE-----
+EAK0mXFb8ijX2xd8rEfpSjaXUrWT9ZURdspcX8rLWrjQ0YhLtNpAVflkIUp416rh
+NBh1GE9aLgvvNip2vZNZiCce9oKB3CQCQx69G7Pzg7k3bfxaer9/auGEpeZhWLX8
+LHgUtYrZ8C7BQAN/wcgnGakqX+90mmaWBmCTLNgD5nk=
+-----END SIGNATURE-----
+extra-info Unnamed977912794928 1FD25595F87A06DCC88AF40867706E4E583CAAB5
+published 2005-01-09 09:04:56
+write-history 2021-05-16 12:55:11 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 12:55:11 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 12:55:11 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 12:55:11 (900 s) 0,0,0
+geoip-db-digest 718C2083812A6D42ABE29A075684152477A892F4
+geoip6-db-digest 48A3A0C3D109020CAF546B47BE36FB93354E353B
+dirreq-stats-end 2021-05-16 12:55:11 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 12:55:11 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 222.85.234.123:51124
+transport obfs4 222.85.234.123:51114 iat-mode=0,node-id=666820973fd95e6cd9e7bc5f1c53732acbc99326,public-key=d6fd62f5ce537d90ea3ea45841b17f34d727bcbc4128748cba14fb87c0ffd9d1
+router-signature
+-----BEGIN SIGNATURE-----
+Hi7BJDbyTYFX8aImS0X6to/kCmGcpt0nb41LMgDQlCTZ9gVJYJjXOQ5lR2TJ0l8G
+TILOLO7VfiC9a1fVMOnE2UilvFLVZQuxM0Gex8h4rQyQh/AoUs9YSXkpK0Fwe7SL
+jfwRxZXgSGRBrWS24LvkuTqdik6teuSIp6yl6Cncl8U=
+-----END SIGNATURE-----
+extra-info Unnamed152029807701 067BE3A52240486F887E140F1214701B4FF3E65E
+published 2011-12-10 05:04:09
+write-history 2021-05-16 07:29:07 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 07:29:07 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 07:29:07 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 07:29:07 (900 s) 0,0,0
+geoip-db-digest E18E631AA8F6668C7E41B69874C09C5719A84022
+geoip6-db-digest 5075EE4A79751904D57C0265B493481C0EB9C0A1
+dirreq-stats-end 2021-05-16 07:29:07 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 07:29:07 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 118.187.157.113:56522
+transport obfs4 118.187.157.113:56512 iat-mode=0,node-id=646aaf623a9b65f3054571ba8680342cf02b6225,public-key=b57cceac5243ea773def6e4a96db5bd89d900f7a41429431c2719f43d523c83f
+router-signature
+-----BEGIN SIGNATURE-----
+L1wB+rLhVrwIvl8mgW7F6DlgPijDAFuzLmW13JP+jkrtG3yKx5mQw1gXtOutBBi1
+QuDBs1EKfyPnRNNoRxw3fE8ye97huMTM8Byg4vfGCrNw8OM5PaC+9a9bTJMLdZJg
+sC2RkWKeQ+xEVIY46QUdfuiSWvMncJ5NKDZz/iLqx4k=
+-----END SIGNATURE-----
+extra-info Unnamed402428933476 15EEA1CC54FA1C9F89620A33A789783DC546D0FA
+published 2006-07-17 03:08:18
+write-history 2021-05-16 13:48:46 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 13:48:46 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 13:48:46 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 13:48:46 (900 s) 0,0,0
+geoip-db-digest 7B8FF77F45E30EF872E1D86AA7C071EF33E7CBF2
+geoip6-db-digest B34E534D26E72EBC8A53085B7675C19988AD42B5
+dirreq-stats-end 2021-05-16 13:48:46 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 13:48:46 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 104.215.131.63:46893
+transport obfs4 104.215.131.63:46883 iat-mode=0,node-id=420f079c4fa62bd56442cbd687964bfa1b423a20,public-key=9f0ef6d54ab02cc095210908cb2866473a3f4338e64c68d1741b45babdfb8d90
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+GBiwi58NpvntPb4TXvYDO0zFv7ctAAbTLrp52aGHH2+LjnnFHSj1snrY0BiT/YDv
+a+cK0NzqlLy4HzFkSc+7lFlqTwYIz5M6hxzD8RMWbYg+jNUtHAreg972hDoPX81Q
+LenbhyAr3v2PhUvwJPhFoBOA+gF95MFTAFQK5M5/+Ns=
+-----END SIGNATURE-----
+extra-info Unnamed175528742549 893DF87E32113ADA0EF383F5DA2C10DE8EA52E20
+published 2011-10-04 18:47:30
+write-history 2021-05-16 11:44:43 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:44:43 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:44:43 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:44:43 (900 s) 0,0,0
+geoip-db-digest B9A3697E2B08A09586FB1F6F97B6B030CEDCDE9C
+geoip6-db-digest 9F82DAF4C3637ACF1C00DD4897281C7E57961A9E
+dirreq-stats-end 2021-05-16 11:44:43 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:44:43 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 193.255.235.203:14182
+transport obfs4 193.255.235.203:14172 iat-mode=0,node-id=db4bf2f8ca37a35fdd742bdb5d37e7d646451922,public-key=c419a92c7dce5225606f604f79d0d07009ebd882b5d5d41d234b71617b691774
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+I1jS4kYvU3auXNMsvCg3isUoejDIS9HdQajpoUveSGO8un23eKOhszbTKGN0kT8x
+Uzv/OZODmLz81ePVVMohEt6WDwdKHcMrOybItr/Ks2gsbtrIESbQo7emT7oZYw0L
+0t9bCmR1CZ+69vwmLPocOQuUiPuHoJMefrL6h0zEaUs=
+-----END SIGNATURE-----
+extra-info Unnamed894728627287 85589AD8B171BCA72E01FC4EB71B5EBB5B8CFC8B
+published 2013-09-10 02:06:21
+write-history 2021-05-17 06:53:35 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 06:53:35 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 06:53:35 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 06:53:35 (900 s) 0,0,0
+geoip-db-digest 018C782D0F93F2DF56F36491E41B60CF2BAFD13F
+geoip6-db-digest 108612CB7E3FDCC66221B699C6757DB2362C1B51
+dirreq-stats-end 2021-05-17 06:53:35 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 06:53:35 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 221.186.69.121:44421
+transport obfs4 221.186.69.121:44411 iat-mode=0,node-id=6d30d645e5c5ce43c166c9ca18613a3f2f90efd0,public-key=7b8ec8dd836b564f0c85ad088fc744de820345204e154bc1503e04e9d6fdd9f1
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+S9wZaeat0vlMQn5H0vuoV8kQYW8n0y4Go5Bk+AMkPqd59Gy8G5CqRrmyLJ2EEezr
+5lLWIjt53OCkuJy2cXzjb4vAAqADwcBHL0hT152btW5yBPJDaaSzLZrh4NlLMIF8
+YgKHIyLW4oxadyQg1oJHQpvBvzrBY6uyABxbkbKwr1g=
+-----END SIGNATURE-----
+extra-info Unnamed367369627917 A6E8D5AAC4C10A60AFE29CA0FAFFF22BC973FC08
+published 2014-11-03 09:21:32
+write-history 2021-05-17 01:08:24 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 01:08:24 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 01:08:24 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 01:08:24 (900 s) 0,0,0
+geoip-db-digest 287280CAD0F119583809C3B0C0D644229BE9F06D
+geoip6-db-digest 43CCBB485955D815C4A869AB7C11C8D8240E4A2F
+dirreq-stats-end 2021-05-17 01:08:24 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 01:08:24 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 138.56.76.212:35925
+transport obfs4 138.56.76.212:35915 iat-mode=0,node-id=d53e4c5562cafbb535c477e05223688b0d5faacd,public-key=5e06bfa9ebccfa3d8759270620b6860f0b92be9d69ef7d7802b78ee5b5f07f96
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+a/6NJtOjEZmh9KXRkLxvpfjIUtjGjYmTGeQjH0L5WqAsAC6pOJ81th+843joIHKI
+NWfGPF+yQVBOsGJRDk06sZRZRnpp1+L536aHKuQ4k6m7QxKVCRhGfP4oQdzM+ClA
+BqOhuYARdXBVNPVciqFeWOyBDHHKiBFVoo+jij8Nguw=
+-----END SIGNATURE-----
+extra-info Unnamed478798098181 1C820A8C00EDB3C9BF25C2F8493DA3B0EA82BDF2
+published 2010-09-19 06:16:00
+write-history 2021-05-16 14:41:12 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 14:41:12 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 14:41:12 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 14:41:12 (900 s) 0,0,0
+geoip-db-digest 4B028E97A1D232DBF9808AC4B3D963EA3AB1584D
+geoip6-db-digest 046D21FFEBB313C7CBD62B2EB29907C19127BCBD
+dirreq-stats-end 2021-05-16 14:41:12 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 14:41:12 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 37.247.163.13:36209
+transport obfs4 37.247.163.13:36199 iat-mode=0,node-id=dd90903d2f566a3922979dd5e18378a075c7ed33,public-key=ec3e3f34b1ed7f551522cd727ba4e749acd4b5dac1d6a438a91f9cc2ca67620c
+router-signature
+-----BEGIN SIGNATURE-----
+coNz3HNba/c6tinWqEBeE5fSnIilhfPelJcN31VoE5PDeE0r7xOlBjryisrDCWUM
+RuOfQla4MCi2ZwUCBjAKu+zq6wmNrWuHkLcQtjucQlISCoZI1Dm/LA1DhPjPiTJB
+NY3BLpRgc1Bl6n+mQw9nnfoMmpPVGeFE7L+IarG7t/0=
+-----END SIGNATURE-----
+extra-info Unnamed797438262780 E5286E22737466E5CC6FE162A74F1AFE178BAF34
+published 2008-11-16 22:10:04
+write-history 2021-05-16 14:20:16 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 14:20:16 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 14:20:16 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 14:20:16 (900 s) 0,0,0
+geoip-db-digest C431BB7815A6284FC80918D12A3C591041339542
+geoip6-db-digest A26E2CB506BF830AAE1C643BEEEC05DED5631DD2
+dirreq-stats-end 2021-05-16 14:20:16 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 14:20:16 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 150.218.167.13:18370
+transport obfs4 150.218.167.13:18360 iat-mode=1,node-id=509d7156a87cf0a92bed636573627c96fef851f5,public-key=c4fcd50d9f0c893c46288b57d8e62b18523145956b249b6ecd6c21718be49065
+router-signature
+-----BEGIN SIGNATURE-----
+YxFMxRPkTpQ8lnSjsPlHyAs8wj5nsScBMUoYnf6k4VBAdcJFZXbSAvTYjvdPvMj0
+1+OLlrWOZXbXnKAkNlYGiA7T/Y8/VjufgRbY+3es8aOyA/zeBLRjDV+8QxTzlJmh
+NutungIic2BTPM+IdIvXaQrrl+wsS67aEGlEbEn6VzY=
+-----END SIGNATURE-----
+extra-info Unnamed351512716041 BB7E256DDF6456CE0866D81A166363827E2C5224
+published 2008-08-17 11:49:54
+write-history 2021-05-17 00:05:55 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 00:05:55 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 00:05:55 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 00:05:55 (900 s) 0,0,0
+geoip-db-digest F6FA6E3C4A43BD391943947B9B2A296707C0A0A6
+geoip6-db-digest 254B66C45CFD579FF9FE0C8F5D2FD8C604F80CCB
+dirreq-stats-end 2021-05-17 00:05:55 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 00:05:55 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 146.32.55.192:27494
+transport obfs4 146.32.55.192:27484 iat-mode=0,node-id=d5dbc7c6642a8a23da14f952a0f64fe874e8191b,public-key=1171666c3e0af069667251bbb8dbac52aeff187a6866daa07c597c813aa289e0
+router-signature
+-----BEGIN SIGNATURE-----
+TkuqmUllshgsnYZT/9lAkYAwr8rSjDM4mgiU46tEQvrb69lioLjcJ4dPqRordbFF
+2L5Qx/oy0pHcb2r4XAIZ3pdh2I4vDyWEBgtygSU7VWPSXzWe2m0NrL63em2Kr/f4
+CIUgCHpEU0bsu0erlCuQSJMU1LFya1r5zsualrkyKfE=
+-----END SIGNATURE-----
+extra-info Unnamed205983051123 52AE35A2CA74D8C535CFF5451E9817039483D2AC
+published 2003-09-13 23:15:41
+write-history 2021-05-17 11:17:18 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 11:17:18 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 11:17:18 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 11:17:18 (900 s) 0,0,0
+geoip-db-digest C8A71A2F5C7B5004B30EB1E780EC4513E380393F
+geoip6-db-digest 8649479AC1F235A6DA144A20CDA0F8768CDEECB6
+dirreq-stats-end 2021-05-17 11:17:18 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 11:17:18 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 156.250.133.191:8749
+transport obfs4 156.250.133.191:8739 iat-mode=1,node-id=12b445e0dbf65060bfc3dd1a0958f2524d48d324,public-key=9b0966fae6a6ad5cc3a0112c5ae1f9b1879c9ba5f87951002c330ffffaf24a6c
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+HZhRXX7m6rbnJqAcdvW7rPsSJSZ2gXAta5kOCa3e2coRxCTbytpvPuv15kmo0v6N
+okM7qoVyAvoWk/I+a8riNeZ/G3trgv0B3GCnYGuxasmeykYA//q/QDr27rZFrZLj
+v81UW3dO/Eoc8Okw19Lg8qMJPhtAo+8HWkbuE99/NUk=
+-----END SIGNATURE-----
+extra-info Unnamed257945106406 755016DCD7EF9301D43AA278FB964E8975BB66BF
+published 2014-01-07 11:38:03
+write-history 2021-05-17 03:56:25 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:56:25 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:56:25 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:56:25 (900 s) 0,0,0
+geoip-db-digest 187B17BD973F659D9B14B68006C2DC25412ECED4
+geoip6-db-digest 83F24539C32871859432A1CD67BB7143EC38C0EC
+dirreq-stats-end 2021-05-17 03:56:25 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:56:25 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 110.151.87.87:64968
+transport obfs4 110.151.87.87:64958 iat-mode=1,node-id=624e4110b6241707578ecefcb0f9188e5c514cf4,public-key=b7f064b4bd27a3d68b5e66519cfac498d2e96da9bfd1bacf4110f4c7c98feca3
+router-signature
+-----BEGIN SIGNATURE-----
+QC3dYPD54Oc8ukr30bN+u7+67U4x6ZYvYiNZC1QrO59qdZ906RQ6rXCkG4iOhxiC
+fuz1xJCLAuLhxQVQn8lEznCCWAtTBw5OV3lILGXmF9TfSH04GuCN2ZWvrho8Ljsh
+y/GTHNQTa7FR3WNHTeUv3o9st6FKofc9DOgZuy9FXNc=
+-----END SIGNATURE-----
+extra-info Unnamed448417236722 C518EC4F6B42AB6EA1F45274B85F4DD72E1E1DD1
+published 2002-11-03 12:37:20
+write-history 2021-05-16 23:44:49 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 23:44:49 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 23:44:49 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 23:44:49 (900 s) 0,0,0
+geoip-db-digest 2AB664ECD6813C6E060DD743E33E8064145645C8
+geoip6-db-digest E7850DFBE516AD065DE4A5D0C73E39E8BD3F885F
+dirreq-stats-end 2021-05-16 23:44:49 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 23:44:49 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 222.180.163.245:53389
+transport obfs4 222.180.163.245:53379 iat-mode=0,node-id=fbd6d7d2ab130f02cedf1d1d5ef220edb6f3c525,public-key=cff3a163e0daf664f1df7b1a42c5dedd58a8928698fed83f6596244b0919cd20
+router-signature
+-----BEGIN SIGNATURE-----
+6xPyur0qh5PkM1hqPkx5V0eiEX2jFM1fH3ItIdEw5+ZDFaB4QjwMTqpvtnZUyYYq
+e0fojRBGfig9COJVQoZKu6rgp2CH+VW+A5w9LxiebS4Oat94q8CTsK32ArV6w8OH
+hEIZQNHRamcNEGiQ6+mCbz5K4eNIVBG0kdaNF8XrVDs=
+-----END SIGNATURE-----
+extra-info Unnamed934106734840 70C3734092ABC767303CDE17D89529791E65A6AA
+published 2013-03-18 04:30:05
+write-history 2021-05-16 11:26:03 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:26:03 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:26:03 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:26:03 (900 s) 0,0,0
+geoip-db-digest 75F8B183FF2941ED48AB7A48348F87C601CF792D
+geoip6-db-digest 20A548014D61F2FFB03ED8B951C2A671635E30D9
+dirreq-stats-end 2021-05-16 11:26:03 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:26:03 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 53.105.19.116:2372
+transport obfs4 53.105.19.116:2362 iat-mode=0,node-id=0b8bf9fc37ad802cefa6733ec62b09d5f43a1b75,public-key=df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119
+router-signature
+-----BEGIN SIGNATURE-----
+N7ZKEui2yH7GRZwuhqoFBum5KSnwcHa/hMHFlbZ6UWv6fAXs9N6l80HLCsTMZ/+2
+Rjs39QX2Gf3BgXcZxh0b+Vze4egvtDgGUTxyAoPyAUAmXuAhShRLd75dEu/XEafA
+gGnuYMH3J0yazzRojE9rFt/fwv+NlfAab/ZXqm1hbKI=
+-----END SIGNATURE-----
+extra-info Unnamed255926873514 155F8662F72A330FFBFB373296D44623608FD0AB
+published 2012-03-06 17:07:41
+write-history 2021-05-16 13:53:08 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 13:53:08 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 13:53:08 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 13:53:08 (900 s) 0,0,0
+geoip-db-digest 7E42296C639317E2274F9ECB49FBA5E23120AAD2
+geoip6-db-digest 835C9CCE8D686963C69249A0CAA0788345A659EA
+dirreq-stats-end 2021-05-16 13:53:08 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 13:53:08 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 175.130.108.99:6855
+transport obfs4 175.130.108.99:6845 iat-mode=0,node-id=bd94219a79987af3e4d4ce45b07edc2230aaf655,public-key=1a5ce2eb33e4dcd8bf09a57d740649e2aec359dc2c0fd952ac0d19d4a63d0c42
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+KIwZOjB7IOp+e3IKKj5DI/wXaIiI9y6VyqnhozQ4WQ5I0Uft9GRLhB9Y7The06j5
+JhSPLviaF8IrLs2y/XAzv+7T7RkhXxFpx57JlhZp+NwqnJ+0FH/5xkpluWbC/3NG
+Vm0h1lAFuagdRG5KeLrRsRG47NAejJvd7KnXrccD7Ek=
+-----END SIGNATURE-----
+extra-info Unnamed821306544860 7C0AFBBE1B08787B37D4CF2B96CF6B49E8B0AE91
+published 2015-06-15 17:40:24
+write-history 2021-05-16 03:00:55 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 03:00:55 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 03:00:55 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 03:00:55 (900 s) 0,0,0
+geoip-db-digest F49832809828FC08D8BB676ACF5D74296BAD818F
+geoip6-db-digest D04B693B7ADB7661E28D36CD16C6F90BE8F27DC7
+dirreq-stats-end 2021-05-16 03:00:55 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 03:00:55 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 128.81.255.160:17788
+transport obfs4 128.81.255.160:17778 iat-mode=1,node-id=50f3b486f99fb22648d26870e7a5cba01caed3da,public-key=1be2b3990b410ca4fb38d1f79019c4018cd8820b69618646c81d22dfcbddc802
+router-signature
+-----BEGIN SIGNATURE-----
+PmWd5rgvuOk40p4eGFnLiwBsj1A4uOnpCBSoUaeE+YN+jWyX+OncCOOEy+loFsK0
+xBOAmfIJCVuH04EBNWf571iW8Y7+D/KtgL9GG1gbHy4MHfGgEefIEZogNzyGYcU1
+2gUu+SNc0hKrtn6lmuHkgii76LtGYNG3FieonrKCDsc=
+-----END SIGNATURE-----
+extra-info Unnamed102588083903 A8A0487F01D44810B32E545A2E6F09F599CC8B7C
+published 2000-03-16 08:13:50
+write-history 2021-05-16 18:47:29 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 18:47:29 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 18:47:29 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 18:47:29 (900 s) 0,0,0
+geoip-db-digest C6E5D3EA6939ED2CCA1C13AEBB55B7CA819D8AD9
+geoip6-db-digest 8CBE83DCAE10381E908E701669CFE19C759C2D53
+dirreq-stats-end 2021-05-16 18:47:29 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 18:47:29 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 121.226.119.89:31383
+transport obfs4 121.226.119.89:31373 iat-mode=1,node-id=df19c54b57b06b4281eb79907ed9016e174dea74,public-key=24b920fb2f49f521a4fce8f8d0bca1098aa7b380733f96fd6de736dca5006a2e
+router-signature
+-----BEGIN SIGNATURE-----
+AcinpqeEdI3LyqTRMc/qLhq1QinMhPFd19gkPe6wOcFDZPmR4mBnVrptAwKu6KNN
+BnJRlzZCoY5JWJF5GdELspp2Hp+ughBblAkwqzi4ysCyk00r9rXGmehCHAj741gJ
+ylBLuMd9viZx/pMquLhAu5jfxHA1m/t+28giSbbeZYg=
+-----END SIGNATURE-----
+extra-info Unnamed548696567176 7054D84C8C8127CF914E1949ECFC5DAA5746B4C6
+published 2002-05-09 19:41:43
+write-history 2021-05-17 09:58:18 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 09:58:18 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 09:58:18 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 09:58:18 (900 s) 0,0,0
+geoip-db-digest D2F06D299BC60CA209F6B90B5A71E9D584B07B96
+geoip6-db-digest 7F7674C273375C4D85121A6291B0918DA3CB4223
+dirreq-stats-end 2021-05-17 09:58:18 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 09:58:18 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 91.233.127.48:15509
+transport obfs4 91.233.127.48:15499 iat-mode=0,node-id=fbd6d7d2ab130f02cedf1d1d5ef220edb6f3c525,public-key=59bf9091f4cbbd2a8796bfe086a501c57226c42739dcf8ad323e7493ad51e38f
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+iB4N+6rOfMJoYqEnmdCBV0VRqkXwh6PCziLUjiKEWqeRA66gdo29fIBhqIXSfpX7
+NITmDBEvdZLkWL9/TEoKVUVyNbzCiPMnuQgnkkjekJp9thgaMPy89p0dz//kxGY8
+SXy9f65bdSDAzrbSEx+t2WybTQPZ233Gr+hyK6MeUO8=
+-----END SIGNATURE-----
+extra-info Unnamed598050917545 D30A69739ECF40EBD2FC72481E1B71B11A759A7D
+published 2015-09-08 14:50:06
+write-history 2021-05-17 09:25:39 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 09:25:39 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 09:25:39 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 09:25:39 (900 s) 0,0,0
+geoip-db-digest 7C90473D628A0925297F025B6A0F0CEB45B01617
+geoip6-db-digest 94CE36FC8964BE187AC50831F647F57EF51014A5
+dirreq-stats-end 2021-05-17 09:25:39 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 09:25:39 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 143.160.225.33:42682
+transport obfs4 143.160.225.33:42672 iat-mode=0,node-id=f40905a7a7dd1623fa8f075715c862f6b944e961,public-key=913c6e2c32d99e4baff62cf421a494730cb043924f2c6bf46406573b59c641bd
+router-signature
+-----BEGIN SIGNATURE-----
+e07Y40ZzAqbEF256kKNLz5QKXs4gtyVQ+UhBkNBgpcZZEbMZF6xqURIK//8SHRFk
+nsIRcbUjhYlKsoDqQw1nbD5wrcDeXxauuvdHBWumwebhylRVBgrOrt5M30+CtqMb
+nRs2ismHkorGWbv9D4P4bZXxRa2/Xv5/UrJXnIDivrY=
+-----END SIGNATURE-----
+extra-info Unnamed661527993754 496D158CB9D63A3FEA09D94FB40BB2740F0AEDB1
+published 2010-07-09 16:03:04
+write-history 2021-05-16 00:28:14 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 00:28:14 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 00:28:14 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 00:28:14 (900 s) 0,0,0
+geoip-db-digest DD1BA46B44C933F7C2CBFFA582D7AEABAC273F63
+geoip6-db-digest 7670ECC7D9FC216105363AC7491ED870663634B0
+dirreq-stats-end 2021-05-16 00:28:14 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 00:28:14 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 26.33.200.182:665
+transport obfs4 26.33.200.182:655 iat-mode=1,node-id=b32c03194e03c658007c5b6bdedced39ddefc291,public-key=f911d00c6d988eeb76aa722c8c01f0c9b77d90f0bd23da5dc056f4dab1860896
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+HJiowp/jvOdqpT/dUewrw1xyuk/LWW7UH6S34LRhHrFl+UaKfJ7bMD4RvqlTpZhY
+c7dH/yoWgScbZNTyWW84DwkCbQpalLpjy2jaDdmH2BnchH5bbW0zaq453NZTuCXS
+jUoUVDikLJH0bUYDLkRMfVYfTBzmFGdKGN0x3rgyGa0=
+-----END SIGNATURE-----
+extra-info Unnamed923636840647 E12833F3981225A942510D7E1C38501D4A312862
+published 2001-01-13 06:38:32
+write-history 2021-05-16 12:32:00 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 12:32:00 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 12:32:00 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 12:32:00 (900 s) 0,0,0
+geoip-db-digest A97DDEFE60541533ED2A8D402B39E5AAD1AB21A1
+geoip6-db-digest 7BCE78895253A8FEE345C3151B552A0D8F873A5E
+dirreq-stats-end 2021-05-16 12:32:00 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 12:32:00 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 118.85.185.252:24683
+transport obfs4 118.85.185.252:24673 iat-mode=1,node-id=bd94219a79987af3e4d4ce45b07edc2230aaf655,public-key=951b1c95584b91fd8776e1d26b25d745ad5d508f6337686b9f7131d7c2f7096a
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+lvwAuVBKo34C2bxCsOWK8r9696EFyzBLpJ1dizgMiqfkhYb4dNvqv5zlq43Xi70z
+BEUAACSVNha8Iz7JXf+7HQ9SUXU4GaZFRfCUIObxLT9Z+K0Q/EjU8At2PqxoiWF6
+ZyZwmTvweX0p9qcT6REAIn8dNoYs+mcLdxx5paZWfXs=
+-----END SIGNATURE-----
+extra-info Unnamed996402969318 1BE18FB4540B46441B1C2AEF9E47E62AF68A6153
+published 2002-01-06 14:53:06
+write-history 2021-05-16 15:25:48 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 15:25:48 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 15:25:48 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 15:25:48 (900 s) 0,0,0
+geoip-db-digest 4B5CE9D3545B4DE103BDB5584FF9EF2A98D7B6FA
+geoip6-db-digest 1A5C8F56ACABD12CDCF250ABF5EB5AB03C86EB49
+dirreq-stats-end 2021-05-16 15:25:48 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 15:25:48 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 92.178.188.144:25006
+transport obfs4 92.178.188.144:24996 iat-mode=1,node-id=2c65f6ea9acd8d164ece87edf2f142942d8cdb42,public-key=6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+jrMZLJP9daoYAikjT2aRHoWW+Gbls2QTg7iSZ6+lgzJwVSkRWlNLfNSGR43eyoeV
+fQDEjtiqmCNFiD7zMBWggo/1VvFno5JRgHUeLW160Vj0HBIWajroOhzG2p5tWxLp
+GVs3Zhl+4wIVfTyBNSNsBtEfK65mtdSnG/nAx+Ol50s=
+-----END SIGNATURE-----
+extra-info Unnamed952245669636 4F2432ECA2A4BA4FE96D3F7A3DBEE87ECCA2319A
+published 2002-12-06 17:02:17
+write-history 2021-05-17 02:10:52 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 02:10:52 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 02:10:52 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 02:10:52 (900 s) 0,0,0
+geoip-db-digest 1E6D6FEE12AD87F7CCAF5A5182D0D013BDAC24BA
+geoip6-db-digest F8154138300A74F37CB3BAD9FE61730D268D1731
+dirreq-stats-end 2021-05-17 02:10:52 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 02:10:52 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 213.170.127.119:14031
+transport obfs4 213.170.127.119:14021 iat-mode=0,node-id=cf4ca14a7adcbc197cd84c1997efdd076911d608,public-key=9e1736c43d19118e6ce4302118af337109491ecc52757dfb949bad6a7940b0c2
+router-signature
+-----BEGIN SIGNATURE-----
+fU3B/GyGqNtU8Cm/G0Bziy8zhXCufRsj4faqZCXHPR5lzuCO08lW6LSvWwI8GEBt
+8WfD/Wvcw8PWRMgTe1K4oFGkFjUFJtGuLryT7q4mdS7ILZMVoOxj1NB1ZVV/5AMX
+D6ZnAwJtGEWaZcXjnWVD1CWw/NYYUzgER3jPqSB3Jj8=
+-----END SIGNATURE-----
+extra-info Unnamed606279069190 CEC2E6FB25BF262BEB9E7334671111376984A6B1
+published 2007-02-12 01:15:23
+write-history 2021-05-17 01:29:18 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 01:29:18 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 01:29:18 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 01:29:18 (900 s) 0,0,0
+geoip-db-digest 91200B7986984849B792241345589F224D9E015A
+geoip6-db-digest 61E00094A9AE4FB18153FAD20F607EC9FD48741D
+dirreq-stats-end 2021-05-17 01:29:18 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 01:29:18 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 128.63.192.21:17401
+transport obfs4 128.63.192.21:17391 iat-mode=1,node-id=e80e322703c31fd74578166d081f71a105bfea5c,public-key=367467f43d580c3c07040a78c7890ae4262dad4778878f9a49d5f652c81689a5
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+CpjD3xgf4AKeTfgUpTkKpa9fdGCY5MLw1H/gNv+XyCI6ZgsDO6+sSVGeRaGKlnha
+C/+8QDuRJ12BKgpRHRz5AWX0gQvQctvNfWg3Y0YChzH5fvRm6IPAjUjcDv4mYMOy
+fpDLhl9SrqApG00qSfoqgflHEb4xvBXsKxXLq6WAVzg=
+-----END SIGNATURE-----
+extra-info Unnamed741837960406 AB55BB6BB385F42E669C1DBCE05646C8C14A8040
+published 2009-03-15 01:44:20
+write-history 2021-05-17 05:11:38 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 05:11:38 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 05:11:38 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 05:11:38 (900 s) 0,0,0
+geoip-db-digest A3C7E622CBD8C0A990C8BD5FED6784877A410004
+geoip6-db-digest 742BB5FFADB35F78A86E2199444AE22B3265EDF2
+dirreq-stats-end 2021-05-17 05:11:38 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 05:11:38 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 162.92.166.61:9700
+transport obfs4 162.92.166.61:9690 iat-mode=1,node-id=0341197a3a9d66dff4cd1f7a0f81b6cf309f6999,public-key=66b4a8b2a17f0463f7427c0239106eaf710ea7129f42d184a58c50cdff614ba4
+router-signature
+-----BEGIN SIGNATURE-----
+Z8RY9bRUjXuEfV0Gljg5vG+LeZmiDox9A8WEK/gEqny758Qw8H0CNt+mk87KrZRH
+qOWBQOy74p11fWyDwCzO+l4EJVmPOYnst0MsilG2zUbmLTQZ5q3xLEeygBPYAVaX
+WIkEGaMBN+3F5p8yMn9qsE4gZWvO5kl9aIfQhtWoagQ=
+-----END SIGNATURE-----
+extra-info Unnamed704911726051 3C1872189CA2444515165D643D2C6A8E54112430
+published 2003-02-20 08:32:42
+write-history 2021-05-16 11:08:22 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:08:22 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:08:22 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:08:22 (900 s) 0,0,0
+geoip-db-digest CC83D0BFC581FC6EE7D8D58DF31717BFA4E51BD7
+geoip6-db-digest B093AC75D40839B82AACD737DB7A6D187E40B5B8
+dirreq-stats-end 2021-05-16 11:08:22 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:08:22 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 136.39.91.9:23239
+transport obfs4 136.39.91.9:23229 iat-mode=1,node-id=9f9719e06258c2440ba70f37e55bb54440bb12b5,public-key=5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5
+router-signature
+-----BEGIN SIGNATURE-----
+YpW5aSQzHfpkHKBe3ze4SkO4W0WITcZM+8JOw+Bw/HYAgDdMEvWD/gsVKGNcoezF
+7knQQ0RMqzqkF71roJqT7HcW8RFqtmhQhBD06rNZ5t0Ip0Qxg+Lw0Q9be8orGZHb
+vAO02qFRidcj3Go+dndpQmQrGuB4x9Fyr65ssO4ZJqE=
+-----END SIGNATURE-----
+extra-info Unnamed785633230205 DD8074CDBF395FE81AC2175517A630076839598E
+published 2001-08-03 08:49:59
+write-history 2021-05-17 00:32:55 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 00:32:55 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 00:32:55 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 00:32:55 (900 s) 0,0,0
+geoip-db-digest 04286368D0B7C581A6238A5B12DB1FBD646F715A
+geoip6-db-digest DC994ED9AEC1DEB81D7EEE2A0640D03D3FEB1A00
+dirreq-stats-end 2021-05-17 00:32:55 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 00:32:55 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 207.229.82.233:23429
+transport obfs4 207.229.82.233:23419 iat-mode=0,node-id=9797edf8d0eed36b1cf92547816051c8af4e45ee,public-key=015275e61fa0d0751c1d9f45541c7804c895404455470710ade3786f282f2da0
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+DlGOFs03CAC7GF2sndMO4qc9J/H2YsQR/c0akXk2kc7v2cMu+BN60mDyca4K7Z/V
+E9zB2hgiUyMH3FdvPP64CbjaW2YYYQagCx8OlWaFYRfbpn62W0qrSILirSEWInd5
+Fgqd0ZFCjwA7W9Zz2HCWvAIVOHL5EU/w9FoGD3q/rVY=
+-----END SIGNATURE-----
+extra-info Unnamed954294931378 39C5F3569D91DD553D480DD5FAE5BBB2919EB575
+published 2008-09-16 10:45:36
+write-history 2021-05-16 15:20:52 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 15:20:52 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 15:20:52 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 15:20:52 (900 s) 0,0,0
+geoip-db-digest E835AB3535520A1053DFB5A77B92CACB12E31264
+geoip6-db-digest C5FA06E43B58658AB004EAC998581559C616F3FB
+dirreq-stats-end 2021-05-16 15:20:52 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 15:20:52 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 164.139.178.23:48546
+transport obfs4 164.139.178.23:48536 iat-mode=1,node-id=c259e771b237769cb6bce9a5ab734c576a6da3e1,public-key=80b5d82499c6feea4eae101d6ad12dc1b1f105795ac7ce68ed940f68fc85558b
+router-signature
+-----BEGIN SIGNATURE-----
+SdX48LqWdvJu3P3g+b+aJpGiYadp/zheSB+UE8CVsIz1xlA1HCvXL2Xz0Q9875pN
+trx1BbR2RFuv8BATQK44wCRu94agat2krLuUc3NYKKYET+lySV1cTBuVfJ77WJz1
+7o/TdUfOsCQLFwvzikfk9H07EBg8LH1eX7+JN7P+fNs=
+-----END SIGNATURE-----
+extra-info Unnamed837051220745 FC077FFC71392C4C3C5B0DD583D38B8CE443C580
+published 2003-01-03 08:10:20
+write-history 2021-05-16 23:41:41 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 23:41:41 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 23:41:41 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 23:41:41 (900 s) 0,0,0
+geoip-db-digest 347536ACF36D13E0F0E07183697073A4699F61B0
+geoip6-db-digest 41D63CBC01A631B07F33C146AEF994638D7C3E9E
+dirreq-stats-end 2021-05-16 23:41:41 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 23:41:41 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 137.98.49.140:13181
+transport obfs4 137.98.49.140:13171 iat-mode=1,node-id=0b8bf9fc37ad802cefa6733ec62b09d5f43a1b75,public-key=c0c74543cc9dcc7f0ddc24eaced85c278aa3e357d3cb319977a8140d26268d06
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+doGshIjLtPM0rlUWDCoInnZjNcwDwMizai5SL1GGmq+/zhWhxBJ1GZbapPa4IDbi
+1cj0GXmFU6cjbj3H3OiX6itT8qmPF+Ub1bm3Qj8yjkxc/nXx/0EySw5GHikPu+An
+426atFaDjsU3GoRgQHosyV4b5PS+x2M5JcY6xMRDbzE=
+-----END SIGNATURE-----
+extra-info Unnamed789004415898 963C7D27A656E19F34BE26A74F0E100BC3F6793B
+published 2012-10-07 09:30:52
+write-history 2021-05-16 16:12:22 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 16:12:22 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 16:12:22 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 16:12:22 (900 s) 0,0,0
+geoip-db-digest 826C6E2FE091A22CB0AC1EEB507F228D59D4852A
+geoip6-db-digest 16AFA30B2300FD5B9ACB98192850EAF498C7F754
+dirreq-stats-end 2021-05-16 16:12:22 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 16:12:22 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 86.24.213.136:20786
+transport obfs4 86.24.213.136:20776 iat-mode=1,node-id=690cd5cb8923ae1a4c6dd01447fd874008cda49e,public-key=5322fecfc92a5e3248a297a3df3eddfb9bd9049504272e4f572b87fa36d4b3bd
+router-signature
+-----BEGIN SIGNATURE-----
+tvVbki6Bgx2r4DGsHEoQ8iGYslSz6KJl2SatSCotrPJ7lMyJwAkR6B5lJNfXQzgc
+RRCInGTSYZMEHdE9/s7ajP/FyQmWtTFUACUY0l1eHH06j/3nt9UPh/iXvTJ0kI9L
+c7XmMVGV7n1rKVVnVmRE27opZBo+TtuKYHlC7fC1Tro=
+-----END SIGNATURE-----
+extra-info Unnamed408855076052 F1F1701A5340AF550545703D351B9E5F907C52FE
+published 2004-03-09 04:07:40
+write-history 2021-05-16 13:50:53 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 13:50:53 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 13:50:53 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 13:50:53 (900 s) 0,0,0
+geoip-db-digest B6AF1EB51213D309E823EC5533BF33F9081637AC
+geoip6-db-digest 55E0FA0645CAAFE79712E930F07833AFEA1C9C9E
+dirreq-stats-end 2021-05-16 13:50:53 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 13:50:53 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 210.220.32.151:23713
+transport obfs4 210.220.32.151:23703 iat-mode=1,node-id=140dc52658e2eeee3fdc4d471cce84fec7253fe3,public-key=9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0
+router-signature
+-----BEGIN SIGNATURE-----
+Q3lsnyKI2ANV9IfzYCp6HaLhEQ4wx9ria1WrIV01DG561PVRNGvMCL2ksYOcUsvk
+Imu7dbsymqAYNvUT0xz0YqCnkDMdvc5gN6RwP1D0KUz4Y+TFlQeYRXtStnonEXQP
+JAIh1ZNrPn3x/TqSIeA/j2fVBhXBXBXzk3HMInpPPuA=
+-----END SIGNATURE-----
+extra-info Unnamed741315576738 E24F44CF17D1321E93433F0088B32AA85547DFE9
+published 2001-12-17 04:20:57
+write-history 2021-05-16 19:55:08 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:55:08 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:55:08 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:55:08 (900 s) 0,0,0
+geoip-db-digest D8807A80E1578EDF19B216B99CE614C363D878A4
+geoip6-db-digest F166DFA5CD527807AC9B35A0C293FE2B8FC14E6D
+dirreq-stats-end 2021-05-16 19:55:08 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:55:08 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 6.168.217.244:46262
+transport obfs4 6.168.217.244:46252 iat-mode=0,node-id=b054fb05c7a4b8359e4f4ddaf67d535b80ab4a5b,public-key=10b2a66888c58a54b277fe2e68fb6e87150c3cd2c537b7f6a2d84559017438c7
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+L2iwgdkGqSu4OEq6YVKVFBp+jEtlb83Fr4He4wvFgvZZfM18kQDiX1ROqQaGMW7A
+FeEHhQ7wrG2uW8rQQDPiEFg1BfnpevHWMK3B+Cv14lyjqTQJv6zrnCPJglsWhJvK
+vjneAhsZexOcjHfWQKlRsBehoHsZ2wOY2F2khk/xVrI=
+-----END SIGNATURE-----
+extra-info Unnamed322466298962 C9C953A0902B12650A1D397E902CAC140AFB6DA1
+published 2001-12-07 03:38:26
+write-history 2021-05-16 04:02:46 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 04:02:46 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 04:02:46 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 04:02:46 (900 s) 0,0,0
+geoip-db-digest C574EAD343B2C24DD6899192CB7BBC5AB3FA0094
+geoip6-db-digest 74CBD574D881DAA76C1E0872FA23846382DCA5B6
+dirreq-stats-end 2021-05-16 04:02:46 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 04:02:46 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 154.248.223.112:11241
+transport obfs4 154.248.223.112:11231 iat-mode=0,node-id=5c7d7be28c2b70cc806f465667a798f8c5272b19,public-key=e258fc78e23908bdff0123123cb31e7a81008118ab1188ddcb740360727add4f
+router-signature
+-----BEGIN SIGNATURE-----
+M64p0N2RoTIzFbUspwUW7k927RpNSOCw3tXRwy1Q3e4OTGvTi7irKHgPVm7Dy8XW
+N880/J9Aioes7q/oQiz8ZSu27DcG0GxRUHIFFbmOtSbftpKvMixxPthdPxD+g9t2
+p1T2CK/x9Xb4fMz6YsIYCTLVXfgO4vfwPyBEUFW4SJQ=
+-----END SIGNATURE-----
+extra-info Unnamed566100430844 9FE74620BFF2FAED64F0AFC73B67BD103FAC9720
+published 2013-05-08 05:00:48
+write-history 2021-05-16 22:23:52 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 22:23:52 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 22:23:52 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 22:23:52 (900 s) 0,0,0
+geoip-db-digest 56631685E4DCC4B08D3D2986D321DE9B129BEAEF
+geoip6-db-digest ECF47D5DA1B28979158B9B8418843F9FFE696311
+dirreq-stats-end 2021-05-16 22:23:52 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 22:23:52 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 5.149.234.208:21539
+transport obfs4 5.149.234.208:21529 iat-mode=1,node-id=0b8bf9fc37ad802cefa6733ec62b09d5f43a1b75,public-key=6d9c54dee5660c46886f32d80e57e9dd0ffa57ee0cd2a762b036d9c8e0c3a33a
+router-signature
+-----BEGIN SIGNATURE-----
+B/bNx1lLtmHCjN8Uyylfu/4EHFXEbYgFwXMwq3SlANAnTV9FCvSh2HsVJuZF12Uc
+hBZ7ZwTtLAk474RcmTxxgXLNcIUw+V172JaEyfrU82yJyaHArAxqNvdq1Kh8dLHd
+SwRkhAra8mIN0sC+BsKzvCNNpjSTniCyPU0qy/Pt7bs=
+-----END SIGNATURE-----
+extra-info Unnamed430344764868 8BBB54C8EFA5F08124B0926FC5D1F8003A1BD58D
+published 2006-06-17 14:56:32
+write-history 2021-05-16 04:47:59 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 04:47:59 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 04:47:59 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 04:47:59 (900 s) 0,0,0
+geoip-db-digest AB5700D9E3DB3C49560485A6B4118D6C7E3F3EB3
+geoip6-db-digest 8BCAF1944961C689277F704DB3C62F72F017BF5C
+dirreq-stats-end 2021-05-16 04:47:59 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 04:47:59 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 19.119.208.158:47248
+transport obfs4 19.119.208.158:47238 iat-mode=0,node-id=46fe3f0a75b18d406d86aca0ed37bb706ed8246b,public-key=10cc3c382b13ad9246b74708d03528d294522c558727bd2ed4a242bfb7cf0c3f
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+fnIGVm/wLYsRM5D9MwnhTJCQeWU/726RcuIY7wW4NpdxjXbhRL5d3/9rwNhuQ5gb
+952REq65GgCCUFCGP51HxLhWzpbbSupLy67IPl042Eug3YkXhO0xCmp3yMLAgwUj
+K+k5owHkZxEonHi85hsUq0zCJ9AM/SmSUc04VYxTfK8=
+-----END SIGNATURE-----
+extra-info Unnamed777484474374 A04E7611C3F2A9F2D0BDF55264D93F613B5CF900
+published 2013-10-02 00:52:16
+write-history 2021-05-16 20:45:52 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 20:45:52 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 20:45:52 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 20:45:52 (900 s) 0,0,0
+geoip-db-digest 34EB609351E1BCDE90C503E38AE7672186D84FD7
+geoip6-db-digest 406FDFF0FF61C2016BB3FDAB75BD122C404919A5
+dirreq-stats-end 2021-05-16 20:45:52 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 20:45:52 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 61.115.1.152:45045
+transport obfs4 61.115.1.152:45035 iat-mode=0,node-id=a6c2c0ae7ee4fd6ac925189e1bd14e6217ef6914,public-key=7b8ec8dd836b564f0c85ad088fc744de820345204e154bc1503e04e9d6fdd9f1
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+NnUTmjNqlPsOoikc62jnKyanv6o4I9lIbEH2SXm4UzEiEtWjAxv+E2dqtWCl9G1X
+U15a3y2KmReICkhHh1Th2B85GHT1SKVkGys2uXLF3lu55vm6+E2rAZNTtPEr0NFi
+j7nxNkWSE2s2ZWkzqflw4H8RDK9mQliVV86wuLAaitw=
+-----END SIGNATURE-----
+extra-info Unnamed841118151273 D3F3B294F8A7762F56F798CCFE0BE752F81E49C1
+published 2004-06-04 01:13:34
+write-history 2021-05-16 06:36:20 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 06:36:20 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 06:36:20 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 06:36:20 (900 s) 0,0,0
+geoip-db-digest 3FF3DF28B5DD13FBFD0CB883A0637370E44AD941
+geoip6-db-digest B3550B183940C265DBD3CAC994950F7B22FAEB53
+dirreq-stats-end 2021-05-16 06:36:20 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 06:36:20 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 171.47.122.242:36870
+transport obfs4 171.47.122.242:36860 iat-mode=0,node-id=322da9ea0683f03ce35cf8a71e59b686b9be28e8,public-key=61126de1b795b976f3ac878f48e88fa77a87d7308ba57c7642b9e1068403a496
+router-signature
+-----BEGIN SIGNATURE-----
+Fme8I6Pl5CDAYyFjWAHg4FocL0C/rO6ki5DRN0r9YYeiJlv5E54cxvmAFPMGrEj8
+TkvIAArKIIlmwxkUZ+7dEGzU01jgJVUNCmitr70vA8qj0K+YRvgOss8X9p+aUery
+PF2GRpswKIHKC4HPufVuTONnWIx2NoaPjnrExHt4ds0=
+-----END SIGNATURE-----
+extra-info Unnamed672942099283 ECDB7B3C31015D64849E11453E5E40568395E89C
+published 2014-11-11 01:11:02
+write-history 2021-05-16 17:19:43 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 17:19:43 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 17:19:43 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 17:19:43 (900 s) 0,0,0
+geoip-db-digest 7C1FCD3BE713C087E9EB49A227BD2E8BAAE730C7
+geoip6-db-digest 9DF6B7E474746E4BF386EFE7056C245498DE5C37
+dirreq-stats-end 2021-05-16 17:19:43 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 17:19:43 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 13.42.105.151:348
+transport obfs4 13.42.105.151:338 iat-mode=1,node-id=c387184c46b35fa4a2ef17efb19f8cb838b973c1,public-key=6a3a9301bb8dd782bb5c170bedfa73e9e7c60235e6e1840f14bd14b812127ef2
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+CtZ0LUlZxGJxyb3bEsyQQNanltEKHfXwnhEMt/FPNnjSwWHOCy2Q6NIZpX0Z7LTC
+YxPkAN37JnukaliU2Mn/IwZomQiJ7+fAqObKknSmXyK9rsFoPfV/Bc2+soZUIzlH
+pfB1vz2PTTWOX81rHjKn5tVblkuXUD8JdO3VAmT80MM=
+-----END SIGNATURE-----
+extra-info Unnamed991072230490 708A01A64A5DB801D242D16DAFEAC6D48DFB80FA
+published 2001-12-02 17:57:23
+write-history 2021-05-17 03:33:07 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:33:07 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:33:07 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:33:07 (900 s) 0,0,0
+geoip-db-digest 157256BD2B42FBDEC09FCA21C4C0B0FB58A7F1C5
+geoip6-db-digest F4E2B279DEF01D48F56A90AB3AF8B989F3F8BB2E
+dirreq-stats-end 2021-05-17 03:33:07 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:33:07 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 155.98.170.89:60384
+transport obfs4 155.98.170.89:60374 iat-mode=0,node-id=ee7c4833938414701f5f1a8652ba39b463fc8b14,public-key=0ae124b1e64802cd478b1a5233f6d6a808c08cb5e512139dc8ef6c96eb0b1330
+router-signature
+-----BEGIN SIGNATURE-----
+KzjZdPrxqfOdOjMAAov9Y1im8HXNe8bJfjmhTo7GD63BZkltAja03vZhCQD1/UBI
+JJ+wWBAWQKpx1iRbOGyXm1ti8fiode4/ObREUrL2mLlqGsRUpa4QB5AY3C83rgNs
+65AzCwhnMC18JcUDmQ0jFx8mmSRWdKW9nXjpHB6X97I=
+-----END SIGNATURE-----
+extra-info Unnamed457843665914 3B2AEBDBA53CD164D90FCED8860C0FEAA97718C5
+published 2004-07-19 10:55:19
+write-history 2021-05-16 09:09:27 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 09:09:27 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 09:09:27 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 09:09:27 (900 s) 0,0,0
+geoip-db-digest AD530744FDDED5C3590C5134721FF38E45A91D0F
+geoip6-db-digest 5679AA32C65AC901E2112D5158B9AC35E1848D9D
+dirreq-stats-end 2021-05-16 09:09:27 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 09:09:27 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 169.144.147.26:19649
+transport obfs4 169.144.147.26:19639 iat-mode=1,node-id=5b9e36ec3fb5698a93d45103ee2f541249c68be4,public-key=0080a9f7727726783617077919407ceec77865f5ae67d908b87ab0b42ef55fc9
+router-signature
+-----BEGIN SIGNATURE-----
+qw6t/myLfQ9UDVkopXdlzr6xx0kgVm9aAS+SAVrC74rQaWXjBpnVFr7A2TcGLD6Z
+oYUEUCi1Wy7HAXhDbOnqNrRGij/OIRslLPJBCOw3fWE1aN5Q6rmfijHCY3nfLFpH
+zK1J0JZPlG7IbEiHL0B2LCyaVgzLGK6gxUvAbFoNJSY=
+-----END SIGNATURE-----
+extra-info Unnamed106915092218 1C9FF426925E2FD4E8AA83B556EC0A5681C44076
+published 2008-07-04 14:36:29
+write-history 2021-05-16 19:16:14 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:16:14 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:16:14 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:16:14 (900 s) 0,0,0
+geoip-db-digest EE55BA72E243FCEAD89008DCE1166B6D8D62143B
+geoip6-db-digest BD800D4B1DC3BE506F06C4D66559DCC9E26AD46A
+dirreq-stats-end 2021-05-16 19:16:14 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:16:14 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 28.70.178.5:53512
+transport obfs4 28.70.178.5:53502 iat-mode=1,node-id=f4e37133cd52efd2967e90d645332c44a56b6832,public-key=e08dd9962eedb16e12840ea2a977cc07bc5fa8d96259682edaa080573d525e4c
+router-signature
+-----BEGIN SIGNATURE-----
+bsKWerOBQVlO7TkszCJb2rhexbg8LzJBX4cfwF/c/3RCkZ/QP7X8eeku6HFVOUf7
+4LLNSF0GU7L5p/7oSZYyLH1PcMOScAM7y0vmWWr91oZRV5WfCw9bZeMiWsMKQssh
+ZdWgkQ6s/7CVg6SrhtXN402cPcPOqWsEeo5gfZ4OtZA=
+-----END SIGNATURE-----
+extra-info Unnamed613759454004 7F50362946FCB51E1975D0BA6714E1544EB7EE92
+published 2013-06-17 10:48:29
+write-history 2021-05-17 03:56:42 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:56:42 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:56:42 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:56:42 (900 s) 0,0,0
+geoip-db-digest 46142C729C3FAA81D3F8C2D2A11E9563E903FAF9
+geoip6-db-digest 1A5B7E882477B8597948C5C1FC08646848967A11
+dirreq-stats-end 2021-05-17 03:56:42 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:56:42 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 188.16.218.4:1640
+transport obfs4 188.16.218.4:1630 iat-mode=0,node-id=75e43426b4fd82102d0e825523b9bf043ed01e5e,public-key=06ea118edadd836a02b202c05bc7e47356b57e28c01edf1dad6cc4cf90c662e2
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+DwdE4x5ji3Iwy+o/SnzKMPXlWm6fXEXcONl3yyS7cL/GRGsowQ1bGw0RF9UUojB9
+XTDKQi48Zk98v2s59Sm7TNDBpQaPYqyrRR0dSwCiJv4QjDnESPh1wAuajyL6C7L/
+bI61fX2Dt4JSjTkO5p6F3/Ez/3b7ykWcSlCOcTbiiV8=
+-----END SIGNATURE-----
+extra-info Unnamed648924614391 8A212E7D4869FA800A8492A4CF23D1E3CF6893B8
+published 2008-07-18 07:18:24
+write-history 2021-05-17 04:32:05 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 04:32:05 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 04:32:05 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 04:32:05 (900 s) 0,0,0
+geoip-db-digest 664510A9D02E450C3675886F8A373FB70931D653
+geoip6-db-digest 67E2EB1AC8DF6306570581D03C07612D6223F566
+dirreq-stats-end 2021-05-17 04:32:05 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 04:32:05 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 195.14.155.228:55543
+transport obfs4 195.14.155.228:55533 iat-mode=1,node-id=e1ef9d5aba553828ff9b4ff2cf9c1f25b085c6a8,public-key=e08dd9962eedb16e12840ea2a977cc07bc5fa8d96259682edaa080573d525e4c
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+KZb12eqUP4OjqX7XTTeh4xNJLtfp6nidP0O/WTL/pk5zgJgooS9WgPN0gxSeSiaT
+QHeaDJlZXDu78cQoZCnazHIq5FbPkkkdubSigpYo+Mzu6YotoTPrM1+9MFaKEdeN
+7uWPo/WboGNiawCzk+ibJaTxigSNYmvaH08MP+PmQ1k=
+-----END SIGNATURE-----
+extra-info Unnamed835908921600 2F64B9D786E7535DE8721FC50BEB3F35080A1623
+published 2004-08-08 02:34:13
+write-history 2021-05-16 05:16:11 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 05:16:11 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 05:16:11 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 05:16:11 (900 s) 0,0,0
+geoip-db-digest 17AD97E5C2383E8A655F98EC89F3FFA2E6F7EA8C
+geoip6-db-digest 54C3505873FC9151BFB1F690C92FDDB4E801E70D
+dirreq-stats-end 2021-05-16 05:16:11 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 05:16:11 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 145.233.232.61:56413
+transport obfs4 145.233.232.61:56403 iat-mode=1,node-id=ce7e33f59bcee84b78e55651620a341e62a13cbc,public-key=56002d2b987d93ad5b10207328ab93ee1544d3799b054dc385cc950c57802d8d
+transport scramblesuit 216.117.3.62:63174 password=ABCDEFGHIJKLMNOPQRSTUVWXYZ234567
+router-signature
+-----BEGIN SIGNATURE-----
+oj1CyAtFqI8/zYu+SnS46mXDGwHmnHkUrhMWgbE1hc7ZPaEkN92Ygus/sTnCSSZB
+MAdczZ8dZPwdbCP7+jwchfUa0KkZoc08QRbLgBm4W7/CkLgZYG+GL48r8DKowDbp
+fWd7v2L0V9kHF/StDwI5zqwXV/omvPTCggfjDNlWVgY=
+-----END SIGNATURE-----
+extra-info Unnamed454762360230 9FF0A204DA72745D9835E9F88FA7A78E41C3999E
+published 2015-08-10 12:55:34
+write-history 2021-05-16 16:25:16 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 16:25:16 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 16:25:16 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 16:25:16 (900 s) 0,0,0
+geoip-db-digest AA316D5A9EB3B1BAAC9526E6AB0F04B123E054E7
+geoip6-db-digest 9FB9F5912FC692D4F5A5A02815E515D6EE509C3B
+dirreq-stats-end 2021-05-16 16:25:16 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 16:25:16 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+QszloOxrvXvZI6383Ir4J5hObnNGCoqYVvUCmeLszVzP71w+ETpP3T2oLfJfJ4aH
+HpLdRTCkdsYqvHwkVowD4N3OHKfDdpH6pKyHrxNNCuvwnJU1Fy26egQnXKZ3z1Td
+dnLZTXDVNaHMommMmtU599qw8pkzrXcMR0tCH8pJJ1A=
+-----END SIGNATURE-----
+extra-info Unnamed145072530981 26B55331AC7E3A2A97F08073D38F205214FD42DA
+published 2002-02-20 18:14:55
+write-history 2021-05-17 01:54:45 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 01:54:45 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 01:54:45 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 01:54:45 (900 s) 0,0,0
+geoip-db-digest 232066BA11E3D70056C20C1534679C101D4949CE
+geoip6-db-digest BCA607B4CB8BCBA1EC4E3C6931DBF2DC1D1F8C44
+dirreq-stats-end 2021-05-17 01:54:45 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 01:54:45 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 9.106.208.173:8678
+transport obfs3 9.106.208.173:8668
+router-signature
+-----BEGIN SIGNATURE-----
+E3RiqoF+OelFzrTGDqlUUCXUNu7VQQdIbrCJvdM0+QFGR5B3kqo+4HbM6JMGnFX5
+BeKJ44dS6r7btv29TffFHFTVZswTFeEb7cPN/D2tqWT4HjQzcYz71pJW9GuR91bO
+2x8xYbHIjCX4BWqk9V7OW7SxSXjaTV3KjHXR4O1Ss6I=
+-----END SIGNATURE-----
+extra-info Unnamed103141968769 EAE8C09B0C22043A73E8183B9179C4A4912A71D1
+published 2011-07-01 02:49:12
+write-history 2021-05-17 07:46:38 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 07:46:38 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 07:46:38 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 07:46:38 (900 s) 0,0,0
+geoip-db-digest 320F15864D3966EE5191F2742EB1CBFEC4E7097F
+geoip6-db-digest 5E46A2E818E900B05E7456635048E8FD1CC50956
+dirreq-stats-end 2021-05-17 07:46:38 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 07:46:38 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 13.83.201.133:26520
+transport obfs3 13.83.201.133:26510
+router-signature
+-----BEGIN SIGNATURE-----
+Fklyu0O65Q5x2mFL52mJvnQjMNQTSgSdF2G6LvamEj1D0NsD1o8KS2edPiAkOdL1
+e9g5jxQj2W6PNNE/JLY6wQgez1dM2tJ0vOpjTDIUaS/rydVeXOD2DLTgwwEJRPXl
+P+CWhG3AqPsXQresmYdZEDtiGGj5r0EzThD6LjTb97Q=
+-----END SIGNATURE-----
+extra-info Unnamed968655166738 EAFC629C83A3E48CFD7040D19C119D6EBA7334A3
+published 2013-11-05 20:24:19
+write-history 2021-05-17 11:08:23 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 11:08:23 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 11:08:23 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 11:08:23 (900 s) 0,0,0
+geoip-db-digest A350271C649790DC5B1BF47E83B57B00AE07CDB5
+geoip6-db-digest 64BD1C8EB414A5B518496212E73B6DD44453FB4F
+dirreq-stats-end 2021-05-17 11:08:23 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 11:08:23 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 119.226.105.142:60269
+transport obfs3 119.226.105.142:60259
+router-signature
+-----BEGIN SIGNATURE-----
+QZjGfyvm2h6mArOLHnvoVN2EuFnfET1qWzEJxAQjsrGbB0n6M6s8ge+tgKdqOTyJ
+V5j12ALBkTdEe24FOOJcEkPwBTF90TScB6pUtiBgAcSy+21uqH8piytEFun11mfD
+Ro270Mezc/v8bPzRfy+IynIZBdX9UGBuXxcvmCX22bc=
+-----END SIGNATURE-----
+extra-info Unnamed886982047723 5D20EF7C2532E49CC77BE8881CA083519A8B469D
+published 2009-06-01 01:46:14
+write-history 2021-05-17 10:52:05 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 10:52:05 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 10:52:05 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 10:52:05 (900 s) 0,0,0
+geoip-db-digest E64DF0C6FF475A43B0A2EC6DB78624505ED0BF3A
+geoip6-db-digest E06D3D672E6C5D2393316B8EAEC95219E8FACC77
+dirreq-stats-end 2021-05-17 10:52:05 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 10:52:05 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 172.81.185.161:36260
+transport obfs3 172.81.185.161:36250
+router-signature
+-----BEGIN SIGNATURE-----
+GCDBXGwRLYagSy1e6dUwuDOrHqRLqarl29fR4dUv+kUhVj5gK5mZ6jsp+yR2o7ol
+8Kj4FJmL/tlCuA3Ha6w921Pg4srN8BGz+BEu0JisiuM/gWo+I6OUcalVuHM0qDXU
+y5OVWB1JSoux+V6XNDEhods8MQv+DlpulgwxbrtVMN8=
+-----END SIGNATURE-----
+extra-info Unnamed822350895120 02BFEE051C539B4B9AE778BF46A3C757F67D3D99
+published 2015-06-07 11:43:32
+write-history 2021-05-16 15:47:03 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 15:47:03 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 15:47:03 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 15:47:03 (900 s) 0,0,0
+geoip-db-digest F0B9FC7D23A9F0DBAE0E97A5054F3806629C2C77
+geoip6-db-digest 935AADCAB5D65586722D7E827615E620674AD44A
+dirreq-stats-end 2021-05-16 15:47:03 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 15:47:03 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 87.59.208.223:15866
+transport obfs3 87.59.208.223:15856
+router-signature
+-----BEGIN SIGNATURE-----
+qiOmQU9CFqwMlVLP+EE27hjiYHyxXQgZ9IXRv34oYzUa3G48+er3fu9NtxIBV+qa
+NGYRcYb/K4UzBFuxDlbQg8j7KoGBIHV9q8P9TvTc+mGxartOHwlpmcDavMJ+l1BY
+Pkl6CswE6rMbT1kmFqlNQHk9w18eHeQ29MrtHuMj95U=
+-----END SIGNATURE-----
+extra-info Unnamed471574356522 BA8D942E918925FC394C1783FCC094C1D48EBCF0
+published 2000-03-02 19:09:22
+write-history 2021-05-16 22:41:32 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 22:41:32 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 22:41:32 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 22:41:32 (900 s) 0,0,0
+geoip-db-digest 3FBBA306A6DF813A829B8F4457FEF7C494C35B63
+geoip6-db-digest 0ABE8D3BA654E6998D2CBCA9B1CDDEA01B0DA347
+dirreq-stats-end 2021-05-16 22:41:32 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 22:41:32 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 220.193.230.113:58370
+transport obfs3 220.193.230.113:58360
+router-signature
+-----BEGIN SIGNATURE-----
+oFh6HS//8YJooVDNMJJWqCZZWwwIvwjxUxQ65UmJAKHpnAkuultEfHzuuvaXMwgp
+rnP6MSmvl7wzLvl8BEehbcVNPGQmucp7sSX1c6Nqrb2x/EaoPlRYqz9Ew0lWW1xt
+2VN0CjIAIZ7DI0UnAMojRKRKnh/h8/CPIn07+bwlx6o=
+-----END SIGNATURE-----
+extra-info Unnamed185399005064 CDEE01E3F59C259B62B89342DEEEDF339D4413EC
+published 2003-11-06 22:52:31
+write-history 2021-05-17 03:10:35 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:10:35 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:10:35 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:10:35 (900 s) 0,0,0
+geoip-db-digest 0F6FCF88388E8BA84E0F11F53361BC43B55D3350
+geoip6-db-digest C55A1FEC5DE2328F7190E0C71EB7C7B3A448D56F
+dirreq-stats-end 2021-05-17 03:10:35 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:10:35 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+I2RxZwb5SggwKEOPZt7HSyapkQK8flmQPXCzey3TrsuwtI+mVRHfNIVTlLCxg1Xn
+nCGNH5wpwUO5nnlomUCkc6FnZpJncmxbg+AZBmVfZaUeIrf9es/kkfjhLhgRpLOt
+Tf/zXxTdi278++3k6tPkLppYUvy/0pvuerbVbmJPaTQ=
+-----END SIGNATURE-----
+extra-info Unnamed284725862063 29B8C0B94078D3989497EBCCA1B4C170E56FD6A6
+published 2009-11-04 06:46:17
+write-history 2021-05-17 09:37:10 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 09:37:10 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 09:37:10 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 09:37:10 (900 s) 0,0,0
+geoip-db-digest E4BA22048AC9EDFE5DC4E55B7664B2133D2D31E2
+geoip6-db-digest 0899584B933C11A97B8C33BCF2E0DC14C51BDAA8
+dirreq-stats-end 2021-05-17 09:37:10 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 09:37:10 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+bMqweej8STJQfAe3oTVj/bS7FrQeMLqIpLHiqmv4NgSH9e6dHa4FP25Kh2thdpk/
+zmKxQ5KGj2NEfE2wPK46JvCKBqn5fSTjSWFMiFyakO5XoPBBU+n7azxuovkNnM3w
+1f+W1RHtxRSn1rqvgy88czsOJqLG305Da4LBk3qYR84=
+-----END SIGNATURE-----
+extra-info Unnamed746012894202 F0B97513E0E20571D46CD87C5AB9F64497A3E6BC
+published 2007-06-08 13:58:52
+write-history 2021-05-16 16:31:49 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 16:31:49 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 16:31:49 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 16:31:49 (900 s) 0,0,0
+geoip-db-digest 5EF8445193520F3CB06427EEF736CAF502C5C9B4
+geoip6-db-digest 0440B654084552AB14557D9E59DEDE563A6E8154
+dirreq-stats-end 2021-05-16 16:31:49 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 16:31:49 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+blbyOc8S8nj2CmVo4shxgknYdSozUxi/rWT7ToqnBdBwJ7E9HKi5EJeu9KaNIEc0
+TAaN/Z/Kcx8+X/VSKI5Kzsfz/ItVxIHiKGUIG142Inlo0G+eezSY2jWC/70H7ITA
+ad8MriJvGro+pH8CTSu9o48C04CHVAp3jWT7QpzPiFA=
+-----END SIGNATURE-----
+extra-info Unnamed280894824885 179463BDEA6E865808AC3CF1E9A6361A2AEEEF9E
+published 2007-10-13 00:40:05
+write-history 2021-05-16 14:25:35 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 14:25:35 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 14:25:35 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 14:25:35 (900 s) 0,0,0
+geoip-db-digest CDD8327B3395D9ABBD50B2994D4A504405AA3E5A
+geoip6-db-digest EE587BACE642C55986BF624870340143920D6E7C
+dirreq-stats-end 2021-05-16 14:25:35 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 14:25:35 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 170.156.185.126:62894
+transport obfs3 170.156.185.126:62884
+router-signature
+-----BEGIN SIGNATURE-----
+a1Llw5JfeLM39R+78Gs7Z7d/uIWRjw7RgKz3+X/td9P3rpnW1BGGcQP6RETsMXwm
+dWZCSTQl+A3u3SjEp8LthxnZQK1cl+l/y4+8YghOXI8CsmW48JTIlVgpsZgN4zSy
+ZWR2uz7ZupVwl6h6pBqhEBCc+wAGWGTIOc+N9Jshs6s=
+-----END SIGNATURE-----
+extra-info Unnamed647361920611 603B80CA6B650A6FBD9898B643B5C48C1EC0663B
+published 2008-08-04 04:34:26
+write-history 2021-05-17 03:48:47 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:48:47 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:48:47 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:48:47 (900 s) 0,0,0
+geoip-db-digest 773CDE019A4B55474055FEDDE770EC81326B12CA
+geoip6-db-digest 7CD8C755AF36C97DD475F86D70335DE4FAC1F661
+dirreq-stats-end 2021-05-17 03:48:47 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:48:47 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+QsDYu+SQdfZ1Jb004HPOWC1MBtPYgvUFOZWlp9Mb0XCXiKtxvHU2wwwwQKO8WTfl
+sVGd0LxxtxoHHrOmC81t6ZBRSjB0HhITY7TGfFGZ4giKnypvz7iz20WDaZqDCDpH
+ZfEy93GywItve9lkMtcrJj9zJ/Y4vDLKLHw/7YG9pjk=
+-----END SIGNATURE-----
+extra-info Unnamed827750495110 C14A3439C7489A5DA15F3F760FBC31CF5C61C433
+published 2008-02-03 15:55:12
+write-history 2021-05-16 19:47:43 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:47:43 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:47:43 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:47:43 (900 s) 0,0,0
+geoip-db-digest 8A11735EB832CD8EA0D5304336332085A630FB7F
+geoip6-db-digest 1DDD29D5562EC52E08D9F86459A8A63CE2B390C4
+dirreq-stats-end 2021-05-16 19:47:43 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:47:43 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 202.140.125.49:19543
+transport obfs3 202.140.125.49:19533
+router-signature
+-----BEGIN SIGNATURE-----
+XBW3uEhuz7FPMldyFmwFsXYQWl7per7GCSA4X+2fi5njIC0yOQ15UVTCwxaWQAXz
+v5G2bh5Mb9Wm1dGYnpNfFxtUzmGE1yzMEO6QN7L0hK82/KR52c2FaG987bVH0UIS
+QeCG3hwpt3JU6XENWDmHIXQk08+Bt2arGGiSCcZKjjw=
+-----END SIGNATURE-----
+extra-info Unnamed135768547262 980C0942BDDB50DE4D4B7B5AB60A7D335F1B11FD
+published 2013-06-09 20:42:54
+write-history 2021-05-17 10:17:01 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 10:17:01 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 10:17:01 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 10:17:01 (900 s) 0,0,0
+geoip-db-digest 7AE706D27E41D2B1BB143721FA12D3C196AAA0B4
+geoip6-db-digest C0BE3188C5E7ADB6371CC8E689C55D60D1750270
+dirreq-stats-end 2021-05-17 10:17:01 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 10:17:01 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 24.178.239.100:21075
+transport obfs3 24.178.239.100:21065
+router-signature
+-----BEGIN SIGNATURE-----
+lrohSR3kEDOqML8qA/Wm4hfxKCfUjrnrORTr5dFl7uujllMxEMnaAXl+h8n3bNiK
+2pW3yG8/rh7U3JFOdUaCUCuvM7HvTrPIwDSp0dN5SMXXyMuibANfI8yvjjaJIx3p
+UrfYeGxgV2dYWk0Es8leMRyTD7gplVVcl3n0k81uKEM=
+-----END SIGNATURE-----
+extra-info Unnamed938555204924 A9E18853549D0E7CB8FD023D93E90709C5EB92ED
+published 2005-07-11 23:50:18
+write-history 2021-05-17 08:47:03 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 08:47:03 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 08:47:03 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 08:47:03 (900 s) 0,0,0
+geoip-db-digest D035DE051C7710A54BB7F25539AF34D2E5C3D3E6
+geoip6-db-digest 6383872C58F9BB751B7A590630D8758378093789
+dirreq-stats-end 2021-05-17 08:47:03 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 08:47:03 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+DQ//4iOkq5B4KZE8EMpnp3aUcseCiynEgsbZ7Vme2+Wr8uO8KEeBuIGHadZzlnW1
+R/oVjfRGTAPSqZ7emjEu/vvOQVTVa99jsJliSs/cxR2ouPZjLWxaaC3UgSjN/7lt
+glqjJrvVME91JT4lOaXcdV74dyPR7tDk+i9CCZ0k+zs=
+-----END SIGNATURE-----
+extra-info Unnamed272585873396 D9409FAFD9A587B2FFDC3AF845E52499E649EBCF
+published 2011-08-13 23:59:04
+write-history 2021-05-16 02:24:03 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 02:24:03 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 02:24:03 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 02:24:03 (900 s) 0,0,0
+geoip-db-digest 8585561EB1C541809A2E97668F4BF966868B1089
+geoip6-db-digest 8727FAEBB64A68F993725933AE58431CF5798EB7
+dirreq-stats-end 2021-05-16 02:24:03 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 02:24:03 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 205.144.183.13:682
+transport obfs3 205.144.183.13:672
+router-signature
+-----BEGIN SIGNATURE-----
+VFZAprP+eUEHljTgymL1Yxy7I0Ujy5/VoQYPHHOvTe2OFo/omy46/MIqcxhTVWtH
+/Ez1Eyuzm7yK/r+SGTOFk+DNo+kG+eQ8xmjobJXIrHnvR14wjZscI+yE4DmeQMUp
+NRbC3wEILEaURDLMvx89U+unIDQuYjbha5SidODiekM=
+-----END SIGNATURE-----
+extra-info Unnamed176061952110 9C4DF823BB5EC9C5D92594D17B062ADEDF2F97A7
+published 2011-11-07 10:12:01
+write-history 2021-05-16 23:28:49 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 23:28:49 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 23:28:49 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 23:28:49 (900 s) 0,0,0
+geoip-db-digest D02C23B7703E242A6BEB3169190AB19DBE9B400D
+geoip6-db-digest 9AE428AF3688CF8D2A6E9D39394EC70BD05C2ACF
+dirreq-stats-end 2021-05-16 23:28:49 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 23:28:49 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+WKDU3oxgaVGinVsbywLPa4deTN/gBPzqjH+cvMnFwb2u1Xr33DukNektUu7JrcSC
+ZrktZAvBrYTcpL6HNfgTFCj1Jt/tE/Z/RyNhTu28+FExSUhPyeiw1iHF3LWsIULC
+cc2ScP1RQ2nHSjLNLpOfPCD96653WnwqwnRgqVML1OY=
+-----END SIGNATURE-----
+extra-info Unnamed366622540999 C5BE5AA94054BE5C5388F13E7A860DC4B2CE815B
+published 2012-03-20 18:21:09
+write-history 2021-05-17 00:18:48 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 00:18:48 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 00:18:48 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 00:18:48 (900 s) 0,0,0
+geoip-db-digest 0656DC5E3E5BFB6036AB759B309AD32AEC312D3B
+geoip6-db-digest 31C5210C2022339E4BE94CF2BEA57D3BBFA59B5D
+dirreq-stats-end 2021-05-17 00:18:48 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 00:18:48 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+ZjIZgLuP4TCyIXdAiFRrv8TPkUnC/zpSEP42gFX8urmF8yOXeNHcScXn0LbCcEzX
+7vznJTVnyutxXACCXE/+/JLV5gMItqOmu9YLjICJxA9VDjuXLPJTqOaL9/mzT7eF
+pXd8JfgFmuqlIGQMd9ZxDRq3OMBg3GtaHf/bC+9v0fY=
+-----END SIGNATURE-----
+extra-info Unnamed703831079902 84DB21D84B38B70BF0783FD8631276F02A88EFC8
+published 2014-03-15 16:05:04
+write-history 2021-05-16 05:06:09 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 05:06:09 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 05:06:09 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 05:06:09 (900 s) 0,0,0
+geoip-db-digest DB6F260269394EE14DD2597457580ADDEF84B2EB
+geoip6-db-digest 26F62D3C502116DDF696B64929B315681E2582DE
+dirreq-stats-end 2021-05-16 05:06:09 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 05:06:09 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 51.219.234.117:35683
+transport obfs3 51.219.234.117:35673
+router-signature
+-----BEGIN SIGNATURE-----
+SLrRRcBEedRFxJ5kM9Zf3U6mEX2agU+T6DtMKJ0EbFn2i3z2Xw5dnpwKLVuYpuQh
+hd3RUPwQT7g9N1Qh0gSMCR7X9g2uK2SQgTrH+4NDGKrWSZTUGgyIW+prX+AAN9jS
+jasb8qcXnELPS0NyNeqCIa+X7ExrKRJPa76ykj8ecTE=
+-----END SIGNATURE-----
+extra-info Unnamed301038370246 D8204804772B5E4D8DDD8BB096E215277340B29A
+published 2014-03-03 10:22:27
+write-history 2021-05-16 22:00:33 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 22:00:33 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 22:00:33 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 22:00:33 (900 s) 0,0,0
+geoip-db-digest 6EFD19C8930F6E1DFEE76A2D8985E984A7A7953E
+geoip6-db-digest 5BF8C1F38D6BC53489F61A0CC555DA5423A165B7
+dirreq-stats-end 2021-05-16 22:00:33 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 22:00:33 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+JJn4rp4VlhW/EwhRPO37woQPjQDOCc7o/Ya5D3SvVaYpJqbP1IpmLdX017IoQPig
+AH/Ap2tpZK4yjXIJn3JcrHzavDAMsw/6md0ppHxc8covKQhZZ6x+Zs0/IzMaqyVT
+1ZbBkc1PpuHlCe4TDnT74AWm7n31Sli0iRZ7tur9QMs=
+-----END SIGNATURE-----
+extra-info Unnamed259838723055 BFFDF0579C7C60673828FFCFD3A48C74BCA7B044
+published 2004-05-17 12:47:05
+write-history 2021-05-16 23:00:07 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 23:00:07 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 23:00:07 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 23:00:07 (900 s) 0,0,0
+geoip-db-digest F94E989A73334012E421B6D2A3D0F92DBF50A7D6
+geoip6-db-digest 60F3D6EA53FE803F5269A6365A70FE755EEE6C35
+dirreq-stats-end 2021-05-16 23:00:07 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 23:00:07 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+kChGEzYj67EjmPw6OCW+0W9yesxFtTlsajKAPnffIBZnuCOeiwn/Hx6jolOsZzZj
+0sbJ+zWdci/C/HaKm8b05Y/xccrcZUGvOHXgNHtHT4Q3RuOBUOBagpIVIygyOcT8
+NGSg5oJ/stNbj/C7671S5UI1EiEEdZ9s/3RvVXPZ4yM=
+-----END SIGNATURE-----
+extra-info Unnamed758694451293 AE7EEF8533A9455BCCB84AD846808390923E1520
+published 2005-09-17 16:52:13
+write-history 2021-05-16 05:07:16 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 05:07:16 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 05:07:16 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 05:07:16 (900 s) 0,0,0
+geoip-db-digest 371266DBE9A281650F1A7BF32BF3FBBA6E9AB634
+geoip6-db-digest D7F3201E6879D6ABE249661FD6373AEBFE9B238A
+dirreq-stats-end 2021-05-16 05:07:16 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 05:07:16 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+W8jPqF6OR1VC0YpZDYxk8aAgsb9GChNKqcUACyY79uhu43gM6sINkTJ16Wezm8wm
+YH/g6ECIKV3eDi8o6qn+mLI+b4qfVivwLD8d8lsIo3+hyeOf3GfefUmAGxfNXeWE
+nKpEOfPeByKnpoPGv8ebKvkRFDKmgUgBQxzZKO9fp+g=
+-----END SIGNATURE-----
+extra-info Unnamed214792907057 2DEC17F8A28AD9AD041423F064904C92555A6688
+published 2014-03-01 15:28:56
+write-history 2021-05-16 17:30:22 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 17:30:22 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 17:30:22 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 17:30:22 (900 s) 0,0,0
+geoip-db-digest 8336036272C92F990F22C09ABD5C1CAE7B88B0AA
+geoip6-db-digest 41C57EADD70B2ABA8E2E9C6CB133047FA63CA22A
+dirreq-stats-end 2021-05-16 17:30:22 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 17:30:22 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 153.142.216.209:5894
+transport obfs3 153.142.216.209:5884
+router-signature
+-----BEGIN SIGNATURE-----
+kptQpA/P/yWdAwIvEjIxvxzVgOyKhzraUyWmwo3simyWqK9tARHMS2DK0Wt4pPiv
+cIhBanorRoCV2JyWl1/SYMuiDyxz0gYnh03pZpba1eWg2IsT35JjyUtHTUU41Ij+
+6wNgBYkbXAUWbd17BvMUjXJKNoUPKl7Q/sbGgSVULJo=
+-----END SIGNATURE-----
+extra-info Unnamed179237362228 6343C64013C05EFF3169B7C90A62CBD3E02B361C
+published 2013-06-19 16:25:11
+write-history 2021-05-17 03:32:12 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:32:12 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:32:12 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:32:12 (900 s) 0,0,0
+geoip-db-digest 8C90EC102233E62E051CF7C036FC4678982A240E
+geoip6-db-digest 37983854847927403196740CECEEEF6FA3681447
+dirreq-stats-end 2021-05-17 03:32:12 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:32:12 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 2.178.195.189:35673
+transport obfs3 2.178.195.189:35663
+router-signature
+-----BEGIN SIGNATURE-----
+jv/Ujd9YjgMg2zc5aGlqbUacXrDhet9OlZG9o9+4AYr9Je5oDd+liT8rx8U39roH
+duOeN6x74UJ07gTpcHdwyykDcFHm3EL/N69gzaKC4MdvEr4Cg6OTiGEchKScPJ8Q
+nHvmIPvdVDONRGgMZYQ2p/dYhqc5TgDm39u2cnxwhjs=
+-----END SIGNATURE-----
+extra-info Unnamed515661769422 00440022F0A1CF78652D532F8B348AE35D24EAED
+published 2004-07-11 09:31:32
+write-history 2021-05-16 00:21:33 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 00:21:33 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 00:21:33 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 00:21:33 (900 s) 0,0,0
+geoip-db-digest AD70C08BE253AD213BBA33478A38E00626EB3C4B
+geoip6-db-digest 04C6F05698D79366FF96E8E37BB4F7579CC47E8A
+dirreq-stats-end 2021-05-16 00:21:33 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 00:21:33 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+aGzK4C5NSsG+4KrR07JUs3/qcdu9fI9s1f1jXzFWr06UwP/5XmBgeyzoC9fxImD/
+/SZ+yLpDUoMZKbejuv+GiQefItTPwlewlPKgaKZSBOdmbrsIr5u5ia8qohtMwfNB
+gXdav3ktbPaoRkeKdS1IdUZZnCUpEqBcCX6XRqFXu0I=
+-----END SIGNATURE-----
+extra-info Unnamed262582432114 6DA76ADAFC9678C2C20EDD72495DD7CA0FDD5D09
+published 2014-05-16 07:42:58
+write-history 2021-05-16 18:30:17 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 18:30:17 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 18:30:17 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 18:30:17 (900 s) 0,0,0
+geoip-db-digest E2F14E42DD228843C1B9E9A3EF1AA5852AF08EB2
+geoip6-db-digest A04EAB38272B76999E64F4942DCFE16D747AD5A4
+dirreq-stats-end 2021-05-16 18:30:17 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 18:30:17 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 7.167.229.32:42240
+transport obfs3 7.167.229.32:42230
+router-signature
+-----BEGIN SIGNATURE-----
+vbpjqfg2jgBcZwMYGY8VR8szbjcvrFnbJUGNZWmV0it6JejsemlMTx0WpWSlISD0
+ITce+KG0+PR8UrepICH3VOd1C2abZ6Ddn2I/8B67jIVuc1F3KPey3v21sdN+IMXb
+WJs0ntdr78HE/MPqRZTNPtKN9aeoPs3gQmgNs3m/eSU=
+-----END SIGNATURE-----
+extra-info Unnamed516476760624 ABA092DBD9DEF4874F7BE11106728C334C5D8673
+published 2011-06-04 08:50:05
+write-history 2021-05-15 23:46:02 (900 s) 3188736,2226176,2866176
+read-history 2021-05-15 23:46:02 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-15 23:46:02 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-15 23:46:02 (900 s) 0,0,0
+geoip-db-digest 8D934D618BAAD20094A7D6F13D3A4ECCB6B0B327
+geoip6-db-digest 803699C93D88E6107285A15B307A3F8CFA092042
+dirreq-stats-end 2021-05-15 23:46:02 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-15 23:46:02 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 157.101.169.216:2200
+transport obfs3 157.101.169.216:2190
+router-signature
+-----BEGIN SIGNATURE-----
+W1aBGFZKwHc1y+EOJ1sC3xrDD/Wg9pGyapZrF7bi3cwOo2lO8WKeGHgfPwgx4R0x
+1IAa29R+VwZCwHfu6xXSYF6r7NsaCKudwLZnJwFVY9vzMnPcymvLSmEHTNFSFyJL
+l8AnAFIEYXXldDoDDK0MeMqeoNjFxh/EeQqSMA+1dvM=
+-----END SIGNATURE-----
+extra-info Unnamed807567000220 3BAA38769F0E12C789B4DE6332531542C1DE62D3
+published 2012-06-12 10:08:57
+write-history 2021-05-16 20:12:24 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 20:12:24 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 20:12:24 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 20:12:24 (900 s) 0,0,0
+geoip-db-digest 334E7FC108D8088E394A4BE19EB25AB7F49D1C64
+geoip6-db-digest 3CF371C76BD0C3410242553DB31118829F3607DD
+dirreq-stats-end 2021-05-16 20:12:24 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 20:12:24 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+rjAHrcwotBoSPGzOFqtDv1K0FPD7omW3wTAkmyo2Ciib+1W1qZK1XX1CLYDSgWeO
+v1rjI3U9WhOwInoji4AgPLBf/+WV4JMLie0ilscIysM0M70axKDVjjH62ql2HYGu
++3U1a93U5uzsDt9Pbj9wCIbgqkEEoCBUc2IrkfYCh6I=
+-----END SIGNATURE-----
+extra-info Unnamed889402444018 5F03BEE3993F72F5547FCDAD4532DB7DF5916FA8
+published 2014-08-12 08:12:19
+write-history 2021-05-16 13:40:53 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 13:40:53 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 13:40:53 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 13:40:53 (900 s) 0,0,0
+geoip-db-digest B8650F1500FDE7A72378BEFABD9D14B1ACCD1867
+geoip6-db-digest 8886C73581F8BAE5ADA79E0B80AFA15B1ED5FF86
+dirreq-stats-end 2021-05-16 13:40:53 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 13:40:53 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 140.155.44.217:19180
+transport obfs3 140.155.44.217:19170
+router-signature
+-----BEGIN SIGNATURE-----
+P1V/OxS5E4p6eH4iJ4zaWJPFhJ81Lp53cSG+do4ytP3BLWv+qHCjqds12lJnhP5I
+Vl5aSx5C0Co5PX8wHDFd0QTzNnNP7bPuLtvc3l88EWPcSxX2IrS0XXEN2Ssy3JGh
+1phcBIGoIIu0Au5MblBredqx8Vp+zM4uAWQjVG52DOc=
+-----END SIGNATURE-----
+extra-info Unnamed161053355800 A7C404A5ED055C708A0E32B7B9B032349C848006
+published 2001-12-05 09:45:48
+write-history 2021-05-16 17:27:11 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 17:27:11 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 17:27:11 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 17:27:11 (900 s) 0,0,0
+geoip-db-digest 8763343945F06D2292EFDFDC0F0CC491A2785F6F
+geoip6-db-digest DD6387D91D0935398C1D348A49B81B1B2D0F8DF5
+dirreq-stats-end 2021-05-16 17:27:11 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 17:27:11 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+dpA6MDBp5wykxJOvmcNj2vdSvinbufCdIfe9L8t8w1eeUuXQBk2Amk5qAEKFC+dP
+9vTvyL05JJpeWkJmqmGFwdg1MoCJgWsm668rmeYrEYpENr1cQSeWhpuvdbgPc8Im
+4ti3jMuMNJ6TaxrR+Q6athYV47sZof7z2hF6lYIk/H0=
+-----END SIGNATURE-----
+extra-info Unnamed873036591677 8DE649CDA809C1AE6D0A19E2503E483E61168614
+published 2004-03-03 19:33:15
+write-history 2021-05-16 04:12:09 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 04:12:09 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 04:12:09 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 04:12:09 (900 s) 0,0,0
+geoip-db-digest 51F35EEAADE6A99FBF46E00D3D0D99C07D190D44
+geoip6-db-digest 1773DBAD893CC38FC336F3648DCD9A7EB63B5CF4
+dirreq-stats-end 2021-05-16 04:12:09 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 04:12:09 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+cDha0NfNRgty4V4rRDWKgHopY9AN5to46HTMMo5NMBObbPFFwMN279zQ8UolGxyr
+sHwmGj8ZbgGpfhLTnHCjVh9q3fRiwJrdiRIUjTS/9BH0xX2orsQwhwlfb/sORgse
+KGDCqGRKNFfLksV/pnDU93iRuxBKacQX4DfffAMDbis=
+-----END SIGNATURE-----
+extra-info Unnamed365648658696 B40F50D512B15213355B1C623730429A158E17DA
+published 2009-02-14 13:52:15
+write-history 2021-05-17 09:30:04 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 09:30:04 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 09:30:04 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 09:30:04 (900 s) 0,0,0
+geoip-db-digest 35CC41E5ED63170449CEF259361922F8A8CCCF87
+geoip6-db-digest EB14617C75780823090AE3663CC0FE371B0E1F57
+dirreq-stats-end 2021-05-17 09:30:04 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 09:30:04 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+bMn2Ct9T1RA6zMqA4gFks9FA9yzx1QTHHkNezvvxmzGZp6Wh+INNB/aD0g0oUMMa
+IYOGGTNHykeSYFrkLh3fHuJwJGr7bXLTD3VHUfaym9eXxbRERpfvErNo8oB6EVNG
+9fGzn2d02CQFfpf03HozEisGnzKC+ZM7niFcWGKh8a0=
+-----END SIGNATURE-----
+extra-info Unnamed958693099733 B268DDF02F61AA00549CD7869703D0C1977A9991
+published 2011-04-03 03:01:59
+write-history 2021-05-17 08:36:05 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 08:36:05 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 08:36:05 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 08:36:05 (900 s) 0,0,0
+geoip-db-digest A05986D44CD290FB5C647DCE2BA1FBCE4E3149B6
+geoip6-db-digest D2C6AEB20C9A34ED5914E86B3ABAB394D38B128A
+dirreq-stats-end 2021-05-17 08:36:05 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 08:36:05 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+R0ceM/fwZjiFOrsianPUku9mfqWVV5CuGqkrMpz5WvVQElHTjNTkrGg80JQoJIoT
+QXx/9WK9WCtrCfDmbXPsYl9RQBk2D2bQMrXHkgnJevN+b2LpzkbKBrghok5YdK9j
+m4tVIPycK3bHYlsUmDuqAwKbcJpTFJ7M4FrFkODAerg=
+-----END SIGNATURE-----
+extra-info Unnamed899138630453 7BF0BD59A8883D852CA3974E3FD1783D59D18C3B
+published 2014-10-15 21:06:55
+write-history 2021-05-16 16:21:50 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 16:21:50 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 16:21:50 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 16:21:50 (900 s) 0,0,0
+geoip-db-digest 93200010EB6EBFDE7BC0C480CCB799F8B31CE05F
+geoip6-db-digest D754089ADA6F2E1427243AEAA906A094BED6F922
+dirreq-stats-end 2021-05-16 16:21:50 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 16:21:50 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 202.50.169.132:8632
+transport obfs3 202.50.169.132:8622
+router-signature
+-----BEGIN SIGNATURE-----
+n8LXCzLm3j2EwPdiFhpegF8RnytcMdXQOhDrwN4IF1X+aKRKPDmU++RLH4zzyvN6
+jpE2yLeCqiv+Q5lJmwbGht7wTjqwNYSmgFWcGW02rvsh5cufzkWvXAutzCZfXkIs
+nFopkaEWQqdnXkZA8NLLvqRU/VL0+P4bL7J6r9amYGc=
+-----END SIGNATURE-----
+extra-info Unnamed312800446969 526C9B19696D6E06572EF74C31C9FF8FB4B26E48
+published 2003-08-09 12:39:39
+write-history 2021-05-16 08:14:39 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 08:14:39 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 08:14:39 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 08:14:39 (900 s) 0,0,0
+geoip-db-digest DAE011D95C23C5C86C214CB823B78E9DA4AE67BE
+geoip6-db-digest 7F5F094BDF0B81F236FFBB1573DF4B4845449BE8
+dirreq-stats-end 2021-05-16 08:14:39 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 08:14:39 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+NjaTZO2xeZLu/B7aEfiHmKk9mDQkfphmDmdyrRGNhou4APCp8nnBH7UKtuM4Ps+/
+X2QXINUs9PwjLKo82vshNHqXi2Wb+AOm6QTKV6J1ty1v0hcZwWaLXnZoov4R+D2J
+jnm3Xa8P/lZO+mRLmj8JArVbVEIGX9EgjYnqeuYkRpk=
+-----END SIGNATURE-----
+extra-info Unnamed168526173524 1B271BEAE81056FDA0F07FA34262C9524622B41F
+published 2013-06-05 02:47:31
+write-history 2021-05-17 10:01:48 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 10:01:48 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 10:01:48 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 10:01:48 (900 s) 0,0,0
+geoip-db-digest 11D7988343A5FEA7B579D0C324763D25D332653C
+geoip6-db-digest 41F261A33D2548B74D12624D13C25526476F6010
+dirreq-stats-end 2021-05-17 10:01:48 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 10:01:48 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 48.184.69.242:9918
+transport obfs3 48.184.69.242:9908
+router-signature
+-----BEGIN SIGNATURE-----
+JpshDYvwq32Qln7ZExTl3qxZTSmXaSVXRy5ZuBk3ApZt5m9tRN0dfA1hAWkrFt3k
++DyHyNwCCT7HtDcdKgbUTA8zPsTVFvdqZSUSQzy6LCTtICLm4lmxC5vCfDWdeCvo
+CzxAqtJIZc6wZNXp8H8GoSno2BmTm9v0qJwJB4GoIpw=
+-----END SIGNATURE-----
+extra-info Unnamed701549940547 F9BEACB01CBBE97E414738906E2E1AF195674177
+published 2013-11-16 18:48:00
+write-history 2021-05-17 10:51:53 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 10:51:53 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 10:51:53 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 10:51:53 (900 s) 0,0,0
+geoip-db-digest 23BF1CE9DF29163E83AC6BE5D6866F54C4976182
+geoip6-db-digest 3402B140E8C1ECAA7A58B3D1B7329CA63743560F
+dirreq-stats-end 2021-05-17 10:51:53 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 10:51:53 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 6.174.226.163:13955
+transport obfs3 6.174.226.163:13945
+router-signature
+-----BEGIN SIGNATURE-----
+OKBprzcZTurm7MAm1OcWnWlsKJKzUExnxWwpXujtrNie/cehkvYVXQMwVROwP9Ht
+ZvrSCK6q7qLxECtp9NWlSns6ot4CP4fwEILgY/1BpXr1n4auk8BgzzZevsue7q/l
+WTj7L59Sli9Av++U0pBSmGpo/FjhWR+vu7iVCqk3NaQ=
+-----END SIGNATURE-----
+extra-info Unnamed965797244061 D9B04AD15E09A229D1933F1CAE2565EC42EB6355
+published 2009-02-20 06:39:40
+write-history 2021-05-16 15:03:41 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 15:03:41 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 15:03:41 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 15:03:41 (900 s) 0,0,0
+geoip-db-digest F71D2CBA8589DB35BC879C78F6C2E9B1B20A197E
+geoip6-db-digest 824CE608DB47B848769ACC0598BE5D358958F552
+dirreq-stats-end 2021-05-16 15:03:41 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 15:03:41 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 159.235.107.62:62630
+transport obfs3 159.235.107.62:62620
+router-signature
+-----BEGIN SIGNATURE-----
+lXMa1T7qrVJwlplQvSuc0M4Z2K026jS4AubJg4F0r7rhi2gKpfPGKLJ2qU/iQXuS
+1IGftnYv8Rz2zed8GRmC80KHx5hTtj0Z1TkNcxDORmLarGGPO7GWfPTm3mRrHajV
+LmoW8GIh6CnVA1bmfEEGUHv0dhFJ0DSe3C8Kph2aWkI=
+-----END SIGNATURE-----
+extra-info Unnamed912924150873 F93392D0267929CCD141DA90B771A0248BBCA2CA
+published 2005-08-01 23:26:33
+write-history 2021-05-16 06:01:15 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 06:01:15 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 06:01:15 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 06:01:15 (900 s) 0,0,0
+geoip-db-digest 582B1EA75BFAFB8330E869D0101CBD07676D3DE5
+geoip6-db-digest FBDC7BCE0BEEA24C5AEA22B731786B73E86C2596
+dirreq-stats-end 2021-05-16 06:01:15 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 06:01:15 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+a6kV9D9YR54eZbDPMh5/a6/uTfwq+LNusjV4Xy2tlQzdm2wLpXUUD1lCcu2WECPz
+MZ6l6BZAWgaUcLN4rPw/37h7K14mEbJvomtCS9LaoLLsjc7DxSOvnsgyijwNvWJz
+BVptTw+/7pRbXP6u3+P3sTU1A2FElA+Trdna8YNEXpI=
+-----END SIGNATURE-----
+extra-info Unnamed527244278158 3F8F254A652B1A02C00061697CC2D25120AF5891
+published 2002-09-14 02:08:53
+write-history 2021-05-17 03:21:50 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:21:50 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:21:50 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:21:50 (900 s) 0,0,0
+geoip-db-digest B00FB79FBE94A3607E6623236F9642ABC2A25115
+geoip6-db-digest A81CF71FC3DE7E7B366DA54F734C171CBEA094BB
+dirreq-stats-end 2021-05-17 03:21:50 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:21:50 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 82.191.62.150:50451
+transport obfs3 82.191.62.150:50441
+router-signature
+-----BEGIN SIGNATURE-----
+eHoDiwNPLZkFuPuPdWoT8/heIP0TaOHxs9zbm/RXouBCOvB7dCKXxtiqpgjJAVDR
+DNYj0fW6FU94bq76uEooH5YrEN7HFw685OVcJY+CiJo2ytbMOCkqywrZsYfT26oI
+EOXCMJuSrEUSmb3rGW8ymMfNP0c0nbJQ3fB4qm11eNs=
+-----END SIGNATURE-----
+extra-info Unnamed826215453760 DDDC35A7E5DC4FD190270E5DC84653EC5BBBBE3C
+published 2010-06-18 15:26:07
+write-history 2021-05-16 09:04:10 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 09:04:10 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 09:04:10 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 09:04:10 (900 s) 0,0,0
+geoip-db-digest D8AA47F14F62F653809ADC0B0CCA244FD7FC5F9B
+geoip6-db-digest 1E530FC74E7CC06B742FCFA73DA8E04526EDB656
+dirreq-stats-end 2021-05-16 09:04:10 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 09:04:10 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 178.35.254.137:5016
+transport obfs3 178.35.254.137:5006
+router-signature
+-----BEGIN SIGNATURE-----
+l8jYvJdCDiXknD3Qcb00aCAWsmyFnNcO1VvgDSyh5yUD23ty3VLJjb4Q6PLK8OSQ
+F+oEPwCne3RKjhnE4WfFIvZrcibVOGQcqD2iPEqGticxnpwbizVKint9GgHYbW5z
+hqabR0/DHsC/GYvmt6rB7L9M7xtbEMgEAzVoZAZVhys=
+-----END SIGNATURE-----
+extra-info Unnamed664657884203 CCBCA499B9F8BF8AC0145169E7A75ECFBC6E45BA
+published 2009-01-01 06:55:26
+write-history 2021-05-16 15:22:09 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 15:22:09 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 15:22:09 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 15:22:09 (900 s) 0,0,0
+geoip-db-digest 47283B3EB671D6E6ACBB723BC73A870FD9FA3601
+geoip6-db-digest AC24C3F3A3729AC651D98D2FF54AC8558E0DEA9D
+dirreq-stats-end 2021-05-16 15:22:09 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 15:22:09 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+mJk1+LlhDps+aedvF9h92FHVpOU3yELr+OoU+HF9DizYhEfGXzPt0/TGH2vdCaZg
+bBPDmMt+E71Z0MZBwZN3NUTuWaJJXiIiDfo7RDnuzS00SbH+DulfCy4AjysNSx2L
++IQX25Xb3Gtxpt6nO2Oe0VYlGfwVTYO31BptL6I+jCo=
+-----END SIGNATURE-----
+extra-info Unnamed395726834484 8EA6E3F68D839F5D542A167D7B7307F9D239FA3A
+published 2003-05-04 22:34:30
+write-history 2021-05-16 08:44:45 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 08:44:45 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 08:44:45 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 08:44:45 (900 s) 0,0,0
+geoip-db-digest E5C8A27DDA929374A3EDC09CE4951AA6A2CB64C4
+geoip6-db-digest 8B37B9790D1E1CEC01EDED66F14B7D23A16B821C
+dirreq-stats-end 2021-05-16 08:44:45 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 08:44:45 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 15.187.155.243:45241
+transport obfs3 15.187.155.243:45231
+router-signature
+-----BEGIN SIGNATURE-----
+O3sGjMGPrXAZOAojIlEkK6EIoZR8e/IczQXwt0KAxrmPaY5FOEQAaUcn2470VlzH
+1nvWASKxk/wKybKnwqzxxYcWyPX5zzeGIEtr1YpB7aZFRzmDUq/nIBtZ7ei01AQJ
+vfOY0/dApqKCUgCJF/cl30m9ZoT8FhYeIL/K3L6isSU=
+-----END SIGNATURE-----
+extra-info Unnamed108693986261 0F6EB67327AC9576929E72F5B567DB64541DE09B
+published 2002-06-20 21:16:54
+write-history 2021-05-16 14:50:01 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 14:50:01 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 14:50:01 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 14:50:01 (900 s) 0,0,0
+geoip-db-digest E69C5EA54F99BB3C5E8C9F8CA16664949E5D03C3
+geoip6-db-digest 5992BFBC4E832DE46C840781E8E5479B6F69C33E
+dirreq-stats-end 2021-05-16 14:50:01 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 14:50:01 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+Nq57ihHyLrVZ+o6raFhfJhGtkOwiKNVQ1Rzr7zCcSEBLMS9HpAmUu51bbmt3zlyt
+TtMKBh3KRG+VwUOSBRozu66D4vfMZYsofSagQGN69IjnabZ4xKw/GKUDGwL4Evvb
++FkN5gWkqwfmEL9PZtEsa7Y5BwoqWm5YoDUR3DQxZx0=
+-----END SIGNATURE-----
+extra-info Unnamed193099156627 0C2651FAC7170A8AA84B80BEC5FA22A42144F3F1
+published 2010-02-16 09:25:26
+write-history 2021-05-17 06:19:30 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 06:19:30 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 06:19:30 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 06:19:30 (900 s) 0,0,0
+geoip-db-digest 6EAE6D560E039CB2100A5CECAF5D66C83CBF930F
+geoip6-db-digest A2DBEC0BADA719885A166E631D0AEA95002B3A3C
+dirreq-stats-end 2021-05-17 06:19:30 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 06:19:30 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 103.153.148.182:55666
+transport obfs3 103.153.148.182:55656
+router-signature
+-----BEGIN SIGNATURE-----
+ciwo5wy4CLWRxsrGA57TbSMe0MQ9tKIzCLunLjxr5F+ubOmRA0v+RDE/T85tXMjx
+07mvUe6aCmv6Xyg1Q4obHCYWnr9GX5s2rwoZTq2Zm4LKCaBzLBmpGNcw4CCWJ9zl
+i/TdHuyEMOBFqkhnkFKMyazDcruGmHh9VXsTvix8rS8=
+-----END SIGNATURE-----
+extra-info Unnamed940601252572 2AB37DE46B9D6924F680F065235FE0321DB19685
+published 2011-01-04 14:48:15
+write-history 2021-05-16 02:18:33 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 02:18:33 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 02:18:33 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 02:18:33 (900 s) 0,0,0
+geoip-db-digest 2619AE4881097701013B318AE9175FF6DB1989E3
+geoip6-db-digest 69C6BEAAD24A33FA3890A2720954F562D2667012
+dirreq-stats-end 2021-05-16 02:18:33 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 02:18:33 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+tSg6BzGrWmp5R5BAPRKq1a7P9pTLMXaqJRXCZyK6/65hPcAOf2kICbW2a14OoHVd
+fLb3gmfEhPbgH6PcfzvZNNrGOdxQ4JN7NwlwRePUrQF2sOXJZsNzgnQNPbSjtPX3
+gxbMJikZsQBKZVZXVMn1dZ3uVr3fao5OhQHNNrItfeA=
+-----END SIGNATURE-----
+extra-info Unnamed860378230857 845159B5D87A8269CCF65BF2FF04367B03C93E7B
+published 2008-09-09 22:27:56
+write-history 2021-05-16 00:53:58 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 00:53:58 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 00:53:58 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 00:53:58 (900 s) 0,0,0
+geoip-db-digest 092EE6BB5A94F9DD8B9BAF90AD5494A9E14B4556
+geoip6-db-digest DD2800961AB6BE2DCF38A712C06405CBCD0230FA
+dirreq-stats-end 2021-05-16 00:53:58 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 00:53:58 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+hEUu1PW0rGKZz35oRo2cxsFg9kneVa8Bf8qsfuoP/NaDJcp70n2BhQFRECg2fx+W
+6HACdb5by19YUTKwRDA2C1YoS8f4XFMX5DA0ou179EneLZfF87btOvb8aJrsfTQI
+xM4EDriXu8Pn4pc+ljvHvGnvlTF0918mr2dqDz8j290=
+-----END SIGNATURE-----
+extra-info Unnamed131393621768 3E2111D17B4266CD398BA8456000310E080856A0
+published 2009-10-07 22:41:18
+write-history 2021-05-17 06:44:51 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 06:44:51 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 06:44:51 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 06:44:51 (900 s) 0,0,0
+geoip-db-digest 1FA9805BA84A4E2A01E81C3A1D2FA77C72094966
+geoip6-db-digest C9B2AAAF83DCFE03F1B642B3F66B9F14101DFCAB
+dirreq-stats-end 2021-05-17 06:44:51 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 06:44:51 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 122.159.224.45:62656
+transport obfs3 122.159.224.45:62646
+router-signature
+-----BEGIN SIGNATURE-----
+Fjkn3l+mNtem8OIL7oGr4G+QYRZLTY7gNPvWexziji9A69C5FvpzZ2mxs57qjuOE
+enTWe94KJ3RpomKhry9/bYmnFg8lSfsAoKCw/RjL2YGVjEz4do8KBpebMuXE3uRD
+/SV9A+7iZhk9SMYxGcKhHXm4i/8DDSwDY1AHL3vcqbE=
+-----END SIGNATURE-----
+extra-info Unnamed694272430940 249C17895212B4AB33B380BA8C1A1C7ED80AC0DC
+published 2014-02-10 22:41:04
+write-history 2021-05-16 06:24:58 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 06:24:58 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 06:24:58 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 06:24:58 (900 s) 0,0,0
+geoip-db-digest AB2C2EE9FC0A08991AE274D04AB1F8EE4A8FBAFD
+geoip6-db-digest FAD66010985A142C73D5A066887F1BFC593300EE
+dirreq-stats-end 2021-05-16 06:24:58 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 06:24:58 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+Bijrwl7qZ/wTO8V0zmiayXnAG2UJI/y+IeZsEhQp0s3tPTunLWj7uOjvIuISe5on
+G2PpCrye7lwFcBFbypedIo9IngSFdr57v+Z3XvFboECx+FU3ZGX4IFas5LxqUw/q
+Ur43vY3efdu+4OgrAgbAFFf0OeA+IbDgXteWqHAygXA=
+-----END SIGNATURE-----
+extra-info Unnamed926364172070 74E0CA24CF31E08EFC0B534456AF8753298C8DA1
+published 2005-12-19 17:56:46
+write-history 2021-05-16 01:24:43 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 01:24:43 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 01:24:43 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 01:24:43 (900 s) 0,0,0
+geoip-db-digest 8B8DC44C2CFEF9FE4E32792299B094B1F2F86438
+geoip6-db-digest 3D44E005D624BF91F561666C9B5B6A16DC21A570
+dirreq-stats-end 2021-05-16 01:24:43 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 01:24:43 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 11.43.20.183:39061
+transport obfs3 11.43.20.183:39051
+router-signature
+-----BEGIN SIGNATURE-----
+SwRS0EnUQ+flu8dH6lpFfXfhZLwhdjhqW87HhrBV36diUM2DTjiyrjpRQotNO8Vu
+iWTN6KtETAd9SK0Oy+nqDx6heN8GcRrDWfWMDndwxZ8qmCafmwpSCvmRrdsm0ISA
+A3j+KusKyXwfpEU2lQHxc0a20Ymm5sRzlvj1SMxUvpI=
+-----END SIGNATURE-----
+extra-info Unnamed654630334718 D818FF4AD4623AADA5644F83D249FFADB5D0C47B
+published 2011-08-17 05:04:31
+write-history 2021-05-16 23:30:29 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 23:30:29 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 23:30:29 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 23:30:29 (900 s) 0,0,0
+geoip-db-digest F8F08587D78B49B9C4AD9F7280DDBF11D177303E
+geoip6-db-digest AB37EDCA199D16B08F642EFDAE8C8C86D1522F91
+dirreq-stats-end 2021-05-16 23:30:29 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 23:30:29 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+OfVVaaLKL8nWebVvuyQ/RIlZzS4FfklJRUtPG69ADlK6DvK3FhsNG97/WWi+xvds
+frqbWQBlfDTCLN/RIK5wzWjS14MFCS8NLVpeBzUaNouWf74QLG0K+iiZjLMOnjuA
+BkikhtK0VvfjwzohZjfEVpa403bC8M0xTrinJgl93tk=
+-----END SIGNATURE-----
+extra-info Unnamed974086771296 DB9C61AC76CF728E899D249D9141F865409B7BF2
+published 2003-11-01 19:25:32
+write-history 2021-05-17 10:17:50 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 10:17:50 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 10:17:50 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 10:17:50 (900 s) 0,0,0
+geoip-db-digest 80A672124FD0726D553A8F0042AF276DB7A24F58
+geoip6-db-digest 434D7AF3DE17704975769FB1CA9970C3B9F5AC3F
+dirreq-stats-end 2021-05-17 10:17:50 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 10:17:50 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 131.35.4.204:41002
+transport obfs3 131.35.4.204:40992
+router-signature
+-----BEGIN SIGNATURE-----
+Zp9LlMIsK9DLiY1gU7ptYiyDaifoqc7RhRAE++NAevWtT+4jAEebMS7sPVHZ+nAh
+WzE5CTtxE31+dIfGJ0M+By6tbv/sij9Mdh81I5LQXYeWPQyIMexOE4bLv39ZBohA
+vEcCl8muokSZDsNLGngzD4GwZwvN01xJvbZduzZMJ+M=
+-----END SIGNATURE-----
+extra-info Unnamed405969494373 0D63864C54B8099BE21642D17C181C3BF27EF821
+published 2006-08-01 16:56:16
+write-history 2021-05-16 04:33:53 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 04:33:53 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 04:33:53 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 04:33:53 (900 s) 0,0,0
+geoip-db-digest DD24937A2BA5EFE709C07228213448B5ADE56ECE
+geoip6-db-digest 83F322273D1E05A117DB94B6911ABC7BA7D1E1AC
+dirreq-stats-end 2021-05-16 04:33:53 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 04:33:53 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 184.50.179.130:38698
+transport obfs3 184.50.179.130:38688
+router-signature
+-----BEGIN SIGNATURE-----
+BJ0X12yld52nYilaPEsrcUy9mSIsmaVwfYiB0OiXJrsP4Ud1aXOOpbj3r9TaYxi1
+Ci8kq/UIwQLOJETdr/t2KSH3ghQkrCzdZRkpgZTK4aBIqDJ9NfieqwVa6u6fpiGN
++/EonZ6SEU1kz6er7CKJIdA/iFEBI/kT5JmWRXTsQmE=
+-----END SIGNATURE-----
+extra-info Unnamed768605983758 B172FF1BBCC2DD23ACAC988B3FD4010A67A6A4A4
+published 2011-12-08 09:21:43
+write-history 2021-05-17 03:22:56 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:22:56 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:22:56 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:22:56 (900 s) 0,0,0
+geoip-db-digest 75AD2FC67C68EFC79DA3ECF1544A67E0B7B41BA7
+geoip6-db-digest D9A965DB8D550FC8FCCD3DD1C4102BE71937ABDF
+dirreq-stats-end 2021-05-17 03:22:56 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:22:56 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+ktVEa1CWNy4DsBZRyLzIfPfcwvvk7W0jOpQ4+A+9DLG9pEJwfpDT9/H3XsgAcK/+
+M1Do4SXoogJjUTEQS+IBakG4I1D+QX+HCp3cMlj/CR6hnLH3Xm1MptVsfJ1QyBtY
+NFcygOoAzpsN0No9/5gpmV1tOdsEG18MODRyLCVaM5Q=
+-----END SIGNATURE-----
+extra-info Unnamed120703480434 99614BAD883AEAAFB2FFF1A70FCAF9803F2F06BA
+published 2000-02-11 10:59:11
+write-history 2021-05-16 19:52:57 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:52:57 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:52:57 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:52:57 (900 s) 0,0,0
+geoip-db-digest 4F027A5DDD863436551ABA67CD7FAB08A9467512
+geoip6-db-digest D111B6512AC0E4B4256205DDB4FE80D80628ACB9
+dirreq-stats-end 2021-05-16 19:52:57 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:52:57 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+OI2djXAZzPruigPco/he4qQoyAusYCzHuhkowWPxQdeSAcvhVvLF1UBC40MXA5jW
+H7DB56mMKc/ejdlsIRQizS5fgnxuhLqfSqz73w49JSP+39bcQtQhgF4LNKUv1/9B
+nMGng4lR0aII32zHdH9sw8b1/QxKUh5jGshks8HB5wI=
+-----END SIGNATURE-----
+extra-info Unnamed475066146613 3269D82B08366A9526042EED8ED0EAFB1EE3AECE
+published 2008-04-20 04:22:55
+write-history 2021-05-16 13:47:55 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 13:47:55 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 13:47:55 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 13:47:55 (900 s) 0,0,0
+geoip-db-digest 928183D2F141CFFFCD9F0C5CA80A1F85EACAE070
+geoip6-db-digest 1DF7A845A50E4A7CFED6F8AACB237B8A2E7FB310
+dirreq-stats-end 2021-05-16 13:47:55 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 13:47:55 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+k4eWhCXbEv988VNOX0nPgRvAcHY4glF5ctb4V8/45/riLw0qCejdxyKj1SCbCc3z
+szAAtgyzSKr6YSwnfCjC7MMvjws5w34F1QNtkqmuraO+8dBElAQ8vZDKreM2FtwU
+1+33VyzruKzaqEyOe7cpDky8+BMcpkX7y9QZyB7QCF4=
+-----END SIGNATURE-----
+extra-info Unnamed631919105975 C9445164A03E9C2770631AFE65C2113ACD040FA0
+published 2010-01-01 14:02:13
+write-history 2021-05-17 03:02:42 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:02:42 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:02:42 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:02:42 (900 s) 0,0,0
+geoip-db-digest 48B0A01F23E30FF66BBE6FC34834762D12D90F4B
+geoip6-db-digest 2613AF38868F68910E2BF12730C0716615A42D64
+dirreq-stats-end 2021-05-17 03:02:42 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:02:42 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+Pxxv08CRxDC2KKtpvy7FSBbrYa2Cb18NRLvIF+24aAdQ6h3fZKnVFJhTHUx+KAwn
+XOcqlI1T+fCNW4AtYviBM3kUtNat+hGJUo7azsLks1+Eli48uoOh5IOQLXPw/VBZ
+AywlibfG9Yj52KHSkwdQklTIRXsYbk/vf+fODvYVhR8=
+-----END SIGNATURE-----
+extra-info Unnamed690516559340 969560F21D7672BDD99418575AAB6146D1803847
+published 2012-03-02 07:26:48
+write-history 2021-05-16 01:29:38 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 01:29:38 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 01:29:38 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 01:29:38 (900 s) 0,0,0
+geoip-db-digest E6373C7C7DB9818E949A06F17EE5D8CBAF0F83B6
+geoip6-db-digest 99F49C648FBB4C804AECB7B37A13FFF02826C8F7
+dirreq-stats-end 2021-05-16 01:29:38 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 01:29:38 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 206.220.93.90:40764
+transport obfs3 206.220.93.90:40754
+router-signature
+-----BEGIN SIGNATURE-----
+c8ZtLA6fxphLtJUg5eKwuLofwkaIYXZOFJYmpDs6Ry95HtyYm1Dh6CPrOcMx0tRj
+RmTvAm05zoS+MXK5O3h4alVay/n6T17iWFpw8addbsVj4jWRmThZltAUMXpytGVB
+HB3QrLyDtJU5SoYvsaB4UYghckpLZL85Hk6jq4RtXik=
+-----END SIGNATURE-----
+extra-info Unnamed638390519342 1E87B222275D1A4C68CD1DFA7AD33C1C5F797A86
+published 2013-09-17 06:46:36
+write-history 2021-05-16 17:10:49 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 17:10:49 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 17:10:49 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 17:10:49 (900 s) 0,0,0
+geoip-db-digest FD8C231D732837B191622D5F0A9989E9DB59756B
+geoip6-db-digest 2CB64565DD86CBA3126AC23F4FFD04A8F5C37269
+dirreq-stats-end 2021-05-16 17:10:49 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 17:10:49 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+lajPW2cecBtgNlsQemvx4GjMXNHCnK+HevRH4OMeaNth9KYXMSgej5FCtPgJG+js
+lkHmPG7ak5+S0CZ7gGc6wtPFVt6WXnQBuOudHlzLFKf3cBBdPgirXm5+s4CUgSQT
+7BR7sZTH50+PbOZxTq/jnF4dz8MnbVoI6pDoDshmuVM=
+-----END SIGNATURE-----
+extra-info Unnamed697410238880 D19B7B05FE96183C019B2F79C606B3A6EB07ECE6
+published 2009-08-11 21:38:05
+write-history 2021-05-17 05:51:26 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 05:51:26 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 05:51:26 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 05:51:26 (900 s) 0,0,0
+geoip-db-digest DF169FCEEDE79B0DA80CFB81C3CDC9EC9FB88078
+geoip6-db-digest 5A2192EE8FC5407258C0CABAEF66C52CE91D787C
+dirreq-stats-end 2021-05-17 05:51:26 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 05:51:26 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+gikbyw6K59sXiH0hZ8SUMBc0C+pGA0ElBLyIN0giUVdMg3tclOnq46zd0clBt1Fg
+SyPtfayb65oWuLRJJ8nPo7b5jXRvxCK3NgH8QY5yEPDgLZzYKexpiorGgVT2ZbTV
+9hdIJ1ItxvrlnksFRYMYD/wrEmjskQNnDqOs1bv+qlY=
+-----END SIGNATURE-----
+extra-info Unnamed347316789126 631375996503A502FD23B03020AA51618CEEF6AF
+published 2005-03-02 07:09:32
+write-history 2021-05-16 11:53:53 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 11:53:53 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 11:53:53 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 11:53:53 (900 s) 0,0,0
+geoip-db-digest 0675E87886E16DCB288690BD3F9231085BE5AC05
+geoip6-db-digest 81B46E901A0D499C46603DCDA5BADE2CD8A0A961
+dirreq-stats-end 2021-05-16 11:53:53 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 11:53:53 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+Te52BJUkepqXaB7uFX1ra19s9IWykjGUKuV6HwbFfYVQstkmI5UocTto6q7EpdGs
+Hh0UWOAEl1vGtjpSA63msCjpLtEqcH8kVyBMeTx/+xMvkPj0r4jzDC0fNcNMeS1q
+yMpm5lR1gG4F2PqD3W403HgGLReUR/7lJl8uNBIJXxA=
+-----END SIGNATURE-----
+extra-info Unnamed945499112523 9ACA22EC0488BBADB26B3B5CC837286BBBB662C9
+published 2014-05-09 23:38:04
+write-history 2021-05-16 01:29:43 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 01:29:43 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 01:29:43 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 01:29:43 (900 s) 0,0,0
+geoip-db-digest CB31916063E1E390439865707194B1C62DD23B95
+geoip6-db-digest 220F0D821EC2D28CD36057F34664FC04EFA13FE1
+dirreq-stats-end 2021-05-16 01:29:43 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 01:29:43 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+nUBerU+gr3OdGJSgClLRZ0/Xl3aCz267vyNNNMi7WUwOfiGsQV4huoKHTL/UkmfK
+DVww1383VHeqLUmqNQMa6t9d456qfCQqA9pY1YE3ISRhgrb0Pm3BvQgjMrekBYpu
+FzuuPTEz0gt1/OC9w2Qnc+dA8MfeyEpAzVQUN1j+8Ik=
+-----END SIGNATURE-----
+extra-info Unnamed735354472865 CEF88D8CAFEC2F28A8CEBDF920CC5640AFC29536
+published 2004-08-12 11:29:30
+write-history 2021-05-16 19:33:07 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:33:07 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:33:07 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:33:07 (900 s) 0,0,0
+geoip-db-digest 3E45B2E187B2A5310BAF3CF370BF4BA354BBF760
+geoip6-db-digest 99B30BF5BD7FC40EDD2BCBA44F00B281BCE04EF0
+dirreq-stats-end 2021-05-16 19:33:07 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:33:07 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 176.230.59.99:50957
+transport obfs3 176.230.59.99:50947
+router-signature
+-----BEGIN SIGNATURE-----
+e68NtdDO0JPGN3Onhb94Tz6W4DZkQs2VhktfBrMmT9GGPo8NLg+hCAbkVpcaCmFb
+GJyL1mVkjFPGMrALXjBuvikcjlTjsI5gB9Lpksexx72Dk0pavaEaOoBBdfyjfksB
+qs2yRcIyG0IxbMMJbXwWW4D9qZqs3lnWJHSBZyn7/l8=
+-----END SIGNATURE-----
+extra-info Unnamed941596143899 5D9AD66D5009C4680D323FF7020B3C46F9CBB9F4
+published 2005-05-05 07:36:51
+write-history 2021-05-16 21:03:21 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 21:03:21 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 21:03:21 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 21:03:21 (900 s) 0,0,0
+geoip-db-digest 61054ECB568A2593F95EE313FD72ED1CC01156AD
+geoip6-db-digest F4E0ED4E9EDE0BA16620A71E14B9541295DCE95A
+dirreq-stats-end 2021-05-16 21:03:21 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 21:03:21 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+ILT9tV+FQyTQkMHGTZ9xWeb2KrPCRJwtyQGmkG03YmCJJE1D9kb+yu4FLHpVpEWd
+SMWnBguF6Jn/Uh5NrVw2FMQbV6Q/QAtjaR6OinZht2odcgEArfkvnjDDJJJ7cgdu
+Svft9xoo5Txd9YyvV4GVwNTJeWXGbIAct1TVXEPu8MY=
+-----END SIGNATURE-----
+extra-info Unnamed522837195117 1A96967EA23327B36DF9172FE84E0BAF8A1F71E0
+published 2008-09-02 14:54:11
+write-history 2021-05-16 03:28:39 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 03:28:39 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 03:28:39 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 03:28:39 (900 s) 0,0,0
+geoip-db-digest FE76EF8504B6069E236FF5A2ABA925D82B2B88A3
+geoip6-db-digest E0F1BA166FD7C79F3A2CA087F2B49009BA907769
+dirreq-stats-end 2021-05-16 03:28:39 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 03:28:39 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+EnkcItnZ3YhiZwL0uipb+foS5ABYg3VBdxR5qmA6LpWymsZD7UxqM6tKobVEaxEq
+bge6NUSW1jOZuDBkhLAvuVbwkxVMSVrDqFTVVsapDA8I7gkAPSZJ7qRyGY4NAxWw
+ch0X4mUURMLkWldIcd7+N6OkUBk3E9FWPbdElK5vR3w=
+-----END SIGNATURE-----
+extra-info Unnamed950600535795 81FF979F5C42B14FC9705ED5FD747C69AC0DF26D
+published 2000-09-18 11:05:21
+write-history 2021-05-17 01:53:57 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 01:53:57 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 01:53:57 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 01:53:57 (900 s) 0,0,0
+geoip-db-digest EC3F9F801F9F00729EB954E4F42351331D619914
+geoip6-db-digest 4A1C17AA8D34D9CC83BE38BC2E256DF7D43F5FD2
+dirreq-stats-end 2021-05-17 01:53:57 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 01:53:57 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 58.87.61.230:48415
+transport obfs3 58.87.61.230:48405
+router-signature
+-----BEGIN SIGNATURE-----
+obSUJuH73mPzMrUbAgYSEy+5dVMjZrU930K6vI/TI0MaouMDjHdqj/VGOUvENiyd
+g5pijyF5FyVPntfUs8xgtnapXGW4bwmMXDkDRzyAtLnaOPW29g9wVo6J2vG1/6wT
+IU4HQBLmPFia7fHO7wektnh26kFORg1Y2jwZSIU7Aow=
+-----END SIGNATURE-----
+extra-info Unnamed735888462604 4C360C47B15A1703CF626A73E70B0191E4391092
+published 2002-12-06 16:16:30
+write-history 2021-05-16 12:31:43 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 12:31:43 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 12:31:43 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 12:31:43 (900 s) 0,0,0
+geoip-db-digest 4AC3933FA2F40E7983B7F3F9AC95ACABA41E7E5B
+geoip6-db-digest B665B8D08851B0422300724690E275BA9D6AB316
+dirreq-stats-end 2021-05-16 12:31:43 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 12:31:43 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 197.109.11.239:35912
+transport obfs3 197.109.11.239:35902
+router-signature
+-----BEGIN SIGNATURE-----
+Mq+qyb9YZsifHj8sjcpk7sjegsZizkUU4g0EEZw352eB7697vblq5tv7T9Yc1stR
+9DsSgiiYlVqbvD6dd2wsQPEtE2nQx0WiMm72vHaHHGBmGjmzuje7NxqGc9YDGh/8
+mr4790MWOCKRt089dmmAkT9d+XISz1S3QX5OuBv49qs=
+-----END SIGNATURE-----
+extra-info Unnamed240748329531 14C9FCAEE0AD52251CFFF5CA91CEF386E70E6DD4
+published 2004-11-05 21:35:07
+write-history 2021-05-17 09:35:18 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 09:35:18 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 09:35:18 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 09:35:18 (900 s) 0,0,0
+geoip-db-digest 557CCEB6C22BF00F1FCCF8EE646D312F7AA4FACE
+geoip6-db-digest B6261520A80231E006D54E58723FDBF6E34FC944
+dirreq-stats-end 2021-05-17 09:35:18 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 09:35:18 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 54.133.180.183:33463
+transport obfs3 54.133.180.183:33453
+router-signature
+-----BEGIN SIGNATURE-----
+h7rNBOQQLjqwAgP0iPbCo9LJu6h3pJ2F0p2SDG+XSwOI32uCe9PLzYvBDLjUpK0R
+kBBbWuZW+fGn2ihk7d68+C6fRnZzJzcRqXDIIRG1d6rczaM/N5j8xIEc3R+tXazd
+qmFeLmFjCEUOsF6hzAIyGAI9S+8PqQpSDc8osRLtIaM=
+-----END SIGNATURE-----
+extra-info Unnamed402958549213 5771CD1E1DE0EF001A3B38433C3442BD63AAE327
+published 2014-01-06 19:16:05
+write-history 2021-05-17 03:36:10 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 03:36:10 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 03:36:10 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 03:36:10 (900 s) 0,0,0
+geoip-db-digest 830CCFFC2FD76FB90D10A0C7DF479AA74050F905
+geoip6-db-digest 496B36621B92C8AACEE7A9529EE779229CF946E2
+dirreq-stats-end 2021-05-17 03:36:10 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 03:36:10 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+RsbectUNt7edXZfW44EeUwgLf7Ut9n1Z7is8VlzXnRWBYJvvFclmff+BV2IB+hCo
+PBVTtPSsTBuYyR4ruQ6hjqwJsfHE5nHsn+qRCmonhGdqLprPdud0ioDqWEmvloEc
+u7FSuLNWug/4yLf7kz784KQDNkLBTPh9pNFJZxMFTvQ=
+-----END SIGNATURE-----
+extra-info Unnamed881091578113 3FC88C7FE9497AEFFB10AAEF859252B853D51151
+published 2007-04-04 19:35:27
+write-history 2021-05-17 01:12:36 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 01:12:36 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 01:12:36 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 01:12:36 (900 s) 0,0,0
+geoip-db-digest ADE87FE0FA83864823F3CD16A6ED9269124EC978
+geoip6-db-digest 633DBEFA6562A19BBEA72E9C1D70B8989B03B3CE
+dirreq-stats-end 2021-05-17 01:12:36 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 01:12:36 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+A4yF36oygBviFgi2NCJewOOzMG4e3qOTJ7g6wVOFKW6G11nrkFohSUhDmjSbIlZA
+oqii/RFspJfNJw9zmc8GFkS6KzY7KbaUE1tO5WOcr9oY2i4NMhVPabggZQRf96wu
+BqyRwHPw2zIYFgkqwWS1bj1mOfah2pX6cJ6twrUelb0=
+-----END SIGNATURE-----
+extra-info Unnamed599056308895 F610073291AC01FB6D53F73E6B5163DDE4BDF584
+published 2014-04-06 05:10:48
+write-history 2021-05-16 22:40:57 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 22:40:57 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 22:40:57 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 22:40:57 (900 s) 0,0,0
+geoip-db-digest 7ADD4A3E755BE6918192B220E3AAA63A9A10588F
+geoip6-db-digest 8600CAAEB43E01AD1995C1819E5BDE1FA7903BC0
+dirreq-stats-end 2021-05-16 22:40:57 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 22:40:57 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+tSWOhgLx1cH4EuxbkogioSjtRHsu9iPpnKj2lTXw8mJx4yPY1aYC3AEnVF6Lq066
+j2SY0YsLNy4Gp/Qt1d+0vmtdQy+ZrqlMQeHWCtB0dObJEBh44tovcoeXWt1M+Koo
+IrQLkvHBofzlsduDmS6PWqJxE9Af2Zs6x8puKMd32GE=
+-----END SIGNATURE-----
+extra-info Unnamed791758378555 6F89D6F828ABB80E8AA4AF19EA136C8205D5F2A1
+published 2005-08-08 22:13:36
+write-history 2021-05-16 08:41:29 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 08:41:29 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 08:41:29 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 08:41:29 (900 s) 0,0,0
+geoip-db-digest BFF96FA32B50868B7E15B5A1B0A9CF695C14EF07
+geoip6-db-digest BCDD066F1251BF5E6976C93C6AF4AB95D14BD87D
+dirreq-stats-end 2021-05-16 08:41:29 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 08:41:29 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 128.83.93.240:29052
+transport obfs3 128.83.93.240:29042
+router-signature
+-----BEGIN SIGNATURE-----
+j1QEDKzXmTI7UN5cwHFKxVhRkZwaV+E5B5v/PemjWxyWpxQB1ytNC1vnpIbtsWCx
+aPfu3s+voqpynZT+hdUqjHZdEHpOEgs8QdauMXn6ypOJQSEsZc9Wirh3K0p+0GM4
+jApSi/tyii7uu8cKx+ub2cgsqZMs2s36XnkbFiWLZhg=
+-----END SIGNATURE-----
+extra-info Unnamed383530767025 C1343C6960C8288390FF7EB3FD0C88EADBFD6C3D
+published 2011-05-03 09:56:13
+write-history 2021-05-17 10:34:50 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 10:34:50 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 10:34:50 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 10:34:50 (900 s) 0,0,0
+geoip-db-digest EC788234150B031DF2EDC74DDCE270BEF6CA3704
+geoip6-db-digest 115581BB18F9FE7641AC43843519DB660A3089E4
+dirreq-stats-end 2021-05-17 10:34:50 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 10:34:50 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+OqW2RlS98xg8jFlMl3H1SXeXB/7OhxORghp98DK80ic7OQvKtUHgNIpbEkpelQrU
+TiQxh8TsodLS2xdGTY7n84PyK1to2Dcr8Gk72Ihk3ct8smLOw4zS2TMdiw2aJ3nc
+kCxzLqVvIJoOCUIbpcbJuM7C7/RCrCwC3iHyDWdMeuM=
+-----END SIGNATURE-----
+extra-info Unnamed874173984652 8C98E763D34C9F30B477B507713D14ECCD039B5A
+published 2004-09-01 18:46:40
+write-history 2021-05-16 19:28:28 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 19:28:28 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 19:28:28 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 19:28:28 (900 s) 0,0,0
+geoip-db-digest 35686A743F1B077DFC1F93431D07700AE662399C
+geoip6-db-digest D8F2E28F1755B05F76C673F0928C943C0918F1FC
+dirreq-stats-end 2021-05-16 19:28:28 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 19:28:28 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 181.180.156.168:10326
+transport obfs3 181.180.156.168:10316
+router-signature
+-----BEGIN SIGNATURE-----
+sXhtK4qDfyEogXOcIFCCyXX1sV5SyjPXkwFIuhqSF6aiPpcAvP5o3Gs5pWD0hXJ5
+uM7ZIzfEoq74WdD2kma9jvn+Vl0eCzGLgshQP7hP5ean/IuFYc/h1eKFDsSqCgdY
+abauzx4MmtgC5MMLEJJlu0cjsBC4RqxbC0bIk1kxMl8=
+-----END SIGNATURE-----
+extra-info Unnamed413487512073 BB7E52DC9902045BE866D9012074DC7FA27368F6
+published 2006-11-18 13:52:19
+write-history 2021-05-17 05:29:04 (900 s) 3188736,2226176,2866176
+read-history 2021-05-17 05:29:04 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-17 05:29:04 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-17 05:29:04 (900 s) 0,0,0
+geoip-db-digest A1A2A333207B27A1B409F040543C2FCFF00D83B1
+geoip6-db-digest 6F6D4692A4AC95FCB6F82A366826C779417F95C5
+dirreq-stats-end 2021-05-17 05:29:04 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-17 05:29:04 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+transport obfs2 4.149.100.79:6500
+transport obfs3 4.149.100.79:6490
+router-signature
+-----BEGIN SIGNATURE-----
+fk90Tf+MNGoP31N9sWxm02s8b8jCqvLsvzUFEUCRLkmW0kyoQc2vgMyWh35EBC6Y
+6bcGMEn8Qb++e41BpJB04Zs7NgRLZNM39vkCx7O7Ls6S6sjh0M/p70Nw9UWN/8ut
+kZPecy8vchwDGGLN2xjbo6pVM1H6Cdc8k3WP40utzCQ=
+-----END SIGNATURE-----
+extra-info Unnamed602187061152 BFA02C380B749B0CF19D2D95464CE5943E7F6718
+published 2005-06-15 06:17:00
+write-history 2021-05-16 03:16:56 (900 s) 3188736,2226176,2866176
+read-history 2021-05-16 03:16:56 (900 s) 3891200,2483200,2698240
+dirreq-write-history 2021-05-16 03:16:56 (900 s) 1024,0,2048
+dirreq-read-history 2021-05-16 03:16:56 (900 s) 0,0,0
+geoip-db-digest 49FCC8F54746D2B121B96DC6AD0ADA08CC835B8D
+geoip6-db-digest AB85E7C6AF44801C284E3B3F99E8ADB68927189E
+dirreq-stats-end 2021-05-16 03:16:56 (86400 s)
+dirreq-v3-ips 
+dirreq-v3-reqs 
+dirreq-v3-resp ok=16,not-enough-sigs=0,unavailable=0,not-found=0,not-modified=0,busy=0
+dirreq-v3-direct-dl complete=0,timeout=0,running=0
+dirreq-v3-tunneled-dl complete=12,timeout=0,running=0
+bridge-stats-end 2021-05-16 03:16:56 (86400 s)
+bridge-ips ca=8
+bridge-ip-versions v4=8,v6=0
+bridge-ip-transports <OR>=8
+router-signature
+-----BEGIN SIGNATURE-----
+L8dpFKIB091CWgeyBFh8IcDgaKFNn1tM6GLC+4A/HC4gpBmzLGEYAw/bqtTRxNoG
+Gf2Rgv5i0chu+LoK3MuMkip/EemOv9A6oo5mYaILGfe8WvlXtzcii0udchKNug6Y
+sdPWZ4Pq5cTUMzkYxLWoxC982ZP2J+lCTbJvvYrUahg=
+-----END SIGNATURE-----

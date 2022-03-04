@@ -1,0 +1,1203 @@
+published 2021-09-29 15:11:52
+flag-thresholds stable-uptime=2073727 stable-mtbf=2851830 fast-speed=55000 guard-wfu=98.000% guard-tk=691200 guard-bw-inc-exits=2617000 guard-bw-exc-exits=2636000 enough-mtbf=1 ignoring-advertised-bws=0
+fingerprint BA44A889E64B93FAA2B114E02C2A279A8555C533
+r Unnamed365955763580 H4p22Vgdcrm52EQRRjRFBSp4q3E aShPGk5jQ8/6SL3Z7MbR1TdOdCs 2021-05-16 11:18:37 143.117.2.216 18972 0
+s Fast Named Running Stable Valid
+w Bandwidth=2193096841
+p reject 1-65535
+v Tor 0.2.4.19
+a [e8b3:3039:58cc:8c96:40ca:4216:1218:ca3f]:18971
+r Unnamed882477886088 l3QrRv/9rT5wO6Vks9kgc5/aTzg kURWNSM79Uf4K69ay5qSZ6lUZNA 2021-05-16 22:34:16 164.29.241.115 22525 0
+s Fast Named Running Stable Valid
+w Bandwidth=1172998172
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [edff:89cf:5063:9e4e:866a:fb68:c8d3:459c]:22524
+r Unnamed571104831565 fCE+RN8MdHdwM7M+M2aolnEAuKU DkmG2PO5GIapBvTSSZHh8lqBbxM 2021-05-16 04:11:40 130.56.204.197 22770 0
+s Fast Named Running Stable Valid
+w Bandwidth=2315224365
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [7e65:89da:fe9a:3589:c70c:c3fd:8ba9:e0aa]:22769
+r Unnamed352955656148 VuBK5cD2TyIgakmTmzP7WXv+Gqc y6jDQsaLcaEKnQfyGnaAm6GMdv0 2021-05-17 08:31:21 60.153.135.82 61343 0
+s Fast Named Running Stable Valid
+w Bandwidth=1165085192
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [78a1:7db4:b132:2b29:2519:9db2:857e:b66a]:61342
+r Unnamed727179264232 sSxSZC6iIvZhKtYiv3ZYG+EYBh4 +t7XWl0ni7AWrlG6wz28zSgfDvU 2021-05-17 01:24:18 130.44.234.175 3843 0
+s Fast Named Running Stable Valid
+w Bandwidth=1169184913
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [de67:b6ec:12ae:c403:ceb4:883a:1fa0:3dc3]:3842
+r Unnamed853572922922 sgODwNhBzDG87NecRreGzejoB64 P+v6LChLYgHeqtF9HJtI3dNy/Ao 2021-05-17 02:57:01 171.100.118.100 16363 0
+s Fast Named Running Stable Valid
+w Bandwidth=506804360
+p reject 1-65535
+v Tor 0.2.2.39
+a [92dc:406e:ec1:90f8:514f:c664:c0fd:7805]:16362
+r Unnamed461691873480 Q5uN8yTJn76+STRNYckyRMdz5AI SAtiiruoX57GswfZypDcYiX0xlw 2021-05-16 06:09:37 199.62.223.149 36965 0
+s Fast Named Running Stable Valid
+w Bandwidth=220265280
+p reject 1-65535
+v Tor 0.2.4.20
+a [650b:82:2bc3:b9bf:297:32af:c8a1:5828]:36964
+r Unnamed725502373871 BobA+HhtRA8kz9RyaobA7CC0Cpg QO0UftfysS724dMbu2uhKvc/8IM 2021-05-17 06:27:47 14.67.12.109 35562 0
+s Fast Named Running Stable Valid
+w Bandwidth=2052488309
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [bb70:a425:66c5:92f0:3a1:cf73:bea0:a4e8]:35561
+r Unnamed456808875955 BGmloJw9ouVunuHSUerV0S+m7O4 cVgaZh7pJMVXWfobhBngpaKhTgk 2021-05-17 02:54:40 98.22.9.231 11108 0
+s Fast Named Running Stable Valid
+w Bandwidth=252347304
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [da2d:810:4537:8f35:b715:c15c:5876:c5c6]:11107
+r Unnamed199966075193 Sf18bTkftA7EmLBNtLdVmdDXe+A B9yRhVxsCn9VqV1h3SysSDkLxKk 2021-05-16 15:25:46 14.38.159.224 25388 0
+s Fast Named Running Stable Valid
+w Bandwidth=1291245113
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [6f91:b279:401d:8b18:50b3:e53:29c7:eb07]:25387
+r Unnamed468894750542 COi3+iSgwgqfHq7nEVZRRRYLc0Y kXHQIbSQ1IGxrmaX5tcZLs0rg0Y 2021-05-16 07:28:22 62.84.203.68 16972 0
+s Fast Named Running Stable Valid
+w Bandwidth=478536427
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [cec1:db82:1923:4c85:8e45:6b32:de91:403b]:16971
+r Unnamed899293706635 qmz7Cd08VGjIVy4OeKlxfuOJRzc O8Wy4pAsbsbQe4nOclbYsIrj8/o 2021-05-16 11:13:23 182.81.27.206 14518 0
+s Fast Named Running Stable Valid
+w Bandwidth=200985582
+p reject 1-65535
+v Tor 0.2.3.25
+a [13f5:b8c6:4f38:c311:efc5:8cb3:bee2:410a]:14517
+r Unnamed918381974595 dogloZpG2mj9cv6SIsZqTnrenNE RE5Af6FHLv1isvIySf9D7W1kutM 2021-05-17 06:35:47 101.221.196.217 25287 0
+s Fast Named Running Stable Valid
+w Bandwidth=2382294609
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [a592:85:45bb:1479:eb41:7bcb:6b3:4680]:25286
+r Unnamed344168503674 9a4shfyZ+U6LzAH1Yr9DO/ydTOE jjycV0uSFok5F6BoCEk74hs6VhU 2021-05-16 19:29:24 58.198.209.103 11454 0
+s Fast Named Running Stable Valid
+w Bandwidth=219949986
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [a98f:f503:ff2e:f225:eddd:41dc:77fd:7fe4]:11453
+r Unnamed870182803515 Et5ExFLwNwHkuecioFbOUyWPj+g f7KgcxERoDQKA15dzTL5kDxaLV4 2021-05-16 19:24:55 66.35.0.177 737 0
+s Fast Named Running Stable Valid
+w Bandwidth=2318831062
+p reject 1-65535
+v Tor 0.2.2.39
+a [e864:bed7:2f0c:4213:5641:fa87:6929:4828]:736
+r Unnamed213383115374 rKRB8HuYW6lPEs5OLGF9//2nrMs WC9EMnVCmv96/Kx6/I2VvCZoBwo 2021-05-16 02:07:44 158.143.156.144 56050 0
+s Fast Named Running Stable Valid
+w Bandwidth=881915715
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [9955:a376:b353:3ef4:e6cb:507d:b607:cd1d]:56049
+r Unnamed366666033972 vlHUiyrqq1k+RaTmespTM2kGp30 XkgenCDdExNyUwW/KyzzqAYKep8 2021-05-16 03:30:33 87.159.28.126 48298 0
+s Fast Named Running Stable Valid
+w Bandwidth=1669455379
+p reject 1-65535
+v Tor 0.2.4.19
+a [24f4:f442:e45d:7d0c:63e:5a87:5fc3:9ef1]:48297
+r Unnamed24675107646 ZjaoVfQIQx8eiNo0PbepRuNV0eU khN2dZ64gV1438BorPlEqkV9pqs 2021-05-16 11:38:59 207.245.90.35 37964 0
+s Fast Named Running Stable Valid
+w Bandwidth=2297716092
+p reject 1-65535
+v Tor 0.2.2.39
+a [1eaf:da32:638f:af14:3bee:e381:76e:42fb]:37963
+r Unnamed265178958927 8IV+zuGii0J+U9uwh3qtxyiEKhk nF51QslotaXleKyfibbd63fGEns 2021-05-17 05:58:31 164.208.170.231 48930 0
+s Fast Named Running Stable Valid
+w Bandwidth=2350512403
+p reject 1-65535
+v Tor 0.2.4.19
+a [8ba6:b1bb:74af:166f:890b:3e88:dbf1:fcd]:48929
+r Unnamed121584158807 Eq5bFY6rMStbSQpdneenWI2nreM Po5IitejsLIwSvJTxGne8G54YI8 2021-05-16 04:36:21 120.145.139.206 58023 0
+s Fast Named Running Stable Valid
+w Bandwidth=1031616033
+p reject 1-65535
+v Tor 0.2.4.19
+a [d1fd:cef7:b745:1ba3:d528:2721:3a32:caa0]:58022
+r Unnamed512359570084 UD/ND52AllRGJVwveqIAi5f06oE hDJUKrn4K8c6HGxKJHMbdXpoJLU 2021-05-16 05:43:47 85.10.132.117 4975 0
+s Fast Named Running Stable Valid
+w Bandwidth=1157384911
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [af1:cb5e:ce16:e03e:fbca:50c0:b40b:f08f]:4974
+r Unnamed775700086185 hrSwFQNP9xK3dt1Y+2FkcAlf/6w HgfyShwLD0zG66MoNIeoSWWbaxU 2021-05-17 05:14:50 106.167.126.56 35488 0
+s Fast Named Running Stable Valid
+w Bandwidth=554894231
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [801c:ebc8:816:c574:8a45:205a:91c6:ae72]:35487
+r Unnamed984048035830 s1UIyr76mG7P8EUIEEFBtsG8P/M AoxlONkD93K8la2lvPRWSKJf508 2021-05-16 22:30:27 3.210.110.91 4747 0
+s Fast Named Running Stable Valid
+w Bandwidth=991557318
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [abf5:83f9:27d9:6e7b:1684:6aa4:6fe3:c288]:4746
+r Unnamed653498933369 K7bfHSOccKaz1lWVQPWVWKR80go tVaEFxOJfbHVlU8lpyFdQ+4sKD4 2021-05-16 08:44:13 13.223.191.46 53471 0
+s Fast Named Running Stable Valid
+w Bandwidth=202514210
+p reject 1-65535
+v Tor 0.2.2.39
+a [8bb3:bc29:f5a9:ec73:149f:6b98:cc58:f212]:53470
+r Unnamed769289984967 gcO8d3ozFc7hmYNz72NYG8qY/ww JsmbM22ZOoDoJjhVSMAVWrPVJPE 2021-05-16 01:20:13 115.116.38.23 35527 0
+s Fast Named Running Stable Valid
+w Bandwidth=2416526178
+p reject 1-65535
+v Tor 0.2.4.20
+a [6895:b64d:fbc9:3c91:5faa:cf36:c58d:41b4]:35526
+r Unnamed800327828876 ShYcZdIGFjvzqjD0esGuU0LhbK8 cAhNgP8SPIZ3NNsLxcs4TrAI00c 2021-05-17 06:11:32 122.228.76.122 6397 0
+s Fast Named Running Stable Valid
+w Bandwidth=1344052107
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [7eb0:5d27:f2b1:99e1:b9f:47f7:2844:f923]:6396
+r Unnamed864369134895 kmsm+LdjG8qU1LNXb4IIu/gfx9s wAkc1hINwDo14cA0kDE7NQeLsYc 2021-05-17 02:26:37 11.158.130.203 7301 0
+s Fast Named Running Stable Valid
+w Bandwidth=2382522729
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [f71:c283:ac5d:8d41:262e:1404:6585:2574]:7300
+r Unnamed409755205903 qwTyjraRuEGh1j1kkcJsoSnEBjc gHimgbG7ACpCoJPZ9MYpngj07hE 2021-05-16 19:27:49 171.254.147.97 27696 0
+s Fast Named Running Stable Valid
+w Bandwidth=1837385241
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [2228:bd04:afc0:490b:2352:a336:c79b:e31b]:27695
+r Unnamed278617786187 8vr3bBlXEYJu3VXY5UVuAHI1Mrc cxJZTZv7e+qbj2VR7JOXBiWZXDk 2021-05-17 04:51:35 17.243.233.239 49720 0
+s Fast Named Running Stable Valid
+w Bandwidth=302278923
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [21e8:b7f8:b5c1:91b1:6577:94e2:a84f:f9dd]:49719
+r Unnamed157519794008 Y2MU8Z7UekSKprVOSR7rgiUjWI8 E8xZKpHfEJ/V0cPJQ9cRibsBYHE 2021-05-16 17:38:37 112.65.112.206 51505 0
+s Fast Named Running Stable Valid
+w Bandwidth=1715232050
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [a2d2:47d4:5aef:4a99:bf0a:a5a5:6b48:58a4]:51504
+r Unnamed783315496605 gmOA9spptYP4/S/tS9FlTxd/yno nV4sZ9EoUsDnn7JKkvJjqOB3YUw 2021-05-17 07:09:35 106.191.122.103 53269 0
+s Fast Named Running Stable Valid
+w Bandwidth=1093610374
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [e9e4:b24d:156d:78df:e18f:6b74:da37:b146]:53268
+r Unnamed813481307470 0jfTwDVNCmD5DiQo8YGnz5DFt44 eOuNoPejK3mvMUWZmOyLos8BOS0 2021-05-16 17:11:07 222.66.21.186 54513 0
+s Fast Named Running Stable Valid
+w Bandwidth=1951057139
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [a8f8:df4e:9bda:a0dc:3524:260:1419:6191]:54512
+r Unnamed797409187538 Pst2cF6Hz04xK4jxdOrGWfKIJ+U DgIRO8NeDgXTMPgG5HxQSyTDoeA 2021-05-16 11:18:29 113.95.32.31 19085 0
+s Fast Named Running Stable Valid
+w Bandwidth=138375168
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [ee10:8be8:cd04:6692:2059:965e:18cb:c934]:19084
+r Unnamed905013773809 +6Ey+1E73pne7psc4/EuNVh2A4o msat29GrmtxMufAp80DZXrAvn4E 2021-05-16 03:19:58 53.209.21.164 39415 0
+s Fast Named Running Stable Valid
+w Bandwidth=1467092800
+p reject 1-65535
+v Tor 0.2.3.25
+a [b986:5b7d:d82f:2b47:80f3:1fb4:2a4:8784]:39414
+r Unnamed776549678355 LHrsJl55dfqalBUQRIxp5x/26X0 jWIY7xQqQ3+twhUUk7YGnVOq5ZY 2021-05-15 23:52:35 18.202.48.188 56118 0
+s Fast Named Running Stable Valid
+w Bandwidth=1449686670
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [2a88:a152:b37f:c863:4243:4099:cf2d:ed6b]:56117
+r Unnamed385156672325 ACzoj7V299XB+fTTLQNx7fy+EGc 1+r8tvPjCfverJsZZqha9rAira0 2021-05-16 01:57:31 107.97.11.42 38743 0
+s Fast Named Running Stable Valid
+w Bandwidth=2142899555
+p reject 1-65535
+v Tor 0.2.5.1-alpha
+a [c1fd:689a:808a:c8ec:f120:26d:f497:3aea]:38742
+r Unnamed405697857921 VNIz6s5C7hQGl9wpBjMnGfrwiTo tApeyLm1zdmVlpHjE37J8MppMzQ 2021-05-16 06:13:39 54.62.2.215 40118 0
+s Fast Named Running Stable Valid
+w Bandwidth=1578177061
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [100a:1c7f:21fd:90e1:27cd:7900:fd76:edfd]:40117
+r Unnamed849288579279 xgOsJr9Ojrvxy3CItmTrel5DVPk GtPh6gb+ST/9XOFss7bX+YUdFWs 2021-05-16 03:53:03 20.88.229.117 57028 0
+s Fast Named Running Stable Valid
+w Bandwidth=1634673972
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [3e75:d687:cca3:b222:aa24:e58e:92b:670a]:57027
+r Unnamed569800593810 a684nZwP1I7wwV0xlPOmg+OgTu0 Ld2J6sf/W47TfqJVruGSrjJwluY 2021-05-17 10:25:56 35.41.173.158 57136 0
+s Fast Named Running Stable Valid
+w Bandwidth=2432885112
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [e055:3268:cb7c:f325:e52a:afd2:6073:c999]:57135
+r Unnamed990825385665 dWWNeg+MlklpGa/XCBMvSDIctYY uitK+ALIQBYcvkrBtpEERzurmhs 2021-05-17 10:37:02 12.56.4.205 4293 0
+s Fast Named Running Stable Valid
+w Bandwidth=65090789
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [48ff:5e05:48bd:7e92:a463:a493:df5a:d848]:4292
+r Unnamed907031763609 EIGTVo5ce8cXvrrLem4/39zPxNQ DVVGgUrSPEtQz7R49/h6HrZp53Y 2021-05-17 02:26:17 182.17.71.187 43725 0
+s Fast Named Running Stable Valid
+w Bandwidth=1807660045
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [ddc1:a18f:42ba:cfdb:2f82:6fcf:f83a:ace0]:43724
+r Unnamed483541478358 +XwrzmcxgYWX1+rU80cdcYk8sr0 wv+UZ9dNRNZIvYC7s4KYS3DwAxI 2021-05-16 14:30:36 203.61.221.137 60988 0
+s Fast Named Running Stable Valid
+w Bandwidth=1095337321
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [f21c:de7d:216a:7ce7:7322:7ab1:295d:39ae]:60987
+r Unnamed840693114090 HZX75pp8em31mdMYeXo7JGABG6w J2IzI1oQxA0DQRSftqsRz9TOgsg 2021-05-16 03:46:06 20.65.151.134 23585 0
+s Fast Named Running Stable Valid
+w Bandwidth=171519716
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [1353:dd6f:fbf8:c201:a475:a317:6d9a:4b51]:23584
+r Unnamed879513194051 JBohd7M+svcVGWGD863b7W6wSEU MOkA2BhQBbAD8ncmt/BBNN6gHPk 2021-05-16 13:13:11 51.65.118.247 6127 0
+s Fast Named Running Stable Valid
+w Bandwidth=295224651
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [2452:2320:7ccf:bd2a:27ee:8349:6b19:4634]:6126
+r Unnamed812034837931 aiq2ytW741dET73pyxYDXU8gWiM cqgxCreOsVJSWaXRyWNba17uwRc 2021-05-16 10:26:06 175.227.240.108 43947 0
+s Fast Named Running Stable Valid
+w Bandwidth=2066452034
+p reject 1-65535
+v Tor 0.2.3.25
+a [6c68:6f16:e6f0:f255:f146:d603:480c:c90a]:43946
+r Unnamed276420634670 odMuMyIA24BZCDhXaRdWGhz0ML8 GERE9255qqPLE58bCg9yUEIJN/4 2021-05-16 15:59:28 64.41.168.113 26115 0
+s Fast Named Running Stable Valid
+w Bandwidth=1832780873
+p reject 1-65535
+v Tor 0.2.2.39
+a [d6e6:b14d:90d4:7d93:17c1:731a:e76a:1768]:26114
+r Unnamed977912794928 H9JVlfh6BtzIivQIZ3BuTlg8qrU Ifsm1PItDf49NO5kGwx0PQ8l+70 2021-05-16 12:55:11 222.85.234.123 51134 0
+s Fast Named Running Stable Valid
+w Bandwidth=553713722
+p reject 1-65535
+v Tor 0.2.2.39
+a [7e3b:f593:513d:f05c:48d0:f797:dc9f:5bf7]:51133
+r Unnamed983964623326 ijVJlV7B+7HnAVYqfZ6TK24q89s TuRQNpxo4ul3de/3ZHwTVu+ret0 2021-05-16 01:15:07 140.113.140.142 56403 0
+s Fast Named Running Stable Valid
+w Bandwidth=2450127040
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [cd85:1dc8:a298:6a03:6dce:d776:74ed:d0e4]:56402
+r Unnamed152029807701 BnvjpSJASG+IfhQPEhRwG0/z5l4 unpyrawlvWM49IK8xOBXd+sJuxA 2021-05-16 07:29:07 118.187.157.113 56532 0
+s Fast Named Running Stable Valid
+w Bandwidth=850816322
+p reject 1-65535
+v Tor 0.2.2.39
+a [3ab2:5c24:9ac3:23fa:b855:ac0a:9dfb:f62a]:56531
+r Unnamed402428933476 Fe6hzFT6HJ+JYgozp4l4PcVG0Po 4Ksljd3QqRg+yqIwc5WXaxXF0Pk 2021-05-16 13:48:46 104.215.131.63 46903 0
+s Fast Named Running Stable Valid
+w Bandwidth=2093772085
+p reject 1-65535
+v Tor 0.2.4.19
+a [9a70:17b2:3a68:45a7:bfd2:1f0c:424e:49ef]:46902
+r Unnamed175528742549 iT34fjIROtoO84P12iwQ3o6lLiA FKcPs2jeOwIo9pmBNGJ8Vda9h3I 2021-05-16 11:44:43 193.255.235.203 14192 0
+s Fast Named Running Stable Valid
+w Bandwidth=986321238
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [7df2:2921:33ec:91e3:6195:287b:5b3c:44c2]:14191
+r Unnamed778171538729 BtWrDRKa0ti4fLtzNvVo/8uOzso 2n+kMbvYQbioAGad5TtuSQdNwhQ 2021-05-17 07:29:13 69.128.46.188 20273 0
+s Fast Named Running Stable Valid
+w Bandwidth=428889216
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [3ca7:eb1e:8433:8b28:1b22:c92b:afb1:cf1b]:20272
+r Unnamed894728627287 hVia2LFxvKcuAfxOtxteu1uM/Is exWgKwpS8bGfaftJEByvVZS5Oq0 2021-05-17 06:53:35 221.186.69.121 44431 0
+s Fast Named Running Stable Valid
+w Bandwidth=768730947
+p reject 1-65535
+v Tor 0.2.5.1-alpha
+a [4890:ee25:57ed:d359:589c:d827:e44e:322a]:44430
+r Unnamed367369627917 pujVqsTBCmCv4pyg+v/yK8lz/Ag BB2x+nFyTBt793MEF0qHPI8sLao 2021-05-17 01:08:24 138.56.76.212 35935 0
+s Fast Named Running Stable Valid
+w Bandwidth=320150988
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [b070:f832:407e:6c58:63d1:fd9c:4066:d8cd]:35934
+r Unnamed478798098181 HIIKjADts8m/JcL4ST2jsOqCvfI 88rT/CR+ClD9mBhHt/4NGekc0Pg 2021-05-16 14:41:12 37.247.163.13 36219 0
+s Fast Named Running Stable Valid
+w Bandwidth=1565006543
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [b149:5b92:39a:3460:b8c3:2f22:fb16:46dd]:36218
+r Unnamed797438262780 5ShuInN0ZuXMb+Fip08a/heLrzQ tMRlH/FDkwjglhDB0BXL5NC6DXw 2021-05-16 14:20:16 150.218.167.13 18380 0
+s Fast Named Running Stable Valid
+w Bandwidth=1919768025
+p reject 1-65535
+v Tor 0.2.4.20
+a [87d2:58e8:27ce:e0b8:59cb:e56a:37b3:6623]:18379
+r Unnamed351512716041 u34lbd9kVs4IZtgaFmNjgn4sUiQ ppEKaKncODjq0e90LUIOkVoVYAU 2021-05-17 00:05:55 146.32.55.192 27504 0
+s Fast Named Running Stable Valid
+w Bandwidth=1031223882
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [1320:907e:cca3:88d7:bdfd:8cf:127e:fb7c]:27503
+r Unnamed205983051123 Uq41osp02MU1z/VFHpgXA5SD0qw v0uiMvcju5GKVIJPNPmrrUkw9Zw 2021-05-17 11:17:18 156.250.133.191 8759 0
+s Fast Named Running Stable Valid
+w Bandwidth=2314955483
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [5c16:227:6fa:2686:90ec:79d8:38a8:db4a]:8758
+r Unnamed346697426770 8I9L5T+XenyqJURCzt1dEtM4ork c5leaH0Tb7h/JaEI8b9JjT7u67A 2021-05-16 12:00:47 121.73.38.89 40169 0
+s Fast Named Running Stable Valid
+w Bandwidth=2410379548
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [b4af:18e5:8ed:6987:90b0:c7c9:cbb5:fd2a]:40168
+r Unnamed257945106406 dVAW3NfvkwHUOqJ4+5ZOiXW7Zr8 lZw6nYtkCRXw1yhHFkwmf3NR4q4 2021-05-17 03:56:25 110.151.87.87 64978 0
+s Fast Named Running Stable Valid
+w Bandwidth=1217120351
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [a801:cc96:446b:5a80:4bd4:54fe:f7b4:5d0]:64977
+r Unnamed448417236722 xRjsT2tCq26h9FJ0uF9N1y4eHdE ThG07xNckEO1mkANO/9NUPfVw4A 2021-05-16 23:44:49 222.180.163.245 53399 0
+s Fast Named Running Stable Valid
+w Bandwidth=144226080
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [b156:a913:19d1:310b:7080:48f5:b782:b535]:53398
+r Unnamed934106734840 cMNzQJKrx2cwPN4X2JUpeR5lpqo DOl0VZRohWwGFbW3GVIBOvYpUuo 2021-05-16 11:26:03 53.105.19.116 2382 0
+s Fast Named Running Stable Valid
+w Bandwidth=730039866
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [f3ae:8a40:14e8:c717:a2e0:ee1b:d8ce:ebd1]:2381
+r Unnamed255926873514 FV+GYvcqMw/7+zcyltRGI2CP0Ks JEYHXWBqJ3LhFxeY/0tIStHMKhE 2021-05-16 13:53:08 175.130.108.99 6865 0
+s Fast Named Running Stable Valid
+w Bandwidth=84031983
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [a150:399b:cae1:a745:5dc4:ece5:bc7f:be04]:6864
+r Unnamed821306544860 fAr7vhsIeHs31M8rls9rSeiwrpE 62dWAy7uskcNlpcE8MykDDc9mEY 2021-05-16 03:00:55 128.81.255.160 17798 0
+s Fast Named Running Stable Valid
+w Bandwidth=948599202
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [a0dc:754c:8425:ea0:b6ab:cb84:144f:a6fa]:17797
+r Unnamed833980966281 xdyQO9G9k6QKO6YZdiR2YAwjxZM Lg2tTpC3T9HyDm+p+C5x3zCPNkQ 2021-05-16 04:56:11 210.238.165.10 22540 0
+s Fast Named Running Stable Valid
+w Bandwidth=434683704
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [7e74:a10c:c27a:b30b:2722:9b7c:4a61:f061]:22539
+r Unnamed131471376442 Eib4lNZN6wd0XgmR8smBZASkO6c VfEORg0SgSFez3gX7n75y6Xz5uY 2021-05-17 06:05:47 130.72.32.195 1514 0
+s Fast Named Running Stable Valid
+w Bandwidth=100711797
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [1716:2c78:37e1:f98b:774c:1e93:a2de:531a]:1513
+r Unnamed721535791500 i9qc8cJr4V+QnteTiZaRxCY3Rfo nG7rGL2no+cdtVNFyZuP6myoJf0 2021-05-16 06:44:15 36.236.186.244 49814 0
+s Fast Named Running Stable Valid
+w Bandwidth=1819315538
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [8317:8bfe:d2c4:3af3:80a0:3469:7a5b:65c9]:49813
+r Unnamed102588083903 qKBIfwHUSBCzLlRaLm8J9ZnMi3w 0w2qsFEZJ1iUy1bG3aqpRRWc5mg 2021-05-16 18:47:29 121.226.119.89 31393 0
+s Fast Named Running Stable Valid
+w Bandwidth=1363107798
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [b5a:872e:bba3:f507:51b9:137f:8a37:8b8c]:31392
+r Unnamed479500506040 So1QFYY+g3pZCfbHYUkg57Ey1HI wNNfiaesWOjEoLoriNklDI7wtIE 2021-05-16 05:49:19 13.80.162.31 60516 0
+s Fast Named Running Stable Valid
+w Bandwidth=1725322115
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [48b4:a2d1:29bd:d1:53bb:8b50:fac6:c661]:60515
+r Unnamed548696567176 cFTYTIyBJ8+RThlJ7PxdqldGtMY mOeYwl54T9o8mOekP6gzYR46odc 2021-05-17 09:58:18 91.233.127.48 15519 0
+s Fast Named Running Stable Valid
+w Bandwidth=128097447
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [e7d0:cf0b:fbe1:aca9:7ee8:3677:8b76:5017]:15518
+r Unnamed598050917545 0wppc57PQOvS/HJIHhtxsRp1mn0 XwiiHxTbCRi4ZgmHu2XnC4If1Eo 2021-05-17 09:25:39 143.160.225.33 42692 0
+s Fast Named Running Stable Valid
+w Bandwidth=1717750057
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [ce0e:c6a1:9f42:4ee3:8f21:e856:6d68:a4e1]:42691
+r Unnamed661527993754 SW0VjLnWOj/qCdlPtAuydA8K7bE iP5/UsL/r1IIOoFPjTK3K+o2U+E 2021-05-16 00:28:14 26.33.200.182 675 0
+s Fast Named Running Stable Valid
+w Bandwidth=1231022268
+p reject 1-65535
+v Tor 0.2.3.25
+a [b063:d226:b6c5:5392:24e5:5e8e:4176:fbd4]:674
+r Unnamed873499299416 9UXu8olppb6AOjmXPRAreOoyM+s MkhkCV20rqNQOg/yNPbi7H4QjUY 2021-05-17 07:38:15 156.217.236.36 1864 0
+s Fast Named Running Stable Valid
+w Bandwidth=2276649356
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [3724:da9e:ab4e:e018:4616:a8ee:c111:665e]:1863
+r Unnamed923636840647 4Sgz85gSJalCUQ1+HDhQHUoxKGI 8hU4rX8QeGLWKh2zvmDY4frAz+M 2021-05-16 12:32:00 118.85.185.252 24693 0
+s Fast Named Running Stable Valid
+w Bandwidth=110868521
+p reject 1-65535
+v Tor 0.2.2.39
+a [bc0c:e03b:d02f:2e6d:42ec:a62c:9ec7:8a80]:24692
+r Unnamed996402969318 G+GPtFQLRkQbHCrvnkfmKvaKYVM gxOqKBCH70otYP095o1lEV2AkIs 2021-05-16 15:25:48 92.178.188.144 25016 0
+s Fast Named Running Stable Valid
+w Bandwidth=610651883
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [9723:9789:8d2e:5f4:269b:393:12ae:89fb]:25015
+r Unnamed952245669636 TyQy7KKkuk/pbT96Pb7ofsyiMZo Yxn2af/S2RctYa2/kzt/aGXv2tU 2021-05-17 02:10:52 213.170.127.119 14041 0
+s Fast Named Running Stable Valid
+w Bandwidth=11544623
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [49ce:ca7d:3607:d90d:4897:28d4:aa4d:a9f3]:14040
+r Unnamed606279069190 zsLm+yW/JivrnnM0ZxERN2mEprE rvD7+/KZME7WLA6ATOj+eA7MmEo 2021-05-17 01:29:18 128.63.192.21 17411 0
+s Fast Named Running Stable Valid
+w Bandwidth=1925513942
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [dd63:a1b1:ac0d:9bd2:c7b7:c755:250e:c85f]:17410
+r Unnamed741837960406 q1W7a7OF9C5mnB284FZGyMFKgEA awWSULtNct55FnOKREgH+KLQdos 2021-05-17 05:11:38 162.92.166.61 9710 0
+s Fast Named Running Stable Valid
+w Bandwidth=175259309
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [e235:ef6c:4517:f9a1:1231:f422:c60a:6c19]:9709
+r Unnamed704911726051 PBhyGJyiREUVFl1kPSxqjlQRJDA IDCWb9TY2JyfRHrxD2DRdfpaPfQ 2021-05-16 11:08:22 136.39.91.9 23249 0
+s Fast Named Running Stable Valid
+w Bandwidth=2401216102
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [5238:d2e7:475a:9f74:e9e5:7d2e:73ab:de84]:23248
+r Unnamed785633230205 3YB0zb85X+gawhdVF6YwB2g5WY4 ya1Y05+D0bwTuPeLg9tFHrVX/Kc 2021-05-17 00:32:55 207.229.82.233 23439 0
+s Fast Named Running Stable Valid
+w Bandwidth=519437170
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [f03e:3f8:7827:10ed:e441:495b:78ca:152a]:23438
+r Unnamed954294931378 OcXzVp2R3VU9SA3V+uW7spGetXU u9OXNwnrd89lOSBPmy52SJLTNOk 2021-05-16 15:20:52 164.139.178.23 48556 0
+s Fast Named Running Stable Valid
+w Bandwidth=311435677
+p reject 1-65535
+v Tor 0.2.3.25
+a [4f3b:5799:1e63:a991:9600:6982:3f5:4633]:48555
+r Unnamed837051220745 /Ad//HE5LEw8Ww3Vg9OLjORDxYA ylQ5w1sHj/1ynC0M2/SPReBlLHA 2021-05-16 23:41:41 137.98.49.140 13191 0
+s Fast Named Running Stable Valid
+w Bandwidth=1373175175
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [169:647d:32ee:d64f:9e2c:f1ed:aa5f:9e20]:13190
+r Unnamed789004415898 ljx9J6ZW4Z80vianTw4QC8P2eTs jSPMeoQHcwf4cTamU/rJCwAlx1w 2021-05-16 16:12:22 86.24.213.136 20796 0
+s Fast Named Running Stable Valid
+w Bandwidth=1650880988
+p reject 1-65535
+v Tor 0.2.3.25
+a [d88a:af59:36dd:8782:4c2:1b9b:c02f:6df9]:20795
+r Unnamed408855076052 8fFwGlNAr1UFRXA9NRueX5B8Uv4 5B8fzA2pCZaBwgatb/eDFeNyzhs 2021-05-16 13:50:53 210.220.32.151 23723 0
+s Fast Named Running Stable Valid
+w Bandwidth=1683214915
+p reject 1-65535
+v Tor 0.2.3.25
+a [318a:13cf:ab3:a404:a50a:5412:6dee:9213]:23722
+r Unnamed741315576738 4k9EzxfRMh6TQz8AiLMqqFVH3+k zht0RXc1w/aiHCuD1OQ84PqU0Ug 2021-05-16 19:55:08 6.168.217.244 46272 0
+s Fast Named Running Stable Valid
+w Bandwidth=82628161
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [3ecd:6b9b:e363:6134:9669:8d7d:3e51:b3d]:46271
+r Unnamed322466298962 yclToJArEmUKHTl+kCysFAr7baE 6daYiY4bOj5cW09CBTNLBKmna5w 2021-05-16 04:02:46 154.248.223.112 11251 0
+s Fast Named Running Stable Valid
+w Bandwidth=1822685372
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [4b0d:2916:16ca:ce62:eefa:fafb:161e:8ffc]:11250
+r Unnamed582203438096 IS8IBFNRi2OtEVizfyYFCmIGia4 vJ/SCEMq1BrTEg9HkVm+BMGa4eM 2021-05-17 01:47:21 1.173.112.166 49331 0
+s Fast Named Running Stable Valid
+w Bandwidth=556191967
+p reject 1-65535
+v Tor 0.2.2.39
+a [e656:fea:7612:1311:5588:5e8c:d840:6796]:49330
+r Unnamed566100430844 n+dGIL/y+u1k8K/HO2e9ED+slyA OvERRjw0Zbi5OPWkL5B8+Grz0K8 2021-05-16 22:23:52 5.149.234.208 21549 0
+s Fast Named Running Stable Valid
+w Bandwidth=120900703
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [7bf7:6161:9bcc:d877:cd06:87c2:8d43:8086]:21548
+r Unnamed430344764868 i7tUyO+l8IEksJJvxdH4ADob1Y0 VAGQMs6bbyZVWArJfZsaRZuW4Kg 2021-05-16 04:47:59 19.119.208.158 47258 0
+s Fast Named Running Stable Valid
+w Bandwidth=193164681
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [5110:740d:b97b:330d:3eae:2cc9:1516:e0bd]:47257
+r Unnamed777484474374 oE52EcPyqfLQvfVSZNk/YTtc+QA 0+zg373WDrIKBFSSkbuA5dolDsM 2021-05-16 20:45:52 61.115.1.152 45055 0
+s Fast Named Running Stable Valid
+w Bandwidth=1420213320
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [579f:ee54:f732:6d2c:62e4:b515:a848:fb86]:45054
+r Unnamed841118151273 0/OylPindi9W95jM/gvnUvgeScE oQ7EcwCPOY9oqdukLks0ESGrc7o 2021-05-16 06:36:20 171.47.122.242 36880 0
+s Fast Named Running Stable Valid
+w Bandwidth=92695486
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [5ee7:33ed:d151:8b4:ea99:a3c4:f891:fb37]:36879
+r Unnamed672942099283 7Nt7PDEBXWSEnhFFPl5AVoOV6Jw IkbO8xz4dDjPtSwenFSCcWvVFGg 2021-05-16 17:19:43 13.42.105.151 358 0
+s Fast Named Running Stable Valid
+w Bandwidth=756182338
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [7b23:86d3:b23b:19ce:6dcb:ef7b:16c1:cf3c]:357
+r Unnamed991072230490 cIoBpkpduAHSQtFtr+rG1I37gPo 44u3ePnJyUxa8vbfAN06NGRIG2s 2021-05-17 03:33:07 155.98.170.89 60394 0
+s Fast Named Running Stable Valid
+w Bandwidth=772022356
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [8b9:6ca6:ec3:89d9:eba9:45e8:20c0:18c]:60393
+r Unnamed496002489238 fbIDMDB4OOQmb4xMIHeFZVBjVKc BfhAymt9GHwboBNz9wmeM+VVG8I 2021-05-16 17:09:18 11.218.116.47 60171 0
+s Fast Named Running Stable Valid
+w Bandwidth=1602787203
+p reject 1-65535
+v Tor 0.2.2.39
+a [67:2420:8b3c:b705:cc9e:e342:8fe7:32ef]:60170
+r Unnamed457843665914 Oyrr26U80WTZD87YhgwP6ql3GMU mwmThe29fisw3n/NILOIp/xRttM 2021-05-16 09:09:27 169.144.147.26 19659 0
+s Fast Named Running Stable Valid
+w Bandwidth=2365728330
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [6570:a4a9:3662:172f:be44:19d9:899c:46ca]:19658
+r Unnamed106915092218 HJ/0JpJeL9ToqoO1VuwKVoHEQHY n8OyAmsEGJ8wqGoQmLsePThoK4w 2021-05-16 19:16:14 28.70.178.5 53522 0
+s Fast Named Running Stable Valid
+w Bandwidth=352733948
+p reject 1-65535
+v Tor 0.2.4.20
+a [4106:1cb2:8e57:8bf3:2648:74ad:9fbe:5989]:53521
+r Unnamed613759454004 f1A2KUb8tR4ZddC6ZxThVE637pI fVHDzYDSPN8SpgtspdjamwLEdQE 2021-05-17 03:56:42 188.16.218.4 1650 0
+s Fast Named Running Stable Valid
+w Bandwidth=2175191110
+p reject 1-65535
+v Tor 0.2.4.19
+a [7fae:8f5d:f3df:f196:5d98:66d8:aa78:90d8]:1649
+r Unnamed648924614391 iiEufUhp+oAKhJKkzyPR489ok7g GJCW5GJw41FE174YQE7SuPYJIq8 2021-05-17 04:32:05 195.14.155.228 55553 0
+s Fast Named Running Stable Valid
+w Bandwidth=302105860
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [19f6:da0d:df89:286:785b:9154:43fd:ed13]:55552
+r Unnamed835908921600 L2S514bnU13och/FC+s/NQgKFiM i6kp8llYRi1mZU2qXfNoMc6QhD4 2021-05-16 05:16:11 145.233.232.61 56423 0
+s Fast Named Running Stable Valid
+w Bandwidth=1573015319
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [d307:76a0:4dd6:faf8:cffc:39c3:fea5:ef0b]:56422
+r Unnamed209809524991 +GmUwqwiD0H/OFft0R/qb3FSNSM b9Um/W+cSfCwqct0J2J771dN8wU 2021-05-17 05:11:55 100.77.53.79 38268 0
+s Fast Named Running Stable Valid
+w Bandwidth=463110141
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [5509:b19e:ef26:7652:4235:a523:bb48:a869]:38267
+r Unnamed472492891586 aejniETzHE637VYAfIyNbvOIelM yJxQ2L+gAbWh2hoaQsushWUHNoA 2021-05-17 09:54:39 23.22.229.56 26741 0
+s Fast Named Running Stable Valid
+w Bandwidth=1632551150
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [a0aa:54de:c576:7f91:f9fb:b454:acb6:1cb0]:26740
+r Unnamed591668640483 yG/DSYiLDt5VjRqYCNT2pa1uQ8w 65aeDm+b2QxHkH0t3vKxgrG997M 2021-05-17 04:40:54 106.87.159.72 38158 0
+s Fast Named Running Stable Valid
+w Bandwidth=784822238
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [fb64:4df5:b520:7c0a:3215:ba8c:d18d:d744]:38157
+r Unnamed454762360230 n/CiBNpydF2YNen4j6enjkHDmZ4 EwvAZWFY4m2whH1eqVwz23iYK7g 2021-05-16 16:25:16 118.104.21.43 16554 0
+s Fast Named Running Stable Valid
+w Bandwidth=1888132305
+p reject 1-65535
+v Tor 0.2.4.19
+a [6725:b482:1c3e:f222:7da0:7ae7:9cc2:feee]:16553
+r Unnamed145072530981 JrVTMax+OiqX8IBz048gUhT9Qto iQEm4OHATjfds5sKUOPa1bja78Q 2021-05-17 01:54:45 9.106.208.173 8688 0
+s Fast Named Running Stable Valid
+w Bandwidth=1025983084
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [312e:dac8:94c8:299a:727:3752:2d4f:fbfd]:8687
+r Unnamed103141968769 6ujAmwwiBDpz6Bg7kXnEpJEqcdE 4M9XgpnonMzJQUNgAoqJHPRrBWs 2021-05-17 07:46:38 13.83.201.133 26530 0
+s Fast Named Running Stable Valid
+w Bandwidth=477499522
+p reject 1-65535
+v Tor 0.2.4.20
+a [61e5:3fd1:4494:aea7:ca6a:65dc:7b0b:effa]:26529
+r Unnamed968655166738 6vxinIOj5Iz9cEDRnBGdbrpzNKM ZVXPW2aTbbg/nSjese2VesRT5jY 2021-05-17 11:08:23 119.226.105.142 60279 0
+s Fast Named Running Stable Valid
+w Bandwidth=1129145703
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [2675:6266:2511:1621:914f:eb2d:3a20:2c55]:60278
+r Unnamed886982047723 XSDvfCUy5JzHe+iIHKCDUZqLRp0 LXokuRTXay4U9p992NW1cufm7jk 2021-05-17 10:52:05 172.81.185.161 36270 0
+s Fast Named Running Stable Valid
+w Bandwidth=2292581215
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [598f:74b7:7dca:7a98:6118:8e27:bc82:42e9]:36269
+r Unnamed822350895120 Ar/uBRxTm0ua53i/RqPHV/Z9PZk xE3yDdVjPgHoIrbPl1Yx41UW4LQ 2021-05-16 15:47:03 87.59.208.223 15876 0
+s Fast Named Running Stable Valid
+w Bandwidth=1601920210
+p reject 1-65535
+v Tor 0.2.3.25
+a [7b2:b0a:d407:ac49:eff6:35dd:8b0:f8ec]:15875
+r Unnamed471574356522 uo2ULpGJJfw5TBeD/MCUwdSOvPA 6TxUbN8RPZpIE69lJ8Vqc/Dd8tQ 2021-05-16 22:41:32 220.193.230.113 58380 0
+s Fast Named Running Stable Valid
+w Bandwidth=1241132209
+p reject 1-65535
+v Tor 0.2.5.1-alpha
+a [2f6d:bc39:5030:6676:c32c:ff6d:a474:42e1]:58379
+r Unnamed185399005064 ze4B4/WcJZtiuJNC3u7fM51EE+w VrQaN7JDSFQ9ZoJCxJ/GEjeEs+4 2021-05-17 03:10:35 50.178.16.181 46110 0
+s Fast Named Running Stable Valid
+w Bandwidth=1148456352
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [5e82:4351:1e68:5f21:6532:14d5:94b3:cc2a]:46109
+r Unnamed284725862063 KbjAuUB405iUl+vMobTBcOVv1qY FuhxRUnutGKFekYeCXzWQbzoXWQ 2021-05-17 09:37:10 175.255.106.161 48405 0
+s Fast Named Running Stable Valid
+w Bandwidth=1811790367
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [7435:7def:c70f:a0bc:448a:7954:ac50:cfcd]:48404
+r Unnamed746012894202 8Ll1E+DiBXHUbNh8Wrn2RJej5rw Z7PMybVd6NLnuGjcZPyJmlwLUhQ 2021-05-16 16:31:49 55.231.21.190 12861 0
+s Fast Named Running Stable Valid
+w Bandwidth=1290500847
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [c6a0:d994:9e35:9633:82ed:4638:d0a2:27fc]:12860
+r Unnamed280894824885 F5RjvepuhlgIrDzx6aY2Giru754 daQpAcxjT32wzj+cYS0ewai1gZw 2021-05-16 14:25:35 170.156.185.126 62904 0
+s Fast Named Running Stable Valid
+w Bandwidth=1057611765
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [522c:f325:5733:f906:97a:4e1c:e93b:6864]:62903
+r Unnamed647361920611 YDuAymtlCm+9mJi2Q7XEjB7AZjs cGM9k/SrPw1IPVaTAT7/gtT2S3s 2021-05-17 03:48:47 171.156.226.76 59949 0
+s Fast Named Running Stable Valid
+w Bandwidth=24397092
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [9f83:db30:41e7:d903:e994:4787:946d:ca2e]:59948
+r Unnamed647485814189 VEhsgQYf3g3z0VNPfDQp8CiE/+M Khabk+SjddAK2ogJsQM9gJUiU9U 2021-05-16 23:44:46 107.139.243.133 50417 0
+s Fast Named Running Stable Valid
+w Bandwidth=1366147079
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [93e4:957d:6711:e965:fbbf:704b:c372:c0ff]:50416
+r Unnamed827750495110 wUo0OcdIml2hXz92D7wxz1xhxDM qhSc+/IPAbRMELZH1u2DkPQTwtg 2021-05-16 19:47:43 202.140.125.49 19553 0
+s Fast Named Running Stable Valid
+w Bandwidth=2005315227
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [a394:f18f:228e:56bf:c1b0:ab51:373b:e4c7]:19552
+r Unnamed135768547262 mAwJQr3bUN5NS3tatgp9M18bEf0 54aU+iNYTHiLQ1Zy2t2s5g6u9zs 2021-05-17 10:17:01 24.178.239.100 21085 0
+s Fast Named Running Stable Valid
+w Bandwidth=719894913
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [bcfa:c857:ada6:a06a:59b:6104:91d6:fdc4]:21084
+r Unnamed938555204924 qeGIU1SdDny4/QI9k+kHCcXrku0 VmPK5pkyXRNbdPAu6ebO7lm7pjU 2021-05-17 08:47:03 100.171.136.130 55869 0
+s Fast Named Running Stable Valid
+w Bandwidth=1147313287
+p reject 1-65535
+v Tor 0.2.4.19
+a [299a:4c36:4d01:1ea9:3625:79dc:6c42:ca3b]:55868
+r Unnamed272585873396 2UCfr9mlh7L/3Dr4ReUkmeZJ688 xkH4EEPvciv0lQoTCN6ajc/+KzQ 2021-05-16 02:24:03 205.144.183.13 692 0
+s Fast Named Running Stable Valid
+w Bandwidth=1713934091
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [7a9e:862f:122b:d804:8909:d6ea:14dd:5a63]:691
+r Unnamed176061952110 nE34I7teycXZJZTRewYq3t8vl6c ypC0Uaax+lVCwAoEH6VRrub8Dns 2021-05-16 23:28:49 166.84.253.106 44261 0
+s Fast Named Running Stable Valid
+w Bandwidth=1731809992
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [a9c3:6539:646e:b8fe:2828:8f7:cc45:d91d]:44260
+r Unnamed978467691420 /w+Pml6AqwEmpUB6hYHOrA2Y4QM v3m/mYp5XWOk5O4SQzDpdeuHxb0 2021-05-16 18:08:01 194.178.20.90 58622 0
+s Fast Named Running Stable Valid
+w Bandwidth=612183088
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [7591:e93:654e:ce93:d377:502a:3c40:26ac]:58621
+r Unnamed334170046534 r/55Cy+h4X33zMIh99FEJ2uITmg tBv4l/m83KehLYAWquR2f55mgH4 2021-05-16 03:06:50 22.75.82.192 14641 0
+s Fast Named Running Stable Valid
+w Bandwidth=1606001371
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [c390:97e3:e093:986b:3a5b:8e40:cb9c:aae3]:14640
+r Unnamed366622540999 xb5aqUBUvlxTiPE+eoYNxLLOgVs cf8mqM+DUz2q7KBRYBf8nIAVb60 2021-05-17 00:18:48 156.241.142.62 30419 0
+s Fast Named Running Stable Valid
+w Bandwidth=1274755591
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [f842:d2c6:73dd:8ee4:b4ff:499d:9f5d:38c0]:30418
+r Unnamed235400167447 YtcOmni56bC212p1QWbBFHYaUa8 gh6Usp4VF2b1GbR5CNotIy1mhd8 2021-05-16 18:14:12 188.27.93.240 18899 0
+s Fast Named Running Stable Valid
+w Bandwidth=1803652706
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [eb12:69f9:311d:89a5:f19:c7d8:b87a:a55b]:18898
+r Unnamed703831079902 hNsh2Es4twvweD/YYxJ28CqI78g XCwAN5df5zvsaMwV+7Iac9Of3RI 2021-05-16 05:06:09 51.219.234.117 35693 0
+s Fast Named Running Stable Valid
+w Bandwidth=714897563
+p reject 1-65535
+v Tor 0.2.3.25
+a [a4dc:4738:a7c6:72e7:a905:a33b:83cd:15e8]:35692
+r Unnamed301038370246 2CBIBHcrXk2N3YuwluIVJ3NAspo mPPwRoUEhIZRSwBSCLvmyJiIAa0 2021-05-16 22:00:33 138.72.141.173 43290 0
+s Fast Named Running Stable Valid
+w Bandwidth=1069228850
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [51a8:4c7e:c07b:9fe9:eca2:92d6:987c:b75e]:43289
+r Unnamed679479785454 gctE4YLQecPayF8slhmqmnsdbuM RLc8oCN260aWFh5UG9ucqpcG2KY 2021-05-16 16:00:10 157.176.132.76 12345 0
+s Fast Named Running Stable Valid
+w Bandwidth=2031511108
+p reject 1-65535
+v Tor 0.2.4.20
+a [6b93:f934:f388:9e2a:27c6:f4f0:6601:1fab]:12344
+r Unnamed259838723055 v/3wV5x8YGc4KP/P06SMdLynsEQ 2EPqmzPnO8KVgo0wEC6UUZJph5c 2021-05-16 23:00:07 111.243.6.6 5046 0
+s Fast Named Running Stable Valid
+w Bandwidth=1838474465
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [df6d:982a:4bd8:80b4:722f:c700:870d:b89e]:5045
+r Unnamed758694451293 rn7vhTOpRVvMuErYRoCDkJI+FSA cUu0mJazY6kyEvpvMQarRL4SyuU 2021-05-16 05:07:16 83.183.75.15 52255 0
+s Fast Named Running Stable Valid
+w Bandwidth=371828940
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [7f1e:8286:763:57c:87a1:bfcc:8410:8f71]:52254
+r Unnamed214792907057 LewX+KKK2a0EFCPwZJBMklVaZog YLr3GTno1mvkEvOKLRsk9QPN8lY 2021-05-16 17:30:22 153.142.216.209 5904 0
+s Fast Named Running Stable Valid
+w Bandwidth=2346168198
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [8f72:9594:7955:43e6:69b7:7824:6c1f:a8a4]:5903
+r Unnamed493098866483 ufP6JFMJx99frbLZzYAoTWBedxI SVPMa1hqYFwXNBEDftvO9NCu/eg 2021-05-17 06:21:36 121.254.11.78 38729 0
+s Fast Named Running Stable Valid
+w Bandwidth=926289316
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [df23:ec06:6525:2477:634c:5e24:dd16:13a9]:38728
+r Unnamed179237362228 Y0PGQBPAXv8xabfJCmLL0+ArNhw bsG8Lh8zg+eBdvEjxTcmo2OxDWk 2021-05-17 03:32:12 2.178.195.189 35683 0
+s Fast Named Running Stable Valid
+w Bandwidth=509072581
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [6e58:fca9:b35c:fac9:3b22:42f1:130:dce]:35682
+r Unnamed515661769422 AEQAIvChz3hlLVMvizSK410k6u0 VY9Hz35F7O50QR4ovMZwm7FMPb8 2021-05-16 00:21:33 194.153.56.12 38705 0
+s Fast Named Running Stable Valid
+w Bandwidth=553614298
+p reject 1-65535
+v Tor 0.2.4.20
+a [30d4:549c:3c30:5860:83aa:78b8:2167:8011]:38704
+r Unnamed262582432114 badq2vyWeMLCDt1ySV3Xyg/dXQk GbLnFx011LEaZT1Mb1YuMGhAOwY 2021-05-16 18:30:17 7.167.229.32 42250 0
+s Fast Named Running Stable Valid
+w Bandwidth=839208492
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [1f6f:5244:cf6e:b4a2:34c5:a5c0:7fca:a8e]:42249
+r Unnamed516476760624 q6CS29ne9IdPe+ERBnKMM0xdhnM af0T4rzzPZNSsbVUOxp/ZEgQ3gc 2021-05-15 23:46:02 157.101.169.216 2210 0
+s Fast Named Running Stable Valid
+w Bandwidth=1884438557
+p reject 1-65535
+v Tor 0.2.4.19
+a [427d:bdd2:7547:7290:65f7:4f1c:ec0b:b5ea]:2209
+r Unnamed807567000220 O6o4dp8OEseJtN5jMlMVQsHeYtM 1mxq1oLRVM8bAGIH5ksPTFO0xEQ 2021-05-16 20:12:24 125.19.156.136 8481 0
+s Fast Named Running Stable Valid
+w Bandwidth=293535677
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [985:f1ca:4e06:db4c:5451:42c9:3c15:ea86]:8480
+r Unnamed860370095147 3hZRXVfO9Fj2ydLAHvdyLiNPoKI ldKJcKWw57ofGwuFBpiw++QRHzE 2021-05-16 15:25:23 197.108.60.246 41873 0
+s Fast Named Running Stable Valid
+w Bandwidth=225030044
+p reject 1-65535
+v Tor 0.2.4.19
+a [f356:8e79:c4c6:5b9c:b86d:6c04:effb:bab6]:41872
+r Unnamed889402444018 XwO+45k/cvVUf82tRTLbffWRb6g jW4Zhwkjk2VIogQoJW13SSjXQRw 2021-05-16 13:40:53 140.155.44.217 19190 0
+s Fast Named Running Stable Valid
+w Bandwidth=2253198514
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [24f1:af26:5f77:cde3:164c:d6f4:66ff:5845]:19189
+r Unnamed161053355800 p8QEpe0FXHCKDjK3ubAyNJyEgAY GrbuEChH9iPdXrbM+SGy4lQGCfs 2021-05-16 17:27:11 106.113.62.156 35639 0
+s Fast Named Running Stable Valid
+w Bandwidth=1226995155
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [70e1:eda0:5fb7:aa91:97c8:54f3:fc24:5d1]:35638
+r Unnamed873036591677 jeZJzagJwa5tChniUD5IPmEWhhQ qgDDGQm3rLkSbLOZikgBFGDEXWM 2021-05-16 04:12:09 212.85.81.22 26489 0
+s Fast Named Running Stable Valid
+w Bandwidth=343450985
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [9209:457b:b639:d1e3:92ad:dd09:83b7:c3f1]:26488
+r Unnamed365648658696 tA9Q1RKxUhM1WxxiNzBCmhWOF9o B33zgdYuIgl9zu/3ZdrqIWPMs8A 2021-05-17 09:30:04 165.4.211.186 51505 0
+s Fast Named Running Stable Valid
+w Bandwidth=190780724
+p reject 1-65535
+v Tor 0.2.5.1-alpha
+a [7eef:714c:d6b2:8c0c:f64d:3f6a:91b2:99b7]:51504
+r Unnamed958693099733 smjd8C9hqgBUnNeGlwPQwZd6mZE sQFOjH0au7mUSQ0ZmapSwRdJsa4 2021-05-17 08:36:05 30.47.154.89 28194 0
+s Fast Named Running Stable Valid
+w Bandwidth=1496164799
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [f17c:b3e:c546:736d:495c:9980:96e4:8c98]:28193
+r Unnamed899138630453 e/C9WaiIPYUso5dOP9F4PVnRjDs W1aVtXOwpOcLnzrmJJNVhp5HLls 2021-05-16 16:21:50 202.50.169.132 8642 0
+s Fast Named Running Stable Valid
+w Bandwidth=2441125096
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [a4e:e099:6572:e0f:8dbc:edc:8611:af8a]:8641
+r Unnamed312800446969 UmybGWltbgZXLvdMMcn/j7Sybkg 4gWxS8RfIMnUrllylHmwlZRi5Rg 2021-05-16 08:14:39 65.72.7.231 40600 0
+s Fast Named Running Stable Valid
+w Bandwidth=1800274551
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [a564:b1fe:1f68:daa7:bf76:ba11:7296:4a79]:40599
+r Unnamed557039288851 wIEKd5Y0zuQgkb1yXa5eHm1azRI ZBwwAcfUQ10p+KGO/ba+T409OmQ 2021-05-16 18:23:31 183.135.163.211 49259 0
+s Fast Named Running Stable Valid
+w Bandwidth=1312893365
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [934a:b66a:61fd:8468:a81d:5ed8:f8b6:2162]:49258
+r Unnamed622446818402 M7Z0uajbutKnlFejIRr3dEIn5OQ G4oB2sJh0weR67bJSB8nKs4yp0E 2021-05-16 00:43:23 43.76.171.173 60984 0
+s Fast Named Running Stable Valid
+w Bandwidth=2338572570
+p reject 1-65535
+v Tor 0.2.4.20
+a [e3f0:ba33:37aa:b0b8:777f:27d9:1d2d:82c5]:60983
+r Unnamed168526173524 Gycb6ugQVv2g8H+jQmLJUkYitB8 dgZKxqQ15EsyB4bG9eUQ78sFmOo 2021-05-17 10:01:48 48.184.69.242 9928 0
+s Fast Named Running Stable Valid
+w Bandwidth=576938477
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [5d17:bc2f:5eb3:3898:ea67:8609:8e87:4ebd]:9927
+r Unnamed701549940547 +b6ssBy76X5BRziQbi4a8ZVnQXc 0BjQGDv/LWhcocyxV2lxqQ2Bm7g 2021-05-17 10:51:53 6.174.226.163 13965 0
+s Fast Named Running Stable Valid
+w Bandwidth=2295128250
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [4cf:584d:caed:6297:834b:3fd8:3edd:a287]:13964
+r Unnamed965797244061 2bBK0V4JoinRkz8criVl7ELrY1U 3W+qEGzKVGX4vvxG6fWprKLGa9g 2021-05-16 15:03:41 159.235.107.62 62640 0
+s Fast Named Running Stable Valid
+w Bandwidth=106895488
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [7a42:8caf:bcb:bf5:f0d3:b8b4:8eeb:605c]:62639
+r Unnamed583829541502 KS/B2gtrfU8CqX3zt2USeheJOzA 6JnA2yXwoeKdHW3O/jPKKaGvbQ0 2021-05-16 04:38:16 11.79.163.38 24863 0
+s Fast Named Running Stable Valid
+w Bandwidth=1525573330
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [1787:c4b4:4af6:f02d:f40c:652f:f715:877f]:24862
+r Unnamed194039878459 qRErPFDv2cDzYcqfCYtkXPW+icg ekVcAsRatUNiMzU8bpa2D0sCsjA 2021-05-16 03:30:17 161.117.83.199 23265 0
+s Fast Named Running Stable Valid
+w Bandwidth=1615135569
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [c291:a853:6572:d1a0:49a:bd51:cd38:1739]:23264
+r Unnamed912924150873 +TOS0CZ5KczRQdqQt3GgJIu8oso FaeK8TRqMiFoBmM/awR+zI3gt7k 2021-05-16 06:01:15 14.232.206.74 43490 0
+s Fast Named Running Stable Valid
+w Bandwidth=89922230
+p reject 1-65535
+v Tor 0.2.3.25
+a [677b:d4bb:1b65:38ed:847f:5c4:cc17:ab53]:43489
+r Unnamed527244278158 P48lSmUrGgLAAGFpfMLSUSCvWJE ERILDER8S1prcdrTSofoNjEqYS8 2021-05-17 03:21:50 82.191.62.150 50461 0
+s Fast Named Running Stable Valid
+w Bandwidth=1347045568
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [23ea:467:f847:8bd0:f813:caf4:7866:c8b5]:50460
+r Unnamed826215453760 3dw1p+XcT9GQJw5dyEZT7Fu7vjw d9NsNGnN/+WtMUZ/mhrwk6AupEI 2021-05-16 09:04:10 178.35.254.137 5026 0
+s Fast Named Running Stable Valid
+w Bandwidth=465263126
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [c691:ff08:6002:27fa:dfbf:9e05:7d2e:3282]:5025
+r Unnamed664657884203 zLykmbn4v4rAFFFp56dez7xuRbo f+7sktHesTtux3atSU19LXLQUU0 2021-05-16 15:22:09 116.170.166.6 19321 0
+s Fast Named Running Stable Valid
+w Bandwidth=2314065219
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [4410:fa3d:23:c61e:4d6b:fb70:7927:867a]:19320
+r Unnamed395726834484 jqbj9o2Dn11UKhZ9e3MH+dI5+jo 4cPv82R0vZUxjeYL7oos4s17Z/c 2021-05-16 08:44:45 15.187.155.243 45251 0
+s Fast Named Running Stable Valid
+w Bandwidth=1368798293
+p reject 1-65535
+v Tor 0.2.3.25
+a [8c61:64d9:e78e:d5ce:6571:7ae7:cfea:ecc1]:45250
+r Unnamed108693986261 D262cyeslXaSnnL1tWfbZFQd4Js HumnLr67mcGHf8VfZ0tw9cqFoFE 2021-05-16 14:50:01 4.71.185.34 36007 0
+s Fast Named Running Stable Valid
+w Bandwidth=614367085
+p reject 1-65535
+v Tor 0.2.4.20
+a [fe63:ee77:8a88:13f6:d6ab:30ad:b9b6:2f41]:36006
+r Unnamed193099156627 DCZR+scXCoqoS4C+xfoipCFE8/E 4NNCSZKjblLiah6fyz4ZuwDW8cU 2021-05-17 06:19:30 103.153.148.182 55676 0
+s Fast Named Running Stable Valid
+w Bandwidth=1447906577
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [8a26:317e:cfe4:883e:4cd2:4ba0:2e4e:157]:55675
+r Unnamed940601252572 KrN95GudaST2gPBlI1/gMh2xloU oQBKFkQHmykLFbLVgToqKRuUjI8 2021-05-16 02:18:33 169.185.228.32 14378 0
+s Fast Named Running Stable Valid
+w Bandwidth=813751724
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [5b36:30e0:5590:6c74:2784:3c31:dde6:68f5]:14377
+r Unnamed860378230857 hFFZtdh6gmnM9lvy/wQ2ewPJPns GIvxKUs8Nwv2pT/NyytzCHCnWNI 2021-05-16 00:53:58 72.164.158.250 13620 0
+s Fast Named Running Stable Valid
+w Bandwidth=2469202045
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [7fc9:6775:637a:7e10:1f31:f151:154e:5457]:13619
+r Unnamed131393621768 PiER0XtCZs05i6hFYAAxDggIVqA FD6LAez0vroJczp3iwL1MUvb2/c 2021-05-17 06:44:51 122.159.224.45 62666 0
+s Fast Named Running Stable Valid
+w Bandwidth=976563146
+p reject 1-65535
+v Tor 0.2.3.25
+a [8753:e9cb:e0f9:e99e:ddc2:e1c6:2cb2:5482]:62665
+r Unnamed651212846459 RlhJTr45W3FIwuTed2/jQ62K5zw nFqZgg5oLePQV5K56ERn0ZDmwPA 2021-05-16 06:37:16 151.123.78.243 51134 0
+s Fast Named Running Stable Valid
+w Bandwidth=2396563943
+p reject 1-65535
+v Tor 0.2.2.39
+a [6863:372b:d79d:a75c:2b6b:ee70:f360:b9b]:51133
+r Unnamed694272430940 JJwXiVIStKszs4C6jBocftgKwNw xoeI9+2mIGmMDehFJNY2/7UhTQE 2021-05-16 06:24:58 134.162.39.90 25450 0
+s Fast Named Running Stable Valid
+w Bandwidth=1249560275
+p reject 1-65535
+v Tor 0.2.5.1-alpha
+a [ed8e:391e:a2e4:2697:b44a:6e7a:7b51:55d5]:25449
+r Unnamed926364172070 dODKJM8x4I78C1NEVq+HUymMjaE UjTjhSP5IjwWD1VXQG+DTViRu7o 2021-05-16 01:24:43 11.43.20.183 39071 0
+s Fast Named Running Stable Valid
+w Bandwidth=264804486
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [f826:80bc:4244:18a7:c271:cb6f:f5c5:f4f9]:39070
+r Unnamed654630334718 2Bj/StRiOq2lZE+D0kn/rbXQxHs J5SQ8BLOtYmUfOZIz0RINbj6hJ0 2021-05-16 23:30:29 93.188.86.59 32270 0
+s Fast Named Running Stable Valid
+w Bandwidth=967473942
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [7b59:fca6:4ec4:6869:3a8e:1d58:b8f1:3cdb]:32269
+r Unnamed974086771296 25xhrHbPco6JnSSdkUH4ZUCbe/I rMJk89AhSxD0jNnzcttyoGfxmDg 2021-05-17 10:17:50 131.35.4.204 41012 0
+s Fast Named Running Stable Valid
+w Bandwidth=462665442
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [4ef4:80f:6363:5128:f6b0:3745:872a:839b]:41011
+r Unnamed387625580156 /RQyk+h+rUmpSU1Y9wsrXlmulvQ cDKOWoF5ucu1fAgCswz1LJfU1bs 2021-05-17 01:27:36 45.225.217.193 51300 0
+s Fast Named Running Stable Valid
+w Bandwidth=2431923910
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [4dda:e3d6:91fc:672a:fe37:5a8a:92c5:29ad]:51299
+r Unnamed405969494373 DWOGTFS4CZviFkLRfBgcO/J++CE T0K7bO87NTtwkGEIFpEuH4EeIPY 2021-05-16 04:33:53 184.50.179.130 38708 0
+s Fast Named Running Stable Valid
+w Bandwidth=147000449
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [45a5:c760:780e:bfb3:7e6a:f8f4:fa36:7d07]:38707
+r Unnamed768605983758 sXL/G7zC3SOsrJiLP9QBCmempKQ raJv6ndqu6QhNNGYhlySB6ItB/M 2021-05-17 03:22:56 6.114.238.141 49026 0
+s Fast Named Running Stable Valid
+w Bandwidth=660147869
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [5fe:1ebb:5c31:b0de:aebc:f535:5c5d:55b7]:49025
+r Unnamed120703480434 mWFLrYg66q+y//GnD8r5gD8vBro P+JyFqEpSGBkzyT4o7ET1HA5Wfc 2021-05-16 19:52:57 141.32.185.180 18320 0
+s Fast Named Running Stable Valid
+w Bandwidth=2285951219
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [a7a:a015:78ee:9641:1da1:662a:c812:7e34]:18319
+r Unnamed867934621570 1PTtttCWEGG2IWHvK8Dxsdfj1yU 8Tdn9sOuuhJQ8d6pi5QgtRg6/l0 2021-05-17 00:18:34 7.124.122.205 28877 0
+s Fast Named Running Stable Valid
+w Bandwidth=2391700408
+p reject 1-65535
+v Tor 0.2.4.19
+a [c96e:f62d:ec5d:788f:e469:2b02:ce43:2ad6]:28876
+r Unnamed596725280170 N+eUtoKIkmSXAKvQiKsIPD1PqJg JzTN2ju1U+kMmpX1T8Za1vSMyHY 2021-05-16 10:34:36 93.30.45.23 58342 0
+s Fast Named Running Stable Valid
+w Bandwidth=1233442643
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [956a:9b52:2cd1:ba1c:a9ce:e170:7e46:4157]:58341
+r Unnamed475066146613 MmnYKwg2apUmBC7tjtDq+x7jrs4 moQIdcyHwM6GfEWuHblCFfKa0Y8 2021-05-16 13:47:55 144.29.254.148 47618 0
+s Fast Named Running Stable Valid
+w Bandwidth=196800342
+p reject 1-65535
+v Tor 0.2.4.16-rc
+a [724a:3f04:4853:9230:8afd:7c5d:eca3:295d]:47617
+r Unnamed261576847372 jFwWA/pbeZl1k6zayrGhvW7hhTk e4cqlfZYaQNPQApUtmkpSWZYSJM 2021-05-16 05:37:55 55.37.197.180 65444 0
+s Fast Named Running Stable Valid
+w Bandwidth=2118808150
+p reject 1-65535
+v Tor 0.2.4.5-alpha
+a [856d:e0bd:c380:e82e:268e:7821:fa44:5a0d]:65443
+r Unnamed631919105975 yURRZKA+nCdwYxr+ZcIROs0ED6A bthkaAIqY1LOq4jHqbKUQ376KNA 2021-05-17 03:02:42 102.203.31.165 51642 0
+s Fast Named Running Stable Valid
+w Bandwidth=445399607
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [5d34:f061:e871:ab90:a437:48c2:7daf:32cd]:51641
+r Unnamed690516559340 lpVg8h12cr3ZlBhXWqthRtGAOEc eRhkqSGAwMr2zQz3/9AQQs/6JbU 2021-05-16 01:29:38 206.220.93.90 40774 0
+s Fast Named Running Stable Valid
+w Bandwidth=503412343
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [3d9d:2e2:59e:f62c:e613:309c:37a7:6484]:40773
+r Unnamed638390519342 HoeyIiddGkxozR36etM8HF95eoY Ms7Xbafr3vGhtdD1kFWl+64bCs0 2021-05-16 17:10:49 123.63.25.182 5868 0
+s Fast Named Running Stable Valid
+w Bandwidth=685745506
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [f8bb:afc:5af2:159a:b5f0:e56d:6f56:3d2c]:5867
+r Unnamed697410238880 0Zt7Bf6WGDwBmy95xgazpusH7OY M0qGDzynMiIS2M5wSigEU2w2sSE 2021-05-17 05:51:26 103.63.131.254 42653 0
+s Fast Named Running Stable Valid
+w Bandwidth=483092532
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [1854:6cf6:aab:3c97:8b6b:e614:979d:a60]:42652
+r Unnamed635554374582 8enIQ3ua32zN4QZoQQOu7qw6Lng lSWgB7wlCjp7jRkPIgzv996lCdo 2021-05-16 16:59:04 14.203.169.212 15167 0
+s Fast Named Running Stable Valid
+w Bandwidth=2241330448
+p reject 1-65535
+v Tor 0.2.2.39
+a [7602:16da:275b:a772:4f6f:2777:b795:c820]:15166
+r Unnamed718318380815 EqCplx8JtjKFZ5e4gwhsYbYR+4g wri/XQMDiygsWIGNrqXxYU0F7uQ 2021-05-16 16:03:07 70.59.85.229 37973 0
+s Fast Named Running Stable Valid
+w Bandwidth=1083097272
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [9dd2:6e:4945:5410:5c0f:5d8c:3bba:cc8f]:37972
+r Unnamed347316789126 YxN1mWUDpQL9I7AwIKpRYYzu9q8 UCndec/n/EpHY5Ooeo3nnovM2zA 2021-05-16 11:53:53 83.249.223.10 28655 0
+s Fast Named Running Stable Valid
+w Bandwidth=1176430302
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [60c3:8ade:aeb0:108a:6f21:50b:b0b7:4313]:28654
+r Unnamed945499112523 msoi7ASIu62yaztcyDcoa7u2Ysk +CxuhPZx1IFJs5jzXoW9FbYFu9Q 2021-05-16 01:29:43 6.0.3.56 63475 0
+s Fast Named Running Stable Valid
+w Bandwidth=1762496834
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [ba95:9c5a:7370:3b58:b1a9:5f7e:2d2d:a4e4]:63474
+r Unnamed735354472865 zviNjK/sLyiozr35IMxWQK/ClTY ugZBPoTkhnclHtdkxBAhYLMUkrQ 2021-05-16 19:33:07 176.230.59.99 50967 0
+s Fast Named Running Stable Valid
+w Bandwidth=797440620
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [cac0:c9c4:e40e:8ca5:b368:f91a:594a:3fe2]:50966
+r Unnamed941596143899 XZrWbVAJxGgNMj/3Ags8RvnLufQ FYl1QMZ9v9MRZO8oMe2kf9bA560 2021-05-16 21:03:21 16.59.230.10 15398 0
+s Fast Named Running Stable Valid
+w Bandwidth=1535441659
+p reject 1-65535
+v Tor 0.2.4.18-rc
+a [c62f:b456:43f7:b446:31f5:f3a5:90a8:773f]:15397
+r Unnamed522837195117 GpaWfqIzJ7Nt+Rcv6E4Lr4ofceA PsMHLBWcrqN1NyM3XJaFVzTKg+o 2021-05-16 03:28:39 216.225.253.6 23062 0
+s Fast Named Running Stable Valid
+w Bandwidth=895607499
+p reject 1-65535
+v Tor 0.2.4.11-alpha
+a [6f52:84ba:ba71:24fb:13ec:7ab1:a2a:fdad]:23061
+r Unnamed950600535795 gf+Xn1xCsU/JcF7V/XR8aawN8m0 zGIBu50+6UzWJuDwA2jidJbn0v4 2021-05-17 01:53:57 58.87.61.230 48425 0
+s Fast Named Running Stable Valid
+w Bandwidth=2211793942
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [a6ae:fb6f:5a:d368:7a16:db81:bf08:e21c]:48424
+r Unnamed884613157710 XmqztXATzWvxLenW21DW3oU+cTM Mvh5iyFwDl/OAh15kr4cs3KAa5g 2021-05-16 10:29:13 11.136.237.3 6612 0
+s Fast Named Running Stable Valid
+w Bandwidth=863247789
+p reject 1-65535
+v Tor 0.2.4.12-alpha
+a [4c1f:5b1:15a5:3c80:892a:a9d8:7095:6c7f]:6611
+r Unnamed735888462604 TDYMR7FaFwPPYmpz5wsBkeQ5EJI LpGpaJOBjtGvojW2rD6jpgVQB4g 2021-05-16 12:31:43 197.109.11.239 35922 0
+s Fast Named Running Stable Valid
+w Bandwidth=1499187467
+p reject 1-65535
+v Tor 0.2.4.9-alpha
+a [ddc:68d6:893:c19e:774e:ceb:4d64:3960]:35921
+r Unnamed689405017962 jbTJeVxgkNeQSwWg9nnB5hM99uA GJWN7LZXGmrl8aGfl8BU4p29cVA 2021-05-16 16:58:50 95.23.182.34 42089 0
+s Fast Named Running Stable Valid
+w Bandwidth=963089764
+p reject 1-65535
+v Tor 0.2.4.6-alpha
+a [3d19:ef80:e7d5:13bc:e30:92c1:170d:3f64]:42088
+r Unnamed805901964418 GGekqwLxOk75V4SyBbZAU7uMZOA fDcORocCtN5F2tJpTaMAU1APXWw 2021-05-17 01:55:52 23.129.71.212 10699 0
+s Fast Named Running Stable Valid
+w Bandwidth=730773493
+p reject 1-65535
+v Tor 0.2.4.15-rc
+a [a655:b94f:a948:812f:37b3:46aa:4fdb:39eb]:10698
+r Unnamed240748329531 FMn8ruCtUiUc//XKkc7zhucObdQ ihW0G4OtIFsXBSD1NtpAkN1q8ck 2021-05-17 09:35:18 54.133.180.183 33473 0
+s Fast Named Running Stable Valid
+w Bandwidth=1068312901
+p reject 1-65535
+v Tor 0.2.4.7-alpha
+a [e53b:a117:67b2:c647:4f92:e24c:c717:d76]:33472
+r Unnamed402958549213 V3HNHh3g7wAaOzhDPDRCvWOq4yc LvpPfbRotovxz9kXfa5QptXz074 2021-05-17 03:36:10 27.20.100.111 36351 0
+s Fast Named Running Stable Valid
+w Bandwidth=959291888
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [8416:186f:81e2:1e41:dc0f:5a5a:7872:cc8b]:36350
+r Unnamed881091578113 P8iMf+lJeu/7EKrvhZJSuFPVEVE qqkt+snh7JM0RBd95n7mc0MKsdc 2021-05-17 01:12:36 113.139.39.126 13611 0
+s Fast Named Running Stable Valid
+w Bandwidth=691164237
+p reject 1-65535
+v Tor 0.2.3.24-rc
+a [5f5b:b80:ff4d:4a19:1dfe:41a9:323b:1376]:13610
+r Unnamed599056308895 9hAHMpGsAfttU/c+a1Fj3eS99YQ jM4kYGPR6Rikae9rCCEmVbej3C0 2021-05-16 22:40:57 136.191.212.196 33451 0
+s Fast Named Running Stable Valid
+w Bandwidth=2426092585
+p reject 1-65535
+v Tor 0.2.4.8-alpha
+a [e82b:6ac:773b:b0ef:36d1:3422:86a:a816]:33450
+r Unnamed791758378555 b4nW+CiruA6KpK8Z6hNsggXV8qE U1mq1RQb8ztKyPZOaWStnb4LGLw 2021-05-16 08:41:29 128.83.93.240 29062 0
+s Fast Named Running Stable Valid
+w Bandwidth=933405694
+p reject 1-65535
+v Tor 0.2.4.14-alpha
+a [9d6d:8ce9:dd4:3bdc:3856:8ea2:ad75:d423]:29061
+r Unnamed383530767025 wTQ8aWDIKIOQ/36z/QyI6tv9bD0 u6kxGGOojWIyxLM8xmSHY0ycudY 2021-05-17 10:34:50 7.109.221.232 33674 0
+s Fast Named Running Stable Valid
+w Bandwidth=894550268
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [e9bc:99d8:524e:c756:1109:382:9ac2:5892]:33673
+r Unnamed481344121048 mO9Fr6RrReww34MIZse/ft3Vm3k WP9slXa5049uw5hlIek5HZ0wiR8 2021-05-16 06:51:34 151.222.111.180 58716 0
+s Fast Named Running Stable Valid
+w Bandwidth=1336454895
+p reject 1-65535
+v Tor 0.2.4.10-alpha
+a [fe68:952f:f2da:7236:1fa9:15d0:195f:6933]:58715
+r Unnamed874173984652 jJjnY9NMnzC0d7UHcT0U7M0Dm1o Mkgh74RhUUc1bRXp4m3pQYcQMrI 2021-05-16 19:28:28 181.180.156.168 10336 0
+s Fast Named Running Stable Valid
+w Bandwidth=1960005026
+p reject 1-65535
+v Tor 0.2.2.39
+a [48b:e04e:b918:28f0:27cf:7d51:ad6:fe1]:10335
+r Unnamed413487512073 u35S3JkCBFvoZtkBIHTcf6JzaPY +AGhNcOMmNQ0fF8zikFqpKeCF0Y 2021-05-17 05:29:04 4.149.100.79 6510 0
+s Fast Named Running Stable Valid
+w Bandwidth=892815722
+p reject 1-65535
+v Tor 0.2.4.17-rc
+a [bc58:43a9:4457:c93e:70bc:44d6:c2ac:dbca]:6509
+r Unnamed602187061152 v6AsOAt0mwzxnS2VRkzllD5/Zxg LFhYzw+wIujkDNoTaykeF/q8Vw4 2021-05-16 03:16:56 105.218.92.78 9193 0
+s Fast Named Running Stable Valid
+w Bandwidth=2002392201
+p reject 1-65535
+v Tor 0.2.2.39
+a [12b2:9d7a:7cbc:aaa0:bb76:c85:12d0:53e7]:9192
