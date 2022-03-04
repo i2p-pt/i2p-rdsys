@@ -150,6 +150,7 @@ func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc 
 				continue
 			}
 			t.Flags = bridge.Flags
+			t.Distribution = bridge.Distribution
 			t.SetBlockedIn(blockedIn)
 			t.SetTestFunc(testFunc)
 			rcol.Add(t)
