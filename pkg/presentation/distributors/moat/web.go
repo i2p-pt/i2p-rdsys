@@ -49,9 +49,13 @@ var (
 // Web server and then waits until it receives a SIGINT.
 func InitFrontend(cfg *internal.Config) {
 	dist = &moat.MoatDistributor{}
-	err := loadCircumventionMapFile(dist, cfg.Distributors.Moat.CircumventionMap)
+	err := loadCircumventionFile(cfg.Distributors.Moat.CircumventionMap, dist.LoadCircumventionMap)
 	if err != nil {
 		log.Fatalf("Can't load circumvention map %s: %v", cfg.Distributors.Moat.CircumventionMap, err)
+	}
+	err = loadCircumventionFile(cfg.Distributors.Moat.CircumventionDefaults, dist.LoadCircumventionDefaults)
+	if err != nil {
+		log.Fatalf("Can't load circumvention defaults %s: %v", cfg.Distributors.Moat.CircumventionDefaults, err)
 	}
 
 	geoipdb, err = geoip.New(cfg.Distributors.Moat.GeoipDB, cfg.Distributors.Moat.Geoip6DB)
@@ -64,10 +68,12 @@ func InitFrontend(cfg *internal.Config) {
 		"/moat/circumvention/countries":      http.HandlerFunc(countriesHandler),
 		"/moat/circumvention/settings":       http.HandlerFunc(circumventionSettingsHandler),
 		"/moat/circumvention/builtin":        http.HandlerFunc(builtinHandler),
+		"/moat/circumvention/defaults":       http.HandlerFunc(circumventionDefaultsHandler),
 		"/meek/moat/circumvention/map":       http.HandlerFunc(circumventionMapHandler),
 		"/meek/moat/circumvention/countries": http.HandlerFunc(countriesHandler),
 		"/meek/moat/circumvention/settings":  http.HandlerFunc(circumventionSettingsHandler),
 		"/meek/moat/circumvention/builtin":   http.HandlerFunc(builtinHandler),
+		"/meek/moat/circumvention/defaults":  http.HandlerFunc(circumventionDefaultsHandler),
 	}
 
 	common.StartWebServer(
@@ -78,14 +84,14 @@ func InitFrontend(cfg *internal.Config) {
 	)
 }
 
-func loadCircumventionMapFile(dist *moat.MoatDistributor, path string) error {
+func loadCircumventionFile(path string, loadFn func(r io.Reader) error) error {
 	f, err := os.Open(path)
 	if err != nil {
 		return err
 	}
 	defer f.Close()
 
-	return dist.LoadCircumventionMap(f)
+	return loadFn(f)
 }
 
 func circumventionMapHandler(w http.ResponseWriter, r *http.Request) {
@@ -175,6 +181,49 @@ func circumventionSettingsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func circumventionDefaultsHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/json; charset=utf-8")
+	enc := json.NewEncoder(w)
+
+	var request transportsRequest
+	dec := json.NewDecoder(r.Body)
+	err := dec.Decode(&request)
+	if err != nil && !errors.Is(err, io.EOF) {
+		log.Println("Error decoding circumvention defaults request:", err)
+		err = enc.Encode(invalidRequest)
+		if err != nil {
+			log.Println("Error encoding jsonError:", err)
+			w.WriteHeader(http.StatusInternalServerError)
+		}
+		return
+	}
+
+	s, err := dist.GetCircumventionDefaults(request.Transports)
+	if err != nil {
+		if errors.Is(err, moat.NoTransportError) {
+			err = enc.Encode(transportNotFound)
+			if err != nil {
+				log.Println("Error encoding jsonError:", err)
+				w.WriteHeader(http.StatusInternalServerError)
+			}
+		} else {
+			log.Println("Error getting circumvention defaults:", err)
+			w.WriteHeader(http.StatusInternalServerError)
+		}
+		return
+	}
+	if s == nil {
+		w.Write([]byte("{}"))
+		return
+	}
+
+	err = enc.Encode(s)
+	if err != nil {
+		log.Println("Error encoding circumvention defaults:", err)
+		w.WriteHeader(http.StatusInternalServerError)
+	}
+}
+
 func countryFromRequest(r *http.Request) string {
 	header := r.Header.Get("X-Forwarded-For")
 	forwarded := strings.Split(header, ",")
@@ -207,7 +256,7 @@ func countryFromRequest(r *http.Request) string {
 	return strings.ToLower(country)
 }
 
-type builtinRequest struct {
+type transportsRequest struct {
 	Transports []string `json:"transports"`
 }
 
@@ -215,7 +264,7 @@ func builtinHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/json; charset=utf-8")
 	enc := json.NewEncoder(w)
 
-	var request builtinRequest
+	var request transportsRequest
 	dec := json.NewDecoder(r.Body)
 	err := dec.Decode(&request)
 	if err != nil && !errors.Is(err, io.EOF) {

@@ -24,6 +24,7 @@ var (
 	NoTransportError = errors.New("No provided transport is available for this country")
 )
 
+// CircumventionMap maps countries to the CircumventionSettings that ara available on those countries
 type CircumventionMap map[string]CircumventionSettings
 
 type CircumventionSettings struct {
@@ -41,17 +42,23 @@ type BridgeSettings struct {
 }
 
 type MoatDistributor struct {
-	rings            map[string]*core.Hashring
-	circumventionMap CircumventionMap
-	cfg              *internal.Config
-	ipc              delivery.Mechanism
-	wg               sync.WaitGroup
-	shutdown         chan bool
+	rings                 map[string]*core.Hashring
+	circumventionMap      CircumventionMap
+	circumventionDefaults CircumventionSettings
+	cfg                   *internal.Config
+	ipc                   delivery.Mechanism
+	wg                    sync.WaitGroup
+	shutdown              chan bool
 }
 
 func (d *MoatDistributor) LoadCircumventionMap(r io.Reader) error {
 	dec := json.NewDecoder(r)
 	return dec.Decode(&d.circumventionMap)
+}
+
+func (d *MoatDistributor) LoadCircumventionDefaults(r io.Reader) error {
+	dec := json.NewDecoder(r)
+	return dec.Decode(&d.circumventionDefaults)
 }
 
 func (d *MoatDistributor) GetCircumventionMap() CircumventionMap {
@@ -63,7 +70,14 @@ func (d *MoatDistributor) GetCircumventionSettings(country string, types []strin
 	if !ok || len(cc.Settings) == 0 {
 		return nil, nil
 	}
+	return d.populateCircumventionSettings(&d.circumventionDefaults, types)
+}
 
+func (d *MoatDistributor) GetCircumventionDefaults(types []string) (*CircumventionSettings, error) {
+	return d.populateCircumventionSettings(&d.circumventionDefaults, types)
+}
+
+func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSettings, types []string) (*CircumventionSettings, error) {
 	circumventionSettings := CircumventionSettings{make([]Settings, 0, len(cc.Settings))}
 	for _, settings := range cc.Settings {
 		if len(types) != 0 {
@@ -85,7 +99,7 @@ func (d *MoatDistributor) GetCircumventionSettings(country string, types []strin
 	}
 
 	if len(circumventionSettings.Settings) == 0 {
-		log.Println("Could not find the requested type of bridge", types, "for the country", country)
+		log.Println("Could not find the requested type of bridge", types)
 		return nil, NoTransportError
 	}
 
@@ -112,8 +126,9 @@ func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
 			bridge, err := d.rings[bs.Type].Get(core.NewHashkey(string(id)))
 			if err != nil {
 				log.Println("Can't get bridgedb bridges of type", bs.Type, ":", err)
+			} else {
+				bridgestrings = append(bridgestrings, bridge.String())
 			}
-			bridgestrings = append(bridgestrings, bridge.String())
 		}
 	default:
 		log.Println("Requested an unsuported bridge source:", bs.Source)
@@ -185,7 +200,7 @@ func (d *MoatDistributor) Init(cfg *internal.Config) {
 
 	d.cfg = cfg
 	d.shutdown = make(chan bool)
-	d.rings = map[string]*core.Hashring{}
+	d.rings = make(map[string]*core.Hashring)
 	for _, rType := range cfg.Distributors.Moat.Resources {
 		d.rings[rType] = core.NewHashring()
 	}

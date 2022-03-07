@@ -75,13 +75,14 @@ type GettorDistConfig struct {
 }
 
 type MoatDistConfig struct {
-	Resources            []string            `json:"resources"`
-	GeoipDB              string              `json:"geoipdb"`
-	Geoip6DB             string              `json:"geoip6db"`
-	CircumventionMap     string              `json:"circumvention_map"`
-	NumBridgesPerRequest int                 `json:"num_bridges_per_request"`
-	BuiltInBridges       map[string][]string `json:"builtin_bridges"`
-	WebApi               WebApiConfig        `json:"web_api"`
+	Resources             []string            `json:"resources"`
+	GeoipDB               string              `json:"geoipdb"`
+	Geoip6DB              string              `json:"geoip6db"`
+	CircumventionMap      string              `json:"circumvention_map"`
+	CircumventionDefaults string              `json:"circumvention_defaults"`
+	NumBridgesPerRequest  int                 `json:"num_bridges_per_request"`
+	BuiltInBridges        map[string][]string `json:"builtin_bridges"`
+	WebApi                WebApiConfig        `json:"web_api"`
 }
 
 type WebApiConfig struct {
