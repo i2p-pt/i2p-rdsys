@@ -1,8 +1,10 @@
 package moat
 
 import (
+	"bytes"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"log"
 	"net"
@@ -48,7 +50,9 @@ var (
 // InitFrontend is the entry point to HTTPS's Web frontend.  It spins up the
 // Web server and then waits until it receives a SIGINT.
 func InitFrontend(cfg *internal.Config) {
-	dist = &moat.MoatDistributor{}
+	dist = &moat.MoatDistributor{
+		FetchBridges: fetchBridges,
+	}
 	err := loadCircumventionFile(cfg.Distributors.Moat.CircumventionMap, dist.LoadCircumventionMap)
 	if err != nil {
 		log.Fatalf("Can't load circumvention map %s: %v", cfg.Distributors.Moat.CircumventionMap, err)
@@ -283,4 +287,22 @@ func builtinHandler(w http.ResponseWriter, r *http.Request) {
 		log.Println("Error encoding builtin bridges:", err)
 		w.WriteHeader(http.StatusInternalServerError)
 	}
+}
+
+func fetchBridges(url string) ([]string, error) {
+	resp, err := http.Get(url)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != 200 {
+		return nil, fmt.Errorf("Status code: %d", resp.StatusCode)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+	body = bytes.TrimSpace(body)
+	return strings.Split(string(body), "\n"), nil
 }

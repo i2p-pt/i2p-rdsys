@@ -17,7 +17,8 @@ import (
 )
 
 const (
-	DistName = "moat"
+	DistName              = "moat"
+	builtinRefreshSeconds = time.Hour
 )
 
 var (
@@ -43,12 +44,15 @@ type BridgeSettings struct {
 
 type MoatDistributor struct {
 	rings                 map[string]*core.Hashring
+	builtinBridges        map[string][]string
 	circumventionMap      CircumventionMap
 	circumventionDefaults CircumventionSettings
 	cfg                   *internal.Config
 	ipc                   delivery.Mechanism
 	wg                    sync.WaitGroup
 	shutdown              chan bool
+
+	FetchBridges func(url string) (bridgeLines []string, err error)
 }
 
 func (d *MoatDistributor) LoadCircumventionMap(r io.Reader) error {
@@ -70,7 +74,7 @@ func (d *MoatDistributor) GetCircumventionSettings(country string, types []strin
 	if !ok || len(cc.Settings) == 0 {
 		return nil, nil
 	}
-	return d.populateCircumventionSettings(&d.circumventionDefaults, types)
+	return d.populateCircumventionSettings(&cc, types)
 }
 
 func (d *MoatDistributor) GetCircumventionDefaults(types []string) (*CircumventionSettings, error) {
@@ -107,10 +111,11 @@ func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSetting
 }
 
 func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
+	log.Println("type:", bs.Type)
 	var bridgestrings []string
 	switch bs.Source {
 	case "builtin":
-		bridgeList := d.cfg.Distributors.Moat.BuiltInBridges[bs.Type]
+		bridgeList := d.builtinBridges[bs.Type]
 		if len(bridgeList) <= d.cfg.Distributors.Moat.NumBridgesPerRequest {
 			bridgestrings = bridgeList
 		} else {
@@ -139,11 +144,11 @@ func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
 func (d *MoatDistributor) GetBuiltInBridges(types []string) map[string][]string {
 	builtinBridges := map[string][]string{}
 	if len(types) == 0 {
-		builtinBridges = d.cfg.Distributors.Moat.BuiltInBridges
+		builtinBridges = d.builtinBridges
 	}
 
 	for _, t := range types {
-		bridges, ok := d.cfg.Distributors.Moat.BuiltInBridges[t]
+		bridges, ok := d.builtinBridges[t]
 		if ok {
 			builtinBridges[t] = bridges
 		}
@@ -161,14 +166,30 @@ func (d *MoatDistributor) housekeeping(rStream chan *core.ResourceDiff) {
 	defer close(rStream)
 	defer d.ipc.StopStream()
 
+	ticker := time.NewTimer(builtinRefreshSeconds)
+	defer ticker.Stop()
+
 	for {
 		select {
+		case <-ticker.C:
+			d.fetchBuiltinBridges()
 		case diff := <-rStream:
 			d.applyDiff(diff)
 		case <-d.shutdown:
 			log.Printf("Shutting down housekeeping.")
 			return
 		}
+	}
+}
+
+func (d *MoatDistributor) fetchBuiltinBridges() {
+	for _, bType := range d.cfg.Distributors.Moat.BuiltInBridgesTypes {
+		builtinBridges, err := d.FetchBridges(d.cfg.Distributors.Moat.BuiltInBridgesURL + "bridges_list." + bType + ".txt")
+		if err != nil {
+			log.Println("Failed to fetch builtin bridges of type", bType, ":", err)
+			continue
+		}
+		d.builtinBridges[bType] = builtinBridges
 	}
 }
 
@@ -204,6 +225,9 @@ func (d *MoatDistributor) Init(cfg *internal.Config) {
 	for _, rType := range cfg.Distributors.Moat.Resources {
 		d.rings[rType] = core.NewHashring()
 	}
+
+	d.builtinBridges = make(map[string][]string)
+	d.fetchBuiltinBridges()
 
 	log.Printf("Initialising resource stream.")
 	d.ipc = mechanisms.NewHttpsIpc(

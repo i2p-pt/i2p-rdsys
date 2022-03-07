@@ -91,9 +91,8 @@
             "circumvention_map": "circumvention.json",
             "circumvention_defaults": "circumvention_defaults.json",
             "num_bridges_per_request": 3,
-            "builtin_bridges": {
-            	"obfs4": []
-            },
+            "builtin_bridges_url": "https://gitweb.torproject.org/builders/tor-browser-build.git/plain/projects/common/",
+            "builtin_bridges_types": ["meek-azure", "obfs4", "snowflake"],
             "web_api": {
                 "api_address": "127.0.0.1:7500",
                 "cert_file": "",
