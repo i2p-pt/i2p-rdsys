@@ -32,7 +32,8 @@
                 "https": "HttpsApiTokenPlaceholder",
                 "salmon": "SalmonApiTokenPlaceholder",
                 "stub": "StubApiTokenPlaceholder",
-                "gettor": "StubApiTokenPlaceholder"
+                "gettor": "GettorApiTokenPlaceholder",
+                "moat": "MoatApiTokenPlaceholder"
         },
         "web_api": {
             "api_address": "127.0.0.1:7100",
@@ -81,6 +82,21 @@
                 "imap_server": "imaps://imap.example.com:993",
                 "imap_username": "gettor",
                 "imap_password": "pass"
+            }
+        },
+        "moat": {
+            "resources": ["obfs4", "vanilla"],
+            "geoipdb":  "/usr/share/tor/geoip",
+            "geoip6db": "/usr/share/tor/geoip6",
+            "circumvention_map": "circumvention.json",
+            "num_bridges_per_request": 3,
+            "builtin_bridges": {
+            	"obfs4": []
+            },
+            "web_api": {
+                "api_address": "127.0.0.1:7500",
+                "cert_file": "",
+                "key_file": ""
             }
         }
     },
