@@ -43,7 +43,7 @@ type BridgeSettings struct {
 }
 
 type MoatDistributor struct {
-	rings                 map[string]*core.Hashring
+	collection            core.Collection
 	builtinBridges        map[string][]string
 	circumventionMap      CircumventionMap
 	circumventionDefaults CircumventionSettings
@@ -128,7 +128,7 @@ func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
 		for i := 0; i < d.cfg.Distributors.Moat.NumBridgesPerRequest; i++ {
 			id := make([]byte, 8)
 			rand.Read(id)
-			bridge, err := d.rings[bs.Type].Get(core.NewHashkey(string(id)))
+			bridge, err := d.collection[bs.Type].Get(core.NewHashkey(string(id)))
 			if err != nil {
 				log.Println("Can't get bridgedb bridges of type", bs.Type, ":", err)
 			} else {
@@ -174,7 +174,7 @@ func (d *MoatDistributor) housekeeping(rStream chan *core.ResourceDiff) {
 		case <-ticker.C:
 			d.fetchBuiltinBridges()
 		case diff := <-rStream:
-			d.applyDiff(diff)
+			d.collection.ApplyDiff(diff)
 		case <-d.shutdown:
 			log.Printf("Shutting down housekeeping.")
 			return
@@ -193,37 +193,15 @@ func (d *MoatDistributor) fetchBuiltinBridges() {
 	}
 }
 
-func (d *MoatDistributor) applyDiff(diff *core.ResourceDiff) {
-	for rType, resources := range diff.New {
-		log.Printf("Adding %d resources of type %s.", len(resources), rType)
-		for _, r := range resources {
-			d.rings[rType].Add(r)
-		}
-	}
-	for rType, resources := range diff.Changed {
-		log.Printf("Changing %d resources of type %s.", len(resources), rType)
-		for _, r := range resources {
-			d.rings[rType].AddOrUpdate(r)
-		}
-	}
-	for rType, resources := range diff.Gone {
-		log.Printf("Removing %d resources of type %s.", len(resources), rType)
-		for _, r := range resources {
-			d.rings[rType].Remove(r)
-		}
-	}
-
-}
-
 func (d *MoatDistributor) Init(cfg *internal.Config) {
 	log.Printf("Initialising %s distributor.", DistName)
 	mrand.Seed(time.Now().UnixNano())
 
 	d.cfg = cfg
 	d.shutdown = make(chan bool)
-	d.rings = make(map[string]*core.Hashring)
+	d.collection = core.NewCollection()
 	for _, rType := range cfg.Distributors.Moat.Resources {
-		d.rings[rType] = core.NewHashring()
+		d.collection.AddResourceType(rType, true, nil)
 	}
 
 	d.builtinBridges = make(map[string][]string)

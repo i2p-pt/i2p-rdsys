@@ -48,7 +48,7 @@ func initDistributor() *MoatDistributor {
 		FetchBridges: fetchBridges,
 	}
 	d.Init(&config)
-	d.rings["dummy"].Add(dummyResource)
+	d.collection["dummy"].Add(dummyResource)
 	return &d
 }
 
