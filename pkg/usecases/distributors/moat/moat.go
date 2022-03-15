@@ -6,7 +6,9 @@ import (
 	"errors"
 	"io"
 	"log"
+	"math/big"
 	mrand "math/rand"
+	"strconv"
 	"sync"
 	"time"
 
@@ -125,15 +127,14 @@ func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
 			}
 		}
 	case "bridgedb":
+		resources := d.collection.Get(d.getProportionIndex(), bs.Type)
 		for i := 0; i < d.cfg.NumBridgesPerRequest; i++ {
-			id := make([]byte, 8)
-			rand.Read(id)
-			bridge, err := d.collection[bs.Type].Get(core.NewHashkey(string(id)))
+			idx, err := rand.Int(rand.Reader, big.NewInt(int64(len(resources))))
 			if err != nil {
 				log.Println("Can't get bridgedb bridges of type", bs.Type, ":", err)
-			} else {
-				bridgestrings = append(bridgestrings, bridge.String())
+				break
 			}
+			bridgestrings = append(bridgestrings, resources[int(idx.Int64())].String())
 		}
 	default:
 		log.Println("Requested an unsuported bridge source:", bs.Source)
@@ -200,8 +201,9 @@ func (d *MoatDistributor) Init(cfg *internal.Config) {
 	d.cfg = &cfg.Distributors.Moat
 	d.shutdown = make(chan bool)
 	d.collection = core.NewCollection()
+	proportions := d.makeProportions()
 	for _, rType := range d.cfg.Resources {
-		d.collection.AddResourceType(rType, true, nil)
+		d.collection.AddResourceType(rType, len(proportions) == 0, proportions)
 	}
 
 	d.builtinBridges = make(map[string][]string)
@@ -222,6 +224,24 @@ func (d *MoatDistributor) Init(cfg *internal.Config) {
 
 	d.wg.Add(1)
 	go d.housekeeping(rStream)
+}
+
+func (d *MoatDistributor) makeProportions() map[string]int {
+	proportions := make(map[string]int)
+	for i := 0; i < d.cfg.NumPeriods; i++ {
+		proportions[strconv.Itoa(i)] = 1
+	}
+	return proportions
+}
+
+func (d *MoatDistributor) getProportionIndex() string {
+	if d.cfg.NumPeriods == 0 || d.cfg.RotationPeriodHours == 0 {
+		return ""
+	}
+
+	now := int(time.Now().Unix() / (60 * 60))
+	period := now / d.cfg.RotationPeriodHours
+	return strconv.Itoa(period % d.cfg.NumPeriods)
 }
 
 func (d *MoatDistributor) Shutdown() {

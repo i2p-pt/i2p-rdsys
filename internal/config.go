@@ -81,6 +81,8 @@ type MoatDistConfig struct {
 	CircumventionMap      string       `json:"circumvention_map"`
 	CircumventionDefaults string       `json:"circumvention_defaults"`
 	NumBridgesPerRequest  int          `json:"num_bridges_per_request"`
+	RotationPeriodHours   int          `json:"rotation_period_hours"`
+	NumPeriods            int          `json:"num_periods"`
 	BuiltInBridgesURL     string       `json:"builtin_bridges_url"`
 	BuiltInBridgesTypes   []string     `json:"builtin_bridges_types"`
 	WebApi                WebApiConfig `json:"web_api"`
