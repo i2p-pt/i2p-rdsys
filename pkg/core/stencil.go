@@ -148,23 +148,17 @@ func (s *Stencil) GetFilterFunc(distName string) (FilterFunc, error) {
 
 // GetForDist takes as input a distributor's name (e.g. "moat") and returns the
 // resources that are allocated for the given distributor.
-func (h *SplitHashring) GetForDist(distName string) ([]Resource, error) {
+func (h *SplitHashring) GetForDist(distName string) (*Hashring, error) {
 	if h.Stencil == nil {
-		return h.Hashring.GetAll(), nil
+		return h.Hashring, nil
 	}
 
 	filterFunc, err := h.Stencil.GetFilterFunc(distName)
 	if err != nil {
-		return []Resource{}, err
+		return NewHashring(), err
 	}
 
-	subHashring := h.Hashring.Filter(filterFunc)
-	var resources []Resource
-	for _, elem := range subHashring.GetAll() {
-		resources = append(resources, elem.(Resource))
-	}
-
-	return resources, nil
+	return h.Hashring.Filter(filterFunc), nil
 }
 
 // Len returns the length of the SplitHashring.

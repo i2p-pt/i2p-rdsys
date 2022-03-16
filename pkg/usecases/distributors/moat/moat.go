@@ -1,13 +1,12 @@
 package moat
 
 import (
-	"crypto/rand"
 	"encoding/json"
 	"errors"
 	"io"
 	"log"
-	"math/big"
 	mrand "math/rand"
+	"net"
 	"strconv"
 	"sync"
 	"time"
@@ -71,19 +70,19 @@ func (d *MoatDistributor) GetCircumventionMap() CircumventionMap {
 	return d.circumventionMap
 }
 
-func (d *MoatDistributor) GetCircumventionSettings(country string, types []string) (*CircumventionSettings, error) {
+func (d *MoatDistributor) GetCircumventionSettings(country string, types []string, ip net.IP) (*CircumventionSettings, error) {
 	cc, ok := d.circumventionMap[country]
 	if !ok || len(cc.Settings) == 0 {
 		return nil, nil
 	}
-	return d.populateCircumventionSettings(&cc, types)
+	return d.populateCircumventionSettings(&cc, types, ip)
 }
 
-func (d *MoatDistributor) GetCircumventionDefaults(types []string) (*CircumventionSettings, error) {
-	return d.populateCircumventionSettings(&d.circumventionDefaults, types)
+func (d *MoatDistributor) GetCircumventionDefaults(types []string, ip net.IP) (*CircumventionSettings, error) {
+	return d.populateCircumventionSettings(&d.circumventionDefaults, types, ip)
 }
 
-func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSettings, types []string) (*CircumventionSettings, error) {
+func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSettings, types []string, ip net.IP) (*CircumventionSettings, error) {
 	circumventionSettings := CircumventionSettings{make([]Settings, 0, len(cc.Settings))}
 	for _, settings := range cc.Settings {
 		if len(types) != 0 {
@@ -100,7 +99,7 @@ func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSetting
 			}
 		}
 
-		settings.Bridges.BridgeStrings = d.getBridges(settings.Bridges)
+		settings.Bridges.BridgeStrings = d.getBridges(settings.Bridges, ip)
 		circumventionSettings.Settings = append(circumventionSettings.Settings, settings)
 	}
 
@@ -112,7 +111,7 @@ func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSetting
 	return &circumventionSettings, nil
 }
 
-func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
+func (d *MoatDistributor) getBridges(bs BridgeSettings, ip net.IP) []string {
 	log.Println("type:", bs.Type)
 	var bridgestrings []string
 	switch bs.Source {
@@ -127,19 +126,32 @@ func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
 			}
 		}
 	case "bridgedb":
-		resources := d.collection.Get(d.getProportionIndex(), bs.Type)
-		for i := 0; i < d.cfg.NumBridgesPerRequest; i++ {
-			idx, err := rand.Int(rand.Reader, big.NewInt(int64(len(resources))))
+		hashring := d.collection.GetHashring(d.getProportionIndex(), bs.Type)
+		var resources []core.Resource
+		if hashring.Len() <= d.cfg.NumBridgesPerRequest {
+			resources = hashring.GetAll()
+		} else {
+			var err error
+			resources, err = hashring.GetMany(ipHashkey(ip), d.cfg.NumBridgesPerRequest)
 			if err != nil {
-				log.Println("Can't get bridgedb bridges of type", bs.Type, ":", err)
-				break
+				log.Println("Error getting resources from the subhashring:", err)
 			}
-			bridgestrings = append(bridgestrings, resources[int(idx.Int64())].String())
+		}
+		for _, resource := range resources {
+			bridgestrings = append(bridgestrings, resource.String())
 		}
 	default:
 		log.Println("Requested an unsuported bridge source:", bs.Source)
 	}
 	return bridgestrings
+}
+
+func ipHashkey(ip net.IP) core.Hashkey {
+	mask := net.CIDRMask(32, 128)
+	if ip.To4() != nil {
+		mask = net.CIDRMask(16, 32)
+	}
+	return core.NewHashkey(ip.Mask(mask).String())
 }
 
 func (d *MoatDistributor) GetBuiltInBridges(types []string) map[string][]string {

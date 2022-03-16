@@ -146,8 +146,9 @@ func circumventionSettingsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	ip := ipFromRequest(r)
 	if request.Country == "" {
-		request.Country = countryFromRequest(r)
+		request.Country = countryFromIP(ip)
 		if request.Country == "" {
 			log.Println("Could not find country code for cicrumvention settings")
 			err = enc.Encode(countryNotFound)
@@ -159,7 +160,7 @@ func circumventionSettingsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	s, err := dist.GetCircumventionSettings(request.Country, request.Transports)
+	s, err := dist.GetCircumventionSettings(request.Country, request.Transports, ip)
 	if err != nil {
 		if errors.Is(err, moat.NoTransportError) {
 			err = enc.Encode(transportNotFound)
@@ -202,7 +203,8 @@ func circumventionDefaultsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	s, err := dist.GetCircumventionDefaults(request.Transports)
+	ip := ipFromRequest(r)
+	s, err := dist.GetCircumventionDefaults(request.Transports, ip)
 	if err != nil {
 		if errors.Is(err, moat.NoTransportError) {
 			err = enc.Encode(transportNotFound)
@@ -228,7 +230,7 @@ func circumventionDefaultsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func countryFromRequest(r *http.Request) string {
+func ipFromRequest(r *http.Request) net.IP {
 	header := r.Header.Get("X-Forwarded-For")
 	forwarded := strings.Split(header, ",")
 	var ip net.IP
@@ -249,10 +251,14 @@ func countryFromRequest(r *http.Request) string {
 		ipStr := strings.Split(r.RemoteAddr, ":")[0]
 		ip = net.ParseIP(ipStr)
 		if ip == nil {
-			return ""
+			return ip
 		}
 	}
 
+	return ip
+}
+
+func countryFromIP(ip net.IP) string {
 	country, ok := geoipdb.GetCountryByAddr(ip)
 	if !ok {
 		return ""

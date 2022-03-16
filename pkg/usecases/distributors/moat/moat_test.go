@@ -79,7 +79,7 @@ func TestCircumventionSettings(t *testing.T) {
 		t.Fatal("Can parse circumventionMap", err)
 	}
 
-	settings, err := d.GetCircumventionSettings("gb", []string{})
+	settings, err := d.GetCircumventionSettings("gb", []string{}, nil)
 	if err != nil {
 		t.Fatal("Can get circumvention settings for gb:", err)
 	}
@@ -87,7 +87,7 @@ func TestCircumventionSettings(t *testing.T) {
 		t.Error("Unexpected settins for 'gb'", settings)
 	}
 
-	settings, err = d.GetCircumventionSettings("cn", []string{})
+	settings, err = d.GetCircumventionSettings("cn", []string{}, nil)
 	if err != nil {
 		t.Fatal("Can get circumvention settings for cn:", err)
 	}
@@ -98,7 +98,7 @@ func TestCircumventionSettings(t *testing.T) {
 		t.Error("Wrong type of 'cn' settings bridge", settings.Settings[0].Bridges.Type)
 	}
 
-	settings, err = d.GetCircumventionSettings("fr", []string{})
+	settings, err = d.GetCircumventionSettings("fr", []string{}, nil)
 	if err != nil {
 		t.Fatal("Can get circumvention settings for fr:", err)
 	}
@@ -109,7 +109,7 @@ func TestCircumventionSettings(t *testing.T) {
 		t.Error("Wrong type of 'fr' settings bridge", settings.Settings[0].Bridges.Type)
 	}
 
-	settings, err = d.GetCircumventionSettings("fr", []string{"snowflake"})
+	settings, err = d.GetCircumventionSettings("fr", []string{"snowflake"}, nil)
 	if err != nil {
 		t.Fatal("Can get circumvention settings for fr:", err)
 	}
@@ -120,7 +120,7 @@ func TestCircumventionSettings(t *testing.T) {
 		t.Error("Now snowlfake type of 'fr' settings bridge", settings.Settings[0].Bridges.Type)
 	}
 
-	settings, err = d.GetCircumventionSettings("fr", []string{"snowflake", "dummy"})
+	settings, err = d.GetCircumventionSettings("fr", []string{"snowflake", "dummy"}, nil)
 	if err != nil {
 		t.Fatal("Can get circumvention settings for fr:", err)
 	}
