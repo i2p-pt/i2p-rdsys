@@ -295,14 +295,8 @@ func (h *Hashring) GetMany(k Hashkey, num int) ([]Resource, error) {
 	}
 
 	for j := i; j < num+i; j++ {
-		r := h.hashnodes[j%h.Len()].elem
-		if r.TestResult().State != StateFunctional {
-			log.Printf("Skipping %q because its state is %d.", r.String(), r.TestResult().State)
-			continue
-		}
 		resources = append(resources, h.hashnodes[j%h.Len()].elem)
 	}
-
 	return resources, nil
 }
 
