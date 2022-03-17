@@ -88,7 +88,7 @@ func TestImapExistingInbox(t *testing.T) {
 func timeoutDistributor(t *testing.T, duration time.Duration) {
 	time.Sleep(duration)
 	syscall.Kill(syscall.Getpid(), syscall.SIGINT)
-	t.Fatal("Timeout, no email recived")
+	t.Error("Timeout, no email recived")
 }
 
 func checkInboxEmptyAndExit(t *testing.T, mbox backend.Mailbox) {
