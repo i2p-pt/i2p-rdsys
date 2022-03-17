@@ -47,7 +47,7 @@ type MoatDistributor struct {
 	builtinBridges        map[string][]string
 	circumventionMap      CircumventionMap
 	circumventionDefaults CircumventionSettings
-	cfg                   *internal.Config
+	cfg                   *internal.MoatDistConfig
 	ipc                   delivery.Mechanism
 	wg                    sync.WaitGroup
 	shutdown              chan bool
@@ -116,16 +116,16 @@ func (d *MoatDistributor) getBridges(bs BridgeSettings) []string {
 	switch bs.Source {
 	case "builtin":
 		bridgeList := d.builtinBridges[bs.Type]
-		if len(bridgeList) <= d.cfg.Distributors.Moat.NumBridgesPerRequest {
+		if len(bridgeList) <= d.cfg.NumBridgesPerRequest {
 			bridgestrings = bridgeList
 		} else {
-			for i := 0; i < d.cfg.Distributors.Moat.NumBridgesPerRequest; i++ {
+			for i := 0; i < d.cfg.NumBridgesPerRequest; i++ {
 				index := mrand.Intn(len(bridgeList))
 				bridgestrings = append(bridgestrings, bridgeList[index])
 			}
 		}
 	case "bridgedb":
-		for i := 0; i < d.cfg.Distributors.Moat.NumBridgesPerRequest; i++ {
+		for i := 0; i < d.cfg.NumBridgesPerRequest; i++ {
 			id := make([]byte, 8)
 			rand.Read(id)
 			bridge, err := d.collection[bs.Type].Get(core.NewHashkey(string(id)))
@@ -183,8 +183,8 @@ func (d *MoatDistributor) housekeeping(rStream chan *core.ResourceDiff) {
 }
 
 func (d *MoatDistributor) fetchBuiltinBridges() {
-	for _, bType := range d.cfg.Distributors.Moat.BuiltInBridgesTypes {
-		builtinBridges, err := d.FetchBridges(d.cfg.Distributors.Moat.BuiltInBridgesURL + "bridges_list." + bType + ".txt")
+	for _, bType := range d.cfg.BuiltInBridgesTypes {
+		builtinBridges, err := d.FetchBridges(d.cfg.BuiltInBridgesURL + "bridges_list." + bType + ".txt")
 		if err != nil {
 			log.Println("Failed to fetch builtin bridges of type", bType, ":", err)
 			continue
@@ -197,10 +197,10 @@ func (d *MoatDistributor) Init(cfg *internal.Config) {
 	log.Printf("Initialising %s distributor.", DistName)
 	mrand.Seed(time.Now().UnixNano())
 
-	d.cfg = cfg
+	d.cfg = &cfg.Distributors.Moat
 	d.shutdown = make(chan bool)
 	d.collection = core.NewCollection()
-	for _, rType := range cfg.Distributors.Moat.Resources {
+	for _, rType := range d.cfg.Resources {
 		d.collection.AddResourceType(rType, true, nil)
 	}
 
@@ -215,7 +215,7 @@ func (d *MoatDistributor) Init(cfg *internal.Config) {
 	rStream := make(chan *core.ResourceDiff)
 	req := core.ResourceRequest{
 		RequestOrigin: "settings",
-		ResourceTypes: cfg.Distributors.Moat.Resources,
+		ResourceTypes: d.cfg.Resources,
 		Receiver:      rStream,
 	}
 	d.ipc.StartStream(&req)
