@@ -46,11 +46,12 @@ type ResourceConfig struct {
 }
 
 type Distributors struct {
-	Https  HttpsDistConfig  `json:"https"`
-	Salmon SalmonDistConfig `json:"salmon"`
-	Stub   StubDistConfig   `json:"stub"`
-	Gettor GettorDistConfig `json:"gettor"`
-	Moat   MoatDistConfig   `json:"moat"`
+	Https    HttpsDistConfig    `json:"https"`
+	Salmon   SalmonDistConfig   `json:"salmon"`
+	Stub     StubDistConfig     `json:"stub"`
+	Gettor   GettorDistConfig   `json:"gettor"`
+	Moat     MoatDistConfig     `json:"moat"`
+	Telegram TelegramDistConfig `json:"telegram"`
 }
 
 type StubDistConfig struct {
@@ -86,6 +87,15 @@ type MoatDistConfig struct {
 	BuiltInBridgesURL     string       `json:"builtin_bridges_url"`
 	BuiltInBridgesTypes   []string     `json:"builtin_bridges_types"`
 	WebApi                WebApiConfig `json:"web_api"`
+}
+
+type TelegramDistConfig struct {
+	Resource             string `json:"resource"`
+	NumBridgesPerRequest int    `json:"num_bridges_per_request"`
+	RotationPeriodHours  int    `json:"rotation_period_hours"`
+	Token                string `json:"token"`
+	MinUserID            int64  `json:"min_user_id"`
+	NewBridgesFile       string `json:"new_bridges_file"`
 }
 
 type WebApiConfig struct {

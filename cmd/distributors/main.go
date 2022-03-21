@@ -10,11 +10,13 @@ import (
 	moatWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/moat"
 	salmonWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/salmon"
 	stubWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/stub"
+	telegramBot "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/telegram"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/gettor"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/https"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/moat"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/salmon"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/stub"
+	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/telegram"
 )
 
 func main() {
@@ -36,11 +38,12 @@ func main() {
 	}
 
 	var constructors = map[string]func(*internal.Config){
-		salmon.DistName: salmonWeb.InitFrontend,
-		https.DistName:  httpsUI.InitFrontend,
-		stub.DistName:   stubWeb.InitFrontend,
-		gettor.DistName: gettorMail.InitFrontend,
-		moat.DistName:   moatWeb.InitFrontend,
+		salmon.DistName:   salmonWeb.InitFrontend,
+		https.DistName:    httpsUI.InitFrontend,
+		stub.DistName:     stubWeb.InitFrontend,
+		gettor.DistName:   gettorMail.InitFrontend,
+		moat.DistName:     moatWeb.InitFrontend,
+		telegram.DistName: telegramBot.InitFrontend,
 	}
 	runFunc, exists := constructors[distName]
 	if !exists {

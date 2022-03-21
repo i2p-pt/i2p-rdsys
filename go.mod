@@ -20,4 +20,5 @@ require (
 	golang.org/x/net v0.0.0-20211011170408-caeb26a5c8c0 // indirect
 	golang.org/x/oauth2 v0.0.0-20211005180243-6b3c2da341f1
 	google.golang.org/api v0.60.0
+	gopkg.in/tucnak/telebot.v2 v2.5.0 // indirect
 )

@@ -100,6 +100,14 @@
                 "cert_file": "",
                 "key_file": ""
             }
+        },
+        "telegram": {
+            "resource": "obfs4",
+            "num_bridges_per_request": 2,
+	    "rotation_period_hours": 24,
+	    "token": "",
+	    "min_user_id": 0,
+	    "new_bridges_file": "new_bridges"
         }
     },
     "updaters": {
