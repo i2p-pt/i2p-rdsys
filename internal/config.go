@@ -96,6 +96,7 @@ type TelegramDistConfig struct {
 	Token                string `json:"token"`
 	MinUserID            int64  `json:"min_user_id"`
 	NewBridgesFile       string `json:"new_bridges_file"`
+	MetricsAddress       string `json:"metrics_address"`
 }
 
 type WebApiConfig struct {

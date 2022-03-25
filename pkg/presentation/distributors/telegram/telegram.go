@@ -2,11 +2,13 @@ package telegram
 
 import (
 	"log"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
 
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/internal"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/telegram"
 	tb "gopkg.in/tucnak/telebot.v2"
@@ -47,6 +49,9 @@ func InitFrontend(cfg *internal.Config) {
 		log.Printf("Shutting down the telegram bot.")
 		tbot.Stop()
 	}()
+
+	http.Handle("/metrics", promhttp.Handler())
+	go http.ListenAndServe(cfg.Distributors.Telegram.MetricsAddress, nil)
 
 	tbot.Start()
 }

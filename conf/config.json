@@ -107,7 +107,8 @@
 	    "rotation_period_hours": 24,
 	    "token": "",
 	    "min_user_id": 0,
-	    "new_bridges_file": "new_bridges"
+	    "new_bridges_file": "new_bridges",
+	    "metrics_address": "127.0.0.1:8000"
         }
     },
     "updaters": {
