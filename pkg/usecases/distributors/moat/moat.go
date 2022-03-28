@@ -112,19 +112,11 @@ func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSetting
 }
 
 func (d *MoatDistributor) getBridges(bs BridgeSettings, ip net.IP) []string {
-	log.Println("type:", bs.Type)
-	var bridgestrings []string
 	switch bs.Source {
 	case "builtin":
-		bridgeList := d.builtinBridges[bs.Type]
-		if len(bridgeList) <= d.cfg.NumBridgesPerRequest {
-			bridgestrings = bridgeList
-		} else {
-			for i := 0; i < d.cfg.NumBridgesPerRequest; i++ {
-				index := mrand.Intn(len(bridgeList))
-				bridgestrings = append(bridgestrings, bridgeList[index])
-			}
-		}
+		bridges := d.GetBuiltInBridges([]string{bs.Type})
+		return bridges[bs.Type]
+
 	case "bridgedb":
 		hashring := d.collection.GetHashring(d.getProportionIndex(), bs.Type)
 		var resources []core.Resource
@@ -137,13 +129,16 @@ func (d *MoatDistributor) getBridges(bs BridgeSettings, ip net.IP) []string {
 				log.Println("Error getting resources from the subhashring:", err)
 			}
 		}
+		bridgestrings := []string{}
 		for _, resource := range resources {
 			bridgestrings = append(bridgestrings, resource.String())
 		}
+		return bridgestrings
+
 	default:
 		log.Println("Requested an unsuported bridge source:", bs.Source)
+		return []string{}
 	}
-	return bridgestrings
 }
 
 func ipHashkey(ip net.IP) core.Hashkey {
