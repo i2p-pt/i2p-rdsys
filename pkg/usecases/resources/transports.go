@@ -68,10 +68,10 @@ func (t *Transport) Expiry() time.Duration {
 }
 
 func (t *Transport) Oid() core.Hashkey {
-	return core.NewHashkey(t.String())
+	return core.NewHashkey(t.String() + "|" + t.BridgeBase.oidString())
 }
 
-// Uid simply returns the pluggable transport's Oid.  For PTs, we don't
+// Uid simply returns the bridge line as a Hashkey. For PTs, we don't
 // distinguish between unique and object IDs because some Tor bridges run more
 // than one PT of the same type, e.g.:
 //
@@ -81,5 +81,5 @@ func (t *Transport) Oid() core.Hashkey {
 // If a PT's Uid is TYPE || FINGERPRINT, then rdsys would get confused because
 // the above two PTs would keep changing its Oid.
 func (t *Transport) Uid() core.Hashkey {
-	return t.Oid()
+	return core.NewHashkey(t.String())
 }

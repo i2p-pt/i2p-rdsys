@@ -1,0 +1,29 @@
+router Unnamed352955656148 60.153.135.82 61343 0 0
+published 2021-05-17 08:31:21
+bandwidth 1165085192 1317052826 1013117558
+reject *:*
+onion-key
+-----BEGIN RSA PUBLIC KEY-----
+8CPnyAn6YQvnkbcNW6WW1yYI/TUp3qmFF3gDvVDsKXBq9gAnNjUakxTsV+ARog2C
+Iw4QoiuQpHCvSd06lhG2QTlhiJxK9JlyoStyiNshKYAT/R2E0YhnjSN4k0XVP5iL
+nSIrV3UyON9iIOejbzxRSv2uMaSWDg3JuXM7GV9gzCaA0GL7hZ2ykWLnyAs=
+-----END RSA PUBLIC KEY-----
+signing-key
+-----BEGIN RSA PUBLIC KEY-----
+MIGJAoGBALlSbHiH4IvtaLs9AD/t9fXD+jd9BZ70VdTjMW0Uwqn56qxdSq/Vh5iH
+uuIMeOjusVdZXxSvIrsqR+t6DA1SEuR/TiNtdir94RknaHP4M19YhizUq1vDu5Xz
+LZVVd/lP+VIgGbpHoOgjTURLZOv8PWbWImWGpk41i/Z8AMNsXuUzAgMBAAE=
+-----END RSA PUBLIC KEY-----
+or-address [78a1:7db4:b132:2b29:2519:9db2:857e:b66a]:61342
+platform Tor 0.2.4.9-alpha on Linux
+opt protocols Link 1 2 Circuit 1 
+uptime 38685807
+contact Somebody <somebody@example.com>
+bridge-distribution-request moat
+fingerprint 56E0 4AE5 C0F6 4F22 206A 4993 9B33 FB59 7BFE 1AA7
+router-signature
+-----BEGIN SIGNATURE-----
+cZDeCAV7768G4fE/gl4qfFu1XOrzHSAfK2N9e+MfKNXq4CCgabLMOk7v5LkqIR5V
+TxJklBCEd9mSIyoX521MQx8XVc08bkjX0V239c6T7ud63/va3YlMyK+QxbqAw77r
+qUJLlBEyvEBaRYstbpdFq9KTVD37MitvwdhVNNsYITg=
+-----END SIGNATURE-----

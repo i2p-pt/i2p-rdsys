@@ -71,3 +71,43 @@ func TestDistributionMechanism(t *testing.T) {
 		}
 	}
 }
+
+func TestDistributionMechanismUpdated(t *testing.T) {
+	fp := "56E04AE5C0F64F22206A49939B33FB597BFE1AA7"
+
+	rcol := core.NewBackendResources()
+	for _, rType := range resourceTypes {
+		rcol.AddResourceType(rType, false, testCfg.Backend.DistProportions)
+	}
+
+	reloadBridgeDescriptors(&testCfg, rcol, nil)
+	rs := rcol.Get("email", "obfs4")
+	found := false
+	for _, res := range rs {
+		transport, ok := res.(*resources.Transport)
+		if ok && transport.Fingerprint == fp {
+			found = true
+			break
+		}
+	}
+
+	if !found {
+		t.Fatalf("Not found %s in email", fp)
+	}
+
+	cfg := testCfg
+	cfg.Backend.DescriptorsFile = "./test_assets/bridge-descriptors_update"
+	reloadBridgeDescriptors(&cfg, rcol, nil)
+	rs = rcol.Get("moat", "obfs4")
+	found = false
+	for _, res := range rs {
+		transport, ok := res.(*resources.Transport)
+		if ok && transport.Fingerprint == fp {
+			found = true
+			break
+		}
+	}
+	if !found {
+		t.Fatalf("Not found %s after being changed to moat", fp)
+	}
+}

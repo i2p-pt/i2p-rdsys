@@ -107,6 +107,10 @@ func (b *BridgeBase) Distributor() string {
 	return b.Distribution
 }
 
+func (b *BridgeBase) oidString() string {
+	return fmt.Sprintf("%s|%v|%v", b.Distribution, b.ORAddresses, b.Flags)
+}
+
 // NewBridge allocates and returns a new Bridge object.
 func NewBridge() *Bridge {
 	b := &Bridge{BridgeBase: BridgeBase{ResourceBase: *core.NewResourceBase()}}
@@ -137,7 +141,7 @@ func (b *Bridge) GetBridgeLine() string {
 }
 
 func (b *Bridge) Oid() core.Hashkey {
-	return core.NewHashkey(b.GetBridgeLine())
+	return core.NewHashkey(b.GetBridgeLine() + "|" + b.BridgeBase.oidString())
 }
 
 func (b *Bridge) Uid() core.Hashkey {
