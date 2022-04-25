@@ -1,3 +1,7 @@
+// Copyright (c) 2021-2022, The Tor Project, Inc.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 // This file implements the core logic of the Salmon proxy distribution system.
 // The theory behind Salmon is presented in the following PETS'16 paper:
 // https://censorbib.nymity.ch/#Douglas2016a
