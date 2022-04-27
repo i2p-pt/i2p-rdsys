@@ -26,9 +26,14 @@ const (
 	KrakenTickerInterval  = 30 * time.Minute
 	MinTransportWords     = 3
 	MinFunctionalFraction = 0.5
+	MinRunningFraction    = 0.5
 	TransportPrefix       = "transport"
 	ExtraInfoPrefix       = "extra-info"
 	RecordEndPrefix       = "-----END SIGNATURE-----"
+)
+
+var (
+	NotEnoughRunningError = errors.New("There is not enough running bridges")
 )
 
 func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendContext) {
@@ -40,7 +45,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	testFunc := bCtx.rTestPool.GetTestFunc()
 	// Immediately parse bridge descriptor when we're called, and let caller
 	// know when we're done.
-	reloadBridgeDescriptors(cfg, rcol, testFunc)
+	reloadBridgeDescriptors(cfg, rcol, testFunc, bCtx.metrics)
 	calcTestedResources(bCtx.metrics, rcol)
 	ready <- true
 	bCtx.metrics.updateDistributors(cfg, rcol)
@@ -52,7 +57,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 			return
 		case <-ticker.C:
 			log.Println("Kraken's ticker is ticking.")
-			reloadBridgeDescriptors(cfg, rcol, testFunc)
+			reloadBridgeDescriptors(cfg, rcol, testFunc, bCtx.metrics)
 			pruneExpiredResources(bCtx.metrics, rcol)
 			calcTestedResources(bCtx.metrics, rcol)
 			bCtx.metrics.updateDistributors(cfg, rcol)
@@ -119,13 +124,19 @@ func pruneExpiredResources(metrics *Metrics, rcol *core.BackendResources) {
 
 // reloadBridgeDescriptors reloads bridge descriptors from the given
 // cached-extrainfo file and its corresponding cached-extrainfo.new.
-func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc resources.TestFunc) {
+func reloadBridgeDescriptors(cfg *Config, rcol *core.BackendResources, testFunc resources.TestFunc, metrics *Metrics) {
 
 	//First load bridge descriptors from network status file
 	bridges, err := loadBridgesFromNetworkstatus(cfg.Backend.NetworkstatusFile)
 	if err != nil {
+		if errors.Is(err, NotEnoughRunningError) {
+			log.Printf("Ignore the bridges descriptor: %s", err.Error())
+			metrics.IgnoringBridgeDescriptors.Set(1)
+			return
+		}
 		log.Printf("Error loading network statuses: %s", err.Error())
 	}
+	metrics.IgnoringBridgeDescriptors.Set(0)
 
 	distributorNames := make([]string, 0, len(cfg.Backend.DistProportions)+1)
 	distributorNames = append(distributorNames, "none")
@@ -198,6 +209,8 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 		return nil, err
 	}
 
+	runningBridges := 0
+	numBridges := 0
 	for obj := range consensus.Iterate(nil) {
 		status, ok := consensus.Get(obj.GetFingerprint())
 		if !ok {
@@ -238,9 +251,19 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 		//check to see if the bridge has the running flag
 		if status.Flags.Running {
 			bridges[b.Fingerprint] = b
+			runningBridges++
 		} else {
 			log.Printf("Found bridge %s in networkstatus but is not running", b.Fingerprint)
 		}
+		numBridges++
+	}
+
+	runningBridgesFraction := float64(runningBridges) / float64(numBridges)
+	if runningBridgesFraction < MinFunctionalFraction {
+		// Fail if most bridges are marked as non-functional. This happens if bridge authority restarts (#102)
+		// XXX: If bridge authority restarts at the same time than rdsys the first update will not get any
+		//      bridges, hopefully this will not happend.
+		return nil, NotEnoughRunningError
 	}
 	return bridges, nil
 }

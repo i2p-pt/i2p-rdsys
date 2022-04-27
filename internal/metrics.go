@@ -25,6 +25,7 @@ const (
 type Metrics struct {
 	TestedResources           *prometheus.GaugeVec
 	DistributingNonFunctional prometheus.Gauge
+	IgnoringBridgeDescriptors prometheus.Gauge
 	Resources                 *prometheus.GaugeVec
 	DistributorResources      *prometheus.GaugeVec
 	Requests                  *prometheus.CounterVec
@@ -49,6 +50,14 @@ func InitMetrics() *Metrics {
 			Namespace: PrometheusNamespace,
 			Name:      "distributing_non_functional_resources",
 			Help:      "If rdsys is distribution non functional bridges",
+		},
+	)
+
+	metrics.IgnoringBridgeDescriptors = promauto.NewGauge(
+		prometheus.GaugeOpts{
+			Namespace: PrometheusNamespace,
+			Name:      "ignoring_bridge_descriptors",
+			Help:      "If the bridge descriptors are being ignored because of failures (high ratio of non-running)",
 		},
 	)
 

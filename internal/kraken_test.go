@@ -5,6 +5,7 @@
 package internal
 
 import (
+	"errors"
 	"testing"
 
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
@@ -28,6 +29,7 @@ var (
 		"none":  {"7C213E44DF0C74777033B33E3366A8967100B8A5", "B20383C0D841CC31BCECD79C46B786CDE8E807AE", "155F8662F72A330FFBFB373296D44623608FD0AB"},
 		"any":   {"768825A19A46DA68FD72FE9222C66A4E7ADE9CD1", "636314F19ED47A448AA6B54E491EEB822523588F", "C518EC4F6B42AB6EA1F45274B85F4DD72E1E1DD1"},
 	}
+	metrics = InitMetrics()
 )
 
 func TestDistributionMechanism(t *testing.T) {
@@ -35,7 +37,7 @@ func TestDistributionMechanism(t *testing.T) {
 	for _, rType := range resourceTypes {
 		rcol.AddResourceType(rType, false, testCfg.Backend.DistProportions)
 	}
-	reloadBridgeDescriptors(&testCfg, rcol, nil)
+	reloadBridgeDescriptors(&testCfg, rcol, nil, metrics)
 
 	foundAny := make([]bool, len(distributor["any"]))
 	for distName := range testCfg.Backend.DistProportions {
@@ -84,7 +86,7 @@ func TestDistributionMechanismUpdated(t *testing.T) {
 		rcol.AddResourceType(rType, false, testCfg.Backend.DistProportions)
 	}
 
-	reloadBridgeDescriptors(&testCfg, rcol, nil)
+	reloadBridgeDescriptors(&testCfg, rcol, nil, metrics)
 	rs := rcol.Get("email", "obfs4")
 	found := false
 	for _, res := range rs {
@@ -101,7 +103,7 @@ func TestDistributionMechanismUpdated(t *testing.T) {
 
 	cfg := testCfg
 	cfg.Backend.DescriptorsFile = "./test_assets/bridge-descriptors_update"
-	reloadBridgeDescriptors(&cfg, rcol, nil)
+	reloadBridgeDescriptors(&cfg, rcol, nil, metrics)
 	rs = rcol.Get("moat", "obfs4")
 	found = false
 	for _, res := range rs {
@@ -124,9 +126,8 @@ func TestOnlyFunctional(t *testing.T) {
 	for _, rType := range resourceTypes {
 		rcol.AddResourceType(rType, false, testCfg.Backend.DistProportions)
 	}
-	metrics := InitMetrics()
 
-	reloadBridgeDescriptors(&testCfg, rcol, nil)
+	reloadBridgeDescriptors(&testCfg, rcol, nil, metrics)
 	calcTestedResources(metrics, rcol)
 	if rcol.OnlyFunctional {
 		t.Errorf("OnlyFunctional flag enabled when most resources are untested")
@@ -189,5 +190,12 @@ func TestOnlyFunctional(t *testing.T) {
 	}
 	if foundDys {
 		t.Errorf("Found dysfunctional bridge %s in email", fpDysfucntional)
+	}
+}
+
+func TestFailUnrunning(t *testing.T) {
+	_, err := loadBridgesFromNetworkstatus("./test_assets/networkstatus-bridges-unrunning")
+	if !errors.Is(err, NotEnoughRunningError) {
+		t.Fatalf("Didn't fail for an update with any running bridges")
 	}
 }
