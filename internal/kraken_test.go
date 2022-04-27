@@ -115,3 +115,79 @@ func TestDistributionMechanismUpdated(t *testing.T) {
 		t.Fatalf("Not found %s after being changed to moat", fp)
 	}
 }
+
+func TestOnlyFunctional(t *testing.T) {
+	fpDysfucntional := "56E04AE5C0F64F22206A49939B33FB597BFE1AA7"
+	fpFunctional := "439B8DF324C99FBEBE49344D61C93244C773E402"
+
+	rcol := core.NewBackendResources()
+	for _, rType := range resourceTypes {
+		rcol.AddResourceType(rType, false, testCfg.Backend.DistProportions)
+	}
+	metrics := InitMetrics()
+
+	reloadBridgeDescriptors(&testCfg, rcol, nil)
+	calcTestedResources(metrics, rcol)
+	if rcol.OnlyFunctional {
+		t.Errorf("OnlyFunctional flag enabled when most resources are untested")
+	}
+
+	rs := rcol.Get("email", "obfs4")
+	foundFunc := false
+	foundDys := false
+	for _, res := range rs {
+		transport, ok := res.(*resources.Transport)
+		if ok {
+			if transport.Fingerprint == fpDysfucntional {
+				foundDys = true
+			} else if transport.Fingerprint == fpFunctional {
+				foundFunc = true
+			}
+		}
+	}
+	if !foundFunc {
+		t.Errorf("Not found %s in email", fpFunctional)
+	}
+	if !foundDys {
+		t.Errorf("Not found %s in email", fpFunctional)
+	}
+
+	for _, hashring := range rcol.Collection {
+		for _, r := range hashring.GetAll() {
+			transport, ok := r.(*resources.Transport)
+			if ok && transport.Fingerprint == fpDysfucntional {
+				r.TestResult().State = core.StateDysfunctional
+				continue
+			}
+			r.TestResult().State = core.StateFunctional
+		}
+	}
+	calcTestedResources(metrics, rcol)
+	if !rcol.OnlyFunctional {
+		t.Errorf("OnlyFunctional flag disabled when most resources are functional")
+	}
+
+	rs = rcol.Get("email", "obfs4")
+	if len(rs) == 0 {
+		t.Fatalf("No resources in email distributor")
+	}
+
+	foundFunc = false
+	foundDys = false
+	for _, res := range rs {
+		transport, ok := res.(*resources.Transport)
+		if ok {
+			if transport.Fingerprint == fpDysfucntional {
+				foundDys = true
+			} else if transport.Fingerprint == fpFunctional {
+				foundFunc = true
+			}
+		}
+	}
+	if !foundFunc {
+		t.Errorf("Not found functional bridge %s in email", fpFunctional)
+	}
+	if foundDys {
+		t.Errorf("Found dysfunctional bridge %s in email", fpDysfucntional)
+	}
+}

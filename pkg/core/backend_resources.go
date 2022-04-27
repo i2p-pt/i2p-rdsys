@@ -23,6 +23,9 @@ const (
 type BackendResources struct {
 	Collection
 
+	// OnlyFunctional resources will be provided to distributors
+	OnlyFunctional bool
+
 	// The mutex us used to protect the access to EventRecipients.
 	// The hashrings in the Collection have their own mutex and the entries
 	// of the Collection map are only set during intialization.
@@ -172,8 +175,12 @@ func (ctx *BackendResources) Get(distName string, rType string) []Resource {
 	}
 
 	var resources []Resource
-	for _, elem := range subHashring.GetAll() {
-		resources = append(resources, elem.(Resource))
+	for _, resource := range subHashring.GetAll() {
+		if ctx.OnlyFunctional && resource.TestResult().State != StateFunctional {
+			continue
+		}
+
+		resources = append(resources, resource)
 	}
 	return resources
 }

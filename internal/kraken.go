@@ -23,11 +23,12 @@ import (
 )
 
 const (
-	KrakenTickerInterval = 30 * time.Minute
-	MinTransportWords    = 3
-	TransportPrefix      = "transport"
-	ExtraInfoPrefix      = "extra-info"
-	RecordEndPrefix      = "-----END SIGNATURE-----"
+	KrakenTickerInterval  = 30 * time.Minute
+	MinTransportWords     = 3
+	MinFunctionalFraction = 0.5
+	TransportPrefix       = "transport"
+	ExtraInfoPrefix       = "extra-info"
+	RecordEndPrefix       = "-----END SIGNATURE-----"
 )
 
 func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendContext) {
@@ -40,6 +41,7 @@ func InitKraken(cfg *Config, shutdown chan bool, ready chan bool, bCtx *BackendC
 	// Immediately parse bridge descriptor when we're called, and let caller
 	// know when we're done.
 	reloadBridgeDescriptors(cfg, rcol, testFunc)
+	calcTestedResources(bCtx.metrics, rcol)
 	ready <- true
 	bCtx.metrics.updateDistributors(cfg, rcol)
 
@@ -72,6 +74,7 @@ func calcTestedResources(metrics *Metrics, rcol *core.BackendResources) {
 		core.StateDysfunctional: "dysfunctional",
 	}
 
+	functionalFractionAcc := 0.
 	for rName, hashring := range rcol.Collection {
 		nums := map[int]int{
 			core.StateUntested:      0,
@@ -84,7 +87,21 @@ func calcTestedResources(metrics *Metrics, rcol *core.BackendResources) {
 		for state, num := range nums {
 			frac := float64(num) / float64(hashring.Len())
 			metrics.TestedResources.With(prometheus.Labels{"type": rName, "status": toStr[state]}).Set(frac)
+			if state == core.StateFunctional {
+				functionalFractionAcc += frac
+			}
 		}
+	}
+
+	// Distribute only functional resources if the fraction is high enough
+	// The fraction might be low after a restart as many resources will be
+	// untested or if there is an issue with bridgestrap.
+	functionalFraction := functionalFractionAcc / float64(len(rcol.Collection))
+	rcol.OnlyFunctional = functionalFraction >= MinFunctionalFraction
+	if rcol.OnlyFunctional {
+		metrics.DistributingNonFunctional.Set(0)
+	} else {
+		metrics.DistributingNonFunctional.Set(1)
 	}
 }
 

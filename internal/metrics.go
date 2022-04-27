@@ -23,10 +23,11 @@ const (
 )
 
 type Metrics struct {
-	TestedResources      *prometheus.GaugeVec
-	Resources            *prometheus.GaugeVec
-	DistributorResources *prometheus.GaugeVec
-	Requests             *prometheus.CounterVec
+	TestedResources           *prometheus.GaugeVec
+	DistributingNonFunctional prometheus.Gauge
+	Resources                 *prometheus.GaugeVec
+	DistributorResources      *prometheus.GaugeVec
+	Requests                  *prometheus.CounterVec
 }
 
 // InitMetrics initialises our Prometheus metrics.
@@ -41,6 +42,14 @@ func InitMetrics() *Metrics {
 			Help:      "The fraction of resources that are currently tested",
 		},
 		[]string{"type", "status"},
+	)
+
+	metrics.DistributingNonFunctional = promauto.NewGauge(
+		prometheus.GaugeOpts{
+			Namespace: PrometheusNamespace,
+			Name:      "distributing_non_functional_resources",
+			Help:      "If rdsys is distribution non functional bridges",
+		},
 	)
 
 	metrics.Resources = promauto.NewGaugeVec(
