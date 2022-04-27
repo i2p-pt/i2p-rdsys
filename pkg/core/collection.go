@@ -45,28 +45,6 @@ func (c Collection) String() string {
 	return strings.Join(s, ", ")
 }
 
-// Get returns a slice of resources of the requested type for the given
-// distributor.
-func (c Collection) Get(distName string, rType string) []Resource {
-	sHashring, exists := c[rType]
-	if !exists {
-		log.Printf("Requested resource type %q not present in our resource collection.", rType)
-		return []Resource{}
-	}
-
-	subHashring, err := sHashring.GetForDist(distName)
-	if err != nil {
-		log.Printf("Failed to get resources for distributor %q: %s", distName, err)
-		return []Resource{}
-	}
-
-	var resources []Resource
-	for _, elem := range subHashring.GetAll() {
-		resources = append(resources, elem.(Resource))
-	}
-	return resources
-}
-
 // GetHashring returns the hashring of the requested type for the given
 // distributor.
 func (c Collection) GetHashring(distName string, rType string) *Hashring {
