@@ -41,13 +41,6 @@ type TelegramDistributor struct {
 }
 
 func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
-	hashring := d.oldHashring
-	pool := "old"
-	if d.cfg.MinUserID != 0 && id > d.cfg.MinUserID {
-		hashring = d.newHashring
-		pool = "new"
-	}
-
 	now := time.Now().Unix() / (60 * 60)
 	period := now / int64(d.cfg.RotationPeriodHours)
 	hashKey := core.NewHashkey(fmt.Sprintf("%d-%d", id, period))
@@ -58,13 +51,24 @@ func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
 	}
 	d.requestHashKeys[hashKey] = time.Now()
 
-	resources, err := hashring.GetMany(hashKey, d.cfg.NumBridgesPerRequest)
+	resources, err := d.newHashring.GetMany(hashKey, d.cfg.NumBridgesPerRequest)
 	if err != nil {
 		log.Println("Error getting resources from the hashring:", err)
 		status = "error"
 	}
 
-	d.bridgeRequestsCount.WithLabelValues(pool, status).Inc()
+	pool := "new"
+	if id >= d.cfg.MinUserID {
+		pool = "old"
+		oldResources, err := d.oldHashring.GetMany(hashKey, d.cfg.NumBridgesPerRequest)
+		if err != nil {
+			log.Println("Error getting resources from the old hashring:", err)
+			status = "error"
+		}
+		resources = append(oldResources, resources...)
+	}
+
+	bridgeRequestsCount.WithLabelValues(pool, status).Inc()
 	return resources
 }
 
