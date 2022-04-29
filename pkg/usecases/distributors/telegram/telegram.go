@@ -28,6 +28,15 @@ const (
 	DistName = "telegram"
 )
 
+var (
+	bridgeRequestsCount = promauto.NewCounterVec(prometheus.CounterOpts{
+		Name: "telegram_bridges_request_total",
+		Help: "The total number of bridge requests",
+	},
+		[]string{"pool", "status"},
+	)
+)
+
 type TelegramDistributor struct {
 	oldHashring *core.Hashring
 	newHashring *core.Hashring
@@ -36,8 +45,7 @@ type TelegramDistributor struct {
 	wg          sync.WaitGroup
 	shutdown    chan bool
 
-	bridgeRequestsCount *prometheus.CounterVec
-	requestHashKeys     map[core.Hashkey]time.Time
+	requestHashKeys map[core.Hashkey]time.Time
 }
 
 func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
@@ -108,13 +116,6 @@ func (d *TelegramDistributor) Init(cfg *internal.Config) {
 	d.shutdown = make(chan bool)
 	d.oldHashring = core.NewHashring()
 	d.newHashring = core.NewHashring()
-
-	d.bridgeRequestsCount = promauto.NewCounterVec(prometheus.CounterOpts{
-		Name: "telegram_bridges_request_total",
-		Help: "The total number of bridge requests",
-	},
-		[]string{"pool", "status"},
-	)
 	d.requestHashKeys = make(map[core.Hashkey]time.Time)
 
 	log.Printf("Initialising resource stream.")
