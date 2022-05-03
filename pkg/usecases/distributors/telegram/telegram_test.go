@@ -39,8 +39,8 @@ func initDistributor() *TelegramDistributor {
 }
 
 func TestGetResources(t *testing.T) {
-	newID := int64(10)
-	oldID := int64(101)
+	newID := int64(101)
+	oldID := int64(10)
 
 	d := initDistributor()
 	defer d.Shutdown()

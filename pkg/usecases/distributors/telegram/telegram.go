@@ -66,7 +66,7 @@ func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
 	}
 
 	pool := "new"
-	if id >= d.cfg.MinUserID {
+	if id < d.cfg.MinUserID {
 		pool = "old"
 		oldResources, err := d.oldHashring.GetMany(hashKey, d.cfg.NumBridgesPerRequest)
 		if err != nil {
