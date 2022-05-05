@@ -5,13 +5,8 @@
 package telegram
 
 import (
-	"bufio"
 	"fmt"
-	"io"
 	"log"
-	"net"
-	"strconv"
-	"strings"
 	"sync"
 	"time"
 
@@ -21,7 +16,7 @@ import (
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/delivery"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/delivery/mechanisms"
-	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/resources"
+	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/persistence"
 )
 
 const (
@@ -44,14 +39,20 @@ type metricsData struct {
 }
 
 type TelegramDistributor struct {
-	oldHashring *core.Hashring
-	newHashring *core.Hashring
-	cfg         *internal.TelegramDistConfig
-	ipc         delivery.Mechanism
-	wg          sync.WaitGroup
-	shutdown    chan bool
+	oldHashring    *core.Hashring
+	newHashring    *core.Hashring
+	cfg            *internal.TelegramDistConfig
+	ipc            delivery.Mechanism
+	wg             sync.WaitGroup
+	shutdown       chan bool
+	metricsChan    chan<- metricsData
+	dynamicBridges map[string][]core.Resource
 
-	metricsChan chan<- metricsData
+	// newHashrightLock is used to block read access when an update is happening in the newHashring
+	newHashrightLock sync.RWMutex
+
+	// NewBridgesStore maps each updater to it's persistence mechanism
+	NewBridgesStore map[string]persistence.Mechanism
 }
 
 func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
@@ -61,7 +62,9 @@ func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
 
 	md := metricsData{hashKey: hashKey}
 
+	d.newHashrightLock.RLock()
 	resources, err := d.newHashring.GetMany(hashKey, d.cfg.NumBridgesPerRequest)
+	d.newHashrightLock.RUnlock()
 	if err != nil {
 		log.Println("Error getting resources from the hashring:", err)
 		md.err = err
@@ -104,6 +107,8 @@ func (d *TelegramDistributor) Init(cfg *internal.Config) {
 	d.shutdown = make(chan bool)
 	d.oldHashring = core.NewHashring()
 	d.newHashring = core.NewHashring()
+	d.loadNewBridgesFromStore()
+	d.dynamicBridges = make(map[string][]core.Resource)
 
 	metricsChan := make(chan metricsData)
 	d.metricsChan = metricsChan
@@ -132,52 +137,6 @@ func (d *TelegramDistributor) Shutdown() {
 	close(d.metricsChan)
 	close(d.shutdown)
 	d.wg.Wait()
-}
-
-func (d *TelegramDistributor) LoadNewBridges(r io.Reader) error {
-	hashring := core.NewHashring()
-
-	scanner := bufio.NewScanner(r)
-	scanner.Split(bufio.ScanLines)
-	for scanner.Scan() {
-		bridgeParts := strings.Split(scanner.Text(), " ")
-		if bridgeParts[0] != d.cfg.Resource {
-			return fmt.Errorf("Not valid bridge type %s", bridgeParts[0])
-		}
-
-		var bridge resources.Transport
-		bridge.RType = bridgeParts[0]
-		bridge.Fingerprint = bridgeParts[2]
-
-		addrParts := strings.Split(bridgeParts[1], ":")
-		if len(addrParts) != 2 {
-			return fmt.Errorf("Malformed address %s", bridgeParts[1])
-		}
-		addr, err := net.ResolveIPAddr("", addrParts[0])
-		if err != nil {
-			return err
-		}
-		bridge.Address = resources.IPAddr{IPAddr: *addr}
-		port, err := strconv.Atoi(addrParts[1])
-		if err != nil {
-			return fmt.Errorf("Can't convert port to integer: %s", err)
-		}
-		bridge.Port = uint16(port)
-
-		bridge.Parameters = make(map[string]string)
-		for _, param := range bridgeParts[3:] {
-			paramParts := strings.Split(param, "=")
-			if len(paramParts) != 2 {
-				return fmt.Errorf("Malformed param %s", param)
-			}
-			bridge.Parameters[paramParts[0]] = paramParts[1]
-		}
-
-		hashring.Add(&bridge)
-	}
-
-	d.newHashring = hashring
-	return nil
 }
 
 func metricsUpdater(ch <-chan metricsData, rotationPeriodHours int) {

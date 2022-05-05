@@ -94,13 +94,14 @@ type MoatDistConfig struct {
 }
 
 type TelegramDistConfig struct {
-	Resource             string `json:"resource"`
-	NumBridgesPerRequest int    `json:"num_bridges_per_request"`
-	RotationPeriodHours  int    `json:"rotation_period_hours"`
-	Token                string `json:"token"`
-	MinUserID            int64  `json:"min_user_id"`
-	NewBridgesFile       string `json:"new_bridges_file"`
-	MetricsAddress       string `json:"metrics_address"`
+	Resource             string            `json:"resource"`
+	NumBridgesPerRequest int               `json:"num_bridges_per_request"`
+	RotationPeriodHours  int               `json:"rotation_period_hours"`
+	Token                string            `json:"token"`
+	MinUserID            int64             `json:"min_user_id"`
+	UpdaterTokens        map[string]string `json:"updater_tokens"`
+	StorageDir           string            `json:"storage_dir"`
+	ApiAddress           string            `json:"api_address"`
 }
 
 type WebApiConfig struct {
