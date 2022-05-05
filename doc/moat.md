@@ -287,9 +287,7 @@ the same payload.
 
 ##### response
 
-If Tor should work on the location without any circumvention mechanism the 
-response will be an empty json object `{}`. Otherwise the response will be a 
-json with the following structure:
+The response will be a json with the following structure:
 
 ```json
 {
@@ -323,7 +321,8 @@ json with the following structure:
         ]
       }
     }
-  ]
+  ],
+  "country": "de"
 }
 ```
 The `settings` list is sorted by the most useful circumvention mechanism first 
@@ -333,6 +332,19 @@ for the location. Each `bridges` entry contains the following fields:
   that are publicly included by the client or `bridgedb` for bridges that are 
   not publicly provided just for this client to use.
 * `bridge_strings` a list of bridgelines for the client to use.
+
+The `country` is the country code for which those settings are. If no country 
+was provided in the request this will be the country discovered from the IP 
+address of the requester.
+
+If Tor should work on the location without any circumvention mechanism the 
+response will contain an empty list in the `settings` field:
+```json
+{
+  "settings": [],
+  "country": "se"
+}
+```
 
 ##### error
 

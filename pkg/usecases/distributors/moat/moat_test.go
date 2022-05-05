@@ -87,8 +87,11 @@ func TestCircumventionSettings(t *testing.T) {
 	if err != nil {
 		t.Fatal("Can get circumvention settings for gb:", err)
 	}
-	if settings != nil {
+	if len(settings.Settings) != 0 {
 		t.Error("Unexpected settins for 'gb'", settings)
+	}
+	if settings.Country != "gb" {
+		t.Error("Unexpected country for 'gb'", settings.Country)
 	}
 
 	settings, err = d.GetCircumventionSettings("cn", []string{}, nil)
@@ -111,6 +114,9 @@ func TestCircumventionSettings(t *testing.T) {
 	}
 	if settings.Settings[0].Bridges.Type != "dummy" {
 		t.Error("Wrong type of 'fr' settings bridge", settings.Settings[0].Bridges.Type)
+	}
+	if settings.Country != "fr" {
+		t.Error("Unexpected country for 'fr'", settings.Country)
 	}
 
 	settings, err = d.GetCircumventionSettings("fr", []string{"snowflake"}, nil)

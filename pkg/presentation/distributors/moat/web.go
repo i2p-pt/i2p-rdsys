@@ -178,10 +178,6 @@ func circumventionSettingsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		return
 	}
-	if s == nil {
-		w.Write([]byte("{}"))
-		return
-	}
 
 	err = enc.Encode(s)
 	if err != nil {

@@ -35,6 +35,7 @@ type CircumventionMap map[string]CircumventionSettings
 
 type CircumventionSettings struct {
 	Settings []Settings `json:"settings"`
+	Country  string     `json:"country,omitempty"`
 }
 
 type Settings struct {
@@ -76,8 +77,11 @@ func (d *MoatDistributor) GetCircumventionMap() CircumventionMap {
 
 func (d *MoatDistributor) GetCircumventionSettings(country string, types []string, ip net.IP) (*CircumventionSettings, error) {
 	cc, ok := d.circumventionMap[country]
+	cc.Country = country
 	if !ok || len(cc.Settings) == 0 {
-		return nil, nil
+		// json.Marshal will return null for an empty slice unless we *make* it
+		cc.Settings = make([]Settings, 0)
+		return &cc, nil
 	}
 	return d.populateCircumventionSettings(&cc, types, ip)
 }
@@ -87,7 +91,11 @@ func (d *MoatDistributor) GetCircumventionDefaults(types []string, ip net.IP) (*
 }
 
 func (d *MoatDistributor) populateCircumventionSettings(cc *CircumventionSettings, types []string, ip net.IP) (*CircumventionSettings, error) {
-	circumventionSettings := CircumventionSettings{make([]Settings, 0, len(cc.Settings))}
+	circumventionSettings := CircumventionSettings{
+		Settings: make([]Settings, 0, len(cc.Settings)),
+		Country:  cc.Country,
+	}
+
 	for _, settings := range cc.Settings {
 		if len(types) != 0 {
 			requestedType := false
