@@ -37,6 +37,12 @@ var (
 	)
 )
 
+type metricsData struct {
+	hashKey core.Hashkey
+	pool    string
+	err     error
+}
+
 type TelegramDistributor struct {
 	oldHashring *core.Hashring
 	newHashring *core.Hashring
@@ -45,7 +51,7 @@ type TelegramDistributor struct {
 	wg          sync.WaitGroup
 	shutdown    chan bool
 
-	requestHashKeys map[core.Hashkey]time.Time
+	metricsChan chan<- metricsData
 }
 
 func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
@@ -53,30 +59,26 @@ func (d *TelegramDistributor) GetResources(id int64) []core.Resource {
 	period := now / int64(d.cfg.RotationPeriodHours)
 	hashKey := core.NewHashkey(fmt.Sprintf("%d-%d", id, period))
 
-	status := "fresh"
-	if _, ok := d.requestHashKeys[hashKey]; ok {
-		status = "cached"
-	}
-	d.requestHashKeys[hashKey] = time.Now()
+	md := metricsData{hashKey: hashKey}
 
 	resources, err := d.newHashring.GetMany(hashKey, d.cfg.NumBridgesPerRequest)
 	if err != nil {
 		log.Println("Error getting resources from the hashring:", err)
-		status = "error"
+		md.err = err
 	}
 
-	pool := "new"
+	md.pool = "new"
 	if id < d.cfg.MinUserID {
-		pool = "old"
+		md.pool = "old"
 		oldResources, err := d.oldHashring.GetMany(hashKey, d.cfg.NumBridgesPerRequest)
 		if err != nil {
 			log.Println("Error getting resources from the old hashring:", err)
-			status = "error"
+			md.err = err
 		}
 		resources = append(oldResources, resources...)
 	}
 
-	bridgeRequestsCount.WithLabelValues(pool, status).Inc()
+	d.metricsChan <- md
 	return resources
 }
 
@@ -86,13 +88,8 @@ func (d *TelegramDistributor) housekeeping(rStream chan *core.ResourceDiff) {
 	defer close(rStream)
 	defer d.ipc.StopStream()
 
-	ticker := time.NewTimer(time.Hour * time.Duration(d.cfg.RotationPeriodHours))
-	defer ticker.Stop()
-
 	for {
 		select {
-		case <-ticker.C:
-			d.expireRequestHashKeys()
 		case diff := <-rStream:
 			d.oldHashring.ApplyDiff(diff)
 		case <-d.shutdown:
@@ -102,21 +99,15 @@ func (d *TelegramDistributor) housekeeping(rStream chan *core.ResourceDiff) {
 	}
 }
 
-func (d *TelegramDistributor) expireRequestHashKeys() {
-	keepDate := time.Now().Add(-time.Hour * time.Duration(d.cfg.RotationPeriodHours))
-	for hk, t := range d.requestHashKeys {
-		if t.Before(keepDate) {
-			delete(d.requestHashKeys, hk)
-		}
-	}
-}
-
 func (d *TelegramDistributor) Init(cfg *internal.Config) {
 	d.cfg = &cfg.Distributors.Telegram
 	d.shutdown = make(chan bool)
 	d.oldHashring = core.NewHashring()
 	d.newHashring = core.NewHashring()
-	d.requestHashKeys = make(map[core.Hashkey]time.Time)
+
+	metricsChan := make(chan metricsData)
+	d.metricsChan = metricsChan
+	go metricsUpdater(metricsChan, cfg.Distributors.Telegram.RotationPeriodHours)
 
 	log.Printf("Initialising resource stream.")
 	d.ipc = mechanisms.NewHttpsIpc(
@@ -138,6 +129,7 @@ func (d *TelegramDistributor) Init(cfg *internal.Config) {
 func (d *TelegramDistributor) Shutdown() {
 	log.Printf("Shutting down %s distributor.", DistName)
 
+	close(d.metricsChan)
 	close(d.shutdown)
 	d.wg.Wait()
 }
@@ -186,4 +178,31 @@ func (d *TelegramDistributor) LoadNewBridges(r io.Reader) error {
 
 	d.newHashring = hashring
 	return nil
+}
+
+func metricsUpdater(ch <-chan metricsData, rotationPeriodHours int) {
+	requestHashKeys := make(map[core.Hashkey]time.Time)
+	lastCleanup := time.Now()
+
+	for md := range ch {
+		status := "fresh"
+		keepDate := time.Now().Add(-time.Hour * time.Duration(rotationPeriodHours))
+		if date, ok := requestHashKeys[md.hashKey]; ok && date.After(keepDate) {
+			status = "cached"
+		} else {
+			requestHashKeys[md.hashKey] = time.Now()
+		}
+		if md.err != nil {
+			status = "error"
+		}
+		bridgeRequestsCount.WithLabelValues(md.pool, status).Inc()
+
+		if lastCleanup.Before(keepDate) {
+			for hk, t := range requestHashKeys {
+				if t.Before(keepDate) {
+					delete(requestHashKeys, hk)
+				}
+			}
+		}
+	}
 }
