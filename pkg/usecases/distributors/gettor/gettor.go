@@ -45,8 +45,12 @@ var (
 
 var platformAliases = map[string]string{
 	"linux":   "linux64",
+	"lin":     "linux64",
 	"windows": "win32",
+	"win":     "win32",
 	"osx":     "osx64",
+	"macos":   "osx64",
+	"mac":     "osx64",
 }
 
 type GettorDistributor struct {
