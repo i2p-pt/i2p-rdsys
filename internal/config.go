@@ -75,8 +75,9 @@ type SalmonDistConfig struct {
 }
 
 type GettorDistConfig struct {
-	Resources []string    `json:"resources"`
-	Email     EmailConfig `json:"email"`
+	Resources      []string    `json:"resources"`
+	Email          EmailConfig `json:"email"`
+	MetricsAddress string      `json:"metrics_address"`
 }
 
 type MoatDistConfig struct {

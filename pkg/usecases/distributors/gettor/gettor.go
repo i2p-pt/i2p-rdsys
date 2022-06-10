@@ -11,6 +11,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promauto"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/internal"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/delivery"
@@ -23,6 +25,22 @@ const (
 
 	CommandHelp  = "help"
 	CommandLinks = "links"
+)
+
+var (
+	requestsCount = promauto.NewCounterVec(prometheus.CounterOpts{
+		Name: "gettor_request_total",
+		Help: "The total number of gettor requests",
+	},
+		[]string{"command", "platform", "locale"},
+	)
+
+	linkResponseCount = promauto.NewCounterVec(prometheus.CounterOpts{
+		Name: "gettor_link_response_total",
+		Help: "The total number of gettor link responses",
+	},
+		[]string{"platform", "locale"},
+	)
 )
 
 var platformAliases = map[string]string{
@@ -54,6 +72,7 @@ type Command struct {
 }
 
 func (d *GettorDistributor) GetLinks(platform, locale string) []*resources.TBLink {
+	linkResponseCount.WithLabelValues(platform, locale).Inc()
 	return d.tblinks[platform][locale]
 }
 
@@ -66,6 +85,7 @@ func (d *GettorDistributor) ParseCommand(body io.Reader) *Command {
 
 	scanner := bufio.NewScanner(body)
 	scanner.Split(bufio.ScanWords)
+	requestedPlatform := ""
 	for scanner.Scan() {
 		if command.Locale != "" && (command.Platform != "" || command.Command != "") {
 			break
@@ -88,17 +108,20 @@ func (d *GettorDistributor) ParseCommand(body io.Reader) *Command {
 		if command.Platform == "" {
 			platform, exists := platformAliases[word]
 			if exists {
+				requestedPlatform = word
 				command.Platform = platform
 				continue
 			}
 
 			_, exists = d.tblinks[word]
 			if exists {
+				requestedPlatform = word
 				command.Platform = word
 				continue
 			}
 		}
 	}
+	requestsCount.WithLabelValues(command.Command, requestedPlatform, command.Locale).Inc()
 
 	if command.Command == "" {
 		if command.Platform == "" {

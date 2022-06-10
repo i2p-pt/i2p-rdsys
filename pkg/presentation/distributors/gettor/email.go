@@ -7,9 +7,11 @@ package gettor
 import (
 	"fmt"
 	"io"
+	"net/http"
 	"net/mail"
 	"strings"
 
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/internal"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/common"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/gettor"
@@ -45,6 +47,9 @@ func InitFrontend(cfg *internal.Config) {
 		}
 		return nil
 	}
+
+	http.Handle("/metrics", promhttp.Handler())
+	go http.ListenAndServe(cfg.Distributors.Gettor.MetricsAddress, nil)
 
 	common.StartEmail(
 		&cfg.Distributors.Gettor.Email,

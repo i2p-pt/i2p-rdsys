@@ -74,6 +74,7 @@
         },
         "gettor": {
             "resources": ["tblink"],
+            "metrics_address": "127.0.0.1:7700",
             "email": {
                 "address": "gettor@example.com",
                 "smtp_server": "smt.example.com:25",
