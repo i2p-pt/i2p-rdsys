@@ -14,26 +14,27 @@
         "storage_dir": "/tmp/storage",
         "assignments_file": "./assignments.log",
         "resources": {
-                "vanilla": {
-			"unpartitioned": false,
-			"stored": false,
-			"distributors": ["https", "salmon"]
-		},
-		"obfs2": {},
-		"obfs3": {},
-		"obfs4": {},
-		"scramblesuit": {},
-		"tblink": {
-			"unpartitioned": true,
-			"stored": true
-		}
+            "vanilla": {
+                "unpartitioned": false,
+                "stored": false,
+                "distributors": ["https", "salmon"]
+            },
+            "obfs2": {},
+            "obfs3": {},
+            "obfs4": {},
+            "scramblesuit": {},
+            "tblink": {
+                "unpartitioned": true,
+                "stored": true
+            }
         },
         "api_tokens": {
-                "https": "HttpsApiTokenPlaceholder",
-                "salmon": "SalmonApiTokenPlaceholder",
-                "stub": "StubApiTokenPlaceholder",
-                "gettor": "GettorApiTokenPlaceholder",
-                "moat": "MoatApiTokenPlaceholder"
+            "https": "HttpsApiTokenPlaceholder",
+            "salmon": "SalmonApiTokenPlaceholder",
+            "stub": "StubApiTokenPlaceholder",
+            "gettor": "GettorApiTokenPlaceholder",
+            "moat": "MoatApiTokenPlaceholder",
+            "i2p": "I2pApiTokenPlaceholder"
         },
         "web_api": {
             "api_address": "127.0.0.1:7100",
@@ -51,6 +52,14 @@
             "resources": ["obfs4", "vanilla"],
             "web_api": {
                 "api_address": "127.0.0.1:7200",
+                "cert_file": "",
+                "key_file": ""
+            }
+        },
+        "i2p": {
+            "resources": ["obfs4", "vanilla"],
+            "web_api": {
+                "api_address": "i2p-rdsys-distributor",
                 "cert_file": "",
                 "key_file": ""
             }
@@ -87,7 +96,7 @@
         },
         "moat": {
             "resources": ["obfs4", "vanilla"],
-            "geoipdb":  "/usr/share/tor/geoip",
+            "geoipdb": "/usr/share/tor/geoip",
             "geoip6db": "/usr/share/tor/geoip6",
             "circumvention_map": "circumvention.json",
             "circumvention_defaults": "circumvention_defaults.json",
@@ -105,14 +114,14 @@
         "telegram": {
             "resource": "obfs4",
             "num_bridges_per_request": 2,
-	    "rotation_period_hours": 24,
-	    "token": "",
-	    "min_user_id": 0,
-	    "updater_tokens": {
-	        "name": "TokenPlaceholder"
-	    },
-	    "storage_dir": "/tmp/storage_telegram",
-	    "api_address": "127.0.0.1:7600"
+            "rotation_period_hours": 24,
+            "token": "",
+            "min_user_id": 0,
+            "updater_tokens": {
+                "name": "TokenPlaceholder"
+            },
+            "storage_dir": "/tmp/storage_telegram",
+            "api_address": "127.0.0.1:7600"
         }
     },
     "updaters": {
@@ -126,8 +135,7 @@
                 "auth_token": "",
                 "owner": "TheTorProject"
             },
-            "s3": [
-                {
+            "s3": [{
                     "access_key": "",
                     "access_secret": "",
                     "signing_method": "archive_org_dangerous_workaround",
@@ -152,7 +160,7 @@
                 "app_credential_path": "",
                 "user_credential_path": "",
                 "parent_folder_id": ""
-	    }
+            }
         }
     }
 }

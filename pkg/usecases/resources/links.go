@@ -5,11 +5,19 @@
 package resources
 
 import (
+	"errors"
 	"fmt"
+	"io/ioutil"
+	"net/http"
+	"net/url"
+	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 	"time"
 
+	"github.com/xgfone/bt/bencode"
+	"github.com/xgfone/bt/metainfo"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/core"
 )
 
@@ -127,4 +135,85 @@ func (tl *TBLink) Expiry() time.Duration {
 // Distributor set for this link
 func (tl *TBLink) Distributor() string {
 	return ""
+}
+
+func (tl *TBLink) downloadFile(filePath, link string) (string, error) {
+	if _, err := os.Stat(filePath); errors.Is(err, os.ErrNotExist) {
+		resp, err := http.Get(link)
+		if err != nil {
+			return "", err
+		}
+		defer resp.Body.Close()
+		if resp.StatusCode != http.StatusOK {
+			return "", fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+		}
+		bytes, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			return "", err
+		}
+		err = ioutil.WriteFile(filePath, bytes, 0644)
+		if err != nil {
+			return "", err
+		}
+		return filePath, nil
+	}
+	return filePath, nil
+}
+
+func (t *TBLink) generateTorrent(file string, announces []string) (*metainfo.MetaInfo, error) {
+	//info, err := metainfo.NewInfoFromFilePath(file, 5120)
+	info, err := metainfo.NewInfoFromFilePath(file, 10240)
+	if err != nil {
+		return nil, fmt.Errorf("GenerateTorrent: %s", err)
+	}
+	info.Name = filepath.Base(file)
+	var mi metainfo.MetaInfo
+	mi.InfoBytes, err = bencode.EncodeBytes(info)
+	if err != nil {
+		return nil, fmt.Errorf("GenerateTorrent: %s", err)
+	}
+	switch len(announces) {
+	case 0:
+		// idk's Open Tracker inside I2P
+		mi.Announce = "http://mb5ir7klpc2tj6ha3xhmrs3mseqvanauciuoiamx2mmzujvg67uq.b32.i2p/a"
+	case 1:
+		mi.Announce = announces[0]
+	default:
+		mi.AnnounceList = metainfo.AnnounceList{announces}
+	}
+	url, err := url.Parse("http://idk.i2p/torbrowser/" + filepath.Base(file))
+	if err != nil {
+		return nil, fmt.Errorf("GenerateTorrent: %s", err)
+	}
+	mi.URLList = []string{url.String()}
+	clearurl, err := url.Parse("https://eyedeekay.github.io/torbrowser/" + filepath.Base(file))
+	if err != nil {
+		return nil, fmt.Errorf("GenerateTorrent: %s", err)
+	}
+	mi.URLList = append(mi.URLList, clearurl.String())
+	return &mi, nil
+}
+
+func (tl *TBLink) GenerateFileMagnet(filePath string) (string, error) {
+	filePath, err := tl.downloadFile(filePath, tl.Link)
+	if err != nil {
+		return "", err
+	}
+	mi, err := tl.generateTorrent(filePath, []string{})
+	if err != nil {
+		return "", err
+	}
+	return mi.Magnet("", mi.InfoHash()).String(), nil
+}
+
+func (tl *TBLink) GenerateSigMagnet(filePath string) (string, error) {
+	filePath, err := tl.downloadFile(filePath, tl.SigLink)
+	if err != nil {
+		return "", err
+	}
+	mi, err := tl.generateTorrent(filePath, []string{})
+	if err != nil {
+		return "", err
+	}
+	return mi.Magnet("", mi.InfoHash()).String(), nil
 }

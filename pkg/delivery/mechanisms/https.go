@@ -34,6 +34,11 @@ type HttpsIpcContext struct {
 	done            chan bool
 	wg              sync.WaitGroup
 	timeBeforeRetry time.Duration
+	Transport       func() *http.Transport
+}
+
+func transport() *http.Transport {
+	return http.DefaultTransport.(*http.Transport)
 }
 
 func NewHttpsIpc(apiEndpoint string, method string, bearerToken string) *HttpsIpcContext {
@@ -41,7 +46,8 @@ func NewHttpsIpc(apiEndpoint string, method string, bearerToken string) *HttpsIp
 	return &HttpsIpcContext{
 		apiEndpoint: apiEndpoint,
 		method:      method,
-		bearerToken: bearerToken}
+		bearerToken: bearerToken,
+		Transport:   transport}
 }
 
 // StartStream initates the start of the HTTP resource stream.
@@ -191,7 +197,11 @@ func (ctx *HttpsIpcContext) sendRequest(req interface{}) (*http.Response, error)
 		httpReq.Header.Set("Authorization", fmt.Sprintf("Bearer %s", ctx.bearerToken))
 	}
 
-	client := &http.Client{}
+	tr := ctx.Transport()
+
+	client := &http.Client{
+		Transport: tr,
+	}
 	resp, err := client.Do(httpReq)
 	if err != nil {
 		return nil, err

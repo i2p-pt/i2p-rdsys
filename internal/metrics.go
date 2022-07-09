@@ -7,6 +7,7 @@ package internal
 import (
 	"fmt"
 	"log"
+	"net"
 	"os"
 	"strconv"
 	"strings"
@@ -128,8 +129,12 @@ func (m *Metrics) updateDistributors(cfg *Config, rcol *core.BackendResources) {
 
 func bridgeInfo(bridge resources.BridgeBase) string {
 	ip := map[uint16]struct{}{}
+	ipAddr := net.ParseIP(bridge.Address.String())
+	if ipAddr == nil {
+		ipAddr = net.ParseIP("127.0.0.1")
+	}
 
-	if bridge.Address.IP.To4() != nil {
+	if ipAddr.To4() != nil {
 		ip[4] = struct{}{}
 	} else {
 		ip[6] = struct{}{}

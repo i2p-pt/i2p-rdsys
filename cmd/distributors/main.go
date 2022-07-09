@@ -11,12 +11,14 @@ import (
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/internal"
 	gettorMail "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/gettor"
 	httpsUI "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/https"
+	i2phttpsUI "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/i2p"
 	moatWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/moat"
 	salmonWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/salmon"
 	stubWeb "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/stub"
 	telegramBot "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/presentation/distributors/telegram"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/gettor"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/https"
+	i2phttps "gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/i2p"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/moat"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/salmon"
 	"gitlab.torproject.org/tpo/anti-censorship/rdsys/pkg/usecases/distributors/stub"
@@ -44,6 +46,7 @@ func main() {
 	var constructors = map[string]func(*internal.Config){
 		salmon.DistName:   salmonWeb.InitFrontend,
 		https.DistName:    httpsUI.InitFrontend,
+		i2phttps.DistName: i2phttpsUI.InitFrontend,
 		stub.DistName:     stubWeb.InitFrontend,
 		gettor.DistName:   gettorMail.InitFrontend,
 		moat.DistName:     moatWeb.InitFrontend,

@@ -21,6 +21,7 @@ const (
 	ResourceTypeWebSocket    = "websocket"
 	ResourceTypeFTE          = "fte"
 	ResourceTypeHTTPT        = "httpt"
+	ResourceTypeI2P          = "i2p"
 	ResourceTypeTBLink       = "tblink"
 )
 
@@ -35,6 +36,7 @@ var ResourceMap = map[string]func() interface{}{
 	ResourceTypeWebSocket:    func() interface{} { return NewTransport() },
 	ResourceTypeFTE:          func() interface{} { return NewTransport() },
 	ResourceTypeHTTPT:        func() interface{} { return NewTransport() },
+	ResourceTypeI2P:          func() interface{} { return NewTransport() },
 	ResourceTypeTBLink:       func() interface{} { return NewTBLink() },
 }
 

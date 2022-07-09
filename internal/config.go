@@ -56,6 +56,7 @@ type Distributors struct {
 	Gettor   GettorDistConfig   `json:"gettor"`
 	Moat     MoatDistConfig     `json:"moat"`
 	Telegram TelegramDistConfig `json:"telegram"`
+	I2P      I2PHttpsDistConfig `json:"i2p"`
 }
 
 type StubDistConfig struct {
@@ -105,6 +106,11 @@ type TelegramDistConfig struct {
 	ApiAddress           string            `json:"api_address"`
 }
 
+type I2PHttpsDistConfig struct {
+	Resources []string     `json:"resources"`
+	WebApi    WebApiConfig `json:"web_api"`
+}
+
 type WebApiConfig struct {
 	ApiAddress string `json:"api_address"`
 	CertFile   string `json:"cert_file"`
@@ -130,6 +136,7 @@ type GettorUpdater struct {
 	Gitlab             Gitlab             `json:"gitlab"`
 	S3Updaters         []S3Updater        `json:"s3"`
 	GoogleDriveUpdater GoogleDriveUpdater `json:"gdrive"`
+	I2P                I2P                `json:"i2p"`
 }
 
 type Github struct {
@@ -158,6 +165,10 @@ type GoogleDriveUpdater struct {
 	AppCredentialPath  string `json:"app_credential_path"`
 	UserCredentialPath string `json:"user_credential_path"`
 	ParentFolderID     string `json:"parent_folder_id"`
+}
+
+type I2P struct {
+	UpstreamMirror string `json:"upstream_mirror"`
 }
 
 // LoadConfig loads the given JSON configuration file and returns the resulting

@@ -7,6 +7,7 @@ package common
 import (
 	"context"
 	"log"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
@@ -22,6 +23,20 @@ import (
 // SIGTERM.  When that happens, the function calls the distributor's Shutdown
 // method and shuts down the Web server.
 func StartWebServer(apiCfg *internal.WebApiConfig, distCfg *internal.Config,
+	dist distributors.Distributor, handlers map[string]http.HandlerFunc) {
+	listener, err := net.Listen("tcp", apiCfg.ApiAddress)
+	if err != nil {
+		log.Fatalf("Error listening on %s: %s", apiCfg.ApiAddress, err)
+	}
+	ListenWebServer(listener, apiCfg, distCfg, dist, handlers)
+}
+
+// ListenWebServer helps distributor frontends start a Web server and configure
+// handlers.  This function does not return until it receives a SIGINT or
+// SIGTERM.  When that happens, the function calls the distributor's Shutdown
+// method and shuts down the Web server. It is identical to the StartWebServer
+// except that it takes a net.Listener instead of a string address.
+func ListenWebServer(listener net.Listener, apiCfg *internal.WebApiConfig, distCfg *internal.Config,
 	dist distributors.Distributor, handlers map[string]http.HandlerFunc) {
 
 	var srv http.Server
@@ -55,13 +70,16 @@ func StartWebServer(apiCfg *internal.WebApiConfig, distCfg *internal.Config,
 	// srv.Addr = cfg.Distributors.Salmon.ApiAddress
 	srv.Addr = apiCfg.ApiAddress
 	log.Printf("Starting Web server at %s.", srv.Addr)
-
+	//os.Exit(0)
 	var err error
 	if apiCfg.KeyFile != "" && apiCfg.CertFile != "" {
-		err = srv.ListenAndServeTLS(apiCfg.CertFile,
-			apiCfg.KeyFile)
+		err = srv.ServeTLS(
+			listener,
+			apiCfg.CertFile,
+			apiCfg.KeyFile,
+		)
 	} else {
-		err = srv.ListenAndServe()
+		err = srv.Serve(listener)
 	}
 	if err != nil {
 		log.Printf("Web API shut down: %s", err)

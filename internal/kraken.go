@@ -223,7 +223,7 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 		b.Fingerprint = string(status.GetFingerprint())
 
 		if addr, err := net.ResolveIPAddr("", status.Address.IPv6Address.String()); err == nil {
-			b.Address = resources.IPAddr{*addr}
+			b.Address = resources.Addr{addr}
 			b.Port = status.Address.IPv6ORPort
 			oraddress := resources.ORAddress{
 				IPVersion: 6,
@@ -233,7 +233,7 @@ func loadBridgesFromNetworkstatus(networkstatusFile string) (map[string]*resourc
 			b.ORAddresses = append(b.ORAddresses, oraddress)
 		}
 		if addr, err := net.ResolveIPAddr("", status.Address.IPv4Address.String()); err == nil {
-			b.Address = resources.IPAddr{*addr}
+			b.Address = resources.Addr{addr}
 			b.Port = status.Address.IPv4ORPort
 			oraddress := resources.ORAddress{
 				IPVersion: 4,
@@ -388,7 +388,7 @@ func populateTransportInfo(transport string, t *resources.Transport) error {
 	if err != nil {
 		return err
 	}
-	t.Address = resources.IPAddr{net.IPAddr{addr.IP, addr.Zone}}
+	t.Address = resources.Addr{&net.IPAddr{addr.IP, addr.Zone}}
 	p, err := strconv.Atoi(port)
 	if err != nil {
 		return err

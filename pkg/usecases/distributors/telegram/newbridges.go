@@ -100,7 +100,7 @@ func parseBridgeline(bridgeline string) (core.Resource, error) {
 	if err != nil {
 		return nil, err
 	}
-	bridge.Address = resources.IPAddr{IPAddr: *addr}
+	bridge.Address = resources.Addr{Addr: addr}
 	port, err := strconv.Atoi(addrParts[1])
 	if err != nil {
 		return nil, fmt.Errorf("Can't convert port to integer: %s", err)
