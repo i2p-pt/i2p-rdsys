@@ -27,14 +27,31 @@ throughout the whole process.
 needsUpdate for a Torrent-Based Updater
 ---------------------------------------
 
-TODO: Describe unique needs(and simplicity) of this function for a
-Torrent-based updater
+When a Torrent-based updater checks if it needs an update, it needs to
+compare the version of the last magnet link it generated with the latest
+version of the Tor Browser Bundle. This requires it to keep track of the
+magnet links it generates, which the i2pProvider struct does by keeping
+a `map` of `TBLink`'s keyed by the platform. If a new release is detected
+for a platorm, the old one is replaced.
 
 newRelease for a Torrent-Based Updater
 --------------------------------------
 
-TODO: Describe unique needs(and complexity) of this function for a
-Torrent-based updater
+When a Torrent-based updater needs to release an update, it needs to generate
+a magnet link and also, in theory, seed the torrent with at least one type of
+tracking. Since adding a fully-fledged I2P torrent client to rdsys isn't yet
+possible, we work around the need to seed the torrent ourselves by:
+
+ 1. Always using identical files(Signed, authentic Tor Browser builds and
+ detatched signature files) as the basis for our torrent metadata
+ 2. Always using identical settings when generating the torrents themselves.
+
+This makes the torrents "reproducible" in the sense that anyone can start with
+the same data and the same settings and end up with the same magnet links. That
+way, it simply joins the swarm of users who are sharing the Tor Browser over
+I2P torrents because they are users of `i2p.plugins.tor-manager`. This takes
+care of seeding without requiring the resources of the rdsys admin by
+leveraging the file-sharing features of `i2p.plugins.tor-manager`.
 
 Clients for a Torrent-Based Updater
 -----------------------------------
@@ -44,7 +61,7 @@ an I2P-enabled Torrent client. I2P is used to bootstrap the torrent without
 revealing the location of the initial seeders, and will for the time being
 updates will be "Visible" faster when they are performed within I2P. For now,
 I enable this using a hack of the built-in I2P Java torrent client, which is
-called "I2PSnark." In the future, a pure-Go bittorrent-over-I2P client would
-be better. Of course, that would still require an I2P router to be running on
-the same host as the Tor Browser. In it's most useful form, it would also embed
-a pure-Go I2P router for the pure-Go I2P torrent client to use.
+called "I2PSnark"(See section above). In the future, a pure-Go bittorrent-over-I2P
+client would be better. Of course, that would still require an I2P router to be
+running on the same host as the Tor Browser. In it's most useful form, it would
+also embed a pure-Go I2P router for the pure-Go I2P torrent client to use.
