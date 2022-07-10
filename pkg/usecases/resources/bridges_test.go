@@ -29,12 +29,17 @@ func TestHashFingerprint(t *testing.T) {
 }
 
 func TestPrintTorAddr(t *testing.T) {
-	a := &IPAddr{}
-	a.IP = net.ParseIP("1.2.3.4")
+	a := &Addr{}
+	a.Addr = &net.IPAddr{
+		IP: net.ParseIP("1.2.3.4"),
+	}
+
 	if PrintTorAddr(a) != "1.2.3.4" {
 		t.Errorf("failed to print IPv4 address correctly")
 	}
-	a.IP = net.ParseIP("2a0c:4d80:42:702::1")
+	a.Addr = &net.IPAddr{
+		IP: net.ParseIP("2a0c:4d80:42:702::1"),
+	}
 	if PrintTorAddr(a) != "[2a0c:4d80:42:702::1]" {
 		t.Errorf("failed to print IPv666666ess correctly")
 	}

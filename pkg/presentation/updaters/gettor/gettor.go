@@ -83,12 +83,12 @@ func InitUpdater(cfg *internal.Config) {
 		providers = append(providers, googleDrive)
 	}
 
-	googleDrive, err := newI2PUpdater(&cfg.Updaters.Gettor.I2P)
+	i2pUpdater := newI2PProvider(&cfg.Updaters.Gettor.I2P)
 	if err != nil {
 		log.Printf("cannot create I2P provider: %v", err)
 	} else {
-		providers = append(providers, googleDrive)
-	
+		providers = append(providers, i2pUpdater)
+	}
 
 	for _, s3Config := range cfg.Updaters.Gettor.S3Updaters {
 		s3Provider, err := newS3Updater(&s3Config)

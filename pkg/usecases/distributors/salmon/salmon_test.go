@@ -151,7 +151,7 @@ func genResourceMap(num int) core.ResourceMap {
 		addrStr := strings.Join(octets, ".")
 		ip := net.ParseIP(addrStr)
 		ipaddr := net.IPAddr{IP: ip}
-		r.Address = resources.IPAddr{IPAddr: ipaddr}
+		r.Address = resources.Addr{Addr: &ipaddr}
 		r.Port = uint16(rand.Intn(65536))
 		r.Parameters["iat-mode"] = "0"
 		// No need to have "real-looking" certificates here.

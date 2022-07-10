@@ -29,6 +29,9 @@ func newI2PProvider(cfg *internal.I2P) *i2pProvider {
 	return &i2pProvider{ctx, cfg}
 }
 
+//needsUpdate(platform string, version resources.Version) bool
+//newRelease(platform string, version resources.Version) uploadFileFunc
+
 func (gh *i2pProvider) newRelease(platform string, version resources.Version) uploadFileFunc {
 	return func(binaryPath string, sigPath string, locale string) *resources.TBLink {
 		link := resources.NewTBLink()
