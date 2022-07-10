@@ -6,7 +6,10 @@ package gettor
 
 import (
 	"context"
+	"encoding/json"
+	"io/ioutil"
 	"log"
+	"net/http"
 	"path"
 
 	//"github.com/google/go-github/github"
@@ -20,46 +23,108 @@ const (
 )
 
 type i2pProvider struct {
-	ctx context.Context
-	cfg *internal.I2P
+	ctx   context.Context
+	cfg   *internal.I2P
+	cache map[string]*resources.TBLink
 }
 
 func newI2PProvider(cfg *internal.I2P) *i2pProvider {
 	ctx := context.Background()
-	return &i2pProvider{ctx, cfg}
+	return &i2pProvider{ctx, cfg, make(map[string]*resources.TBLink)}
 }
 
 //needsUpdate(platform string, version resources.Version) bool
+func (i *i2pProvider) needsUpdate(platform string, version resources.Version) bool {
+	release, err := i.getRelease()
+	if err != nil {
+		log.Println("[I2P] Error fetching latest release:", err)
+		return false
+	}
+	cached, ok := i.cache[platform]
+	if !ok {
+		log.Println("[I2P] No cached release for", platform)
+		return true
+	}
+	cachedVersion, err := resources.Str2Version(cached.Version.String())
+	if err != nil {
+		log.Println("[I2P] Error parsing cached version:", err)
+		return true
+	}
+	if version.Compare(cachedVersion) == 1 {
+		log.Println("[I2P] New version available:", version, ">", cachedVersion)
+		return true
+	}
+	releaseVersion, err := resources.Str2Version(release)
+	if err != nil {
+		log.Println("[I2P] Error parsing latest release:", err)
+		return true
+	}
+	if version.Compare(releaseVersion) == 1 {
+		log.Println("[I2P] New version available:", version, ">", releaseVersion)
+		return true
+	}
+	return false
+}
+
 //newRelease(platform string, version resources.Version) uploadFileFunc
 
-func (gh *i2pProvider) newRelease(platform string, version resources.Version) uploadFileFunc {
+func (i *i2pProvider) newRelease(platform string, version resources.Version) uploadFileFunc {
 	return func(binaryPath string, sigPath string, locale string) *resources.TBLink {
-		link := resources.NewTBLink()
-		for i, filePath := range []string{binaryPath, sigPath} {
+		if _, ok := i.cache[platform]; !ok {
+			i.cache[platform] = resources.NewTBLink()
+		}
+		for index, filePath := range []string{binaryPath, sigPath} {
 			filename := path.Base(filePath)
-			if i == 0 {
-				MagnetLink, err := link.GenerateFileMagnet(filename)
+			if index == 0 {
+				MagnetLink, err := i.cache[platform].GenerateFileMagnet(filename)
 				if err != nil {
 					log.Println("[I2P] Couldn't generate a magnet link for", filename, ":", err)
 					return nil
 				}
-				link.Link = MagnetLink
+				i.cache[platform].Link = MagnetLink
 			} else {
-				SigMagnetLink, err := link.GenerateSigMagnet(filename)
+				SigMagnetLink, err := i.cache[platform].GenerateSigMagnet(filename)
 				if err != nil {
 					log.Println("[I2P] Couldn't generate a magnet link for", filename, ":", err)
 					return nil
 				}
-				link.SigLink = SigMagnetLink
+				i.cache[platform].SigLink = SigMagnetLink
 			}
 		}
 
-		link.Version = version
-		link.Provider = i2pPlatform
-		link.Platform = platform
-		link.Locale = locale
-		link.FileName = path.Base(binaryPath)
+		i.cache[platform].Version = version
+		i.cache[platform].Provider = i2pPlatform
+		i.cache[platform].Platform = platform
+		i.cache[platform].Locale = locale
+		i.cache[platform].FileName = path.Base(binaryPath)
 
-		return link
+		return i.cache[platform]
 	}
+}
+
+func (i *i2pProvider) getRelease() (string, error) {
+	// get the latest version for the platform from "https://aus1.torproject.org/torbrowser/update_3/release/downloads.json"
+	// return the list of releases for the platform
+	// return an error if the platform is not supported
+	// start by fetching the downloads.json
+	resp, err := http.Get("https://aus1.torproject.org/torbrowser/update_3/release/downloads.json")
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+	// read the body
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return "", err
+	}
+	// parse the body
+	var downloads map[string]interface{}
+	err = json.Unmarshal(body, &downloads)
+	if err != nil {
+		return "", err
+	}
+	v := downloads["version"].(string)
+	log.Printf("[I2P] latest Tor version fetched: %s", v)
+
+	return v, nil
 }
